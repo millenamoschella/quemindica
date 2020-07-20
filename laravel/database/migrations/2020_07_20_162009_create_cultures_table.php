@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostsTable extends Migration
+class CreateCulturesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,15 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('cultures', function (Blueprint $table) {
             $table->id();
-            $table->text ('conteudo');
+            $table->string('titulo', 45);
+            $table->string('autor', 45);
+            $table->integer('ano');
             $table->timestamps();
+
+            $table->foreignId('genre_id')->constrained('genres');
+            $table->foreignId('cultureSegment_id')->constrained('culture__segments');
         });
     }
 
@@ -27,6 +32,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('cultures');
     }
 }
