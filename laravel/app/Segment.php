@@ -13,6 +13,6 @@ class Segment extends Model
 
     public function product()
     {
-        return $this->hasMany('App\Product', 'product_id');
+        return $this->hasMany('App\Product', 'products_id');
     }
 }
