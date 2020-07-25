@@ -18,7 +18,7 @@ class CreateRatingsTable extends Migration
             $table->decimal('nota', 2, 1);
             $table->timestamps();
 
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->constrained();
         });
     }
 

@@ -6,6 +6,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+use App\Rating;
+use App\Reaction;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -44,12 +47,12 @@ class User extends Authenticatable
 
     public function rating()
     {
-        return $this->hasMany('App\Rating', 'ratings_id');
+        return $this->hasMany(Rating::class);
     }
 
     public function reaction()
     {
-        return $this->hasMany('App\Reaction','reactions_id');
+        return $this->hasMany(Reaction::class);
     }
     
 }

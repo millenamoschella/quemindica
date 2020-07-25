@@ -13,10 +13,11 @@ class CreateCultureRatingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('culture_ratings', function (Blueprint $table) {
+        Schema::create('culture_rating', function (Blueprint $table) {
            
-            $table->foreignId('rating_id')->constrained('ratings');
-            $table->foreignId('culture_id')->constrained('cultures');
+            $table->foreignId('rating_id')->constrained();
+            $table->foreignId('culture_id')->constrained();
+            $table->timestamps();
         });
     }
 

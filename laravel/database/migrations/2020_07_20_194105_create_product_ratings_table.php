@@ -13,10 +13,11 @@ class CreateProductRatingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_ratings', function (Blueprint $table) {
+        Schema::create('product_rating', function (Blueprint $table) {
             
-            $table->foreignId('rating_id')->constrained('ratings');
-            $table->foreignId('product_id')->constrained('products');
+            $table->foreignId('rating_id')->constrained();
+            $table->foreignId('product_id')->constrained();
+            $table->timestamps();
         });
     }
 

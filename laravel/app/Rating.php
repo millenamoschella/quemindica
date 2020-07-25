@@ -2,13 +2,15 @@
 
 namespace App;
 
+use App\User;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Rating extends Model
 {
     public function user()
     {
-        return $this->belongsTo('App\User', 'users_id');
+        return $this->belongsTo(User::class);
     }
 
     public function serviceRating()

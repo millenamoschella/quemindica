@@ -23,7 +23,7 @@ class CreateServicesTable extends Migration
             $table->string('localizacao');
             $table->timestamps();
 
-            $table->foreignId('segment_id')->constrained('segments');
+            $table->foreignId('segment_id')->constrained();
         });
     }
 

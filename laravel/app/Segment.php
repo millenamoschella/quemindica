@@ -4,15 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+use App\Service;
+use App\Product;
+
 class Segment extends Model
 {
     public function service()
     {
-        return $this->hasMany('App\Service', 'services_id');
+        return $this->hasMany(Service::class);
     }
 
     public function product()
     {
-        return $this->hasMany('App\Product', 'products_id');
+        return $this->hasMany(Product::class);
     }
 }

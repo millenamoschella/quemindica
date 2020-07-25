@@ -15,8 +15,8 @@ class CreateServiceRatingsTable extends Migration
     {
         Schema::create('service_ratings', function (Blueprint $table) {
            
-            $table->foreignId('rating_id')->constrained('ratings');
-            $table->foreignId('service_id')->constrained('services');
+            $table->foreignId('rating_id')->constrained();
+            $table->foreignId('service_id')->constrained();
         });
     }
 

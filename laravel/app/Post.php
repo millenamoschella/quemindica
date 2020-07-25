@@ -3,32 +3,37 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
+use App\Service;
+use App\Products;
+use App\Culture;
+use App\Reaction;
 
 class Post extends Model
 {
     public function user()
     {
-        return $this->belongsTo('App\User','users_id');
+        return $this->belongsTo(User::class);
     }
 
     public function service()
     {
-        return $this->belongsTo('App\Service','services_id');
+        return $this->belongsTo(Service::class);
     }
 
     public function product()
     {
-        return $this->belongsTo('App\Product','products_id');
+        return $this->belongsTo(Product::class);
     }
 
     public function culture()
     {
-        return $this->belongsTo('App\Culture', 'cultures_id');
+        return $this->belongsTo(Culture::class);
     }
 
     public function reaction()
     {
-        return $this->hasMany('App\Reaction', 'reactions_id');
+        return $this->hasMany(Reaction::class);
     }
 
 }

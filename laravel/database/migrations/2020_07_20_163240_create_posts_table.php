@@ -18,10 +18,10 @@ class CreatePostsTable extends Migration
             $table->string('conteudo, 180');
             $table->timestamps();
 
-            $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('service_id')->constrained('services');
-            $table->foreignId('product_id')->constrained('products');
-            $table->foreignId('culture_id')->constrained('cultures');
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('service_id')->constrained();
+            $table->foreignId('product_id')->constrained();
+            $table->foreignId('culture_id')->constrained();
             
 
         });

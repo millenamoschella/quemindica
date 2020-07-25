@@ -20,7 +20,7 @@ class CreateCulturesTable extends Migration
             $table->integer('ano');
             $table->timestamps();
 
-            $table->foreignId('genre_id')->constrained('genres');
+            $table->foreignId('genre_id')->constrained();
             $table->foreignId('cultureSegment_id')->constrained('culture__segments');
         });
     }
