@@ -15,17 +15,7 @@ class CreateSegmentsTable extends Migration
     {
         Schema::create('segments', function (Blueprint $table) {
             $table->id();
-            $table->string('assistencia_tecnica',45);
-            $table->string('educacao',45);
-            $table->string('design',45);
-            $table->string('eventos',45);
-            $table->string('moda',45);
-            $table->string('cosmeticos',45);
-            $table->string('reformas',45);
-            $table->string('saude',45);
-            $table->string('servicos_domesticos',45);
-            $table->string('concertos',45);
-            $table->string('outros',45);
+            $table->string('tipo')->nullable()->default(NULL);
             $table->timestamps();
         });
     }

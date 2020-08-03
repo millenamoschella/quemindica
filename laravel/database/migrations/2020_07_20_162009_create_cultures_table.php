@@ -15,9 +15,10 @@ class CreateCulturesTable extends Migration
     {
         Schema::create('cultures', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo', 45);
-            $table->string('autor', 45);
-            $table->integer('ano');
+            $table->string('titulo', 45)->nullable()->default(NULL);
+            $table->string('autor', 45)->nullable()->default(NULL);
+            $table->integer('ano')->nullable()->default(NULL);
+            $table->string('plataforma')->nullable()->default(NULL);
             $table->timestamps();
 
             $table->foreignId('genre_id')->constrained();

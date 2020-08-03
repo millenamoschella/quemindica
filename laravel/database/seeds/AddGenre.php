@@ -13,6 +13,7 @@ class AddGenre extends Seeder
      */
     public function run()
     {
+        Genre::create(['genero' => Null]);
         Genre::create(['genero' => 'romance']);
         Genre::create(['genero' => 'aventura']);
         Genre::create(['genero' => 'drama']);

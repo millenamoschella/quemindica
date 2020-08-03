@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 
 use App\Rating;
 use App\Reaction;
+use App\Service;
 
 class User extends Authenticatable
 {
@@ -19,7 +20,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'sobrenome', 'email', 'password', 'cpf', 'telefone', 'logradouro', 'bairro', 'cidade', 'estado', 'cep', 'sobre', 'foto', 'nascimento'
     ];
 
     /**
@@ -54,5 +55,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Reaction::class);
     }
-    
+
+    public function followers()
+    {
+        return $this->belongsToMany('App\User', 'user_user', 'user_id', 'follower_id');
+    }
+   
 }

@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration
             $table->string ('estado', 2);
             $table->integer ('cep');
             $table->string ('sobre', 120);
-            $table->string ('foto');
+            $table->string ('foto')->nullable();
             $table->date ('nascimento');
             $table->rememberToken();
             $table->timestamps();
