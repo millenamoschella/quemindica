@@ -88,7 +88,7 @@ class AddUsersSeeder extends Seeder
             'password' => '12345',
             'cpf' => '551.123.321-12',
             'telefone' => 985413957,
-            'logradouro' => 'Rua dos Devs Junior, 456',
+            'logradouro' => 'Rua dos Devs, 456',
             'bairro' => 'Php',
             'cidade' => 'JavaScript',
             'estado' => 'MD',
