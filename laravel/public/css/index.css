@@ -1,0 +1,244 @@
+.font_h4 {
+    font-size: 2em;
+    line-height: 36px;
+}
+
+.font_h3 {
+    font-size: 1.7em;
+}
+
+.font_p {
+    font-size: 1.3em;
+}
+
+.btn-primary {
+    background-color: #007592;
+    border-color: #007592;
+}
+
+/* banner index topo */
+
+.banner_top {
+    padding-top: 50px;
+    background-color: #007592;
+    color: #FCDA73;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.box {
+    margin-top: 30px;
+}
+
+.service {
+    width: 100%;
+}
+
+.texto_home {
+    color: #e5e5e5;
+    padding: 5px;
+    
+}
+
+#cor {
+    color: #fcda73;
+    font-size: 60px;
+}
+
+.fundo {
+    background-color: #007592;
+}
+
+#tam {
+    font-size: 50px;
+    color: #fcda73;
+}
+
+
+
+
+/* banner index meio */
+
+.banner_middle {
+    background-color: #e5e5e5;
+    color: #007592;
+    background-size: cover;
+    width: 100%;
+    height: 95vh;
+}
+
+.texto_meio {
+    color: #333333;
+}
+
+.img_rede_social {
+    margin-top: 50px;
+    width: 70%;
+}
+
+.box_text {
+    margin: 50px 0;
+}
+
+.box_img {
+    padding: 0 100px;
+}
+
+
+/* banner cadastro index */
+
+.banner_cadastro {
+    background-color: #FCDA73;
+    color: #e5e5e5;
+    background-size: cover;
+    width: 100%;
+    height: 10vh;
+}
+
+.btn-azul {
+    background: #00415e;
+}
+
+
+/* banner index team */
+
+.banner_team {
+    background-color: #007592;
+    color: #FCDA73;
+    width: 100%;
+    margin-top: 0px;
+    height: 95vh;
+}
+
+.team {
+
+    margin-top: 0px;
+    width: 100%;
+}
+
+#logo_banner {
+    height: 20vh;
+}
+
+.box_text_right {
+    padding: 60px 0;
+}
+
+
+
+
+
+@media (max-width: 1200px){
+    
+    .font_h4 {
+        margin-top: 50px;
+        font-size: 1.7em;
+    }
+
+    .font_p {
+        padding-bottom: 50px;
+        font-size: 1.1em;
+    }
+
+    .box_img_left {
+        padding: 0 100px;
+    }
+    
+}
+
+
+@media (min-width: 1200px) {
+    .img_rede_social {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .box {
+        padding: 0 100px;
+    }
+    
+    .box_img {
+        float: right;
+        width: 50%;
+        height: 95vh;
+        margin: 0;
+        padding: 80px 0;
+        overflow: hidden;
+    }
+
+    .box_text {
+        float: left;
+        width: 50%;
+        margin: 0;
+        padding: 250px 0;
+        overflow: hidden;
+    }
+
+    .banner_team {
+        height: 72vh;
+    }
+
+    .box_text_right {
+        overflow: hidden;
+        float: right;
+        width: 50%;
+        height: 95vh;
+        margin: 0;
+        padding: 100px 0;
+        height: 70vh;
+    }
+
+    .box_img_left {
+        float: left;
+        width: 50%;
+        margin: 0;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .img_rede_social {
+        margin-top: 20px;
+        width: 65%;
+    }
+
+    .banner_team {
+        height: 55vh;
+    }
+
+    .box_text_right {
+        overflow: hidden;
+        float: right;
+        width: 50%;
+        margin: 0;
+        padding: 50px 0;
+        height: 55vh;
+    }
+
+    .box_img_left {
+        float: left;
+        width: 50%;
+        margin: 0;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+
+    .box {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 590px) {
+    .line_register {
+        display: none;
+    }
+    
+}
+
+@media (min-width: 590px) {
+    .btn_hidden {
+        display: none;
+    }
+}
