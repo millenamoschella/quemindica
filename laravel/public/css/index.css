@@ -1,45 +1,4 @@
-.font_h4 {
-    font-size: 2em;
-    line-height: 36px;
-}
-
-.font_h3 {
-    font-size: 1.7em;
-}
-
-.font_p {
-    font-size: 1.3em;
-}
-
-.btn-primary {
-    background-color: #007592;
-    border-color: #007592;
-}
-
-/* banner index topo */
-
-.banner_top {
-    padding-top: 50px;
-    background-color: #007592;
-    color: #FCDA73;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-}
-
-.box {
-    margin-top: 30px;
-}
-
-.service {
-    width: 100%;
-}
-
-.texto_home {
-    color: #e5e5e5;
-    padding: 5px;
-    
-}
+/* ELEMENTOS ?
 
 #cor {
     color: #fcda73;
@@ -53,192 +12,245 @@
 #tam {
     font-size: 50px;
     color: #fcda73;
-}
+} */
 
 
 
+/* SEÇÃO BANNER */
 
-/* banner index meio */
-
-.banner_middle {
-    background-color: #e5e5e5;
-    color: #007592;
+.secao-banner {
+    overflow: hidden;
+    height: auto;
+    padding: 20px;
+    color: #FCDA73;
+    background-color: #007592;
     background-size: cover;
-    width: 100%;
-    height: 95vh;
 }
 
-.texto_meio {
+.secao-banner img {
+    max-width: 100%;
+    margin-top: 60px;
+}
+
+.secao-banner-texto {
+    margin-bottom: 10px;
+}
+
+.secao-banner-texto h4 {
+    margin-top: 5px;
+    font-size: 2em;
+}
+
+.secao-banner-texto p {
+    padding: 5px;
+    font-size: 1.3em;
+    color: #e5e5e5;
+}
+
+
+
+/* SEÇÃO CADASTRO */
+
+
+.secao-cadastro {
+    padding: 5px;
+    color: #e5e5e5;
+    background-color: #FCDA73;
+}
+
+.secao-cadastro form {
+    margin: 10px;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #007592;
+    border-color: #007592;
+}
+
+
+
+/* SEÇÃO SOBRE */
+
+.secao-sobre {
+    overflow: hidden;
+    height: auto;
+    color: #007592;
+    background-color: #e5e5e5;
+}
+
+.secao-sobre img {
+    padding-top: 15px;
+    margin: 10px 0px;
+    width: 600px;
+}
+
+.secao-sobre h4 {
+    margin-top: 15px;
+    font-size: 2em;
+    line-height: 36px;
+}
+
+.secao-sobre p {
+    font-size: 1.3em;
     color: #333333;
 }
 
-.img_rede_social {
-    margin-top: 50px;
-    width: 70%;
-}
-
-.box_text {
-    margin: 50px 0;
-}
-
-.box_img {
-    padding: 0 100px;
-}
 
 
-/* banner cadastro index */
+/* SEÇÃO TIME */
 
-.banner_cadastro {
-    background-color: #FCDA73;
-    color: #e5e5e5;
-    background-size: cover;
-    width: 100%;
-    height: 10vh;
-}
-
-.btn-azul {
-    background: #00415e;
-}
-
-
-/* banner index team */
-
-.banner_team {
-    background-color: #007592;
+.secao-time {
+    overflow: hidden;
+    height: auto;
     color: #FCDA73;
-    width: 100%;
-    margin-top: 0px;
-    height: 95vh;
+    background-color: #007592;
 }
 
-.team {
+.secao-time img {
+    margin-bottom: 20px;
+    width: 500px;
+}
 
-    margin-top: 0px;
-    width: 100%;
+.secao-time h3 {
+    font-size: 1.7em;
 }
 
 #logo_banner {
-    height: 20vh;
+    width: 140px;
+    margin: 10px;
 }
 
-.box_text_right {
-    padding: 60px 0;
-}
-
-
-
-
-
-@media (max-width: 1200px){
-    
-    .font_h4 {
-        margin-top: 50px;
-        font-size: 1.7em;
-    }
-
-    .font_p {
-        padding-bottom: 50px;
-        font-size: 1.1em;
-    }
-
-    .box_img_left {
-        padding: 0 100px;
-    }
-    
+.secao-time p {
+    font-size: 1.5em;
+    margin: 5px;
 }
 
 
-@media (min-width: 1200px) {
-    .img_rede_social {
-        margin-top: 30px;
-        width: 100%;
+
+/* ÁREA RESPONSIVA */
+
+@media (max-width: 360px) {
+
+    /* SEÇÃO BANNER */
+
+    .secao-banner {
+        padding: 0%;
     }
 
-    .box {
-        padding: 0 100px;
-    }
-    
-    .box_img {
-        float: right;
-        width: 50%;
-        height: 95vh;
-        margin: 0;
-        padding: 80px 0;
-        overflow: hidden;
+    .secao-banner img {
+        padding-top: 15px;
     }
 
-    .box_text {
-        float: left;
-        width: 50%;
-        margin: 0;
-        padding: 250px 0;
-        overflow: hidden;
+    .secao-banner-texto h4 {
+        margin-left: 30px;
     }
 
-    .banner_team {
-        height: 72vh;
+    .secao-banner p {
+        font-size: 1em;
+        margin-left: 30px;
+        width: 300px;
     }
 
-    .box_text_right {
-        overflow: hidden;
-        float: right;
-        width: 50%;
-        height: 95vh;
-        margin: 0;
-        padding: 100px 0;
-        height: 70vh;
+    /* SEÇÃO CADASTRO */
+
+    .secao-cadastro form {
+        padding: 0px;
     }
 
-    .box_img_left {
-        float: left;
-        width: 50%;
-        margin: 0;
-        overflow: hidden;
-        padding: 0 20px;
+    .secao-cadastro form input {
+        width: 245px;
     }
-}
 
-@media (min-width: 992px) and (max-width: 1200px) {
-    .img_rede_social {
+    /* SEÇÃO SOBRE */
+
+    .secao-sobre p {
         margin-top: 20px;
-        width: 65%;
+        padding: 0px;
+        font-size: 1em;
     }
 
-    .banner_team {
-        height: 55vh;
+    .secao-sobre img {
+        padding: 0px;
+        width: 400px;
     }
 
-    .box_text_right {
-        overflow: hidden;
-        float: right;
-        width: 50%;
-        margin: 0;
-        padding: 50px 0;
-        height: 55vh;
+    /* SEÇÃO TIME */
+
+    img .worker {
+        width: 300px;
     }
 
-    .box_img_left {
-        float: left;
-        width: 50%;
-        margin: 0;
-        overflow: hidden;
-        padding: 0 20px;
+    .secao-time h3 {
+        font-size: 1.2em;
     }
 
-    .box {
-        padding: 0 100px;
+    .secao-time p {
+        font-size: 1.2em;
     }
 }
 
-@media (max-width: 590px) {
-    .line_register {
-        display: none;
+
+@media (max-width: 529px) {
+
+    /* SEÇÃO CADASTRO */
+
+    .secao-cadastro form {
+        padding: 0px;
     }
-    
+
+    .secao-cadastro form input {
+        width: 245px;
+    }
+
+    .btn-primary {
+        margin: 0px 100px;
+    }
 }
 
-@media (min-width: 590px) {
-    .btn_hidden {
-        display: none;
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+    /* SEÇÃO CADASTRO */
+
+    .secao-cadastro form input {
+        width: 180px;
+    }
+
+
+    /* SEÇÃO SOBRE */
+
+    .secao-sobre {
+        padding: 10px;
+    }
+
+    .secao-sobre h4 {
+        margin-top: 15px;
+        font-size: 2em;
+    }
+
+    .secao-sobre p {
+        padding: 15px;
+        margin-left: -30px;
+        width: 300px;
+        font-size: 1em;
+        color: #333333;
+    }
+
+    /* SEÇÃO TIME */
+
+    .secao-time h3 {
+        font-size: 1em;
+        margin: 10px;
+    }
+
+    #logo_banner {
+        width: 110px;
+        margin: 10px;
+    }
+
+    .secao-time p {
+        font-size: 1em;
+        margin: 5px;
     }
 }

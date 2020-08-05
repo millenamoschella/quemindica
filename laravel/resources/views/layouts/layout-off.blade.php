@@ -23,7 +23,7 @@
     <header class="container-fluid fixed-top">
 
         {{-- ÁRREA MENU --}}
-        <nav class="navbar" id="btn_qi">
+        <nav class="container navbar" id="btn_qi">
             <div class="container-fluid">
 
                 {{-- ÁREA LOGO --}}
