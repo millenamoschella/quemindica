@@ -11,10 +11,11 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
     {{-- ASSETS --}}
-    <link rel="stylesheet" href="css/feed.css">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/minhaConta.css">
+    <link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/suporte.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/minhaConta.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/feed.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <!-- <link rel="stylesheet" href="css/feedresponsivo.css"> -->
 
     <!-- ÍCONES -->

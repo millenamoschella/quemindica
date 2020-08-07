@@ -116,18 +116,4 @@
     </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @endsection

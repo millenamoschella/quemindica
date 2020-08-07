@@ -1,4 +1,8 @@
+/* CSS DA ESTRUTURA DO SITE */
+
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
 * {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -15,7 +19,38 @@ header {
 }
 
 
-/* HEADER_DESLOG */
+/* ELEMENTOS MENU LAYOUT OFF*/
+
+.button,
+.button_suporte {
+    border: none;
+    color: white;
+    padding: 8px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button_suporte {
+    padding: 0 8px;
+}
+
+.button1 {
+    background-color: #007592;
+    color: #FCDA73;
+    border: 1px solid #FCDA73;
+    border-radius: 5px;
+}
+
+.button1:hover {
+    background-color: #FCDA73;
+    color: #007592;
+}
+
 
 #btn_qi a {
     color: #fcda73;
@@ -31,71 +66,7 @@ header {
 }
 
 
-/* SOMENTE ESSA ID ACIMA */
-
-.nav_barra {
-    height: 60px;
-}
-
-.container-fluid {
-    width: 100%;
-}
-
-
-/* barra de busca */
-
-
-/* <<<<<<< HEADER */
-.button, .button_suporte {
-    border: none;
-    color: white;
-    padding: 8px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
-
-.button_suporte {
-    padding: 0 8px;
-}
-
-.button1 {
-    background-color: #007592; 
-    color: #FCDA73; 
-    border: 1px solid #FCDA73;
-    border-radius: 5px;
-  }
-  
-  .button1:hover {
-    background-color: #FCDA73;
-    color: #007592;
-  }
-
-.divBusca {
-    background-size: 3vh;
-    background-image: url('../imagens/loupe.png');
-    background-position: 96%;
-    background-repeat: no-repeat;
-    border: solid 1px;
-    border-color: #cccccc;
-    border-radius: 5px;
-}
-
-#txtBusca {
-    float: left;
-    background-color: transparent;
-    padding-left: 5px;
-    font-size: 18px;
-    border: none;
-}
-
-.fundo {
-    background-color: #007592;
-}
+/* MENU */
 
 .hamburguer {
     margin-left: 50px;
@@ -112,8 +83,19 @@ header {
     width: 15%;
 }
 
+.nav_barra {
+    height: 60px;
+}
 
-/* sobre nós */
+.container-fluid {
+    width: 100%;
+}
+
+
+
+/* PÁGINAS */
+
+/* PÁGINA QUEM SOMOS */
 
 .banner_conteudo {
     background-color: #E2E2E7;
@@ -137,7 +119,7 @@ span#sobre h4 {
 }
 
 
-/* REGISTRAR */
+/* PÁGINA REGISTRAR */
 
 .banner_conteudo {
     background-color: white;
@@ -177,8 +159,7 @@ span#sobre h4 {
 }
 
 
-
-/*LOGIN */
+/* PÁGINA LOGIN */
 
 .form-signin {
     width: 100%;
@@ -198,62 +179,94 @@ form {
 }
 
 
-/* SECTION FOOTER */
 
-footer {
-    background-color: #1b252f;
-    position: absolute;
-    right: 0;
-    width: 100%;
+
+
+
+
+/* CSS MENU LOGADO */
+
+/* BUSCA MENU LOGADO*/
+
+.divBusca {
+    background-size: 3vh;
+    background-image: url('../imagens/loupe.png');
+    background-position: 96%;
+    background-repeat: no-repeat;
+    border: solid 1px;
+    border-color: #cccccc;
+    border-radius: 5px;
 }
 
-.footer {
-    background-color: #333;
-    color: #fff;
-    font-size: 0.8em;
-    display: inline-block;
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    border: none;
 }
 
-.footer ul li {
-    margin: 0px;
-    list-style-type: none;
-    display: inline;
-    font-size: 1em;
+.fundo {
+    background-color: #007592;
 }
 
-.footer ul li a {
-    color: #ffffff;
-    text-decoration: none;
+
+
+
+
+
+
+
+
+
+
+
+/* ELEMENTOS */
+
+/* #cor {
+    color: #fcda73;
+    font-size: 60px;
 }
 
-.footer ul li a:hover {
-    color: #e5e5e5;
-    text-decoration: none;
-    font-weight: bold;
+.fundo {
+    background-color: #007592;
 }
 
-.footer img {
-    width: 30px;
-    margin: 5px;
-}
+#tam {
+    font-size: 50px;
+    color: #fcda73;
+} */
 
-.footer h6 {
-    text-align: center;
-}
 
-.endereco {
-    text-align: center;
-}
 
-.copyright {
-    color: #fff;
-    background-color: #666;
-    text-align: center;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
     .banner_azul {
