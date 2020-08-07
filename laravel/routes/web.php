@@ -19,33 +19,30 @@ Route::get('/feed', 'FeedController@feed')->name('home'); //precisa de controlle
 
 Route::get('/suporte', 'SuporteController@suporte')->name('suporte'); //precisa de controller para o formulário
 
-Route::get('/servicos', 'ServiceController@servico')->name('servicos'); //talvez precise, rever
-
-
-Route::get('/faq', function () {
-    return view('faq');
-})->name('faq');
-
-
-Route::get('/sobre', function () {
-    return view('sobre');
-})->name('sobre');
-
-Route::get('/termos', function () {
-    return view('termos');
-})->name('termos');
-
-Route::get('/politica-dados', function () {
-    return view('/politica-dados');
-})->name('/politica-dados');
-
-Route::get('/politica-cookies', function () {
-    return view('politica-cookies');
-})->name('politica-cookies');
-
+Route::get('/servicos', 'ServiceController@servicos')->name('servicos'); //talvez precise, rever
 
 Route::get('/amigos', 'FriendController@amigos')->name('amigos'); //precisa de controller para excluir um amigo/ precisar editar a view
+
 Route::get('/configuracao', 'ConfiguracaoController@configuracao')->name('configuracao'); //precisa de controller para cru usuario/ precisar editar a view
+
+
+
+
+
+
+// ROTAS CONTROLLER SITE
+
+Route::get('/sobre', 'SiteController@sobre')->name('sobre');
+Route::get('/faq', 'SiteController@faq')->name('faq');
+Route::get('/termos', 'SiteController@termos')->name('termos');
+Route::get('/politica-dados', 'SiteController@politicaDados')->name('politica-dados');
+Route::get('/politica-cookies', 'SiteController@politicaCookies')->name('politica-cookies');
+
+
+
+
+
+
 
 
 

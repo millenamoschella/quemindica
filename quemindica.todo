@@ -2,7 +2,7 @@
     
 TODOS:
     
-    ☐ Arrumar CSS/FAQ -
+    ☐ Arrumar CSS/FAQ - @started(20-08-07 19:33)
     ☐ Arrumar CSS/Feed - @critical 
     ☐ Arrumar CSS/Login -
     ☐ Arrumar CSS/Perfil -
@@ -10,7 +10,6 @@ TODOS:
     ☐ Arrumar CSS/Registrar -
     ☐ Arrumar CSS/Servicos -
     ☐ Arrumar CSS/Sobre -
-    ☐ Arrumar CSS/Suporte -
     ☐ Organizar CSS Estilo -
     ☐ Organizar CSS feed e feed responsivo -
 
@@ -28,6 +27,7 @@ TODOS:
 
     FINALIZADOS: 
         ✔ Arrumar CSS e home @done(20-08-05 22:32)
+        ✔ Arrumar CSS/Suporte @done(20-08-07 19:32)
     
 
     CANCELADOS:
