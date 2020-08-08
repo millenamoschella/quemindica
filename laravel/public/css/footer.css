@@ -1,43 +1,38 @@
-/* CSS DO FOOTER */
-
 footer {
-    background-color: #1b252f;
+
     position: absolute;
     right: 0;
     width: 100%;
-}
-
-.footer {
     background-color: #333;
     color: #fff;
     font-size: 0.8em;
     display: inline-block;
 }
 
-.footer ul li {
+footer ul li {
     margin: 0px;
     list-style-type: none;
     display: inline;
     font-size: 1em;
 }
 
-.footer ul li a {
+footer ul li a {
     color: #ffffff;
     text-decoration: none;
 }
 
-.footer ul li a:hover {
+footer ul li a:hover {
     color: #e5e5e5;
     text-decoration: none;
     font-weight: bold;
 }
 
-.footer img {
+footer img {
     width: 30px;
     margin: 5px;
 }
 
-.footer h6 {
+footer h6 {
     text-align: center;
 }
 
@@ -54,47 +49,3 @@ footer {
     padding-bottom: 10px;
     margin-bottom: 0;
 }
-
-
-
-
-/* .section_5 {
-    background-color: #2d3e50;
-    color: #fff;
-    padding: 10px;
-  }  
-
-.colunasfooter {
-    margin: 10px 30px 0 30px;
-  }
-
-
-  h5.footertext {
-    text-transform: uppercase;
-    font-size: 1.2em;
-    text-align: center;
-  }
-
-  .footertext {
-    text-align: center;
-  }
-
-  .socialmedias {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  footer {
-    background-color: #1b252f;
-    position: absolute;
-    right: 0;
-    width: 100%;
-  }
-  
-  footer p {
-    color: #fff;
-    text-align: center;
-    margin: 15px;
-  }
-   */
