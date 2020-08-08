@@ -1,4 +1,4 @@
-@extends('layouts.layout-off')
+@extends('layouts.layout-menuoff')
 
 
 @section('content')
@@ -57,7 +57,7 @@
 
                 {{-- BOTÃO CADASTRO --}}
                 <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-2">Cadastrar</button>
+                    <button type="submit" class="btn mb-2">Cadastrar</button>
                 </div>
             </div>
         </form>

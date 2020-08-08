@@ -1,0 +1,26 @@
+.secao-servicos {
+    margin-top: 40px;
+    padding: 40px;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card-servicos {
+    background-color: #FCDA73;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px #0000001f,
+        0 1px 2px #0000003d;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-servicos:hover {
+    box-shadow: 0 14px 28px #00000040,
+        0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-title {
+    font-weight: bold;
+}

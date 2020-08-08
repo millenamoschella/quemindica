@@ -1,4 +1,4 @@
-@extends('layouts.layout-off')
+@extends('layouts.layout-menuoff')
 
 
 @section('content')
@@ -60,7 +60,9 @@
             <label for="termos">
                 <input type="checkbox" name="termos" id="termos" value="termos">Aceita os termos e condições</label>
             <div class="espaco">
-                <button class="padrao" type="submit"><a class="padrao" href="feed.php">Criar Conta</a></button>
+                <button class="btn" type="submit">
+                    <a class="padrao" href="#">Criar Conta</a>
+                </button>
             </div>
 
         </div>

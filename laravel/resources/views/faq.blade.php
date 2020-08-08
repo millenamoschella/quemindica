@@ -1,4 +1,4 @@
-@extends('layouts.layout-off')
+@extends('layouts.layout-menuoff')
 
 
 @section('content')
@@ -15,7 +15,7 @@
     {{-- ÁREA PERGUNTAS FREQUENTES --}}
     <section class="banner_faq">
         <div class="container questions_box">
-            <h3 class="h3_title"><strong>Perguntas Frequentes</strong></h3>
+            <h3><strong>Perguntas Frequentes</strong></h3>
 
             <div class='question'>
                 <input type='checkbox' id='question-1'>

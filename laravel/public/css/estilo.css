@@ -1,6 +1,5 @@
 /* CSS DA ESTRUTURA DO SITE */
 
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
 * {
@@ -18,264 +17,33 @@ header {
     background-color: #007592;
 }
 
+/* ELEMENTOS */
 
-/* ELEMENTOS MENU LAYOUT OFF*/
+/* TÍTULOS */
 
-.button,
-.button_suporte {
-    border: none;
-    color: white;
-    padding: 8px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.button_suporte {
-    padding: 0 8px;
-}
-
-.button1 {
-    background-color: #007592;
-    color: #FCDA73;
-    border: 1px solid #FCDA73;
-    border-radius: 5px;
-}
-
-.button1:hover {
-    background-color: #FCDA73;
+h1,
+h2,
+h3,
+h4,
+h5 {
     color: #007592;
 }
 
+/* BOTÕES */
 
-#btn_qi a {
-    color: #fcda73;
-    font-size: 1.5em;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-#cores a {
-    color: black;
-    font-size: 1em;
-    text-transform: uppercase;
-}
-
-
-/* MENU */
-
-.hamburguer {
-    margin-left: 50px;
-}
-
-.banner_azul {
+.btn {
     background-color: #007592;
-    color: #FCDA73;
-    padding-bottom: 50px;
+    color: #fff;
+    font-size: 0.8em;
 }
 
+.btn:hover {
+    color: #cccccc;
+}
+
+
+/* LOGO */
 #quemindica {
     margin-top: 90px;
     width: 15%;
-}
-
-.nav_barra {
-    height: 60px;
-}
-
-.container-fluid {
-    width: 100%;
-}
-
-
-
-/* PÁGINAS */
-
-/* PÁGINA QUEM SOMOS */
-
-.banner_conteudo {
-    background-color: #E2E2E7;
-    background-size: cover;
-    width: 100%;
-}
-
-.img_grupo {
-    padding-bottom: 50px;
-}
-
-span#sobre {
-    padding: 5px;
-    font-size: 1, 2em;
-    line-height: 35px;
-}
-
-span#sobre h4 {
-    color: #666666;
-    margin-bottom: 10px;
-}
-
-
-/* PÁGINA REGISTRAR */
-
-.banner_conteudo {
-    background-color: white;
-}
-
-.obrigatorio {
-    font-size: 12px;
-    color: red;
-}
-
-.radius {
-    border-radius: 10px;
-}
-
-.padrao {
-    background-color: #306d5c;
-    border-radius: 10px;
-    padding: 10px;
-    color: white;
-}
-
-.padrao a {
-    background-color: #306d5c;
-    border-radius: 10px;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.form-signin1 {
-    width: 100%;
-    max-width: 500px;
-    padding: 15px;
-    margin: auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-
-
-/* PÁGINA LOGIN */
-
-.form-signin {
-    width: 100%;
-    max-width: 300px;
-    padding: 15px;
-    margin: auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-
-form {
-    display: block;
-}
-
-.espaco {
-    padding: 20px;
-}
-
-
-
-
-
-
-
-/* CSS MENU LOGADO */
-
-/* BUSCA MENU LOGADO*/
-
-.divBusca {
-    background-size: 3vh;
-    background-image: url('../imagens/loupe.png');
-    background-position: 96%;
-    background-repeat: no-repeat;
-    border: solid 1px;
-    border-color: #cccccc;
-    border-radius: 5px;
-}
-
-#txtBusca {
-    float: left;
-    background-color: transparent;
-    padding-left: 5px;
-    font-size: 18px;
-    border: none;
-}
-
-.fundo {
-    background-color: #007592;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* ELEMENTOS */
-
-/* #cor {
-    color: #fcda73;
-    font-size: 60px;
-}
-
-.fundo {
-    background-color: #007592;
-}
-
-#tam {
-    font-size: 50px;
-    color: #fcda73;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 768px) {
-    .banner_azul {
-        padding-bottom: 30px;
-    }
-}
-
-@media (max-width: 514px) {
-    #quemindica {
-        display: none;
-    }
 }

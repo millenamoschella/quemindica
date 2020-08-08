@@ -1,4 +1,4 @@
-@extends('layouts.layout-off')
+@extends('layouts.layout-menuoff')
 
 
 @section('content')

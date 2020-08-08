@@ -1,4 +1,4 @@
-@extends('layouts.layout-off')
+@extends('layouts.layout-menuoff')
 
 @section('content')
 
@@ -21,7 +21,7 @@
                 <input type="checkbox" value="remember-me"> Lembrar de mim
             </label>
         </div>
-        <button class="btn btn-lg btn-block padrao" type="submit">Entrar</button>
+        <button class="btn" type="submit">Entrar</button>
         <div class="espaco">
             <a href="#"> Esqueci minha senha</a>
         </div>

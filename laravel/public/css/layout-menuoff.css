@@ -1,0 +1,39 @@
+#btn_qi a {
+    color: #fcda73;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.button1 {
+    background-color: #007592;
+    color: #FCDA73;
+    border: 1px solid #FCDA73;
+    border-radius: 5px;
+}
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 8px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-color: #FCDA73;
+    color: #007592;
+}
+
+#cores a {
+    color: black;
+    font-size: 1em;
+    text-transform: uppercase;
+}

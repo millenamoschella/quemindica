@@ -1,4 +1,4 @@
-@extends('layouts.layout-minhaconta')
+@extends('layouts.layout-menulogado')
 
 
 @section('content')

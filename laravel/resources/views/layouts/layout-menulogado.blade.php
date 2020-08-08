@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feed - Quem Indica</title>
+    <title>QUEM INDICA</title>
 
     {{-- BOOTSTRAP --}}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
     {{-- ASSETS --}}
-    <link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/suporte.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/minhaConta.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/feed.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <!-- <link rel="stylesheet" href="css/feedresponsivo.css"> -->
+    <link rel="stylesheet" href="{{ asset('../css/layout-menulogado.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/estilo.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/suporte.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/perfil.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/feed.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/servicos.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
+
+    {{-- FAVICON --}}
+    <link rel="shortcut icon" href="{{ asset('../imagens/logo/logo-icon.svg') }}" type="image/x-icon">
 
     <!-- ÍCONES -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -33,7 +37,11 @@
 
         {{-- ÁREA BUSCA --}}
         <div class="d-flex">
-            <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" width="50" height="50">
+
+            {{-- LOGO --}}
+            <a href="{{ url('home') }}">
+                <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" width="50" height="50">
+            </a>
             <form class="form-inline">
                 <input class="form-control  divBusca" type="search" placeholder="Buscar" aria-label="Search">
             </form>
@@ -50,8 +58,11 @@
             <div class="navbar-nav ml-auto">
                 <div class="dropdown">
                     {{-- ÁREA FOTO USUÁRIO MENU --}}
-                    <img src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto do usuario" width="40px"
-                        class="rounded">
+
+                    <a href="{{ url('perfil') }}">
+                        <img src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto do usuario"
+                            width="40px" class="rounded">
+                    </a>
 
                     {{-- ÁREA NOME USUÁRIO MENU --}}
                     <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink"

@@ -1,4 +1,4 @@
-@extends('layouts.layout-minhaconta')
+@extends('layouts.layout-menulogado')
 
 
 @section('content')
@@ -64,8 +64,7 @@
                         <input type="text" class="form-control" aria-label="Recipient's username"
                             aria-describedby="button-addon2" placeholder="Pesquisar">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-primary" type="button" id="button-addon2"><i
-                                    class="fa fa-search"></i></button>
+                            <button class="btn" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
                 </form>

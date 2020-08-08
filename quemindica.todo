@@ -2,16 +2,16 @@
     
 TODOS:
     
-    ☐ Arrumar CSS/FAQ - @started(20-08-07 19:33)
-    ☐ Arrumar CSS/Feed - @critical 
     ☐ Arrumar CSS/Login -
     ☐ Arrumar CSS/Perfil -
-    ☐ Conteúdo páginas: Política de Dados, Política de Cookies e Temos de Uso -
     ☐ Arrumar CSS/Registrar -
     ☐ Arrumar CSS/Servicos -
     ☐ Arrumar CSS/Sobre -
     ☐ Organizar CSS Estilo -
+    ☐ Arrumar CSS/Feed - @critical 
     ☐ Organizar CSS feed e feed responsivo -
+    ☐ Conteúdo páginas: Política de Dados, Política de Cookies e Temos de Uso -
+    ☐ Criar um CSS para página de serviços
 
 
     CRIAÇÕES - PÁGINAS NOVAS:
@@ -23,11 +23,13 @@ TODOS:
     INICIADOS:
         ☐ Organizar CSS Footer - @started(20-08-05 22:09)
         ☐ Arrumar CSS/Modal - @started(20-08-05 22:07)
+        ☐ Arrumar CSS/FAQ - @started(20-08-07 19:33)
     
 
     FINALIZADOS: 
         ✔ Arrumar CSS e home @done(20-08-05 22:32)
         ✔ Arrumar CSS/Suporte @done(20-08-07 19:32)
+        ✔ Criar um controller Site para organizar as páginas estáticas @done(20-08-07 19:47)
     
 
     CANCELADOS:

@@ -1,4 +1,4 @@
-@extends('layouts.layout-minhaconta')
+@extends('layouts.layout-menulogado')
 
 @section('content')
 
@@ -15,7 +15,7 @@
 
                 {{-- TÍTULO --}}
                 <form class="formulario">
-                    <h2 class="titulo">
+                    <h2>
                         Suporte
                     </h2>
 
@@ -45,7 +45,7 @@
 
                     {{-- BOTÃO --}}
                     <div class="container-botao">
-                        <button class="btn-formulario">
+                        <button class="btn">
                             Enviar
                         </button>
                     </div>

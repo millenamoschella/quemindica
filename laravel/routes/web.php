@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
  */
 
 
-Route::get('/home', 'HomeController@home')->name('home'); //precisa de controller para o cadastro 
+Route::get('/home', 'HomeController@home')->name('home'); //controller para página home 
 
 Route::get('/registrar', 'RegistrarController@registrar')->name('registrar'); // precisa de controller para o formulário
 
@@ -28,9 +28,7 @@ Route::get('/configuracao', 'ConfiguracaoController@configuracao')->name('config
 
 
 
-
-
-// ROTAS CONTROLLER SITE
+// ROTAS - CONTROLLER SITE
 
 Route::get('/sobre', 'SiteController@sobre')->name('sobre');
 Route::get('/faq', 'SiteController@faq')->name('faq');
