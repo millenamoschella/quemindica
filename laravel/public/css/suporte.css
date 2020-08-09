@@ -5,23 +5,6 @@
     box-sizing: border-box;
 }
 
-/* ELEMENTOS */
-
-input {
-    outline: none;
-    border: none;
-}
-
-textarea {
-    outline: none;
-    border: none;
-}
-
-button {
-    outline: none !important;
-    border: none;
-}
-
 /* BOX FORMULÁRIO */
 
 .container-formulario-suporte {
@@ -86,6 +69,8 @@ input.area-input {
     height: 50px;
     border-radius: 5px;
     padding: 0 30px 0 50px;
+    outline: none;
+    border: none;
 }
 
 input.area-input[name="email"] {
@@ -97,6 +82,8 @@ textarea.area-input {
     border-radius: 5px;
     padding: 14px 30px;
     resize: none;
+    outline: none;
+    border: none;
 }
 
 .wrap-area-input {
@@ -155,6 +142,8 @@ textarea.area-input {
     color: #fff;
     transition: all 0.4s;
     background: #027592;
+    outline: none !important;
+    border: none;
 }
 
 .btn-formulario:hover {

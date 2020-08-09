@@ -18,25 +18,27 @@
                 <form class="form-signin" action="login.php" method="POST">
 
                     {{-- EMAIL --}}
-                    <label for="inputEmail" class="sr-only">Endereço de email</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required="">
-                    <br>
+                    <label for="input-modalEmail" class="sr-only">Endereço de email</label>
+                    <input-modal type="email" id="input-modalEmail" class="form-control" placeholder="Seu email"
+                        required="">
+                        <br>
 
-                    {{-- SENHA --}}
-                    <label for="inputPassword" class="sr-only">Senha</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
-                    <div class="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Lembrar de mim
-                        </label>
-                    </div>
+                        {{-- SENHA --}}
+                        <label for="input-modalPassword" class="sr-only">Senha</label>
+                        <input-modal type="password" id="input-modalPassword" class="form-control" placeholder="Senha"
+                            required="">
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input-modal type="checkbox" value="remember-me"> Lembrar de mim
+                                </label>
+                            </div>
 
-                    {{-- BOTÃO --}}
-                    <button class="btn btn-lg btn-block padrao" type="submit">Entrar</button>
-                    <div class="mb-3 text-center">
-                        <a href="#">Esqueci minha senha</a>
-                    </div>
-                    <button class="btn btn-lg btn-block padrao" type="submit">Cadastrar</button>
+                            {{-- BOTÃO --}}
+                            <button class="btn btn-lg btn-block padrao" type="submit">Entrar</button>
+                            <div class="mb-3 text-center">
+                                <a href="#">Esqueci minha senha</a>
+                            </div>
+                            <button class="btn btn-lg btn-block padrao" type="submit">Cadastrar</button>
 
                 </form>
 
@@ -60,25 +62,32 @@
 {{-- MODAL SUPORTE --}}
 
 <div id="modalSuporte" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog ">
+        <div class="modal-content modal-suporte text-center">
 
-    {{-- INÍCIO MODAL SUPORTE --}}
-    <div class="modal-dialog">
-        <div class="modal-content">
+            {{-- BOTÃO FECHAR --}}
 
-            {{-- HEADER MODAL SUPORTE --}}
-            <div class="modal-header">
-                <h4 class="modal-title">Suporte</h4><!-- Título -->
+            <div class="fechar">
+                <button type="button" class="btn-fechar-suporte" data-dismiss="modal">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
             </div>
+
+            {{-- TÍTULO MODAL SUPORTE --}}
+            <h4 class="modal-title-suporte">Suporte</h4>
 
             {{-- CORPO MODAL SUPORTE --}}
             <div class="modal-body">
                 <div class="main">
                     <div class="container">
+
                         <div class="signup-content">
+
 
                             {{-- IMAGEM --}}
                             <div class="signup-img">
-                                <img src="{{ asset('../imagens/institucional/banner02.jpg') }}" class="img-fluid"
+                                <img src="{{ asset('../imagens/institucional/suporte-novo.png') }}" class="img-fluid"
                                     alt="Banner Suporte">
                             </div>
 
@@ -88,42 +97,41 @@
                                 <form action="suporte.php" method="POST" class="register-form" id="register-form">
                                     <div class="row">
 
+
+
                                         {{-- NOME --}}
-                                        <div class="col">
-                                            <label for="nome">Nome</label>
-                                            <input type="text" value="" name="nome" id="nome" class="form-control"
+                                        <div class="wrap-area-input-modal-suporte-modal-suporte">
+                                            <input class="area-input-modal-suporte" type="text" name="name"
                                                 placeholder="Nome">
+                                            <span class="focus-area-input-modal-suporte"></span>
+                                            <span class="icone-input-modal-suporte">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
                                         </div>
 
-                                        {{-- SOBRENOME
-                                        --}}
-                                        <div class="col">
-                                            <label for="sobrenome">Sobrenome</label>
-                                            <input type="text" value="" name="sobrenome" id="sobrenome"
-                                                class="form-control" placeholder="Sobrenome">
+                                        {{-- EMAIL --}}
+                                        <div class="wrap-area-input-modal-suporte-modal-suporte">
+                                            <input class="area-input-modal-suporte" type="text" name="email"
+                                                placeholder="Email">
+                                            <span class="focus-area-input-modal-suporte"></span>
+                                            <span class="icone-input-modal-suporte">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </span>
                                         </div>
 
-                                    </div>
+                                        {{-- MENSAGEM --}}
+                                        <div class="wrap-area-input-modal-suporte-modal-suporte">
+                                            <textarea class="area-input-modal-suporte" name="message"
+                                                placeholder="Mensagem"></textarea>
+                                            <span class="focus-area-input-modal-suporte"></span>
+                                        </div>
 
-                                    {{-- EMAIL --}}
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input class="form-control" type="text" value="" name="email" id="email"
-                                            placeholder="@.com">
-                                    </div>
-
-                                    {{-- TEXTAREA --}}
-                                    <div class="form-group purple-border">
-                                        <label for="exampleFormControlTextarea4">Mensagem</label>
-                                        <textarea class="form-control" name="mensagem" id="email" rows="3">
-                                            </textarea>
-                                    </div>
-
-                                    {{-- BOTÃO --}}
-                                    <div class="input-group-append" id="enviar">
-                                        <button class="btn btn-md btn-dark m-0 px-3" type="button" value=""
-                                            class="submit" name="enviar" id="enviar">Enviar</button>
-                                    </div>
+                                        {{-- BOTÃO --}}
+                                        <div class="container-botao-modal-suporte">
+                                            <button class="btn-formulario-modal-suporte">
+                                                Enviar
+                                            </button>
+                                        </div>
 
                                 </form>
 
@@ -134,15 +142,6 @@
                 </div>
             </div>
 
-            {{-- FOOTER MODAL SUPORTE --}}
-            <div class="modal-footer">
-                {{-- BOTÃO FECHAR --}}
-                <button type="button" class="btn btn-default" data-dismiss="modal">
-                    Fechar <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                </button>
-            </div>
-
         </div>
     </div>
-
 </div>
