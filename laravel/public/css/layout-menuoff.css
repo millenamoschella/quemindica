@@ -18,7 +18,7 @@ header {
 /* BOTÃO SUPORTE E LOGIN */
 
 .botao-suporte img {
-    width: 37px;
+    width: 35px;
     padding: 5px;
     border-radius: 5px;
     background-color: #FCDA73;
@@ -26,24 +26,26 @@ header {
 
 .btn-suporte:hover {
     font-weight: bold;
-    color: #00415e;
-    border: solid 1px #FCDA73;
-    background-color: #007592;
+    border: solid 1px #016983;
+    background-color: #FCDA73;
 }
 
 .btn-login {
-    font-size: 1em;
-    color: #FCDA73;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #00415e;
     border-radius: 5px;
-    border: solid 1px #FCDA73;
-    background-color: #007592;
+    border: solid 1px #007592;
+    background-color: #FCDA73;
+
+    box-shadow: 0 10px 20px #00000030,
+        0 6px 6px #0000003b;
 }
 
 
 .btn-login:hover {
-    color: #00415e;
-    border: solid 1.5px #FCDA73;
-    background-color: #FCDA73;
+    color: #FCDA73;
+    background-color: #007592;
 }
 
 

@@ -48,7 +48,7 @@
                 <div class="col-auto">
                     <label class="sr-only" for="inlineFormInputGroup">Email</label>
                     <div class="input-group mb-2">
-                        <div class="input-group-prepend">
+                        <div class="input-group-prepend arroba">
                             <div class="input-group-text">@</div>
                         </div>
                         <input type="email" class="form-control" id="email" placeholder="Email">
