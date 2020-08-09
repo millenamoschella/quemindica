@@ -45,7 +45,7 @@
 
                     {{-- BOTÃO --}}
                     <div class="container-botao">
-                        <button class="btn">
+                        <button class="btn-formulario">
                             Enviar
                         </button>
                     </div>

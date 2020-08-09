@@ -147,18 +147,18 @@ textarea.area-input {
 .btn-formulario {
     width: 100%;
     height: 50px;
-    border-radius: 5px;
-    background: #027592;
-    font-size: 0.8em;
-    color: #fff;
     display: flex;
+    border-radius: 5px;
     justify-content: center;
     align-items: center;
-    transition: all 0.8s;
+    font-size: 0.8em;
+    color: #fff;
+    transition: all 0.4s;
+    background: #027592;
 }
 
 .btn-formulario:hover {
-    background: #333333;
+    background: #aaaaaa;
 }
 
 /* ÁREA RESPONSIVA */
