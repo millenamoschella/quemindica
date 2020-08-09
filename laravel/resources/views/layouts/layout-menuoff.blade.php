@@ -34,43 +34,46 @@
 
     {{-- MENU --}}
 
-    <header class="container-fluid fixed-top">
+    <header class="container-fluid fixed-top nav-off">
 
         {{-- ÁRREA MENU --}}
-        <nav class="container navbar" id="btn_qi">
-            <div class="container-fluid">
+        <nav class="container navbar navbar-expand">
 
-                {{-- ÁREA LOGO --}}
-                <div class="navbar-header">
-                    <a class="navbar-brand " href="{{ url('home') }}">
-                        <img src="{{ asset('../imagens/logo-icon.svg') }}" width="50" height="50" alt="">
-                        <strong id="quemindica">Quem Indica</strong>
-                    </a>
-                </div>
+            {{-- LOGO E QUEM INDICA --}}
 
-                {{-- ÁREA MODAL DE SUPORTE E LOGIN --}}
-                <ul class="nav navbar-nav navbar-right list-group list-group-horizontal">
+            <div class="logo-nav">
+                <a class="navbar-brand" href="{{ url('home') }}">
+                    <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" width="50" height="50"
+                        alt="Logo Quem Indica" class="img-fluid">
+                </a>
+                <a class="navbar-brand titulo-quemindica" href="{{ url('home') }}">
+                    QUEM INDICA
+                </a>
+            </div>
 
-                    {{-- SUPORTE NAV --}}
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#modalSuporte">
-                            <button class="button_suporte button1">
-                                <img src="{{ asset('../icones/suporte.png') }}" width="40" height="40" alt="suporte">
-                            </button>
+            {{-- BOTÕES PARA SUPORTE E LOGIN --}}
+            <div class="navbar-collapse collapse botoes-nav">
+                <ul class="navbar-nav ml-auto">
+
+                    {{-- BOTÃO SUPORTE --}}
+                    <li class="nav-item botao-suporte">
+                        <a href="#" data-toggle="modal" data-target="#modalSuporte" class="nav-link">
+                            <img src="{{ asset('../icones/suporte-qi.png') }}" class="btn-suporte">
                         </a>
                     </li>
 
-                    {{-- LOGIN NAV --}}
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#modalEntrar">
-                            <button class="button button1 text-uppercase"><strong>Entrar</strong>
+                    {{-- BOTÃO LOGIN --}}
+                    <li class="nav-item botao-login">
+                        <a href="#" data-toggle="modal" data-target="#modalEntrar" class="nav-link">
+                            <button class="btn btn-login">
+                                LOGIN
                             </button>
                         </a>
                     </li>
 
                 </ul>
-
             </div>
+
         </nav>
 
     </header>

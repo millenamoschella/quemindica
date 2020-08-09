@@ -1,39 +1,65 @@
-#btn_qi a {
-    color: #fcda73;
-    font-size: 1.5em;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-
-.button1 {
+header {
     background-color: #007592;
+}
+
+
+/* LOGO E TÍTULO QUEM INDICA */
+
+.titulo-quemindica {
     color: #FCDA73;
-    border: 1px solid #FCDA73;
+    font-weight: bold;
+}
+
+.titulo-quemindica:hover {
+    color: #FCDA73;
+}
+
+
+/* BOTÃO SUPORTE E LOGIN */
+
+.botao-suporte img {
+    width: 37px;
+    padding: 5px;
     border-radius: 5px;
-}
-
-
-.button {
-    border: none;
-    color: white;
-    padding: 8px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.button1:hover {
     background-color: #FCDA73;
-    color: #007592;
 }
 
-#cores a {
-    color: black;
+.btn-suporte:hover {
+    font-weight: bold;
+    color: #00415e;
+    border: solid 1px #FCDA73;
+    background-color: #007592;
+}
+
+.btn-login {
     font-size: 1em;
-    text-transform: uppercase;
+    color: #FCDA73;
+    border-radius: 5px;
+    border: solid 1px #FCDA73;
+    background-color: #007592;
+}
+
+
+.btn-login:hover {
+    color: #00415e;
+    border: solid 1.5px #FCDA73;
+    background-color: #FCDA73;
+}
+
+
+/* AREA RESPONSIVA */
+
+
+@media (max-width: 440px) {
+    .titulo-quemindica {
+        margin-left: -15px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 390px) {
+    .titulo-quemindica {
+        margin-left: -15px;
+        font-size: 0.6em;
+    }
 }
