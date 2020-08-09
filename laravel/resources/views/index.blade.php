@@ -57,7 +57,7 @@
 
                 {{-- BOTÃO CADASTRO --}}
                 <div class="col-auto">
-                    <button type="submit" class="btn mb-2">Cadastrar</button>
+                    <button type="submit" class="btn btn-cadastro mb-2">Cadastrar</button>
                 </div>
             </div>
         </form>

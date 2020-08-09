@@ -48,8 +48,16 @@
     padding: 10px;
 }
 
-.btn-primary {
+.btn-cadastro {
+    color: #e5e5e5;
+    font-weight: bold;
     background-color: #007592;
+    border-color: #007592;
+}
+
+.btn-cadastro:hover {
+    color: #007592;
+    background-color: #FCDA73;
     border-color: #007592;
 }
 
