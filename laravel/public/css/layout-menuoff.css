@@ -30,23 +30,32 @@ header {
     background-color: #FCDA73;
 }
 
-.btn-login {
-    font-size: 0.9em;
-    font-weight: 400;
-    color: #00415e;
-    border-radius: 5px;
-    border: solid 1px #007592;
-    background-color: #FCDA73;
-
-    box-shadow: 0 10px 20px #00000030,
-        0 6px 6px #0000003b;
-}
-
-
-.btn-login:hover {
-    color: #FCDA73;
+.botao-novo {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
     background-color: #007592;
+    border: 1px solid #016983;
+    letter-spacing: 1px;
+    transition: all 150ms linear;
+    box-shadow: 2px 2px 2px #00415e,
+        4px 4px 4px #00415e;
 }
+
+
+.botao-novo:hover {
+    background-color: #00415e;
+    border: 1px solid #00415e;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 #FCDA73;
+    box-shadow: 1px 1px 2px #002b3f;
+    transition: all 250ms linear;
+}
+
 
 
 /* AREA RESPONSIVA */

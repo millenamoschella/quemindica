@@ -65,16 +65,18 @@
                     {{-- BOTÃO LOGIN --}}
                     <li class="nav-item botao-login">
                         <a href="#" data-toggle="modal" data-target="#modalEntrar" class="nav-link">
-                            <button class="btn btn-login">
+                            <button class="btn botao-novo">
                                 LOGIN
                             </button>
                         </a>
                     </li>
 
+
                 </ul>
             </div>
 
         </nav>
+
 
     </header>
 
