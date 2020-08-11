@@ -15,10 +15,7 @@ class CreateCultureSegmentsTable extends Migration
     {
         Schema::create('culture__segments', function (Blueprint $table) {
             $table->id();
-            $table->string('musica',45);
-            $table->string('filme',45);
-            $table->string('serie',45);
-            $table->string('livro',45);
+            $table->string('tipo',45)->nullable()->default(NULL);
             $table->timestamps();
         });
     }

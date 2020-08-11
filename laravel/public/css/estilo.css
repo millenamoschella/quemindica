@@ -1,0 +1,32 @@
+/* CSS DA ESTRUTURA DO SITE */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* ELEMENTOS */
+
+/* TÍTULOS */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #007592;
+}
+
+/* LOGO */
+#quemindica {
+    margin-top: 90px;
+    width: 15%;
+}

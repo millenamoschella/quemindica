@@ -1,0 +1,22 @@
+/* PÁGINA QUEM SOMOS */
+
+.banner_conteudo {
+    background-color: #E2E2E7;
+    background-size: cover;
+    width: 100%;
+}
+
+.img_grupo {
+    padding-bottom: 50px;
+}
+
+span#sobre {
+    padding: 5px;
+    font-size: 1, 2em;
+    line-height: 35px;
+}
+
+span#sobre h4 {
+    color: #666666;
+    margin-bottom: 10px;
+}

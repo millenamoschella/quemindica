@@ -1,0 +1,267 @@
+/* CSS PÁGINA HOME/INDEX */
+
+
+/* SEÇÃO BANNER */
+
+.secao-banner {
+    overflow: hidden;
+    height: auto;
+    padding: 20px;
+    color: #FCDA73;
+    background-color: #007592;
+    background-size: cover;
+}
+
+.secao-banner img {
+    max-width: 100%;
+    margin-top: 60px;
+}
+
+.secao-banner-texto {
+    margin-bottom: 10px;
+}
+
+.secao-banner-texto h4 {
+    margin-top: 5px;
+    font-size: 2em;
+}
+
+.secao-banner-texto p {
+    padding: 5px;
+    font-size: 1.3em;
+    color: #e5e5e5;
+}
+
+
+
+/* SEÇÃO CADASTRO */
+
+
+.secao-cadastro {
+    padding: 5px;
+    color: #e5e5e5;
+    background-color: #FCDA73;
+}
+
+.secao-cadastro form {
+    margin: 10px;
+    padding: 10px;
+}
+
+.btn-cadastro {
+    color: #e5e5e5;
+    font-weight: bold;
+    background-color: #007592;
+    border-color: #007592;
+}
+
+.btn-cadastro:hover {
+    color: #007592;
+    background-color: #FCDA73;
+    border-color: #007592;
+}
+
+.arroba {
+    box-shadow: 0 1px 3px #0000001f,
+        0 1px 2px #0000003d;
+}
+
+.secao-cadastro input {
+    box-shadow: 0 1px 3px #0000001f,
+        0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.secao-cadastro input:hover {
+    box-shadow: 0 14px 28px #00000040,
+        0 10px 10px #00000038;
+}
+
+
+
+
+/* SEÇÃO SOBRE */
+
+.secao-sobre {
+    overflow: hidden;
+    height: auto;
+    color: #007592;
+    background-color: #e5e5e5;
+}
+
+.secao-sobre img {
+    padding-top: 15px;
+    margin: 10px 0px;
+    width: 600px;
+}
+
+.secao-sobre h4 {
+    margin-top: 15px;
+    font-size: 2em;
+    line-height: 36px;
+}
+
+.secao-sobre p {
+    font-size: 1.3em;
+    color: #333333;
+}
+
+
+
+/* SEÇÃO TIME */
+
+.secao-time {
+    overflow: hidden;
+    height: auto;
+    color: #FCDA73;
+    background-color: #007592;
+}
+
+.secao-time img {
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.secao-time h3 {
+    font-size: 1.7em;
+    color: #FCDA73;
+}
+
+#logo_banner {
+    width: 140px;
+    margin: 10px;
+}
+
+.secao-time p {
+    font-size: 1.5em;
+    margin: 5px;
+}
+
+
+
+/* ÁREA RESPONSIVA */
+
+@media (max-width: 360px) {
+
+    /* SEÇÃO BANNER */
+
+    .secao-banner {
+        padding: 0%;
+    }
+
+    .secao-banner img {
+        padding-top: 15px;
+    }
+
+    .secao-banner-texto h4 {
+        margin-left: 30px;
+    }
+
+    .secao-banner p {
+        font-size: 1em;
+        margin-left: 30px;
+        width: 300px;
+    }
+
+    /* SEÇÃO CADASTRO */
+
+    .secao-cadastro form {
+        padding: 0px;
+    }
+
+    .secao-cadastro form input {
+        width: 245px;
+    }
+
+    /* SEÇÃO SOBRE */
+
+    .secao-sobre p {
+        margin-top: 20px;
+        padding: 0px;
+        font-size: 1em;
+    }
+
+    .secao-sobre img {
+        padding: 0px;
+        width: 400px;
+    }
+
+    /* SEÇÃO TIME */
+
+    img .worker {
+        width: 300px;
+    }
+
+    .secao-time h3 {
+        font-size: 1.2em;
+    }
+
+    .secao-time p {
+        font-size: 1.2em;
+    }
+}
+
+
+@media (max-width: 529px) {
+
+    /* SEÇÃO CADASTRO */
+
+    .secao-cadastro form {
+        padding: 0px;
+    }
+
+    .secao-cadastro form input {
+        width: 245px;
+    }
+
+    .btn-primary {
+        margin: 0px 100px;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+    /* SEÇÃO CADASTRO */
+
+    .secao-cadastro form input {
+        width: 180px;
+    }
+
+
+    /* SEÇÃO SOBRE */
+
+    .secao-sobre {
+        padding: 10px;
+    }
+
+    .secao-sobre h4 {
+        margin-top: 15px;
+        font-size: 2em;
+    }
+
+    .secao-sobre p {
+        padding: 15px;
+        margin-left: -30px;
+        width: 300px;
+        font-size: 1em;
+        color: #333333;
+    }
+
+    /* SEÇÃO TIME */
+
+    .secao-time h3 {
+        font-size: 1em;
+        margin: 10px;
+    }
+
+    #logo_banner {
+        width: 110px;
+        margin: 10px;
+    }
+
+    .secao-time p {
+        font-size: 1em;
+        margin: 5px;
+    }
+}

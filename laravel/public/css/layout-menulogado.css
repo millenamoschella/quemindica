@@ -1,0 +1,62 @@
+/* BUSCA MENU LOGADO*/
+
+.divBusca {
+    background-size: 3vh;
+    background-image: url('../imagens/institucional/loupe.png');
+    background-position: 96%;
+    background-repeat: no-repeat;
+    border: solid 1px;
+    border-color: #cccccc;
+    border-radius: 5px;
+    margin: 0 20px;
+}
+
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    border: none;
+}
+
+.fundo {
+    background-color: #007592;
+}
+
+
+
+/* DESCOBRIR DE ONDE É ESSE CSS */
+/* MENU */
+
+.hamburguer {
+    margin-left: 50px;
+}
+
+.banner_azul {
+    background-color: #007592;
+    color: #FCDA73;
+    padding-bottom: 50px;
+}
+
+.nav_barra {
+    height: 60px;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+
+/* ÁREA RESPONSIVA */
+
+@media (max-width: 768px) {
+    .banner_azul {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 514px) {
+    #quemindica {
+        display: none;
+    }
+}

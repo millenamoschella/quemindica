@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    font-size: 20px;
+}
+
+.grid-container {
+    display: grid;
+    margin-top: -25px;
+    grid-template-columns: 15% 1fr 15%;
+    grid-template-rows: 100px 1fr 300px;
+    grid-template-areas: "header header header"
+        "left main right"
+        "left main right"
+        "footer footer footer";
+}
+
+/* SECTION HEADER --------------------------------------------------------------------------------------------------------------------------------*/
+
+.header {
+    grid-area: header;
+}
+
+
+/* SECTION ASIDE-LEFT ----------------------------------------------------------------------------------------------------------------------------*/
+
+.left {
+    grid-area: left;
+    background-color: #0f4c81;
+    padding: 20px;
+}
+
+#avatar-usuario img {
+    width: 150px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.profile-header-img {
+    padding: 10px;
+}
+
+.rank-label-container {
+    margin-top: -19px;
+    text-align: center;
+}
+
+.label.label-default.rank-label {
+    background-color: #007592;
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+    color: #fff;
+}
+
+.menu-lateral {
+    margin: 25px 0px;
+}
+
+.icone {
+    margin: 10px;
+}
+
+
+#explorar-hashtags {
+    text-align: left;
+    color: #fff;
+    padding: 10px;
+}
+
+#explorar-hashtags h4 {
+    font-weight: bold;
+}
+
+#explorar-hashtags,
+.menu-lateral ul li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+#explorar-hastags,
+.menu-lateral ul li a {
+    padding: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+#explorar-hashtags,
+.menu-lateral ul li a:hover {
+    color: #007592;
+    font-weight: bold;
+}
+
+
+/* SECTION ASIDE-RIGHT ---------------------------------------------------------------------------------------------------------------------------*/
+
+.right {
+    grid-area: right;
+    background-color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.right h4 {
+    padding: 10px 0px;
+    margin: 10px 0px;
+    color: #fff;
+    text-align: center;
+}
+
+#cards-servicos {
+    padding: 10px;
+}
+
+#cards-servicos img {
+    width: 150px;
+    margin: 10px;
+}
+
+
+/* SECTION CONTEÚDO ------------------------------------------------------------------------------------------------------------------------------*/
+
+.main {
+    grid-area: main;
+    background-color: #ffffff;
+}
+
+.hashtags {
+    display: flex;
+}
+
+#hashtags ul li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+#hashtags ul li a {
+    padding: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+    background-color: #666;
+    margin: 2px;
+    padding: 1px;
+    border-radius: 20px;
+}
+
+#hashtags ul li a:hover {
+    color: #007592;
+    font-weight: bold;
+}
+
+
+/* SECTION FOOTER --------------------------------------------------------------------------------------------------------------------------------*/
+
+.footer {
+    grid-area: footer;
+}

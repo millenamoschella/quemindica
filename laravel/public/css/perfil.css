@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: white;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    font-size: 16px;
+}
+
+header {
+    background-color: #e5e5e5;
+}
+
+.nav_barra {
+    height: 60px;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+
+/* banner index topo */
+
+.banner_top {
+    margin-top: 50px;
+    background-color: #007592;
+    color: #FCDA73;
+    background-size: cover;
+    width: 100%;
+    height: 78vh;
+}
+
+.service {
+    margin-left: 25px;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.texto_home {
+    color: #e5e5e5;
+    padding: 5px;
+    font-size: 1.3em;
+    line-height: 30px;
+}
+
+#margem_texto {
+    margin-top: 40px;
+}
+
+#btn_qi a {
+    color: #fcda73;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#cor {
+    color: #fcda73;
+    font-size: 60px;
+}
+
+#tam {
+    font-size: 50px;
+    color: #fcda73;
+}
+
+.caracter {
+    font-size: 25px;
+    text-align: justify;
+    padding: 5px;
+}
+
+.but {
+    padding: 30px;
+}
+
+
+/* banner index meio */
+
+.banner_middle {
+    background-color: #e5e5e5;
+    color: #007592;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+}
+
+.texto_meio {
+    color: #333333;
+    padding: 5px;
+    font-size: 1.3em;
+    line-height: 30px;
+}
+
+.img_rede_social {
+    margin-right: 25px;
+    margin-top: 20px;
+    width: 90%;
+}
+
+
+/* banner cadastro index */
+
+.banner_cadastro {
+    background-color: #FCDA73;
+    color: #e5e5e5;
+    background-size: cover;
+    width: 100%;
+    height: 10vh;
+}
+
+.alinha_form {
+    margin-top: 16px;
+}
+
+.btn-azul {
+    background: #00415e;
+}
+
+
+/* barra de busca */
+
+#btnBusca {
+    width: 25px;
+    position: relative;
+    margin: 6px 0 6px 0;
+}
+
+.banner_azul {
+    background-color: #007592;
+    background-size: cover;
+    color: #FCDA73;
+    width: 100%;
+    height: 47vh;
+}
+
+#quemindica {
+    margin-top: 90px;
+    width: 15%;
+}
+
+
+/* sobre nós */
+
+.banner_conteudo {
+    background-color: #E2E2E7;
+    background-size: cover;
+    width: 100%;
+}
+
+#grupo {
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width: 40%;
+}
+
+span#sobre {
+    padding: 5px;
+    font-size: 1, 2em;
+    line-height: 35px;
+}
+
+span#sobre h4 {
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+
+/* FAQ */
+
+.banner_cinza {
+    background-color: #333333;
+    background-size: cover;
+    width: 100%;
+    height: 27vh;
+}
+
+.banner_cinza h1 {
+    color: #FCDA73;
+    font-size: 5em;
+    margin-top: 60px;
+}
+
+.banner_faq {
+    background-color: #E2E2E7;
+    background-size: cover;
+    width: 100%;
+    height: 110vh;
+}
+
+.perguntas {
+    margin-top: 50px;
+}
+
+#hashtag {
+    margin-left: 20px;
+    margin-top: 60px;
+    width: 8%;
+}
+
+.question-1 {
+    margin-top: 200px;
+}
+
+.question {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.question input,
+.question .answer {
+    display: none
+}
+
+.question label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%
+}
+
+.question input:checked~.answer {
+    display: block
+}
+
+
+/* foooter */
+
+.rodape {
+    background-color: #333333;
+    padding: 15px;
+}
+
+ul li a {
+    color: white;
+}
+
+#face {
+    width: 100px;
+}
+
+
+/*CSS da pagina Minha Conta*/
+
+.imagemUsuario {
+    padding: 20px;
+    margin-top: 0%;
+    border-radius: 50%;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nomeUsuario {
+    padding: 20px;
+    margin-top: 0%;
+    width: 100%;
+    color: #FCDA73;
+    font-size: 1.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fotoPequena {
+    width: 45px;
+    border-radius: 50%;
+}
+
+#imgHashtag {
+    width: 25px;
+}
+
+.dropdown {
+    margin-top: 1%;
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+#imgAmigos {
+    width: 60px;
+}
+
+#minhasHashtags {
+    background-color: #0f4c81;
+    border: solid 1px;
+}
+
+#posicao {
+    width: 100%;
+    margin-left: 0;
+}
+
+#ladoDireito {
+    width: 100%;
+    grid-area: right;
+    background-color: #666;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-right: -23%;
+}
+
+
+/* PAGINA DE SERVICOS */
+
+#topo1 {
+    margin-top: 15px;
+}
+
+#topo {
+    margin-top: 15px;
+}
+
+#tituloServicos {
+    width: 100%;
+    color: #0f4c81;
+}
