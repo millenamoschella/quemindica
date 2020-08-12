@@ -5,6 +5,14 @@
 
 <h1 align="center">Quem Indica</h1>
 
+
+
+[![GitHub stars](https://img.shields.io/github/stars/millenamoschella/quemindica)](https://github.com/millenamoschella/quemindica/stargazers)
+![GitHub last commit](https://img.shields.io/github/last-commit/millenamoschella/quemindica)
+![GitHub contributors](https://img.shields.io/github/contributors/millenamoschella/quemindica)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/millenamoschella/quemindica)
+
+
 > Projeto Integrador - Digital House :star2:
 
 > Status do Projeto: Em desenvolvimento :grey_exclamation:
