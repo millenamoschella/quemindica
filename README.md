@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://quem-indica.herokuapp.com/">
-    <img src="https://quem-indica.herokuapp.com/imagens/logo_icon.svg" width="120">
+    <img src="https://quem-indica.herokuapp.com/imagens/logo_icon.svg" width="200">
   </a>
 
 <h1 align="center">Quem Indica</h1>
