@@ -1,7 +1,11 @@
-# Projeto Integrador - Digital House :star2:
+<p align="center">
+  <a href="https://quem-indica.herokuapp.com/">
+    <img src="https://quem-indica.herokuapp.com/imagens/logo_icon.svg" width="120">
+  </a>
 
-#  <img src="https://quem-indica.herokuapp.com/imagens/logo_icon.svg" width="48"> Quem Indica
+<h1 align="center">Quem Indica</h1>
 
+> Projeto Integrador - Digital House :star2:
 
 > Status do Projeto: Em desenvolvimento :grey_exclamation:
 ## Deploy da Aplicação com Heroku: 
