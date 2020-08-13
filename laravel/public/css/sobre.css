@@ -1,23 +1,25 @@
 .div1-quemsomos {
     width: 100%;
     height: auto;
-    padding: 60px 20px;
-    background-color: #e5e5e5;
+    background-color: #01a3cc;
+}
+
+.div1-quemsomos h1 {
+    margin-top: 100px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.div1-quemsomos h1,
+p {
+    color: #fff;
 }
 
 .div1-quemsomos img {
-    border-radius: 50px;
-    filter: grayscale(100%) contrast(120%);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    width: 100%i;
+    height: auto;
+    margin-top: -530px;
 }
-
-.div1-quemsomos img:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
 
 /* AVATARS */
 
@@ -32,21 +34,18 @@
 }
 
 .avatar-time {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .avatar-time:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.251), 0 10px 10px #00000038;
 }
-
 
 .social-link {
     width: 30px;
     height: 30px;
-    border: 1px solid #ddd;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,4 +60,10 @@
     background: #ddd;
     text-decoration: none;
     color: #555;
+}
+
+/* SEÇÃO QUEM SOMOS DIVS */
+
+.secao-divs {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }

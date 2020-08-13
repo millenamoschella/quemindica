@@ -43,8 +43,7 @@
 
             <div class="logo-nav">
                 <a class="navbar-brand" href="{{ url('home') }}">
-                    <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" width="50" height="50"
-                        alt="Logo Quem Indica" class="img-fluid">
+                    <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" alt="Logo Quem Indica" class="img-fluid">
                 </a>
                 <a class="navbar-brand titulo-quemindica" href="{{ url('home') }}">
                     QUEM INDICA
@@ -64,16 +63,40 @@
 
                     {{-- BOTÃO LOGIN --}}
                     <li class="nav-item botao-login">
+
                         <a href="#" data-toggle="modal" data-target="#modalEntrar" class="nav-link">
-                            <button class="btn botao-novo">
+                            <button class="botao-entrar">
                                 LOGIN
                             </button>
                         </a>
-                    </li>
 
+                    </li>
 
                 </ul>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </nav>
 

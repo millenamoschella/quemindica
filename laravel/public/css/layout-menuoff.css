@@ -5,6 +5,11 @@ header {
 
 /* LOGO E TÍTULO QUEM INDICA */
 
+
+.logo-nav img {
+    width: 60px;
+}
+
 .titulo-quemindica {
     color: #FCDA73;
     font-weight: bold;
@@ -30,31 +35,56 @@ header {
     background-color: #FCDA73;
 }
 
-.botao-novo {
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    position: relative;
-    text-decoration: none;
+
+.botao-entrar {
+    padding: 9px 25px;
+    box-shadow: inset 0px 0px 0px 1px #7fb6ca;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #016983;
     text-transform: uppercase;
-    background-color: #007592;
-    border: 1px solid #016983;
-    letter-spacing: 1px;
-    transition: all 150ms linear;
-    box-shadow: 2px 2px 2px #00415e,
-        4px 4px 4px #00415e;
+    font-weight: 800;
+    font-size: 14px;
+    position: relative;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    margin: auto;
+    display: block;
 }
 
+.botao-entrar:focus {
+    outline: 0;
+}
 
-.botao-novo:hover {
-    background-color: #00415e;
-    border: 1px solid #00415e;
-    color: #fff;
+.botao-entrar:before {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #01586e;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    transform: translate(8px, 8px);
     text-decoration: none;
-    text-shadow: -1px -1px 0 #FCDA73;
-    box-shadow: 1px 1px 2px #002b3f;
-    transition: all 250ms linear;
 }
+
+.botao-entrar:hover:before {
+    transform: translate(0px, 0px);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

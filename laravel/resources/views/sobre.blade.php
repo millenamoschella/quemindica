@@ -7,41 +7,37 @@
     {{-- DIV 1 --}}
     <div class="div1-quemsomos">
         <div class="container">
-            <div class="row h-100 align-items-center py-5">
-                <div class="col-lg-6">
+            <div class="row text-center">
+                <div class="col-lg-12 ">
 
                     {{-- TÍTULO --}}
-                    <h1 class="display-4 py-4">Quem Somos</h1>
+                    <h1> Quem Somos </h1>
 
                     {{-- PARÁGRAFO 1 --}}
-                    <p class="lead text-muted px-5">
+                    <p class="lead px-5">
                         Quem Indica é uma comunidade online especializada em Indicar
                         serviços (freelancer) para
                         trabalhos cotidianos e produtos.
                     </p>
-                    <p class="lead text-muted px-5">
-                        Disponível neste website -
-                        <a href="https://www.quemindica.io" class="text-muted">
-                            <u>Quem Indica</u>
-                        </a>
-                    </p>
+
                 </div>
 
-                {{-- IMAGEM 1 --}}
-                <div class="col-lg-6 d-none d-lg-block">
-                    <img src="{{ asset('../imagens/institucional/equipe.png') }}" alt="Time Quem Indica" class="img-fluid">
-                </div>
 
             </div>
         </div>
+        {{-- IMAGEM 1 --}}
+        <div class="">
+            <img src="{{ asset('../imagens/institucional/quemsomos/equipe-sobre.png') }}" alt="Time Quem Indica"
+                class="img-fluid">
+        </div>
     </div>
 
-    <div class="bg-white py-5">
+
+    <div class="bg-white py-5 secao-divs">
         <div class="container py-5">
 
-
             {{-- DIV 2 --}}
-            <div class="row align-items-center mb-5">
+            <div class="row align-items-center mb-5 div-2">
                 <div class="col-lg-6 order-2 order-lg-1">
 
                     {{-- PARÁGRAFO 2 --}}
@@ -55,28 +51,29 @@
                         promete beneficiar os usuários que fazem várias indicações.
                     </p>
                 </div>
-
                 {{-- IMAGEM 2 --}}
-                <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img
+                <div class="col-lg-6 mx-auto order-1 order-lg-2"><img
                         src="{{ asset('../imagens/institucional/imagem-sobre2.jpg') }}" alt="Banner Time"
                         class="img-fluid mb-4 mb-lg-0">
                 </div>
+
             </div>
 
 
             {{-- DIV 3 --}}
-            <div class="row align-items-center">
+            <div class="row align-items-center mb-5 div-3">
+
                 {{-- IMAGEM 3 --}}
-                <div class="col-lg-5 px-5 mx-auto">
-                    <img src="{{ asset('../imagens/institucional/imagem-sobre1.jpg') }}" alt="Imagem Conexão"
+                <div class="col-lg-6 px-5 mx-auto">
+                    <img src="{{ asset('../imagens/institucional/quemsomos/sobre-4.jpg') }}" alt="Imagem Conexão"
                         class="img-fluid mb-4 mb-lg-0">
                 </div>
 
                 <div class="col-lg-6">
 
                     {{-- PARÁGRAFO 3 --}}
-                    <i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
-                    <p class="font-italic text-muted mb-4">
+
+                    <p class="font-italic text-muted mb-4 ">
                         Quem Indica é o reflexo de uma sociedade cada vez mais interligada entre si, que apesar de
                         possuírem diversas diferenças,
                         elas apresentam algumas características em comum: o compartilhamento de informações e de
@@ -89,7 +86,7 @@
 
 
             {{-- DIV 4 --}}
-            <div class="row align-items-center mb-5">
+            <div class="row align-items-center mb-5 div-4">
                 <div class="col-lg-6 order-2 order-lg-1">
                     {{-- PÁRÁGRAFO 4 --}}
                     <p class="font-italic text-muted mb-4">
@@ -102,8 +99,8 @@
                 </div>
 
                 {{-- IMAGEM 4 --}}
-                <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2">
-                    <img src="{{ asset('../imagens/institucional/sobre-03.jpg') }}" alt="Banner Tecnologia"
+                <div class="col-lg-6 mx-auto order-1 order-lg-2">
+                    <img src="{{ asset('../imagens/institucional/quemsomos/sobre-7.jpg') }}" alt="Banner Tecnologia"
                         class="img-fluid mb-4 mb-lg-0">
                 </div>
             </div>
@@ -144,7 +141,7 @@
                                     href="https://www.linkedin.com/in/marcia-tiemi-miashiro-yokota-245046170/"
                                     class="social-link" target="_blank"><i
                                         class=" fa
-                                                                                                                                                                                                                                                                                        fa-linkedin"></i></a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    fa-linkedin"></i></a>
                             </li>
 
                         </ul>
@@ -168,7 +165,7 @@
                             <li class="list-inline-item"><a href="https://www.linkedin.com/in/millenamoschella/"
                                     class="social-link" target="_blank"><i
                                         class=" fa
-                                                                                                                                                                                                                                                                                        fa-linkedin"></i></a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    fa-linkedin"></i></a>
                             </li>
 
                         </ul>
@@ -249,17 +246,5 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-    </section>
 
 @endsection
