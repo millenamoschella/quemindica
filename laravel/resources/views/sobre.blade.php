@@ -5,10 +5,10 @@
 
 
     {{-- DIV 1 --}}
-    <div class="div1-quemsomos">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 text-center">
+    <div class="container h-100">
+        <div class="div1-quemsomos ">
+            <div class="row h-100 align-items-center ">
+                <div class="col-12 ">
 
                     {{-- TÍTULO --}}
                     <h1 class="font-weight-light">
@@ -144,7 +144,7 @@
                                     href="https://www.linkedin.com/in/marcia-tiemi-miashiro-yokota-245046170/"
                                     class="social-link" target="_blank"><i
                                         class=" fa
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            fa-linkedin"></i></a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            fa-linkedin"></i></a>
                             </li>
 
                         </ul>
@@ -168,7 +168,7 @@
                             <li class="list-inline-item"><a href="https://www.linkedin.com/in/millenamoschella/"
                                     class="social-link" target="_blank"><i
                                         class=" fa
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            fa-linkedin"></i></a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            fa-linkedin"></i></a>
                             </li>
 
                         </ul>

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('../css/modal.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/sobre.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/faq.css') }}">
 
     {{-- FAVICON --}}
     <link rel="shortcut icon" href="{{ asset('../imagens/logo/logo-icon.svg') }}" type="image/x-icon">

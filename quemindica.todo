@@ -4,7 +4,6 @@ TODOS:
     
     ☐ Adicionar login e registrar laravel/ui -
     ☐ Arrumar CSS/Registrar e Login -
-    ☐ Arrumar CSS/Sobre -
     ☐ Organizar CSS Estilo -
     ☐ Arrumar CSS/Feed - @critical 
     ☐ Conteúdo páginas: Política de Dados, Política de Cookies e Temos de Uso -
@@ -28,6 +27,7 @@ TODOS:
         ✔ Criar um controller Site para organizar as páginas estáticas @done(20-08-07 19:47)
         ✔ Arrumar CSS/Servicos @done(20-08-07 23:28)
         ✔ Organizar CSS Footer @done(20-08-07 23:33)
+        ✔ Arrumar CSS/Sobre @done(20-08-13 11:23)
     
 
 TAGS: 

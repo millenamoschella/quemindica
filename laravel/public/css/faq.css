@@ -1,53 +1,103 @@
-/* FAQ */
-
-.banner_faq {
-    background-color: #E2E2E7;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.secao-faq {
+    padding: 100px;
+    background-color: #eee;
 }
 
-.questions_box {
-    height: 90vh;
-    padding-bottom: 50px;
-    overflow: auto;
-}
-
-.h3_title {
-    padding: 50px 0;
-    text-align: center;
-    color: #007592;
-    text-transform: uppercase;
-}
-
-
-#hashtag {
-    margin-left: 20px;
-    margin-top: 80px;
-    width: 8%;
-}
-
-.question-1 {
-    margin-top: 200px;
-}
-
-.question {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-}
-
-.question input,
-.question .answer {
-    display: none
-}
-
-.question label {
-    display: inline-block;
+.secao-faq h1 {
     font-weight: bold;
-    margin-bottom: 5px;
-    width: 100%
 }
 
-.question input:checked~.answer {
-    display: block
+.faq-nav {
+    flex-direction: column;
+    margin: 0 0 32px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 5px #55555526;
+}
+
+.faq-nav .nav-link {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 13px 16px;
+    background-color: #fff;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    color: #616161;
+    transition: background-color 0.2s ease;
+}
+
+.faq-nav .nav-link:hover {
+    background-color: #f6f6f6;
+}
+
+.faq-nav .nav-link.active {
+    background-color: #f6f6f6;
+    font-weight: 700;
+    color: #000000de;
+}
+
+.faq-nav .nav-link:last-of-type {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom: 0;
+}
+
+.faq-nav .nav-link i.mdi {
+    margin-right: 5px;
+    font-size: 18px;
+    position: relative;
+}
+
+.tab-content {
+    box-shadow: 0 1px 5px #55555526;
+}
+
+.tab-content .card {
+    border-radius: 0;
+}
+
+.tab-content .card-header {
+    padding: 15px 16px;
+    border-radius: 0;
+    background-color: #f6f6f6;
+}
+
+.tab-content .card-header h5 {
+    margin: 0;
+}
+
+.tab-content .card-header h5 button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    font-weight: 700;
+    color: rgba(0, 0, 0, .87);
+    text-align: left;
+    white-space: normal;
+}
+
+.tab-content .card-header h5 button:hover,
+.tab-content .card-header h5 button:focus,
+.tab-content .card-header h5 button:active,
+.tab-content .card-header h5 button:hover:active {
+    text-decoration: none;
+}
+
+.tab-content .card-body p {
+    color: #616161;
+}
+
+.tab-content .card-body p:last-of-type {
+    margin: 0;
+}
+
+.accordion>.card:not(:first-child) {
+    border-top: 0;
+}
+
+.collapse.show .card-body {
+    border-bottom: 1px solid #00000020;
 }
