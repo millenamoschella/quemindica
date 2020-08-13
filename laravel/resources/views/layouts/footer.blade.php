@@ -13,6 +13,9 @@
                         <p><a href="{{ url('suporte') }}">Suporte</a></p>
                     </li>
                     <li>
+                        <p><a href="{{ url('faq') }}">FAQ</a></p>
+                    </li>
+                    <li>
                         <p><a href="{{ url('termos') }}">Termos de Uso</a></p>
                     </li>
                     <li>
