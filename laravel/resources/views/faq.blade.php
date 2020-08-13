@@ -11,39 +11,45 @@
 
             <div class="row">
 
-                {{-- MENU --}}
-                <div class="col-lg-4">
+                {{-- MENU TÓPICOS --}}
+                <div class="col-lg-4 menu-faq">
                     <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+
                         <a href="#tab1" class="nav-link active" data-toggle="pill" role="tab" aria-controls="tab1"
                             aria-selected="true">
                             <i class="fa fa-question p-2" aria-hidden="true"></i>
                             Perguntas Frequentes
                         </a>
+
                         <a href="#tab2" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab2"
                             aria-selected="false">
                             <i class="fa fa-user p-2" aria-hidden="true"></i>
                             Perfil
                         </a>
+
                         <a href="#tab3" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab3"
                             aria-selected="false">
                             <i class="fa fa-cog p-2" aria-hidden="true"></i>
                             Conta
                         </a>
+
                         <a href="#tab4" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab4"
                             aria-selected="false">
                             <i class="fa fa-quote-right p-2" aria-hidden="true"></i>
                             Serviços e Indicações
                         </a>
+
                         <a href="#tab5" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab5"
                             aria-selected="false">
                             <i class="fa fa-star-half-o p-2" aria-hidden="true"></i>
                             Pontuação
                         </a>
+
                     </div>
                 </div>
 
                 {{-- PERGUNTAS --}}
-                <div class="col-lg-8">
+                <div class="col-lg-8 secao-perguntas">
                     <div class="tab-content" id="faq-tab-content">
 
                         {{-- PERGUNTA: PERGUNTAS FREQUENTES --}}
@@ -58,6 +64,7 @@
                                                 data-target="#accordion-tab-1-content-1" aria-expanded="false"
                                                 aria-controls="accordion-tab-1-content-1">
                                                 Pergunta 1
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -81,6 +88,7 @@
                                                 data-target="#accordion-tab-1-content-2" aria-expanded="false"
                                                 aria-controls="accordion-tab-1-content-2">
                                                 Pergunta 2
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -104,6 +112,7 @@
                                                 data-target="#accordion-tab-1-content-3" aria-expanded="false"
                                                 aria-controls="accordion-tab-1-content-3">
                                                 Pergunta 3
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -135,6 +144,7 @@
                                                 data-target="#accordion-tab-2-content-1" aria-expanded="false"
                                                 aria-controls="accordion-tab-2-content-1">
                                                 Pergunta 1
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -158,6 +168,7 @@
                                                 data-target="#accordion-tab-2-content-2" aria-expanded="false"
                                                 aria-controls="accordion-tab-2-content-2">
                                                 Pergunta 2
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -181,6 +192,7 @@
                                                 data-target="#accordion-tab-2-content-3" aria-expanded="false"
                                                 aria-controls="accordion-tab-2-content-3">
                                                 Pergunta 3
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -212,6 +224,7 @@
                                                 data-target="#accordion-tab-3-content-1" aria-expanded="false"
                                                 aria-controls="accordion-tab-3-content-1">
                                                 Pergunta 1
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -235,6 +248,7 @@
                                                 data-target="#accordion-tab-3-content-2" aria-expanded="false"
                                                 aria-controls="accordion-tab-3-content-2">
                                                 Pergunta 2
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -258,6 +272,7 @@
                                                 data-target="#accordion-tab-3-content-3" aria-expanded="false"
                                                 aria-controls="accordion-tab-3-content-3">
                                                 Pergunta 3
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -289,6 +304,7 @@
                                                 data-target="#accordion-tab-4-content-1" aria-expanded="false"
                                                 aria-controls="accordion-tab-4-content-1">
                                                 Pergunta 1
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -313,6 +329,7 @@
                                                 data-target="#accordion-tab-4-content-2" aria-expanded="false"
                                                 aria-controls="accordion-tab-4-content-2">
                                                 Pergunta 2
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -337,6 +354,7 @@
                                                 data-target="#accordion-tab-4-content-3" aria-expanded="false"
                                                 aria-controls="accordion-tab-4-content-3">
                                                 Pergunta 3
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -369,6 +387,7 @@
                                                 data-target="#accordion-tab-5-content-1" aria-expanded="false"
                                                 aria-controls="accordion-tab-5-content-1">
                                                 Pergunta 1
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -393,6 +412,7 @@
                                                 data-target="#accordion-tab-5-content-2" aria-expanded="false"
                                                 aria-controls="accordion-tab-5-content-2">
                                                 Pergunta 2
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -417,6 +437,7 @@
                                                 data-target="#accordion-tab-5-content-3" aria-expanded="false"
                                                 aria-controls="accordion-tab-5-content-3">
                                                 Pergunta 3
+                                                <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                             </button>
                                         </h5>
                                     </div>
