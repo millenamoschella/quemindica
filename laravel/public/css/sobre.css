@@ -1,7 +1,8 @@
 .div1-quemsomos {
+    width: 100%;
     height: auto;
-    background-size: cover;
     background-color: #01a3cc;
+    padding: 20px;
 }
 
 .div1-quemsomos h1 {
@@ -15,9 +16,8 @@ p {
     color: #fff;
 }
 
-.imagem-time-sobre img {
+.imagem-time-sobre {
     background-color: #01a3cc;
-    height: auto;
 }
 
 /* AVATARS */

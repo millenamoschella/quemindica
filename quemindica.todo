@@ -1,10 +1,8 @@
 *LISTA DE TAREFAS PROJETO*:
     
 TODOS:
-    
     ☐ Adicionar login e registrar laravel/ui -
     ☐ Arrumar CSS/Registrar e Login -
-    ☐ Organizar CSS Estilo -
     ☐ Arrumar CSS/Feed - @critical 
     ☐ Conteúdo páginas: Política de Dados, Política de Cookies e Temos de Uso -
     ☐ Criar um CSS para página de serviços
@@ -13,12 +11,12 @@ TODOS:
     CRIAÇÕES - PÁGINAS NOVAS:
         ☐ Criar layout para página amigos @4h @critical 
         ☐ Criar layout para página configurações @4h @critical 
-        ☐ Criar um painel admin para a equipe @4h
+        ☐ Criar um painel admin para a equipe @4h @critical 
 
 
     INICIADOS:
         ☐ Arrumar CSS/Modal - @started(20-08-05 22:07)
-        ☐ Arrumar CSS/FAQ - @started(20-08-07 19:33)
+        ☐ Organizar CSS Estilo - @started(20-08-05 22:07)
     
 
     FINALIZADOS: 
@@ -28,6 +26,7 @@ TODOS:
         ✔ Arrumar CSS/Servicos @done(20-08-07 23:28)
         ✔ Organizar CSS Footer @done(20-08-07 23:33)
         ✔ Arrumar CSS/Sobre @done(20-08-13 11:23)
+        ✔ Arrumar CSS/FAQ @done(20-08-13 17:40)
     
 
 TAGS: 

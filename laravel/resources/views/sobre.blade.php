@@ -5,27 +5,27 @@
 
 
     {{-- DIV 1 --}}
-    <div class="container h-100">
-        <div class="div1-quemsomos ">
-            <div class="row h-100 align-items-center ">
-                <div class="col-12 ">
 
-                    {{-- TÍTULO --}}
-                    <h1 class="font-weight-light">
-                        Quem Somos
-                    </h1>
+    <div class="div1-quemsomos">
+        <div class="row text-center">
+            <div class="col-12">
 
-                    {{-- PARÁGRAFO 1 --}}
-                    <p class="lead">
-                        Quem Indica é uma comunidade online especializada em Indicar
-                        serviços (freelancer) para
-                        trabalhos cotidianos e produtos.
-                    </p>
+                {{-- TÍTULO --}}
+                <h1 class="font-weight-light">
+                    Quem Somos
+                </h1>
 
-                </div>
+                {{-- PARÁGRAFO 1 --}}
+                <p class="lead">
+                    Quem Indica é uma comunidade online especializada em Indicar
+                    serviços (freelancer) para
+                    trabalhos cotidianos e produtos.
+                </p>
+
             </div>
         </div>
     </div>
+
 
     {{-- IMAGEM 1 --}}
     <section class="imagem-time-sobre">
@@ -144,7 +144,7 @@
                                     href="https://www.linkedin.com/in/marcia-tiemi-miashiro-yokota-245046170/"
                                     class="social-link" target="_blank"><i
                                         class=" fa
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            fa-linkedin"></i></a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    fa-linkedin"></i></a>
                             </li>
 
                         </ul>
@@ -168,7 +168,7 @@
                             <li class="list-inline-item"><a href="https://www.linkedin.com/in/millenamoschella/"
                                     class="social-link" target="_blank"><i
                                         class=" fa
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            fa-linkedin"></i></a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    fa-linkedin"></i></a>
                             </li>
 
                         </ul>
