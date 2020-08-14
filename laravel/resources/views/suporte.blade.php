@@ -17,7 +17,8 @@
                     <h4 class="titulo">Suporte</h4>
 
                     {{-- FORMULÁRIO --}}
-                    <form class="container">
+                    <form action="{{ route('suporte') }}" method="POST" class="container">
+                        @csrf
 
                         {{-- NOME --}}
                         <div class="row">

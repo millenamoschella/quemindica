@@ -35,13 +35,14 @@
     {{-- ÁREA SEÇÃO CADASTRO --}}
 
     <section class="secao-cadastro">
-        <form>
+        <form action="{{ route('registrar') }}" method="POST">
+            @csrf
             <div class="form-row justify-content-center">
 
                 {{-- NOME --}}
                 <div class="col-auto">
                     <label class="sr-only" for="inlineFormInput">Nome</label>
-                    <input type="text" class="form-control mb-2" id="nome" placeholder="Nome">
+                    <input type="text" name="nome" class="form-control mb-2" id="nome" placeholder="Nome">
                 </div>
 
                 {{-- EMAIL --}}
@@ -51,7 +52,7 @@
                         <div class="input-group-prepend arroba">
                             <div class="input-group-text">@</div>
                         </div>
-                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Email">
                     </div>
                 </div>
 
