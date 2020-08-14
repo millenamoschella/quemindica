@@ -115,5 +115,10 @@
         </div>
     </section>
 
+    {{-- VOLTAR PARA O TOPO - CSS NO ESTILO.CSS --}}
+
+    <a href="#" id="toTopBtn" class="btn toTopBtn" data-abc="true">
+        <i class="fa fa-arrow-up"></i>
+    </a>
 
 @endsection
