@@ -15,7 +15,6 @@
 
 .div-formulario {
     margin-top: 30px;
-    /* flex-wrap: wrap; */
     border-radius: 5px;
     background: #ffffff;
     box-shadow: 0 1px 3px #0000001f, 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -84,7 +83,7 @@ textarea.area-input {
     transition: all 0.4s;
 }
 
-.area-input:focus + .focus-area-input + .icone-input {
+.area-input:focus+.focus-area-input+.icone-input {
     color: #027592;
     padding-left: 26px;
 }

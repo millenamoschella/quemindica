@@ -1,0 +1,102 @@
+.secao-termos {
+    background-color: #018eb1;
+    padding: 80px;
+}
+
+/* MENU */
+
+.ative,
+.menu-termos a:hover {
+    background-color: #018eb1;
+    border: 1px solid #fff;
+}
+
+.menu-termos {
+    margin-bottom: 10px;
+}
+
+.menu-termos a {
+    padding: 20px;
+    background-color: #027592;
+    color: #fff;
+    border: 1px solid #027592;
+}
+
+.menu-termos a:hover {
+    background-color: #018eb1;
+    border: 1px solid #fff;
+}
+
+.menu-termos:focusbele {
+    background-color: #018eb1;
+    border: 1px solid #fff;
+}
+
+
+
+/* TEXTOS */
+
+.textos-termos-politicas div {
+    border-radius: 5px;
+    border: 1px solid #018eb1;
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.textos-termos-politicas div:hover {
+    box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
+}
+
+.textos-termos-politicas h2 {
+    font-size: 2em;
+    color: #027592;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.textos-termos-politicas p {
+    font-size: 0.875em;
+    line-height: 1.3;
+    color: #027592;
+}
+
+
+/* MENU VOLTAR AO TOPO */
+
+.toTopBtn {
+    position: fixed;
+    bottom: 26px;
+    right: 39px;
+    z-index: 98;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #027592;
+
+    box-shadow: 0 1px 3px #0000001f,
+        0 1px 2px #0000003d;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.toTopBtn:hover {
+    font-weight: bold;
+    background-color: #FCDA73;
+    color: #027592;
+    box-shadow: 0 14px 28px #00000040,
+        0 10px 10px #00000038;
+}
+
+
+
+/* ÁREA RESPONSIVA */
+
+
+@media (max-width: 750px) {
+    .toTopBtn {
+        display: none;
+    }
+}

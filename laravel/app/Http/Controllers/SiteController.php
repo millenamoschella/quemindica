@@ -16,18 +16,9 @@ class SiteController extends Controller
         return view('faq');
     }
 
-    public function termos()
-    {
-        return view('termos');
-    }
 
-    public function politicaDados()
+    public function politicasTermos()
     {
-        return view('politica-dados');
-    }
-
-    public function politicaCookies()
-    {
-        return view('politica-cookies');
+        return view('politicas-termos');
     }
 }

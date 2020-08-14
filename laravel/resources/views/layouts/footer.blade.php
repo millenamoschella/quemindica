@@ -16,13 +16,13 @@
                         <p><a href="{{ url('faq') }}">FAQ</a></p>
                     </li>
                     <li>
-                        <p><a href="{{ url('termos') }}">Termos de Uso</a></p>
+                        <p><a href="{{ url('politicas-termos') }}">Termos de Uso</a></p>
                     </li>
                     <li>
-                        <p><a href="{{ url('politica-dados') }}">Politica de Dados</a></p>
+                        <p><a href="{{ url('politicas-termos') }}">Politica de Dados</a></p>
                     </li>
                     <li>
-                        <p><a href="{{ url('politica-cookies') }}">Politica de Cookies</a></p>
+                        <p><a href="{{ url('politicas-termos') }}">Politica de Cookies</a></p>
                     </li>
                 </ul>
             </div>

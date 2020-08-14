@@ -32,9 +32,8 @@ Route::get('/configuracao', 'ConfiguracaoController@configuracao')->name('config
 
 Route::get('/sobre', 'SiteController@sobre')->name('sobre');
 Route::get('/faq', 'SiteController@faq')->name('faq');
-Route::get('/termos', 'SiteController@termos')->name('termos');
-Route::get('/politica-dados', 'SiteController@politicaDados')->name('politica-dados');
-Route::get('/politica-cookies', 'SiteController@politicaCookies')->name('politica-cookies');
+Route::get('/politicas-termos', 'SiteController@politicasTermos')->name('politicas-termos');
+
 
 
 
