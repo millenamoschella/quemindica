@@ -1,33 +1,34 @@
 *LISTA DE TAREFAS PROJETO*:
-    
+
+
 TODOS:
-    ☐ Adicionar login e registrar laravel/ui -
-    ☐ Arrumar CSS/Registrar e Login -
-    ☐ Arrumar CSS/Feed - @critical 
-    ☐ Conteúdo páginas: Política de Dados, Política de Cookies e Temos de Uso -
-    ☐ Criar um CSS para página de serviços
-
-
-    CRIAÇÕES - PÁGINAS NOVAS:
+        ☐ Adicionar login e registrar laravel/ui - @high 
+        ☐ Arrumar CSS/Registrar e Login - @high
+        ☐ Arrumar CSS/Feed - @critical 
+        ☐ Arrumar CSS/Perfil - @critical 
         ☐ Criar layout para página amigos @4h @critical 
-        ☐ Criar layout para página configurações @4h @critical 
-        ☐ Criar um painel admin para a equipe @4h @critical 
+        ☐ Criar layout para página configurações @4h @high
+        ☐ Criar um painel admin para a equipe @4h @high
+        ☐ Conteúdo: Política de Dados, Política de Cookies e Temos de Uso - @low
 
 
     INICIADOS:
-        ☐ Arrumar CSS/Modal - @started(20-08-05 22:07)
-        ☐ Organizar CSS Estilo - @started(20-08-05 22:07)
-    
+        ☐ Arrumar Footer - @started(20-08-13 23:44)
+
 
     FINALIZADOS: 
-        ✔ Arrumar CSS e home @done(20-08-05 22:32)
-        ✔ Arrumar CSS/Suporte @done(20-08-07 19:32)
-        ✔ Criar um controller Site para organizar as páginas estáticas @done(20-08-07 19:47)
-        ✔ Arrumar CSS/Servicos @done(20-08-07 23:28)
-        ✔ Organizar CSS Footer @done(20-08-07 23:33)
-        ✔ Arrumar CSS/Sobre @done(20-08-13 11:23)
-        ✔ Arrumar CSS/FAQ @done(20-08-13 17:40)
+        ✔ Arrumar CSS e home - @done(20-08-05 22:32)
+        ✔ Arrumar CSS/Suporte - @done(20-08-07 19:32)
+        ✔ Criar um controller Site para organizar as páginas estáticas - @done(20-08-07 19:47)
+        ✔ Arrumar CSS/Servicos - @done(20-08-07 23:28)
+        ✔ Arrumar CSS/Modal Suporte - @done(20-08-13 17:40)
+        ✔ Organizar CSS Footer - @done(20-08-07 23:33)
+        ✔ Arrumar CSS/Sobre - @done(20-08-13 11:23)
+        ✔ Arrumar CSS/FAQ - @done(20-08-13 17:40)
+        ✔ Organizar CSS Estilo - @done(20-08-13 23:36)
+        ✔ Arrumar páginas: Política de Dados, Política de Cookies e Temos de Uso - @done(20-08-13 23:37)
+        ✔ Criar um CSS para página de serviços - @done(20-08-13 23:38)
     
 
 TAGS: 
-    @critical @high @low @today 
+    @critical @high @low @today @critical 

@@ -63,15 +63,22 @@
                         </a>
                     </li>
 
-                    {{-- BOTÃO LOGIN --}}
-                    <li class="nav-item botao-login">
+                    {{-- BOTÃO LOGIN E REGISTRAR --}}
+                    <li class="nav-item botao-loginRegistrar">
 
                         <a href="#" data-toggle="modal" data-target="#modalEntrar" class="nav-link">
                             <button class="botao-entrar">
                                 LOGIN
                             </button>
                         </a>
+                    </li>
 
+                    <li class="nav-item botao-loginRegistrar">
+                        <a href="{{ route('registrar') }}" class="nav-link">
+                            <button class="botao-registrar">
+                                REGISTRAR
+                            </button>
+                        </a>
                     </li>
 
                 </ul>
