@@ -39,11 +39,10 @@
     <header class="container-fluid fixed-top nav-off">
 
         {{-- ÁRREA MENU --}}
-        <nav class="container navbar navbar-expand">
+        <nav class="container mb-1 navbar navbar-expand-lg navbar-dark info-color">
 
             {{-- LOGO E QUEM INDICA --}}
-
-            <div class="logo-nav">
+            <div class="nav-brand logo-nav">
                 <a class="navbar-brand" href="{{ url('home') }}">
                     <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" alt="Logo Quem Indica" class="img-fluid">
                 </a>
@@ -52,8 +51,14 @@
                 </a>
             </div>
 
-            {{-- BOTÕES PARA SUPORTE E LOGIN --}}
-            <div class="navbar-collapse collapse botoes-nav">
+            {{-- MENU RESPONSIVO --}}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            {{-- BOTÕES SUPORTE, LOGIN E REGISTRAR --}}
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
                 <ul class="navbar-nav ml-auto">
 
                     {{-- BOTÃO SUPORTE --}}
@@ -63,9 +68,8 @@
                         </a>
                     </li>
 
-                    {{-- BOTÃO LOGIN E REGISTRAR --}}
+                    {{-- BOTÃO LOGIN --}}
                     <li class="nav-item botao-loginRegistrar">
-
                         <a href="#" data-toggle="modal" data-target="#modalEntrar" class="nav-link">
                             <button class="botao-entrar">
                                 LOGIN
@@ -73,6 +77,7 @@
                         </a>
                     </li>
 
+                    {{-- BOTÃO REGISTRAR --}}
                     <li class="nav-item botao-loginRegistrar">
                         <a href="{{ route('registrar') }}" class="nav-link">
                             <button class="botao-registrar">
@@ -83,32 +88,7 @@
 
                 </ul>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </nav>
-
 
     </header>
 

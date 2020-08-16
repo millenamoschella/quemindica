@@ -23,7 +23,16 @@ header {
 /* BOTÃO SUPORTE + LOGIN + REGISTRAR */
 
 
+
 /* BOTÃO SUPORTE */
+
+.botao-suporte {
+    position: relative;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+}
+
 .botao-suporte img {
     width: 35px;
     padding: 5px;
@@ -81,27 +90,4 @@ header {
 .botao-entrar:hover:before,
 .botao-registrar:hover:before {
     transform: translate(0px, 0px);
-}
-
-
-/* AREA RESPONSIVA */
-
-
-@media (max-width: 767px) {
-    .titulo-quemindica {
-        /* margin-left: -15px;
-        font-size: 0.8em; */
-        display: none;
-    }
-}
-
-@media (max-width: 390px) {
-
-    .logo-nav img {
-        display: none;
-    }
-
-    .botoes-nav {
-        margin-right: 150px;
-    }
 }
