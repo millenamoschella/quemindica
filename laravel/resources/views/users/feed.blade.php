@@ -18,7 +18,7 @@
                         <div class="row user text-center ">
 
                             {{-- EDITAR PERFIL --}}
-                            <i class="fa fa-gear"><a href="#"></a></i>
+                            <i class="fa fa-gear"><a href="{{ route('configuracao') }}"></a></i>
 
                             <div class="flex-grow-1 infos-usuario">
 
@@ -71,7 +71,8 @@
                         <i class="fa fa-list-alt" aria-hidden="true"><a href="{{ route('servicos') }}"
                                 title="">Serviços</a></i>
 
-                        <i class="fa fa-cog" aria-hidden="true"><a href="#" title="">Configurações</a></i>
+                        <i class="fa fa-cog" aria-hidden="true"><a href="{{ route('configuracao') }}"
+                                title="">Configurações</a></i>
 
                     </ul>
                 </div>
