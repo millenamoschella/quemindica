@@ -8,6 +8,6 @@ class PerfilController extends Controller
 {
     public function perfil()
     {
-        return view('perfil');
+        return view('users.perfil');
     }
 }

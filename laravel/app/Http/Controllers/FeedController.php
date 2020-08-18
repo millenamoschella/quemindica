@@ -8,6 +8,6 @@ class FeedController extends Controller
 {
     public function feed()
     {
-        return view('feed');
+        return view('users.feed');
     }
 }

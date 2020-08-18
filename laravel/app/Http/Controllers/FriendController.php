@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class FriendController extends Controller
 {
-    //
+    public function amigosPag()
+    {
+        return view('users.amigos');
+    }
 }

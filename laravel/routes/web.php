@@ -2,40 +2,49 @@
 
 use Illuminate\Support\Facades\Route;
 
-/**
- * ROTAS 
- */
+// ROTA HOME
+
+Route::get('/home', 'HomeController@home')->name('home');
 
 
-Route::get('/home', 'HomeController@home')->name('home'); //controller para página home 
+// ROTAS AUTENTICAÇÃO
 
-Route::get('/registrar', 'RegistrarController@registrar')->name('registrar'); // precisa de controller para o formulário
-
-Route::get('/login', 'LoginController@login')->name('login'); // precisa de controller para o formulário
-
-Route::get('/perfil', 'PerfilController@perfil')->name('perfil'); // precisa de controller para mostrar os posts, excluir, edtar etc
-
-Route::get('/feed', 'FeedController@feed')->name('home'); //precisa de controller, deixar compacto: reaction, post dentro de feed
-
-Route::get('/suporte', 'SuporteController@suporte')->name('suporte'); //precisa de controller para o formulário
-
-Route::get('/servicos', 'ServiceController@servicos')->name('servicos'); //talvez precise, rever
-
-Route::get('/amigos', 'FriendController@amigos')->name('amigos'); //precisa de controller para excluir um amigo/ precisar editar a view
-
-Route::get('/configuracao', 'ConfiguracaoController@configuracao')->name('configuracao'); //precisa de controller para cru usuario/ precisar editar a view
+Route::get('/registrar', 'RegistrarController@registrar')->name('registrar');
+Route::get('/login', 'LoginController@login')->name('login');
 
 
 
+// ROTAS SERVIÇOS
 
-// ROTAS - CONTROLLER SITE
+Route::get('/servicos', 'ServiceController@servicos')->name('servicos');
+
+
+
+// ROTAS AMIGOS 
+
+Route::get('/amigos', 'FriendController@amigosPag')->name('amigos');
+
+
+
+// ROTAS USUÁRIO 
+
+Route::get('/feed', 'FeedController@feed')->name('home');
+Route::get('/configuracao', 'ConfiguracaoController@configuracao')->name('configuracao');
+Route::get('/perfil', 'PerfilController@perfil')->name('perfil');
+
+
+
+// ROTAS SITE 
 
 Route::get('/sobre', 'SiteController@sobre')->name('sobre');
 Route::get('/faq', 'SiteController@faq')->name('faq');
 Route::get('/politicas-termos', 'SiteController@politicasTermos')->name('politicas-termos');
+Route::get('/suporte', 'SiteController@suporte')->name('suporte');
 
 
+// ROTAS ADMIN EQUIPE
 
+Route::get('/admin', 'AdminController@painel')->name('admin');
 
 
 

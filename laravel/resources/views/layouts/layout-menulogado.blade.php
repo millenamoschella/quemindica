@@ -16,9 +16,11 @@
     <link rel="stylesheet" href="{{ asset('../css/estilo.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/suporte.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/perfil.css') }}">
+
     <link rel="stylesheet" href="{{ asset('../css/feed.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/servicos.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/admin.css') }}" class="rel">
 
     {{-- FAVICON --}}
     <link rel="shortcut icon" href="{{ asset('../imagens/logo/logo-icon.svg') }}" type="image/x-icon">
