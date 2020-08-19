@@ -97,7 +97,7 @@
                         </div>
 
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer card-footer-feed">
                         <a href="#">Ver Mais</a>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                                     placeholder="Qual a sua indicação de hoje?"></textarea>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group icones-postagem">
                                 {{-- ADICIONAR IMAGEM --}}
 
                                 {{-- <input type="file"> --}}
@@ -208,7 +208,7 @@
 
                     {{-- BOTÕES CURTIR, COMENTAR E COMPARTILHAR
                     --}}
-                    <div class="card-footer">
+                    <div class="card-footer card-footer-feed">
 
                         <a href="#" class="notification">
                             <i class="fa fa-heart-o" aria-hidden="true"></i>

@@ -1,72 +1,121 @@
-.capa-perfil img {
-    width: 100%;
-    height: 400px;
+/* CAPA PERFIL */
+
+.capa {
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    box-shadow: 0 14px 28px #00000040,
+        0 10px 10px #00000038;
 }
 
+.capa-perfil img {
+    width: 100%;
+}
+
+.capa img {
+    height: 80vh;
+}
+
+/* FOTO E NOME DO USUÁRIO */
+
+.secao-foto-user-perfil {
+    position: relative;
+    margin: 0 0 -80px;
+    background-color: #007592;
+}
 
 .perfil-quemindica {
     margin-top: 60px;
     background-color: #007592;
 }
 
-/* SEÇÃO USUÁRIO */
 
-.secao-usuario-perfil {
-    padding-bottom: 20px;
-}
-
-.user-perfil {
-    text-align: center;
+.foto-nome {
     position: relative;
 }
 
-/* IMAGEM USUÁRIO */
-.avatar-perfil {
-    width: 370px;
-    margin-top: -220px;
-    border: solid 2px #fff;
-
-    box-shadow: 0 1px 3px #0000001f,
-        0 1px 2px #0000003d;
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+.info-usuario-perfil {
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 10px;
 }
 
-.avatar-perfil:hover {
-    box-shadow: 0 14px 28px #00000040,
-        0 10px 10px #00000038;
+.foto-perfil-user {
+    position: relative;
+    top: -110px;
+    display: block;
+    width: 180px;
+    border: 5px solid #fff;
+    margin: 0 auto -16px;
+    border-radius: 100%;
+
+    box-shadow: 0 19px 38px #0000004d,
+        0 15px 12px #00000038;
 }
 
-/* NOME USUÁRIO */
+.foto-perfil-user img {
+    position: relative;
+    width: 100%;
+    border-radius: 100%;
 
-.nome-topo-perfil {
-    margin-top: 10px;
 }
 
-.nome-topo-perfil h2,
-h6 {
-    margin-top: 5px;
-    margin-left: 270px;
-    font-weight: bold;
-    margin-bottom: 1px;
-}
-
-.nome-topo-perfil h2 {
+.nome-usuario-perfil {
+    margin-top: -100px;
     color: #fff;
     font-weight: bold;
-    font-size: 2em;
+    text-shadow: 3px 3px 4px #013b49;
 }
 
-.nome-topo-perfil h6 {
-    color: #facb3e;
-    font-weight: bold;
+
+/* BOTÕES ADICIONAR E MENSAGEM */
+
+.adicionar,
+.mensagem {
+    padding: 8px;
+    margin: 10px 5px;
+    border-radius: 5px;
     font-size: 1em;
+    font-weight: bold;
+
+    box-shadow: 0 10px 20px #00000030,
+        0 6px 6px #0000003b;
+}
+
+.adicionar {
+    background-color: #ffd559;
+    border: solid 1px #ffd559;
+    color: #007592;
+}
+
+.mensagem {
+    background-color: #E6EBEE;
+    border: solid 1px #E6EBEE;
+    color: #007592;
+}
+
+.adicionar:hover {
+    background-color: #E6EBEE;
+    border: solid 1px #E6EBEE;
+    color: #007592;
+    font-weight: bold;
+}
+
+.mensagem:hover {
+    background-color: #ffd559;
+    border: solid 1px #ffd559;
+    color: #007592;
+    font-weight: bold;
 }
 
 
 /* ÁREA PONTOS E INDICAÇÕES */
 
 .pontuacao-feed-perfil {
-    margin-top: -60px;
+    margin-top: -40px;
 }
 
 .pontuacao-feed-perfil i {
@@ -74,6 +123,7 @@ h6 {
     color: #ffd559;
     font-weight: 400;
     margin-top: 50px;
+    text-shadow: 3px 3px 4px #7a7a7a;
 }
 
 .pontuacao-feed-perfil span {
@@ -82,20 +132,11 @@ h6 {
     color: #ffd559;
 }
 
-
-/* BIO USUÁRIO */
-
-.descricao-usuario-perfil {
-    color: #007592;
-    margin: 25px 0;
-}
-
-
 /* ÁREA TAGS */
 
 .secao-tags-perfil h5 {
+    padding: 15px 0;
     font-weight: bold;
-    padding: 15px;
 }
 
 .tags-perfil {
@@ -123,11 +164,13 @@ h6 {
 }
 
 .tag-rounded-perfil:hover {
-    color: #fff;
-    background-color: #ffd559;
+    border: 2px solid #ffd559;
+    color: #00b2df;
+    background-color: #fff;
 }
 
 /* SEÇÃO POSTS */
+
 
 .nome-post-usuario-perfil {
     margin: -10px;
@@ -380,6 +423,7 @@ span:hover {
 }
 
 .amigos-perfil h5 {
+    padding: 15px 0;
     font-weight: bold;
 }
 

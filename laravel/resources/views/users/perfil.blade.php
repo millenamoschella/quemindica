@@ -4,24 +4,40 @@
 @section('content')
 
 
-    {{-- PERFIL --}}
+
+    {{-- SEÇÃO CAPA PERFIL, NOME E FOTO DO USUÁRIO --}}
+    <div class="secao-capa-perfil"></div>
+
+    {{-- CAPA PERFIL --}}
+    <section class="capa-perfil">
+        <div class="capa">
+            <img src="{{ asset('../imagens/institucional/capa-perfil.jpg') }}" alt="Foto capa perfil" class="img-fluid">
+        </div>
+    </section>
+
+    {{-- SEÇÃO FOTO E NOME DO USUÁRIO --}}
+    <section class="secao-foto-user-perfil">
+        <div class="info-usuario-perfil">
+
+            {{-- FOTO USUÁRIO --}}
+            <div class="foto-perfil-user">
+                <img src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}" alt="Capa perfil usuário">
+            </div>
+
+            {{-- NOME USUÁRIO --}}
+            <h1 class="nome-usuario-perfil">Shyrles Monteiro</h1>
+
+            {{-- BOTÕES ADICIONAR E MENSAGEM --}}
+            <div class="adicionar-mensagem-perfil">
+                <button class="adicionar">Adicionar</button>
+                <button class="mensagem">Mensagem</button>
+            </div>
+
+        </div>
+    </section>
+
+    {{-- SEÇÃO MENU, POSTS E AMIGOS --}}
     <div class="container-fluid perfil-quemindica">
-
-        {{-- FOTO USUÁRIO --}}
-        <div class="row">
-            <div class="capa-perfil">
-                <img src="{{ asset('imagens/institucional/capa-perfil.jpg') }}" alt="Capa perfil usuário" class="img-fluid">
-            </div>
-        </div>
-
-        {{-- NOME --}}
-        <div class="row">
-            <div class="col-12 nome-topo-perfil">
-                <h2>Shyrles Monteiro</h2>
-                <h6>@shyrlesmonteiro</h6>
-            </div>
-        </div>
-
         <div class="col-12">
             <div class="row">
 
@@ -34,13 +50,6 @@
                             <div class="row user-perfil text-center ">
 
                                 <div class="flex-grow-1 infos-usuario">
-
-                                    {{-- IMAGEM USUÁRIO
-                                    --}}
-                                    <a href="{{ route('perfil') }}">
-                                        <img src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}"
-                                            class="rounded-circle avatar-perfil img-fluid">
-                                    </a>
 
                                     {{-- PONTUAÇÃO --}}
 
@@ -55,19 +64,10 @@
                                         </div>
                                     </div>
 
-
-
                                 </div>
-
-                                {{-- INDICAÇÕES E PONTOS
-                                --}}
-
-
                             </div>
                         </div>
-
                     </div>
-
 
                     {{-- TAGS --}}
                     <div class="card shadow secao-tags-perfil text-center">
@@ -89,7 +89,6 @@
                         </div>
 
                     </div>
-
 
                 </div>
 
@@ -172,7 +171,7 @@
 
                         {{-- BOTÕES CURTIR, COMENTAR E COMPARTILHAR
                         --}}
-                        <div class="card-footer-perfil">
+                        <div class="card-footer card-footer-perfil">
 
                             <a href="#" class="notification-perfil">
                                 <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -281,7 +280,7 @@
 
                 {{-- SEÇÃO AMIGOS --}}
                 <div class="col-lg-3 col-md-2 col-sm-12 order-md-3 amigos-perfil text-center">
-                    <div class="card shadow">
+                    <div class="card">
                         <div class="amigos-cards">
 
                             {{-- TÍTULO --}}
@@ -338,7 +337,7 @@
 
 
                         {{-- VER MAIS AMIGOS --}}
-                        <div class="card-footer-perfil">
+                        <div class="card-footer card-footer-perfil">
                             <a href="#">Ver Mais</a>
                         </div>
 
@@ -347,6 +346,7 @@
 
             </div>
         </div>
+
     </div>
 
 

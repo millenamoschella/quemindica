@@ -1,6 +1,6 @@
 .secao-faq {
     padding: 80px 0;
-    background-color: #005a70;
+    background-color: #018eb1;
 }
 
 .secao-faq h1 {
@@ -32,8 +32,8 @@
     color: #fff;
     border: 0;
     border-radius: 0;
-    border-bottom: 1px solid #005a70;
-    background-color: #00708b;
+    border-bottom: 1px solid #00657e;
+    background-color: #027592;
 }
 
 .faq-nav .nav-link:hover {
@@ -62,13 +62,13 @@
 
 .tab-content .card {
     border-radius: 2px;
-    border: 2px solid #006781;
+    border: 2px solid #027592;
 }
 
 .tab-content .card-header {
     padding: 15px 16px;
     border-radius: 0;
-    background-color: #006781;
+    background-color: #027592;
 }
 
 .tab-content .card-header h5 {

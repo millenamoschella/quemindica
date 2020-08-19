@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('../css/amigos.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/configuracao.css') }}">
 
     {{-- FAVICON --}}
     <link rel="shortcut icon" href="{{ asset('../imagens/logo/logo-icon.svg') }}" type="image/x-icon">

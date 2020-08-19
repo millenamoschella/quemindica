@@ -65,6 +65,7 @@
     font-size: 1.5em;
     color: #ffd559;
     font-weight: 400;
+    text-shadow: 3px 3px 4px #7a7a7a;
 }
 
 .pontuacao-feed span {
@@ -143,28 +144,29 @@
 }
 
 .tag-rounded:hover {
-    color: #fff;
-    background-color: #ffd559;
+    border: 2px solid #ffd559;
+    color: #00b2df;
+    background-color: #fff;
 }
 
-.card-footer a {
+.card-footer-feed a {
     font-weight: bold;
     text-decoration: none;
 }
 
-.card-footer a:hover {
+.card-footer-feed a:hover {
     font-weight: bold;
     color: #ffd559;
 }
 
-.card-footer i,
+.card-footer-feed i,
 span {
     color: #007592;
     font-size: 1.1em;
     font-weight: 500;
 }
 
-.card-footer i:hover,
+.card-footer-feed i:hover,
 span:hover {
     color: #ffd559;
     font-weight: #ffd559;
@@ -197,6 +199,19 @@ span:hover {
     font-size: 0.9em;
     margin-right: 5px;
 }
+
+.icones-postagem i {
+    color: #007592;
+}
+
+.icones-postagem i:hover {
+    color: #ffcd36;
+}
+
+.icones-postagem .fa-paper-plane-o:hover {
+    color: #007592;
+}
+
 
 .notification {
     color: white;
