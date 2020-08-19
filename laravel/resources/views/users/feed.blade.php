@@ -159,7 +159,7 @@
                                 <div class="ml-2">
 
                                     {{-- AUTOR --}}
-                                    <h6>@shyrlesmonteiro</h6>
+                                    <h5 class="nome-post-usuario">@shyrlesmonteiro</h5>
                                 </div>
                             </div>
                             <div>
@@ -185,10 +185,13 @@
                     </div>
 
                     {{-- POSTAGEM --}}
-                    <div class="card-body">
+                    <div class="card-body postagem-feed">
 
                         {{-- TEMPO DO POST --}}
-                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>35 min atrás</div>
+                        <div class="mb-2 tempo-comentario-feed">
+                            <i class="fa fa-clock-o"></i>
+                            <span class="tempo-feed">35 min atrás</span>
+                        </div>
 
                         {{-- TÍTULO POST --}}
                         <a class="card-link" href="#">
@@ -196,7 +199,7 @@
                         </a>
 
                         {{-- MENSAGEM POST --}}
-                        <p class="card-text">
+                        <p class="card-text px-5">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem eos ipsa
                             praesentium esse magnam nemo dolor
                             sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
@@ -253,7 +256,7 @@
 
                                             {{-- TEMPO
                                             --}}
-                                            <span>15 horas atrás</span>
+                                            <span class="tempo-comentario-feed">15 horas atrás</span>
 
                                             {{-- RESPONDER
                                             --}}
@@ -266,7 +269,7 @@
                                             et. Integer
                                             sodales nibh ac posuere ullamcorper. Nullam maximus libero ac
                                             diam suscipit
-                                            ornare.
+                                            ornare
                                         </p>
                                     </div>
                                 </li>
@@ -304,6 +307,14 @@
                         </div>
 
                     </div>
+
+
+
+
+
+
+
+
 
                 </div>
 

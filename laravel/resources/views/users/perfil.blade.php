@@ -4,258 +4,354 @@
 @section('content')
 
 
-    <div class="container mt-4 mb-n5" id="posicao">
-        <div class="row  pt-4 pb-5">
+    {{-- PERFIL --}}
+    <div class="container-fluid perfil-quemindica">
 
-            {{-- ÁREA FOTO E NOME DO USUÁRIO + HASHTAGS --}}
-            <div class="col-sm-2 sm-12 pt-3" id="minhasHashtags">
-                <img class="imagemUsuario" src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto do Usuário">
-                <p class="nomeUsuario">Shyrles Monteiro</p>
+        {{-- FOTO USUÁRIO --}}
+        <div class="row">
+            <div class="capa-perfil">
+                <img src="{{ asset('imagens/institucional/capa-perfil.jpg') }}" alt="Capa perfil usuário" class="img-fluid">
+            </div>
+        </div>
 
-                {{-- ÁREA ASIDE ESQUERDO HASHTAGS QUE O USUÁRIO SEGUE
-                --}}
-                <h5 class="mt-0 text-center text-white mb-5"><strong># Minhas Hashtags </strong></h5>
-                <div class="media">
-                    <img class="mr-3" id="imgHashtag" src="{{ asset('imagens/minhaConta/hashtag-teste.png') }}"
-                        alt="Imagem de uma lupa com hashtag">
-                    <div class="media-body text-white">
-                        <p>#quemindica</p>
+        {{-- NOME --}}
+        <div class="row">
+            <div class="col-12 nome-topo-perfil">
+                <h2>Shyrles Monteiro</h2>
+                <h6>@shyrlesmonteiro</h6>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="row">
+
+                {{-- MENU ESQUERDO --}}
+                <div class="col-lg-2 col-md-3 col-sm-12 order-md-1 secao-usuario-perfil">
+
+                    {{-- INFOS USUÁRIO --}}
+                    <div class="card shadow mb-3">
+                        <div class="card-body ">
+                            <div class="row user-perfil text-center ">
+
+                                <div class="flex-grow-1 infos-usuario">
+
+                                    {{-- IMAGEM USUÁRIO
+                                    --}}
+                                    <a href="{{ route('perfil') }}">
+                                        <img src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}"
+                                            class="rounded-circle avatar-perfil img-fluid">
+                                    </a>
+
+                                    {{-- PONTUAÇÃO --}}
+
+                                    <div class="pontuacao-feed-perfil">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        <div>
+                                            <span>25 pontos</span>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                {{-- INDICAÇÕES E PONTOS
+                                --}}
+
+
+                            </div>
+                        </div>
+
                     </div>
+
+
+                    {{-- TAGS --}}
+                    <div class="card shadow secao-tags-perfil text-center">
+                        <div class="card-body tags-perfil">
+                            <h5>Tags seguidas</h5>
+
+                            <div class="tags-seguidas-perfil">
+
+                                <a href="#"><span class="tag-rounded-perfil">Livros</span></a>
+                                <a href="#"><span class="tag-rounded-perfil">Decoração</span></a>
+                                <a href="#"><span class="tag-rounded-perfil">Pintores Zona Oeste</span></a>
+                                <a href="#"><span class="tag-rounded-perfil">Brechós</span></a>
+                                <a href="#"><span class="tag-rounded-perfil">Manicures</span></a>
+                                <a href="#"><span class="tag-rounded-perfil">Ilustradores</span></a>
+                                <a href="#"><span class="tag-rounded-perfil">Esteticistas</span></a>
+                                <a href="#"><span class="tag-rounded-perfil">Games</span></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
                 </div>
 
-                <div class="media">
-                    <img class="mr-3" id="imgHashtag" src="{{ asset('imagens/minhaConta/hashtag-teste.png') }}"
-                        alt="Imagem de uma lupa com hashtag">
-                    <div class="media-body text-white">
-                        <p>#teamo</p>
+
+                {{-- POSTS DO USUÁRIO --}}
+                <div class="col-lg-7 col-md-7 col-sm-12 mb-3 order-md-2 posts-perfil">
+
+                    {{-- EXEMPLO POST --}}
+
+                    <div class="card shadow mb-3 area-post-perfil">
+
+                        {{-- FOTO USUÁRIO E HORÁRIO POST
+                        --}}
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    {{-- FOTO USUÁRIO AUTOR DO POST
+                                    --}}
+                                    <div class="mr-2">
+                                        <a href="{{ route('perfil') }}">
+                                            <img class="rounded-circle" width="45"
+                                                src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}"
+                                                alt="Foto autor post" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="ml-2">
+
+                                        {{-- AUTOR --}}
+                                        <h5 class="nome-post-usuario-perfil">@shyrlesmonteiro</h5>
+                                    </div>
+                                </div>
+                                <div>
+
+                                    {{-- BOTÕES POSTAGEM
+                                    --}}
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="gedf-drop1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                            {{-- ÍCONE 3 PONTOS
+                                            --}}
+                                            <i class="fa fa-ellipsis-h"></i>
+                                        </button>
+
+                                        {{-- OPÇÕES --}}
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                                            <a class="dropdown-item" href="#">Esconder</a>
+                                            <a class="dropdown-item" href="#">Reportar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {{-- POSTAGEM --}}
+                        <div class="card-body postagem-perfil">
+
+                            {{-- TEMPO DO POST --}}
+                            <div class="mb-2 tempo-comentario">
+                                <i class="fa fa-clock-o"></i>
+                                <span class="tempo">35 min atrás</span>
+                            </div>
+
+                            {{-- TÍTULO POST --}}
+                            <a class="card-link" href="#">
+                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adip.</h5>
+                            </a>
+
+                            {{-- MENSAGEM POST --}}
+                            <p class="card-text px-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem
+                                eos
+                                ipsa
+                                praesentium esse magnam nemo dolor
+                                sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
+                            </p>
+                        </div>
+
+                        {{-- BOTÕES CURTIR, COMENTAR E COMPARTILHAR
+                        --}}
+                        <div class="card-footer-perfil">
+
+                            <a href="#" class="notification-perfil">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <span class="badge">3</span>
+                            </a>
+
+                            <a href="#" class="notification-perfil">
+                                <i class="fa fa-comment-o" aria-hidden="true"></i>
+                                <span class="badge">3</span>
+                            </a>
+
+                            <a href="#" class="notification-perfil">
+                                <i class="fa fa-share" aria-hidden="true"></i>
+                                <span class="badge">3</span>
+                            </a>
+
+                        </div>
+
+                        {{-- SEÇÃO COMENTÁRIOS DO POST
+                        --}}
+
+                        <div class="user-post-perfil">
+                            <div class="area-comentario-perfil">
+                                <ul class="comentarios-perfil">
+
+                                    {{-- SEÇÃO COMENTÁRIO
+                                    --}}
+                                    <li>
+                                        {{-- FOTO AUTOR COMENTÁRIO
+                                        --}}
+                                        <div class="avatar-autor-comentario-perfil">
+                                            <a href=""><img src="{{ asset('../imagens/minhaConta/sara.jfif') }}"
+                                                    alt="Foto autor comentário"></a>
+                                        </div>
+
+                                        {{-- COMENTÁRIO
+                                        --}}
+                                        <div class="secao-comentario-perfil">
+                                            <div class="autor-hora-perfil">
+
+                                                {{-- AUTOR COMENTÁRIO
+                                                --}}
+                                                <h5>
+                                                    <a href="#" title="">Sara Margarido</a>
+                                                </h5>
+
+                                                {{-- TEMPO
+                                                --}}
+                                                <span>15 horas atrás</span>
+
+                                                {{-- RESPONDER
+                                                --}}
+                                                <a class="responder-comentario-perfil" href="#"><i
+                                                        class="fa fa-reply"></i></a>
+                                            </div>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                                maximus sed ex quis
+                                                varius. Fusce tincidunt neque ex, auctor placerat lacus placerat
+                                                et. Integer
+                                                sodales nibh ac posuere ullamcorper. Nullam maximus libero ac
+                                                diam suscipit
+                                                ornare.
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    {{-- VER TODOS OS COMENTÁRIOS
+                                    --}}
+                                    <li>
+                                        <a href="#" class="vertodos-comentarios-perfil">Ver Todos</a>
+                                    </li>
+
+                                    {{-- COMENTÁRIO
+                                    --}}
+                                    <li class="post-comment">
+
+                                        {{-- ÁREA COMENTAR
+                                        --}}
+                                        <div class="form-comentar-perfil">
+                                            <form action="#" method="post">
+                                                @csrf
+
+                                                <div class="form-group area-text-comentar-perfil">
+                                                    <textarea class="form-control" id="comentario" rows="3"
+                                                        placeholder="Faça um comentário..."></textarea>
+
+
+                                                    {{-- BOTÃO COMENTAR
+                                                    --}}
+                                                    <button type="submit" class="btn">Comentar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
                     </div>
+
                 </div>
 
-                <div class="media">
-                    <img class="mr-3" id="imgHashtag" src="{{ asset('imagens/minhaConta/hashtag-teste.png') }}"
-                        alt="Imagem de uma lupa com hashtag">
-                    <div class="media-body text-white">
-                        <p>#amo</p>
-                    </div>
-                </div>
 
-                <div class="media">
-                    <img class="mr-3" id="imgHashtag" src="{{ asset('imagens/minhaConta/hashtag-teste.png') }}"
-                        alt="Imagem de uma lupa com hashtag">
-                    <div class="media-body text-white">
-                        <p>#riodejaneiro</p>
-                    </div>
-                </div>
+                {{-- SEÇÃO AMIGOS --}}
+                <div class="col-lg-3 col-md-2 col-sm-12 order-md-3 amigos-perfil text-center">
+                    <div class="card shadow">
+                        <div class="amigos-cards">
 
-                <div class="media">
-                    <img class="mr-3" id="imgHashtag" src="{{ asset('imagens/minhaConta/hashtag-teste.png') }}"
-                        alt="Imagem de uma lupa com hashtag">
-                    <div class="media-body text-white">
-                        <p>#jesus</p>
-                    </div>
-                </div>
+                            {{-- TÍTULO --}}
+                            <h5>Amigos</h5>
 
-                <div class="media">
-                    <img class="mr-3" id="imgHashtag" src="{{ asset('imagens/minhaConta/hashtag-teste.png') }}"
-                        alt="Imagem de uma lupa com hashtag">
-                    <div class="media-body text-white">
-                        <p>#riodejaneiro</p>
+                            {{-- IMAGEM SERVIÇO --}}
+                            <div class="cards-imagens-perfil">
+
+                                <a href="#">
+                                    <img src="{{ asset('imagens/minhaConta/sara.jfif') }}"
+                                        class="img-fluid card-amigos-perfil">
+                                </a>
+                                <a href="#">
+                                    <img src="{{ asset('imagens/minhaConta/leonardo.jfif') }}"
+                                        class="img-fluid card-amigos-perfil">
+                                </a>
+                                <a href="#">
+                                    <img src="{{ asset('imagens/minhaConta/marcia.png') }}"
+                                        class="img-fluid card-amigos-perfil">
+                                </a>
+                                <a href="#">
+                                    <img src="{{ asset('imagens/minhaConta/Millena.png') }}"
+                                        class="img-fluid card-amigos-perfil">
+                                </a>
+
+                                <a href="#">
+                                    <img src="{{ asset('imagens/minhaConta/vivian.jfif') }}"
+                                        class="img-fluid card-amigos-perfil">
+                                </a>
+
+                                <a href="#">
+                                    <img src="{{ asset('imagens/minhaConta/sandra.jfif') }}"
+                                        class="img-fluid card-amigos-perfil">
+                                </a>
+
+                                <a href="#">
+                                    <img src="{{ asset('imagens/minhaConta/joao.jfif') }}"
+                                        class="img-fluid card-amigos-perfil">
+                                </a>
+
+                                <a href="#">
+                                    <img src="{{ asset('imagens/minhaConta/gabriel.jfif') }}"
+                                        class="img-fluid card-amigos-perfil">
+                                </a>
+
+                                <a href="#">
+                                    <img src="{{ asset('imagens/minhaConta/michelle.png') }}"
+                                        class="img-fluid card-amigos-perfil">
+                                </a>
+
+                            </div>
+                        </div>
+
+
+
+                        {{-- VER MAIS AMIGOS --}}
+                        <div class="card-footer-perfil">
+                            <a href="#">Ver Mais</a>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
-
-            {{-- ÁREA PUBLICAÇÕES DO USUÁRIO --}}
-            <div class="col justify-content-center mt-5 mb-3">
-
-                <div class="col-sm-6 sm-12">
-
-                    {{-- ÁREA EXEMPLO PUBLICAÇÃO/INDICAÇÃO --}}
-                    <div class="media">
-                        <img class="mr-3" id="fotoPequena" src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}"
-                            alt=" Imagem de exemplo genérica">
-                        <div class="media-body">
-                            <h5 class="mt-0"><strong>Shyrles Monteiro</strong></h5>
-                            <h6 class="mt-0" style="width: 35rem;">Alguém faz montagem de móveis? Preciso montar um
-                                guarda-roupa e uma cômoda</h6>
-                        </div>
-                    </div>
-
-                    {{-- ÁREA EXEMPLO PUBLICAÇÃO/INDICAÇÃO --}}
-                    <div class="media">
-                        <img class="mr-3" id="fotoPequena" src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}"
-                            alt="Imagem de exemplo genérica">
-                        <div class="media-body">
-                            <h5 class="mt-0"><strong>Shyrles Monteiro</strong></h5>
-                            <h6 class="mt-0" style="width: 35rem;">Algum Pintor de casa?</h6>
-                        </div>
-                    </div>
-
-                    {{-- ÁREA EXEMPLO PUBLICAÇÃO/INDICAÇÃO --}}
-                    <div class="media">
-                        <img class="mr-3" id="fotoPequena" src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}"
-                            alt="Imagem de exemplo genérica">
-                        <div class="media-body">
-                            <h5 class="mt-0"><strong>Shyrles Monteiro</strong></h5>
-                            <img src="imagens/minhaConta/carreto.jpg" alt="imagem da indicação de carreto">
-                        </div>
-                    </div>
-
-                    {{-- ÁREA EXEMPLO PUBLICAÇÃO/INDICAÇÃO --}}
-                    <div class="media">
-                        <img class="mr-3" id="fotoPequena" src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}"
-                            alt="Imagem de exemplo genérica">
-                        <div class="media-body">
-                            <h5 class="mt-0"><strong>Shyrles Monteiro</strong></h5>
-                            <h6 class="mt-0" style="width: 35rem;">Alguém conhece alguma escola ou hotelzinho infantil na
-                                região, que fica com a criança em caso de emergência por períodos mais curtos? Ou algum site
-                                de baba que cobra por diária de confiança... Indicações pleaaseee!!!! Muito obrigada bjs .
-                                Procurando Recomendaçãos!</h6>
-                        </div>
-                    </div>
-
-                    {{-- ÁREA EXEMPLO PUBLICAÇÃO/INDICAÇÃO --}}
-                    <div class="media">
-                        <img class="mr-3" id="fotoPequena" src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}"
-                            alt="Imagem de exemplo genérica">
-                        <div class="media-body">
-                            <h5 class="mt-0"><strong>Shyrles Monteiro</strong></h5>
-                            <h6 class="mt-0" style="width: 35rem;">Eai, qual anime ta mais ansioso?</h6>
-                            <h6 class="mt-0" style="width: 35rem;">Animes:</h6>
-                            <h6 class="mt-0" style="width: 35rem;">Boku no Hero 4 temporada</h6>
-                            <h6 class="mt-0" style="width: 35rem;">Nanatsu no Taizai 3ª temporada</h6>
-                            <h6 class="mt-0" style="width: 35rem;">Shokugeki no Souma 4ª temporada</h6>
-                            <h6 class="mt-0" style="width: 35rem;">Granblue Fantasy 2ª temporada</h6>
-                            <h6 class="mt-0" style="width: 35rem;">Psycho Pass 3ª temporada</h6>
-                            <h6 class="mt-0" style="width: 35rem;">Radiant 2ª temporada</h6>
-                            <h6 class="mt-0" style="width: 35rem;">- Kito</h6>
-                            <img src="imagens/minhaConta/recomendacaoOtaku.jpg" alt="imagem da indicação de serie">
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            {{-- ÁREA AMIGOS ASIDE DIREIRO --}}
-            <div class="col justify-content-right ml-5 mb-0 mr-6" id="ladoDireito">
-
-                <div class="col sm-5 pt-3 mt-4">
-
-                    <h5 class="mt-0 text-warning ml-5"><strong>Amigos</strong></h5>
-
-                    {{-- 1º ROW --}}
-                    <div class="media ml-5">
-
-                        {{-- AMIGO 1 --}}
-                        <div class="card bg-warning text-white border-warning mt-3 mb-5" style="width: 7rem; height: 7rem;">
-                            <div class="img-animation">
-                                <img class="card-img-top rounded-4" src="{{ asset('../imagens/minhaConta/sara.jfif') }}"
-                                    alt="Imagem do usuario">
-                            </div>
-                            Sara margarido
-                        </div>
-
-                        {{-- AMIGO 2 --}}
-                        <div class="card bg-warning text-white border-warning ml-3 mr-3 mt-3 mb-5"
-                            style="width: 7rem; height: 7rem;">
-                            <div class="img-animation">
-                                <img class="card-img-top rounded-4" src="{{ asset('../imagens/minhaConta/aline.png') }}"
-                                    alt="Imagem do usuario">
-                            </div>
-                            Aline margarido
-                        </div>
-
-                        {{-- AMIGO 3 --}}
-                        <div class="card bg-warning text-white border-warning mt-3 mb-5" style="width: 7rem; height: 7rem;">
-                            <!--botom topo -->
-                            <div class="img-animation">
-                                <img class="card-img-top rounded-4" src="{{ asset('../imagens/minhaConta/gabriel.jfif') }}"
-                                    alt="Imagem do usuario">
-                            </div>
-                            Gabriel Teacher
-                        </div>
-
-                    </div>
-
-                    {{-- 2º ROW --}}
-                    <div class="media ml-5">
-
-                        {{-- AMIGO 4 --}}
-                        <div class="card bg-warning text-white border-warning mt-3 mb-5" style="width: 7rem; height: 7rem;">
-                            <!--botom topo -->
-                            <div class="img-animation">
-                                <img class="card-img-top rounded-4" src="{{ asset('../imagens/minhaConta/joao.jfif') }}"
-                                    alt="Imagem do usuario">
-                            </div>
-                            João margarido
-                        </div>
-
-                        {{-- AMIGO 5 --}}
-                        <div class="card bg-warning text-white border-warning ml-3 mr-3 mt-3 mb-5"
-                            style="width: 7rem; height: 7rem;">
-                            <!--botom topo -->
-                            <div class="img-animation">
-                                <img class="card-img-top rounded-4" src="{{ asset('imagens/minhaConta/juliana.png') }}"
-                                    alt="Imagem do usuario">
-                            </div>
-                            Juliana Alencar
-                        </div>
-
-                        {{-- AMIGO 6 --}}
-                        <div class="card bg-warning text-white border-warning mt-3 mb-5" style="width: 7rem; height: 7rem;">
-                            <!--botom topo -->
-                            <div class="img-animation">
-                                <img class="card-img-top rounded-4" src="{{ asset('imagens/minhaConta/leonardo.jfif') }}"
-                                    alt="Imagem do usuario">
-                            </div>
-                            Leonardo Margarido
-                        </div>
-
-                    </div>
-
-                    {{-- 3º ROW --}}
-                    <div class="media ml-5">
-
-                        {{-- AMIGO 7 --}}
-                        <div class="card bg-warning text-white border-warning mt-3 mb-5" style="width: 7rem; height: 7rem;">
-                            <!--botom topo -->
-                            <div class="img-animation">
-                                <img class="card-img-top rounded-4" src="{{ asset('imagens/minhaConta/marcia.png') }}"
-                                    alt="Imagem do usuario">
-                            </div>
-                            Marcia margarido
-                        </div>
-
-                        {{-- AMIGO 8 --}}
-                        <div class="card bg-warning text-white border-warning ml-3 mr-3 mt-3 mb-5"
-                            style="width: 7rem; height: 7rem;">
-                            <!--botom topo -->
-                            <div class="img-animation">
-                                <img class="card-img-top rounded-4" src="{{ asset('imagens/minhaConta/larissa.png') }}"
-                                    alt="Imagem do usuario">
-                            </div>
-                            Larissa margarido
-                        </div>
-
-                        {{-- AMIGO 9 --}}
-                        <div class="card bg-warning text-white border-warning mt-3 mb-5" style="width: 7rem; height: 7rem;">
-                            <!--botom topo -->
-                            <div class="img-animation">
-                                <img class="card-img-top rounded-4" src="{{ asset('imagens/minhaConta/leonardo.jfif') }}"
-                                    alt="Imagem do usuario">
-                            </div>
-                            Leonardo Margarido
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
         </div>
     </div>
+
+
+
+
 
 
 @endsection

@@ -123,13 +123,14 @@
 }
 
 .tags-feed a {
-    font-size: 15px;
+    font-size: 0.8em;
     text-decoration: none;
 }
 
 .tags-seguidas span {
     display: inline-block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .tag-rounded {
@@ -156,6 +157,47 @@
     color: #ffd559;
 }
 
+.card-footer i,
+span {
+    color: #007592;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.card-footer i:hover,
+span:hover {
+    color: #ffd559;
+    font-weight: #ffd559;
+}
+
+
+/* SEÇÃO POSTS */
+
+.nome-post-usuario {
+    margin: -10px;
+    font-size: 1em;
+}
+
+.posts-feed textarea {
+    resize: none;
+    color: #007592;
+}
+
+.area-post-feed button {
+    border: none;
+}
+
+.tempo-comentario-feed .tempo-feed {
+    color: #8f8f8f;
+    font-size: 0.9em;
+}
+
+.tempo-comentario-feed i {
+    color: #8f8f8f;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
 .notification {
     color: white;
     text-decoration: none;
@@ -177,34 +219,17 @@
     font-size: 0.7em;
 }
 
-
-/* SEÇÃO POSTS */
-
-
-.posts-feed textarea {
-    resize: none;
-    color: #007592;
+.postagem-feed {
+    background-color: #f1f1f1;
 }
 
-.posts-feed i,
-span {
-    color: #007592;
-    font-size: 1.1em;
-    font-weight: 500;
+.postagem-feed h5 {
+    font-size: 1.2em;
+    padding-left: 50px;
 }
 
-.posts-feed i:hover,
-span:hover {
-    color: #ffd559;
-    font-weight: #ffd559;
-}
-
-.area-post-feed h6 {
-    color: #007592;
-}
-
-.area-post-feed button {
-    border: none;
+.postagem-feed p {
+    font-size: 0.9em;
 }
 
 /* COMENTÁRIOS POSTAGENS */
@@ -307,6 +332,7 @@ span:hover {
     color: #ffd559;
 }
 
+
 .autor-hora h5 {
     padding-bottom: 5px;
     text-transform: capitalize;
@@ -314,7 +340,8 @@ span:hover {
     margin-bottom: 0;
 }
 
-.autor-hora span {
+
+.autor-hora .tempo-comentario-feed {
     color: #007592;
     font-size: 0.8em;
     padding-left: 10px;
@@ -323,7 +350,11 @@ span:hover {
 
 .autor-hora i {
     font-size: 0.9em;
-    color: ffd559;
+    color: #ffd559;
+}
+
+.autor-hora i:hover {
+    color: #007592;
 }
 
 .responder-comentario {

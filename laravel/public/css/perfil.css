@@ -1,330 +1,431 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
-
-* {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
-body {
-    background-color: white;
-    margin: 0 auto;
+.capa-perfil img {
     width: 100%;
-    height: 100vh;
-    padding: 0;
-    font-size: 16px;
-}
-
-header {
-    background-color: #e5e5e5;
-}
-
-.nav_barra {
-    height: 60px;
-}
-
-.container-fluid {
-    width: 100%;
+    height: 400px;
 }
 
 
-/* banner index topo */
-
-.banner_top {
-    margin-top: 50px;
+.perfil-quemindica {
+    margin-top: 60px;
     background-color: #007592;
-    color: #FCDA73;
-    background-size: cover;
-    width: 100%;
-    height: 78vh;
 }
 
-.service {
-    margin-left: 25px;
-    margin-top: 80px;
-    width: 100%;
+/* SEÇÃO USUÁRIO */
+
+.secao-usuario-perfil {
+    padding-bottom: 20px;
 }
 
-.texto_home {
-    color: #e5e5e5;
-    padding: 5px;
-    font-size: 1.3em;
-    line-height: 30px;
-}
-
-#margem_texto {
-    margin-top: 40px;
-}
-
-#btn_qi a {
-    color: #fcda73;
-    font-size: 1.5em;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-#cor {
-    color: #fcda73;
-    font-size: 60px;
-}
-
-#tam {
-    font-size: 50px;
-    color: #fcda73;
-}
-
-.caracter {
-    font-size: 25px;
-    text-align: justify;
-    padding: 5px;
-}
-
-.but {
-    padding: 30px;
-}
-
-
-/* banner index meio */
-
-.banner_middle {
-    background-color: #e5e5e5;
-    color: #007592;
-    background-size: cover;
-    width: 100%;
-    height: 80vh;
-}
-
-.texto_meio {
-    color: #333333;
-    padding: 5px;
-    font-size: 1.3em;
-    line-height: 30px;
-}
-
-.img_rede_social {
-    margin-right: 25px;
-    margin-top: 20px;
-    width: 90%;
-}
-
-
-/* banner cadastro index */
-
-.banner_cadastro {
-    background-color: #FCDA73;
-    color: #e5e5e5;
-    background-size: cover;
-    width: 100%;
-    height: 10vh;
-}
-
-.alinha_form {
-    margin-top: 16px;
-}
-
-.btn-azul {
-    background: #00415e;
-}
-
-
-/* barra de busca */
-
-#btnBusca {
-    width: 25px;
+.user-perfil {
+    text-align: center;
     position: relative;
-    margin: 6px 0 6px 0;
 }
 
-.banner_azul {
-    background-color: #007592;
-    background-size: cover;
-    color: #FCDA73;
-    width: 100%;
-    height: 47vh;
+/* IMAGEM USUÁRIO */
+.avatar-perfil {
+    width: 370px;
+    margin-top: -220px;
+    border: solid 2px #fff;
+
+    box-shadow: 0 1px 3px #0000001f,
+        0 1px 2px #0000003d;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
-#quemindica {
-    margin-top: 90px;
-    width: 15%;
+.avatar-perfil:hover {
+    box-shadow: 0 14px 28px #00000040,
+        0 10px 10px #00000038;
 }
 
+/* NOME USUÁRIO */
 
-/* sobre nós */
-
-.banner_conteudo {
-    background-color: #E2E2E7;
-    background-size: cover;
-    width: 100%;
+.nome-topo-perfil {
+    margin-top: 10px;
 }
 
-#grupo {
-    margin-top: 50px;
-    margin-left: 30px;
-    margin-bottom: 30px;
-    width: 40%;
-}
-
-span#sobre {
-    padding: 5px;
-    font-size: 1, 2em;
-    line-height: 35px;
-}
-
-span#sobre h4 {
-    color: #666666;
-    margin-bottom: 10px;
-}
-
-
-/* FAQ */
-
-.banner_cinza {
-    background-color: #333333;
-    background-size: cover;
-    width: 100%;
-    height: 27vh;
-}
-
-.banner_cinza h1 {
-    color: #FCDA73;
-    font-size: 5em;
-    margin-top: 60px;
-}
-
-.banner_faq {
-    background-color: #E2E2E7;
-    background-size: cover;
-    width: 100%;
-    height: 110vh;
-}
-
-.perguntas {
-    margin-top: 50px;
-}
-
-#hashtag {
-    margin-left: 20px;
-    margin-top: 60px;
-    width: 8%;
-}
-
-.question-1 {
-    margin-top: 200px;
-}
-
-.question {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-}
-
-.question input,
-.question .answer {
-    display: none
-}
-
-.question label {
-    display: inline-block;
+.nome-topo-perfil h2,
+h6 {
+    margin-top: 5px;
+    margin-left: 270px;
     font-weight: bold;
-    margin-bottom: 5px;
-    width: 100%
+    margin-bottom: 1px;
 }
 
-.question input:checked~.answer {
-    display: block
+.nome-topo-perfil h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.nome-topo-perfil h6 {
+    color: #facb3e;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 
-/* foooter */
+/* ÁREA PONTOS E INDICAÇÕES */
 
-.rodape {
-    background-color: #333333;
+.pontuacao-feed-perfil {
+    margin-top: -60px;
+}
+
+.pontuacao-feed-perfil i {
+    font-size: 1.5em;
+    color: #ffd559;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
+.pontuacao-feed-perfil span {
+    font-size: 1em;
+    font-weight: 600;
+    color: #ffd559;
+}
+
+
+/* BIO USUÁRIO */
+
+.descricao-usuario-perfil {
+    color: #007592;
+    margin: 25px 0;
+}
+
+
+/* ÁREA TAGS */
+
+.secao-tags-perfil h5 {
+    font-weight: bold;
     padding: 15px;
 }
 
-ul li a {
-    color: #ffffff;
+.tags-perfil {
+    padding: 10px;
 }
 
-#face {
-    width: 100px;
+.tags-perfil a {
+    font-size: 0.8em;
+    text-decoration: none;
 }
 
+.tags-seguidas-perfil span {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
 
-/*CSS da pagina Minha Conta*/
+.tag-rounded-perfil {
+    border: 1px solid #ffe8a1;
+    background-color: #ffe8a1;
+    border-radius: 25px;
+    padding: 6px 15px;
+    color: #00b2df;
+    transition: all 300ms ease-in-out;
+}
 
-.imagemUsuario {
-    padding: 20px;
-    margin-top: 0%;
+.tag-rounded-perfil:hover {
+    color: #fff;
+    background-color: #ffd559;
+}
+
+/* SEÇÃO POSTS */
+
+.nome-post-usuario-perfil {
+    margin: -10px;
+    font-size: 1em;
+}
+
+.posts-perfil textarea {
+    resize: none;
+    color: #007592;
+}
+
+.area-post-perfil button {
+    border: none;
+}
+
+.tempo-comentario .tempo {
+    color: #8f8f8f;
+    font-size: 0.9em;
+}
+
+.tempo-comentario i {
+    color: #8f8f8f;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+.notification-perfil {
+    color: white;
+    text-decoration: none;
+    padding: 5px 6px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.notification-perfil .badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 15px;
+    padding: 3px 5px;
     border-radius: 50%;
+    background: #ffcd36;
+    color: white;
+    font-size: 0.7em;
+}
+
+.card-footer-perfil i,
+span {
+    color: #007592;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.card-footer-perfil i:hover,
+span:hover {
+    color: #ffd559;
+    font-weight: #ffd559;
+}
+
+.postagem-perfil {
+    background-color: #f1f1f1;
+}
+
+.postagem-perfil h5 {
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+.postagem-perfil p {
+    font-size: 0.9em;
+}
+
+/* COMENTÁRIOS POSTAGENS */
+
+.user-post-perfil {
+    padding: 10px;
+    height: auto;
+}
+
+.area-comentario-perfil {
+    display: inline-block;
+    margin-top: 10px;
     width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 
-.nomeUsuario {
-    padding: 20px;
-    margin-top: 0%;
-    width: 100%;
-    color: #FCDA73;
-    font-size: 1.5em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.secao-comentario-perfil {
+    border: 1px solid #ede9e9;
+    display: table-cell;
+    margin-left: 20px;
+    padding: 10px;
+    vertical-align: top;
+    position: relative;
+    width: 65%;
 }
 
-#fotoPequena {
-    width: 45px;
-    border-radius: 50%;
-}
-
-#imgHashtag {
-    width: 25px;
-}
-
-.dropdown {
-    margin-top: 1%;
-}
-
-.card-text {
+.secao-comentario-perfil p {
     font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 0;
+    max-width: 100%;
+    margin-top: 5px;
 }
 
-#imgAmigos {
-    width: 60px;
+.secao-comentario-perfil::before {
+    border-bottom: 10px solid transparent;
+    border-right: 11px solid #ffd559;
+    border-top: 10px solid transparent;
+    left: -11px;
+    top: 10px;
+    position: absolute;
+    content: '';
 }
 
-#minhasHashtags {
-    background-color: #0f4c81;
-    border: solid 1px;
-}
-
-#posicao {
+.comentarios-perfil {
+    float: left;
     width: 100%;
-    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+    margin-top: 20px;
 }
 
-#ladoDireito {
+.avatar-autor-comentario-perfil {
+    display: table-cell;
+    vertical-align: top;
+    width: 7.6%;
+}
+
+.avatar-autor-comentario-perfil img {
+    border-radius: 100%;
+    width: 50px;
+    margin-left: 60px;
+}
+
+.comentarios-perfil li {
+    display: inline-block;
+    margin-bottom: 20px;
     width: 100%;
-    grid-area: right;
-    background-color: #666;
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-    margin-right: -23%;
 }
 
-
-/* PAGINA DE SERVICOS */
-
-#topo1 {
-    margin-top: 15px;
+.comentarios-perfil li ul {
+    margin-left: 55px;
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none;
 }
 
-#topo {
-    margin-top: 15px;
+.vertodos-comentarios-perfil {
+    display: table;
+    font-size: 12px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-transform: capitalize;
 }
 
-#tituloServicos {
+.autor-hora-perfil {
+    display: inline-block;
     width: 100%;
-    color: #0f4c81;
+}
+
+.user-post-perfil a {
+    text-decoration: none;
+    color: #007592;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.user-post-perfil a:hover {
+    font-weight: bold;
+    color: #ffd559;
+}
+
+.autor-hora-perfil h5 {
+    padding-bottom: 5px;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.autor-hora-perfil span {
+    color: #007592;
+    font-size: 0.8em;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+.autor-hora-perfil i {
+    font-size: 0.9em;
+    color: #ffd559;
+}
+
+.autor-hora-perfil i:hover {
+    color: #007592;
+}
+
+.responder-comentario-perfil {
+
+    text-transform: capitalize;
+    font-size: 13px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.post-comment-perfil {
+    margin-top: -20px;
+}
+
+.form-comentar-perfil {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+
+.area-text-comentar-perfil textarea {
+    border: 1px solid #ffd559;
+    border-radius: 5px;
+    color: #696969;
+    font-size: 1em;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+}
+
+.area-text-comentar-perfil .form-control:focus {
+    border: 1px solid #ffd559;
+    box-shadow: 0 0 0 0.2rem #ffd559a1;
+}
+
+.form-comentar-perfil button {
+    bottom: 15px;
+    position: absolute;
+    right: 0;
+    background: none;
+    font-weight: bold;
+    color: #007592;
+}
+
+.form-comentar-perfil button:hover {
+    font-weight: bold;
+    color: #ffd559;
+}
+
+
+/* SEÇÃO AMIGOS PERFIL */
+
+.amigos-perfil {
+    margin-bottom: 20px;
+}
+
+.amigos-perfil h5 {
+    font-weight: bold;
+}
+
+.amigos-cards {
+    padding: 4px;
+}
+
+.cards-imagens-perfil img {
+    margin: 7px 3px;
+}
+
+.card-amigos-perfil {
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 100px;
+    box-shadow: 0 1px 3px #0000001f,
+        0 1px 2px #0000003d;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-amigos-perfil:hover {
+    box-shadow: 0 14px 28px #00000040,
+        0 10px 10px #00000038;
+}
+
+
+.amigos-perfil a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.amigos-perfil a:hover {
+    font-weight: bold;
+    color: #ffd559;
+}
+
+.card-footer-perfil {
+    padding: 20px;
+}
+
+.card-footer-perfil a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card-footer-perfil a:hover {
+    font-weight: bold;
+    color: #ffd559;
 }
