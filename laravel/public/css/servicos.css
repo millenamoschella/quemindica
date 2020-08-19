@@ -3,6 +3,11 @@
     padding: 40px;
 }
 
+.secao-servicos h1 {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
 .card {
     margin-top: 20px;
 }

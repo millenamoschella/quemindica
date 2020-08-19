@@ -288,7 +288,7 @@
                                             @csrf
 
                                             <div class="form-group area-text-comentar">
-                                                <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"
+                                                <textarea class="form-control" id="comentario" rows="3"
                                                     placeholder="Faça um comentário..."></textarea>
 
 

@@ -6,7 +6,7 @@
     {{-- SEÇÃO SERVIÇOS --}}
     <section class="container secao-servicos">
 
-        <h1 class="text-center p-3">Serviços</h1>
+        <h1 class="text-center">Serviços</h1>
 
         <div class="row">
 

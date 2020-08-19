@@ -54,9 +54,10 @@
 
                         {{-- BOTÃO --}}
                         <div class="row">
+
                             <div class="form-group col-lg-12">
-                                <button type="submit" class="btn btn-formulario">
-                                    <span>Enivar</span>
+                                <button type="submit" class="btn btn-formulario-suporte">
+                                    Enivar
                                 </button>
                             </div>
 
