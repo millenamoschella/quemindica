@@ -108,6 +108,8 @@
 
             {{-- SEÇÃO ESCREVER POST --}}
             <div class="col-lg-8 col-md-7 col-sm-12 mb-3 order-md-2 posts-feed">
+
+                {{-- ESCREVER POST --}}
                 <div class="card shadow mb-3">
                     <div class="card-body">
                         <form action="#" method="POST" enctype="multipart/form-data">
@@ -136,11 +138,11 @@
                     </div>
                 </div>
 
-
                 {{-- EXEMPLO POST --}}
 
                 <div class="card shadow mb-3 area-post-feed">
 
+                    {{-- FOTO USUÁRIO E HORÁRIO POST --}}
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex justify-content-between align-items-center">
@@ -181,6 +183,8 @@
                         </div>
 
                     </div>
+
+                    {{-- POSTAGEM --}}
                     <div class="card-body">
 
                         {{-- TEMPO DO POST --}}
@@ -199,7 +203,7 @@
                         </p>
                     </div>
 
-                    {{-- BOTÕES CURTIT, COMENTAR E COMPARTILHAR
+                    {{-- BOTÕES CURTIR, COMENTAR E COMPARTILHAR
                     --}}
                     <div class="card-footer">
 
@@ -220,8 +224,88 @@
 
                     </div>
 
-                </div>
+                    {{-- SEÇÃO COMENTÁRIOS DO POST --}}
 
+                    <div class="user-post">
+                        <div class="area-comentario">
+                            <ul class="comentarios">
+
+                                {{-- SEÇÃO COMENTÁRIO
+                                --}}
+                                <li>
+                                    {{-- FOTO AUTOR COMENTÁRIO
+                                    --}}
+                                    <div class="avatar-autor-comentario">
+                                        <a href=""><img src="{{ asset('../imagens/minhaConta/sara.jfif') }}"
+                                                alt="Foto autor comentário"></a>
+                                    </div>
+
+                                    {{-- COMENTÁRIO
+                                    --}}
+                                    <div class="secao-comentario">
+                                        <div class="autor-hora">
+
+                                            {{-- AUTOR COMENTÁRIO
+                                            --}}
+                                            <h5>
+                                                <a href="#" title="">Sara Margarido</a>
+                                            </h5>
+
+                                            {{-- TEMPO
+                                            --}}
+                                            <span>15 horas atrás</span>
+
+                                            {{-- RESPONDER
+                                            --}}
+                                            <a class="responder-comentario" href="#"><i class="fa fa-reply"></i></a>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                            maximus sed ex quis
+                                            varius. Fusce tincidunt neque ex, auctor placerat lacus placerat
+                                            et. Integer
+                                            sodales nibh ac posuere ullamcorper. Nullam maximus libero ac
+                                            diam suscipit
+                                            ornare.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                {{-- VER TODOS OS COMENTÁRIOS
+                                --}}
+                                <li>
+                                    <a href="#" class="vertodos-comentarios">Ver Todos</a>
+                                </li>
+
+                                {{-- COMENTÁRIO
+                                --}}
+                                <li class="post-comment">
+
+                                    {{-- ÁREA COMENTAR
+                                    --}}
+                                    <div class="form-comentar">
+                                        <form action="#" method="post">
+                                            @csrf
+
+                                            <div class="form-group area-text-comentar">
+                                                <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"
+                                                    placeholder="Faça um comentário..."></textarea>
+
+
+                                                {{-- BOTÃO COMENTAR
+                                                --}}
+                                                <button type="submit" class="btn">Comentar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -255,7 +339,6 @@
                                 <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
                                     class="img-fluid card-servico-feed">
                             </a>
-
                         </div>
 
                     </div>

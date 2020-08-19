@@ -13,14 +13,15 @@
                 <div class="row">
 
                     {{-- USUÁRIOS --}}
+
                     <div class="col-lg-4 col-md-4 col-sm-12 card-admin">
                         <div class="card">
                             <div class="card-content">
-                                <div class="card-body">
+                                <div class="card-body card-b-admin">
                                     <div class="media d-flex">
                                         <div class="media-body text-left">
                                             <h3>5</h3>
-                                            <span>Usuários</span>
+                                            <span><a href="#">Usuários</a></span>
                                         </div>
                                         <div class="align-self-center">
                                             <i class="fa fa-users float-right"></i>
@@ -31,6 +32,7 @@
                         </div>
                     </div>
 
+
                     {{-- INDICAÇÕES --}}
                     <div class="col-lg-4 col-md-4 col-sm-12 card-admin">
                         <div class="card">
@@ -39,7 +41,7 @@
                                     <div class="media d-flex">
                                         <div class="media-body text-left">
                                             <h3>65</h3>
-                                            <span>Indicações</span>
+                                            <span><a href="#">Indicações</a></span>
                                         </div>
                                         <div class="align-self-center">
                                             <i class="fa fa-file-text-o float-right"></i>
@@ -58,7 +60,7 @@
                                     <div class="media d-flex">
                                         <div class="media-body text-left">
                                             <h3>10</h3>
-                                            <span>Serviços</span>
+                                            <span><a href="#">Serviços</a></span>
                                         </div>
                                         <div class="align-self-center">
                                             <i class="fa fa-comments float-right"></i>
@@ -95,8 +97,8 @@
 
                                     <div class="wrap secao-pesquisa-admin">
                                         <div class="pesquisar">
-                                            <input type="text" class="input-pesquisar" placeholder="Pesquisar">
-                                            <button type="submit" class="botao-pesquisar">
+                                            <input type="text" class="input-pesquisar-admin" placeholder="Pesquisar">
+                                            <button type="submit" class="botao-pesquisar-admin">
                                                 <i class="fa fa-search"></i>
                                             </button>
                                         </div>

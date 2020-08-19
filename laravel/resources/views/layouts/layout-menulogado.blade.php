@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="{{ asset('../css/layout-menulogado.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/estilo.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/suporte.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/perfil.css') }}">
-
-    <link rel="stylesheet" href="{{ asset('../css/feed.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/servicos.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/feed.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/perfil.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/amigos.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/admin.css') }}" class="rel">
+    <link rel="stylesheet" href="{{ asset('../css/admin.css') }}">
 
     {{-- FAVICON --}}
     <link rel="shortcut icon" href="{{ asset('../imagens/logo/logo-icon.svg') }}" type="image/x-icon">
@@ -75,14 +75,16 @@
                     {{-- ÁREA DROPDOWN MENU --}}
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <a class="dropdown-item" href="{{ url('feed') }}">Feed</a>
-                        <a class="dropdown-item" href="{{ url('servicos') }}">Serviços</a>
                         <a class="dropdown-item" href="{{ url('perfil') }}">Meu Perfil</a>
+                        <a class="dropdown-item" href="{{ url('amigos') }}">Amigos</a>
+                        <a class="dropdown-item" href="{{ url('servicos') }}">Serviços</a>
                         <a class="dropdown-item" href="{{ url('suporte') }}">Suporte</a>
                         <a class="dropdown-item" href="{{ url('home') }}">Sair</a>
                     </div>
                 </div>
             </div>
         </div>
+
 
     </nav>
 
