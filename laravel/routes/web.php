@@ -44,7 +44,9 @@ Route::get('/suporte', 'SiteController@suporte')->name('suporte');
 
 // ROTAS ADMIN EQUIPE
 
-Route::get('/admin', 'AdminController@painel')->name('admin');
+Route::get('/admin-usuarios', 'AdminController@usuarios')->name('admin-usuarios');
+Route::get('/admin-indicacoes', 'AdminController@indicacoes')->name('admin-indicacoes');
+Route::get('/admin-servicos', 'AdminController@servicos')->name('admin-servicos');
 
 
 

@@ -52,6 +52,10 @@
 
 /* PROCURAR */
 
+.conteudo-admin h2 {
+    color: #007592;
+    font-weight: bold;
+}
 
 .secao-pesquisa-admin {
     width: 400px;

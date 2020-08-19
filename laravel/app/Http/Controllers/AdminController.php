@@ -6,8 +6,20 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function painel()
+    public function usuarios()
     {
-        return view('admin.admin');
+        return view('admin.admin-usuarios');
+    }
+
+
+    public function indicacoes()
+    {
+        return view('admin.admin-indicacoes');
+    }
+
+
+    public function servicos()
+    {
+        return view('admin.admin-servicos');
     }
 }
