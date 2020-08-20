@@ -61,20 +61,28 @@
 
                 </div>
 
+
+
                 {{-- LINKS --}}
-                <div class="card shadow links-feed">
+                <div class="card shadow links-feed ">
                     <h5 class="text-center">Navegação</h5>
+
                     <ul>
+                        <i class="fa fa-user-circle" aria-hidden="true"><a href="{{ route('perfil') }}"
+                                title="">Perfil</a></i>
 
                         <i class="fa fa-users" aria-hidden="true"><a href="{{ route('amigos') }}" title="">Amigos</a></i>
 
                         <i class="fa fa-list-alt" aria-hidden="true"><a href="{{ route('servicos') }}"
                                 title="">Serviços</a></i>
 
-                        <i class="fa fa-cog" aria-hidden="true"><a href="{{ route('configuracao') }}"
-                                title="">Configurações</a></i>
+                        <i class="fa fa-question-circle" aria-hidden="true"><a href="{{ route('suporte') }}"
+                                title="">Suporte</a></i>
 
+                        <i class="fa fa-cog" aria-hidden="true"><a href="{{ route('configuracao') }}" title="">Editar
+                                Perfil</a></i>
                     </ul>
+
                 </div>
 
 

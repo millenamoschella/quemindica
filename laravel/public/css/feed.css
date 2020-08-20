@@ -85,31 +85,29 @@
 
 /* ÁREA LINKS MENU ESQUERDO */
 
-.links-feed {}
-
 .links-feed h5 {
     font-weight: bold;
     padding: 15px;
 }
 
 .links-feed a {
+    font-size: 0.9em;
     text-decoration: none;
     color: #007592;
     font-weight: bold;
-    padding: 10px;
+    padding: 0 10px;
     display: inline-block;
-}
-
-.links-feed i {
-    padding: 10px;
-    color: #007592;
-    font-size: 1.1em;
-    margin-left: -10px;
 }
 
 .links-feed a:hover {
     color: #ffd559;
     font-weight: #ffd559;
+}
+
+.links-feed i {
+    color: #007592;
+    font-size: 1.1em;
+    padding: 10px;
 }
 
 /* ÁREA TAGS */

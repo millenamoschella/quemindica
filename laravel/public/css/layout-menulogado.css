@@ -189,14 +189,9 @@
 
 @media (max-width: 992px) {
 
-    /* .foto-links-menu-logado {
-        background-color: #30b498;
-        display: flex;
-        justify-content: left;
-
-
-
-    } */
+    .foto-links-menu-logado {
+        display: none;
+    }
 
     .titulo-menu-logado {
         font-size: 1em;
@@ -222,5 +217,18 @@
 
     .menu-links-menulog a {
         color: #007592;
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .menu-logado .navbar-collapse {
+        overflow: visible;
+        max-height: none;
+    }
+
+    .menu-logado .navbar-collapse .navbar-nav>.nav-item.dropdown .dropdown-menu>.dropdown-item>.dropdown-message {
+        max-width: 300px;
     }
 }

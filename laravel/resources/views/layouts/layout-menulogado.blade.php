@@ -40,7 +40,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top menu-logado" id="mainNav">
 
         {{-- TÍTULO --}}
-        <a href="{{ url('perfil') }}">
+        <a href="{{ url('home') }}">
             <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" class="img-fluid logo-menu-logado">
         </a>
 
@@ -55,32 +55,33 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        {{-- FOTO USUÁRIO E LINKS --}}
-        <div class="d-inline dropdown ml-auto foto-links-menu-logado">
-
-            {{-- FOTO USUÁRIO --}}
-            <a class="dropdown-toggle seta-drop-menulog" id="messages" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false" href="#">
-                <img src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto usuário menu"
-                    class="img-fluid avatar-menu-logado">
-            </a>
-
-            {{-- MENU DROPDOWN --}}
-            <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menulog" aria-labelledby="messages">
-                <a class="dropdown-item" href="{{ url('feed') }}">Feed</a>
-                <a class="dropdown-item" href="{{ route('perfil') }}">Meu Perfil</a>
-                <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
-                <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
-                <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
-                <a class="dropdown-item" href="{{ route('configuracao') }}">Editar Perfil</a>
-            </div>
-        </div>
-
         {{-- MENU NAV --}}
+
         <div class="collapse navbar-collapse menu-nav-logado" id="navbarResponsive">
-
-
             <ul class="navbar-nav ml-auto componentes-menu-logado">
+
+                {{-- FOTO USUÁRIO E LINKS --}}
+                <div class="dropdown ml-auto foto-links-menu-logado">
+
+                    {{-- FOTO USUÁRIO --}}
+                    <a class="dropdown-toggle seta-drop-menulog" id="messages" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" href="#">
+                        <img src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto usuário menu"
+                            class="img-fluid avatar-menu-logado">
+                    </a>
+
+                    {{-- MENU DROPDOWN --}}
+                    <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menulog"
+                        aria-labelledby="messages">
+                        <a class="dropdown-item" href="{{ url('feed') }}">Feed</a>
+                        <a class="dropdown-item" href="{{ route('perfil') }}">Meu Perfil</a>
+                        <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
+                        <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
+                        <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
+                        <a class="dropdown-item" href="{{ route('configuracao') }}">Editar Perfil</a>
+                    </div>
+                </div>
+
 
                 {{-- ÁREA NOTIFICAÇÕES MENSAGENS --}}
                 <li class="nav-item dropdown">
@@ -195,8 +196,9 @@
                 </li>
 
             </ul>
-
         </div>
+
+
 
     </nav>
 
