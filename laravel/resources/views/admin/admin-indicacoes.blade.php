@@ -39,6 +39,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">Id</th>
+                                <th scope="col">Indicação</th>
                                 <th scope="col">Usuário</th>
                                 <th scope="col">Categoria</th>
                                 <th scope="col">Ações</th>
@@ -48,7 +49,8 @@
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>Shyrles Monteiro</td>
+                                <td>Cadeira</td>
+                                <td>1</td>
                                 <td>Decoração</td>
 
                                 <td>

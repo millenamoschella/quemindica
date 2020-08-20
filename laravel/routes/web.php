@@ -52,12 +52,6 @@ Route::get('/admin-servicos', 'AdminController@servicos')->name('admin-servicos'
 
 
 
-
-
-
-
-
-
 // Route::get('/post', 'PostController@post')->name('post');
 
 // Route::get('/product ', 'ProductController@product')->name('product'); 

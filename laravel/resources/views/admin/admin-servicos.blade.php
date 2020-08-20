@@ -39,9 +39,8 @@
                         <thead>
                             <tr>
                                 <th scope="col">Id</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Indicações</th>
-                                <th scope="col">Serviços</th>
+                                <th scope="col">Serviço</th>
+                                <th scope="col">Usuário</th>
                                 <th scope="col">Ações</th>
                             </tr>
                         </thead>
@@ -49,9 +48,8 @@
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>Shyrles Monteiro</td>
-                                <td>4</td>
-                                <td>20</td>
+                                <td>Manicure</td>
+                                <td>Jane Doe</td>
 
                                 <td>
                                     <i class="fa fa-pencil btn" aria-hidden="true"><a href=""></a></i>

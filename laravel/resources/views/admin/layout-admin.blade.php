@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ asset('../css/servicos.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/layout-admin.css') }}">
 
 
     {{-- FAVICON --}}
@@ -30,8 +31,6 @@
 </head>
 
 <body>
-
-
 
     {{-- PAINEL ADMIN --}}
     <div class="secao-admin-painel">

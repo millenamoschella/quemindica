@@ -34,60 +34,206 @@
 
 <body>
 
+
+
     {{-- MENU --}}
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top menu-logado" id="mainNav">
 
-    <nav class="navbar navbar-expand-lg bd-navbar navbar-light fixed-top fundo">
+        {{-- TÍTULO --}}
+        <a href="{{ url('perfil') }}">
+            <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" class="img-fluid logo-menu-logado">
+        </a>
 
-        {{-- ÁREA BUSCA --}}
-        <div class="d-flex">
+        <a class="navbar-brand titulo-menu-logado" href="{{ route('home') }}">QUEM INDICA</a>
 
-            {{-- LOGO --}}
-            <a href="{{ url('home') }}">
-                <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" width="50" height="50">
+
+        {{-- FOTO USUÁRIO E LINKS --}}
+        <div class="d-inline dropdown ml-auto foto-links-menu-logado">
+
+            {{-- FOTO USUÁRIO --}}
+            <a class="dropdown-toggle seta-drop-menulog" id="messages" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" href="#">
+                <img src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto usuário menu"
+                    class="img-fluid avatar-menu-logado">
             </a>
-            <form class="form-inline">
-                <input class="form-control  divBusca" type="search" placeholder="Buscar" aria-label="Search">
-            </form>
-        </div>
 
-        {{-- ÁREA BOTÃO MENU LADO DIREITO --}}
-        <button class="navbar-toggler bg-light " type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        {{-- ÁRREA MENU LATERAL --}}
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav ml-auto">
-                <div class="dropdown">
-                    {{-- ÁREA FOTO USUÁRIO MENU --}}
-
-                    <a href="{{ url('perfil') }}">
-                        <img src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto do usuario"
-                            width="40px" class="rounded">
-                    </a>
-
-                    {{-- ÁREA NOME USUÁRIO MENU --}}
-                    <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Shyrles Monteiro
-                    </a>
-
-                    {{-- ÁREA DROPDOWN MENU --}}
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="{{ url('feed') }}">Feed</a>
-                        <a class="dropdown-item" href="{{ url('perfil') }}">Meu Perfil</a>
-                        <a class="dropdown-item" href="{{ url('amigos') }}">Amigos</a>
-                        <a class="dropdown-item" href="{{ url('servicos') }}">Serviços</a>
-                        <a class="dropdown-item" href="{{ url('suporte') }}">Suporte</a>
-                        <a class="dropdown-item" href="{{ url('home') }}">Sair</a>
-                    </div>
-                </div>
+            {{-- MENU DROPDOWN --}}
+            <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menulog" aria-labelledby="messages">
+                <a class="dropdown-item" href="{{ url('feed') }}">Feed</a>
+                <a class="dropdown-item" href="{{ route('perfil') }}">Meu Perfil</a>
+                <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
+                <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
+                <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
+                <a class="dropdown-item" href="{{ route('configuracao') }}">Editar Perfil</a>
             </div>
         </div>
 
+        {{-- SEÇÃO MENU NOTIFICAÇÕES, PESQUISAR E SAIR --}}
+        <div>
+
+            {{-- BOTÃO MENU --}}
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            {{-- MENU NAV --}}
+            <div class="collapse navbar-collapse menu-nav-logado" id="navbarResponsive">
+
+                <ul class="navbar-nav ml-auto componentes-menu-logado">
+
+                    {{-- ÁREA NOTIFICAÇÕES MENSAGENS --}}
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-fw fa-envelope"></i>
+
+                            <span class="d-lg-none">Mensagens
+                                <span class="badge badge-pill badge-primary">1 Nova</span>
+                            </span>
+
+                            <span class="indicator text-primary d-none d-lg-block">
+                                <i class="fa fa-fw fa-circle"></i>
+                            </span>
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+                            <h6 class="dropdown-header">Novas Mensagens</h6>
+                            <div class="dropdown-divider"></div>
+
+                            {{-- EXEMPLO NOTIFICAÇÃO MENSAGEM
+                            --}}
+                            <a class="dropdown-item" href="#">
+
+                                <strong class="nome-user-not">Sara Maragarido</strong>
+
+                                <span class="small float-right text-muted">15:45</span>
+
+                                <div class="dropdown-message small">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Proin at eros magna. Maecenas
+                                    ultricies orci ac purus vestibulum tincidunt.
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+
+                            {{-- BOTÃO VER TODAS AS MENSAGENS
+                            --}}
+                            <a class="dropdown-item small ver-mais-menu" href="#">Ver Todas</a>
+
+                        </div>
+                    </li>
+
+
+                    {{-- ÁREA NOTIFICAÇÕES GERAIS --}}
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+
+                            <i class="fa fa-fw fa-bell"></i>
+
+                            <span class="d-lg-none">Notificações
+                                <span class="badge badge-pill badge-warning">1 Nova</span>
+                            </span>
+
+                            <span class="indicator text-warning d-none d-lg-block">
+                                <i class="fa fa-fw fa-circle"></i>
+                            </span>
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+
+                            <h6 class="dropdown-header">Novas Notificações</h6>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">
+
+                                <strong class="nome-user-not">Marcia quer ser sua amiga</strong>
+
+                                <span class="small float-right text-muted">10:04</span>
+
+                                <div class="dropdown-message small">
+                                    This is an automated server response message. All
+                                    systems are online.
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+
+                            {{-- VER TODAS AS NOTIFICAÇÕES
+                            --}}
+                            <a class="dropdown-item small ver-mais-menu" href="#">Ver Todas</a>
+
+                        </div>
+                    </li>
+
+
+                    {{-- ÁREA PESQUISA --}}
+                    <li class="nav-item">
+                        <form class="form-inline my-2 my-lg-0 mr-lg-2">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Pesquisar">
+                                <span class="input-group-append">
+
+                                    <button class="btn btn-pesquisa-menu" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+
+                                </span>
+                            </div>
+                        </form>
+                    </li>
+
+
+                    {{-- BOTÃO SAIR --}}
+                    <li class="nav-item botao-sair-menu">
+
+                        <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                            <i class="fa fa-fw fa-sign-out"></i><span>Sair</span></a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
 
     </nav>
+
+    {{-- MODAL SAIR --}}
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title modal-titulo-menu" id="exampleModalLabel">Desejar sair da conta?</h5>
+
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+
+                </div>
+
+                <div class="modal-body texto-modal-sair">Selecione <b>sair</b> abaixo para sair da conta</div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-botao-modal-menu-cancelar" type="button"
+                        data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-botao-modal-menu-sair" href="login.html">Sair</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
 
     {{-- CONTEÚDO FEED --}}
 
