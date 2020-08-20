@@ -153,7 +153,6 @@
     color: #fff;
 }
 
-
 .componentes-menu-logado>.nav-item.dropdown>.nav-link {
     position: relative;
     min-width: 45px;
@@ -189,6 +188,16 @@
 
 
 @media (max-width: 992px) {
+
+    /* .foto-links-menu-logado {
+        background-color: #30b498;
+        display: flex;
+        justify-content: left;
+
+
+
+    } */
+
     .titulo-menu-logado {
         font-size: 1em;
     }
