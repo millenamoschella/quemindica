@@ -54,8 +54,6 @@
     background-color: #FCDA73;
 }
 
-
-
 .menu-nav-logado {
     overflow: auto;
     max-height: 75vh;
@@ -115,8 +113,6 @@
     color: #FCDA73;
 }
 
-
-
 .fa-sign-out {
     color: #fff;
 }
@@ -158,7 +154,6 @@
 }
 
 
-
 .componentes-menu-logado>.nav-item.dropdown>.nav-link {
     position: relative;
     min-width: 45px;
@@ -193,67 +188,30 @@
 /* ÁREA RESPONSIVA */
 
 
-@media (min-width: 992px) {
-    .menu-logado .navbar-brand {
-        width: 250px;
+@media (max-width: 992px) {
+    .titulo-menu-logado {
+        font-size: 1em;
     }
 
-    .menu-nav-logado {
-        overflow: visible;
-        max-height: none;
+    .titulo-not-mobile-menulog {
+        color: #FCDA73;
+        font-size: 0.9em;
     }
 
-    .menu-nav-logado .navbar-sidenav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        flex-direction: column;
-        margin-top: 56px;
+    .not-badge-mobile {
+        background-color: #FCDA73;
     }
 
-    .menu-nav-logado .navbar-sidenav>.nav-item {
-        width: 250px;
-        padding: 0;
+    .not-badge-mobile:hover {
+        color: #007592;
     }
 
-    .menu-nav-logado .navbar-sidenav>.nav-item>.nav-link {
-        padding: 1em;
+    .menu-links-menulog {
+        justify-content: center;
+        background-color: #fff;
     }
 
-    .menu-nav-logado .navbar-sidenav>.nav-item .sidenav-second-level,
-    .menu-nav-logado .navbar-sidenav>.nav-item .sidenav-third-level {
-        padding-left: 0;
-        list-style: none;
-    }
-
-    .menu-nav-logado .navbar-sidenav>.nav-item .sidenav-second-level>li,
-    .menu-nav-logado .navbar-sidenav>.nav-item .sidenav-third-level>li {
-        width: 250px;
-    }
-
-    .menu-nav-logado .navbar-sidenav>.nav-item .sidenav-second-level>li>a,
-    .menu-nav-logado .navbar-sidenav>.nav-item .sidenav-third-level>li>a {
-        padding: 1em;
-    }
-
-    .menu-nav-logado .navbar-sidenav>.nav-item .sidenav-second-level>li>a {
-        padding-left: 2.75em;
-    }
-
-    .menu-nav-logado .navbar-sidenav>.nav-item .sidenav-third-level>li>a {
-        padding-left: 3.75em;
-    }
-
-    .componentes-menu-logado>.nav-item.dropdown>.nav-link {
-        min-width: 0;
-    }
-
-    .componentes-menu-logado>.nav-item.dropdown>.nav-link:after {
-        width: 24px;
-        text-align: center;
-    }
-
-    .componentes-menu-logado>.nav-item.dropdown .dropdown-menu>.dropdown-item>.dropdown-message {
-        max-width: 300px;
+    .menu-links-menulog a {
+        color: #007592;
     }
 }

@@ -46,159 +46,157 @@
 
         <a class="navbar-brand titulo-menu-logado" href="{{ route('home') }}">QUEM INDICA</a>
 
-
-        {{-- FOTO USUÁRIO E LINKS --}}
-        <div class="d-inline dropdown ml-auto foto-links-menu-logado">
-
-            {{-- FOTO USUÁRIO --}}
-            <a class="dropdown-toggle seta-drop-menulog" id="messages" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false" href="#">
-                <img src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto usuário menu"
-                    class="img-fluid avatar-menu-logado">
-            </a>
-
-            {{-- MENU DROPDOWN --}}
-            <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menulog" aria-labelledby="messages">
-                <a class="dropdown-item" href="{{ url('feed') }}">Feed</a>
-                <a class="dropdown-item" href="{{ route('perfil') }}">Meu Perfil</a>
-                <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
-                <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
-                <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
-                <a class="dropdown-item" href="{{ route('configuracao') }}">Editar Perfil</a>
-            </div>
-        </div>
-
         {{-- SEÇÃO MENU NOTIFICAÇÕES, PESQUISAR E SAIR --}}
-        <div>
 
-            {{-- BOTÃO MENU --}}
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-            {{-- MENU NAV --}}
-            <div class="collapse navbar-collapse menu-nav-logado" id="navbarResponsive">
-
-                <ul class="navbar-nav ml-auto componentes-menu-logado">
-
-                    {{-- ÁREA NOTIFICAÇÕES MENSAGENS --}}
-                    <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-fw fa-envelope"></i>
-
-                            <span class="d-lg-none">Mensagens
-                                <span class="badge badge-pill badge-primary">1 Nova</span>
-                            </span>
-
-                            <span class="indicator text-primary d-none d-lg-block">
-                                <i class="fa fa-fw fa-circle"></i>
-                            </span>
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="messagesDropdown">
-                            <h6 class="dropdown-header">Novas Mensagens</h6>
-                            <div class="dropdown-divider"></div>
-
-                            {{-- EXEMPLO NOTIFICAÇÃO MENSAGEM
-                            --}}
-                            <a class="dropdown-item" href="#">
-
-                                <strong class="nome-user-not">Sara Margarido</strong>
-
-                                <span class="small float-right text-muted">15:45</span>
-
-                                <div class="dropdown-message small">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Proin at eros magna. Maecenas
-                                    ultricies orci ac purus vestibulum tincidunt.
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-
-                            {{-- BOTÃO VER TODAS AS MENSAGENS
-                            --}}
-                            <a class="dropdown-item small ver-mais-menu" href="#">Ver Todas</a>
-
-                        </div>
-                    </li>
+        {{-- BOTÃO MENU --}}
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
 
-                    {{-- ÁREA NOTIFICAÇÕES GERAIS --}}
-                    <li class="nav-item dropdown">
+        {{-- MENU NAV --}}
+        <div class="collapse navbar-collapse menu-nav-logado" id="navbarResponsive">
 
-                        <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+            <ul class="navbar-nav ml-auto componentes-menu-logado">
 
-                            <i class="fa fa-fw fa-bell"></i>
+                {{-- FOTO USUÁRIO E LINKS --}}
+                <div class="d-inline dropdown ml-auto foto-links-menu-logado">
 
-                            <span class="d-lg-none">Notificações
-                                <span class="badge badge-pill badge-warning">1 Nova</span>
-                            </span>
+                    {{-- FOTO USUÁRIO --}}
+                    <a class="dropdown-toggle seta-drop-menulog" id="messages" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" href="#">
+                        <img src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto usuário menu"
+                            class="img-fluid avatar-menu-logado">
+                    </a>
 
-                            <span class="indicator text-warning d-none d-lg-block">
-                                <i class="fa fa-fw fa-circle"></i>
-                            </span>
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="alertsDropdown">
-
-                            <h6 class="dropdown-header">Novas Notificações</h6>
-                            <div class="dropdown-divider"></div>
-
-                            <a class="dropdown-item" href="#">
-
-                                <strong class="nome-user-not">Marcia quer ser sua amiga</strong>
-
-                                <span class="small float-right text-muted">10:04</span>
-
-                                <div class="dropdown-message small">
-                                    This is an automated server response message. All
-                                    systems are online.
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-
-                            {{-- VER TODAS AS NOTIFICAÇÕES
-                            --}}
-                            <a class="dropdown-item small ver-mais-menu" href="#">Ver Todas</a>
-
-                        </div>
-                    </li>
+                    {{-- MENU DROPDOWN --}}
+                    <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menulog"
+                        aria-labelledby="messages">
+                        <a class="dropdown-item" href="{{ url('feed') }}">Feed</a>
+                        <a class="dropdown-item" href="{{ route('perfil') }}">Meu Perfil</a>
+                        <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
+                        <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
+                        <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
+                        <a class="dropdown-item" href="{{ route('configuracao') }}">Editar Perfil</a>
+                    </div>
+                </div>
 
 
-                    {{-- ÁREA PESQUISA --}}
-                    <li class="nav-item">
-                        <form class="form-inline my-2 my-lg-0 mr-lg-2">
-                            <div class="input-group">
-                                <input class="form-control" type="text" placeholder="Pesquisar">
-                                <span class="input-group-append">
+                {{-- ÁREA NOTIFICAÇÕES MENSAGENS --}}
+                <li class="nav-item dropdown">
 
-                                    <button class="btn btn-pesquisa-menu" type="button">
-                                        <i class="fa fa-search"></i>
-                                    </button>
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-envelope"></i>
 
-                                </span>
+                        <span class="d-lg-none titulo-not-mobile-menulog">Mensagens
+                            <span class="badge badge-pill not-badge-mobile">1 Nova</span>
+                        </span>
+
+                        <span class="indicator text-primary d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+                        <h6 class="dropdown-header">Novas Mensagens</h6>
+                        <div class="dropdown-divider"></div>
+
+                        {{-- EXEMPLO NOTIFICAÇÃO MENSAGEM
+                        --}}
+                        <a class="dropdown-item" href="#">
+
+                            <strong class="nome-user-not">Sara Margarido</strong>
+
+                            <span class="small float-right text-muted">15:45</span>
+
+                            <div class="dropdown-message small">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Proin at eros magna. Maecenas
+                                ultricies orci ac purus vestibulum tincidunt.
                             </div>
-                        </form>
-                    </li>
+                        </a>
+                        <div class="dropdown-divider"></div>
+
+                        {{-- BOTÃO VER TODAS AS MENSAGENS
+                        --}}
+                        <a class="dropdown-item small ver-mais-menu" href="#">Ver Todas</a>
+
+                    </div>
+                </li>
 
 
-                    {{-- BOTÃO SAIR --}}
-                    <li class="nav-item botao-sair-menu">
+                {{-- ÁREA NOTIFICAÇÕES GERAIS --}}
+                <li class="nav-item dropdown">
 
-                        <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-                            <i class="fa fa-fw fa-sign-out"></i><span>Sair</span></a>
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
 
-                    </li>
+                        <i class="fa fa-fw fa-bell"></i>
 
-                </ul>
+                        <span class="d-lg-none titulo-not-mobile-menulog">Notificações
+                            <span class="badge badge-pill not-badge-mobile">1 Nova</span>
+                        </span>
 
-            </div>
+                        <span class="indicator text-warning d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+
+                        <h6 class="dropdown-header">Novas Notificações</h6>
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">
+
+                            <strong class="nome-user-not">Marcia quer ser sua amiga</strong>
+
+                            <span class="small float-right text-muted">10:04</span>
+
+                            <div class="dropdown-message small">
+                                This is an automated server response message. All
+                                systems are online.
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+
+                        {{-- VER TODAS AS NOTIFICAÇÕES
+                        --}}
+                        <a class="dropdown-item small ver-mais-menu" href="#">Ver Todas</a>
+
+                    </div>
+                </li>
+
+
+                {{-- ÁREA PESQUISA --}}
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0 mr-lg-2">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Pesquisar">
+                            <span class="input-group-append">
+
+                                <button class="btn btn-pesquisa-menu" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+
+                            </span>
+                        </div>
+                    </form>
+                </li>
+
+
+                {{-- BOTÃO SAIR --}}
+                <li class="nav-item botao-sair-menu">
+
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-fw fa-sign-out"></i><span>Sair</span></a>
+
+                </li>
+
+            </ul>
 
         </div>
 
