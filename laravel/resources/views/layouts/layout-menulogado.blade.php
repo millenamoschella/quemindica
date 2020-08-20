@@ -108,7 +108,7 @@
                             --}}
                             <a class="dropdown-item" href="#">
 
-                                <strong class="nome-user-not">Sara Maragarido</strong>
+                                <strong class="nome-user-not">Sara Margarido</strong>
 
                                 <span class="small float-right text-muted">15:45</span>
 
