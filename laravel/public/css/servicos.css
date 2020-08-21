@@ -1,11 +1,149 @@
+.side-filtros {
+    background: #007592;
+    padding: 50px;
+}
+
+/* SEÇÃO PESQUISA */
+
+.pesquisa-servico {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.input-pesquisa-servico {
+    color: #fff;
+    border: 2px solid #FCDA73;
+    background-color: #007592;
+}
+
+.input-pesquisa-servico:focus {
+    color: #fff;
+    background-color: #007592;
+}
+
+.input-pesquisa-servico::placeholder {
+    color: #fff;
+}
+
+.botao-pesquisar-servico {
+    margin-left: -5px;
+    border: 1px solid #FCDA73;
+    background-color: #FCDA73;
+}
+
+.botao-pesquisar-servico:hover {
+    border: 1px solid #FCDA73;
+}
+
+.botao-pesquisar-servico i {
+    color: #007592;
+}
+
+.botao-pesquisar-servico i:hover {
+    color: #FCDA73;
+}
+
+
+/* SEÇÃO FILTRO PREÇO */
+.pesquisa-preco {
+    color: #fff;
+    background-color: #007592;
+    box-shadow: 0 10px 20px #00000030,
+        0 6px 6px #0000003b;
+}
+
+.pesquisa-preco h6 {
+    font-weight: bold;
+}
+
+.input-faixa-preco-servico {
+    color: #fff;
+    border: 2px solid #FCDA73;
+    background-color: #007592;
+}
+
+.input-faixa-preco-servico:focus {
+    color: #fff;
+    background-color: #007592;
+}
+
+.input-faixa-preco-servico::placeholder {
+    color: #fff;
+}
+
+
+/* SEÇÃO FILTRO CATEGORIA */
+
+.pesquisa-categoria {
+    margin-left: 0px 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #007592;
+    box-shadow: 0 10px 20px #00000030,
+        0 6px 6px #0000003b;
+}
+
+.pesquisa-categoria h6 {
+    font-weight: bold;
+}
+
+
+.pesquisa-categoria input[type='checkbox'] {
+    display: block;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.pesquisa-categoria input[type='checkbox']:after {
+    content: "";
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    font-size: 0.6em;
+    background-color: #FCDA73;
+    box-shadow: 0 10px 20px #00000030,
+        0 6px 6px #0000003b;
+}
+
+.pesquisa-categoria input[type='checkbox']:hover:after,
+.pesquisa-categoria input[type='checkbox']:checked:hover:after {
+    content: '\2714';
+    font-weight: bold;
+    color: #FCDA73;
+    background-color: #006983;
+}
+
+.pesquisa-categoria input[type='checkbox']:checked:after {
+    content: '\2714';
+    font-weight: bold;
+    color: #FCDA73;
+    background-color: #006983;
+}
+
+.pesquisa-categoria span {
+    color: #FCDA73;
+    margin: 10px;
+}
+
+
+
+
+/* ÁREA SERVIÇOS */
+
 .secao-servicos {
     margin-top: 40px;
-    padding: 40px;
+    padding: 5px 40px;
+    background-color: #fff;
 }
 
 .secao-servicos h1 {
     font-weight: bold;
     margin-top: 30px;
+    color: #007592;
 }
 
 .card {
