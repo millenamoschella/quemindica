@@ -164,6 +164,17 @@
         0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+.card-servicos button {
+    margin-top: -20px;
+    margin-left: -20px;
+    color: #006983;
+    font-weight: bold;
+}
+
 .card-title {
     font-weight: bold;
+}
+
+.card-servicos p {
+    color: #6b6b6b;
 }
