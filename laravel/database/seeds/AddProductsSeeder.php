@@ -62,7 +62,7 @@ class AddProductsSeeder extends Seeder
         ]);
 
         Product::create([
-            'nome' => 'Shampoo Lo Poo',
+            'nome' => 'Shampoo Low Poo',
             'marca' => 'Skala',
             'descricao' => 'Sem sulfatos, parabenos e silicone',
             'valor' => 51.00,

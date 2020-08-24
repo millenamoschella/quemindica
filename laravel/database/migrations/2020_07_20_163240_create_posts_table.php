@@ -19,9 +19,9 @@ class CreatePostsTable extends Migration
             $table->timestamps();
 
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('service_id')->constrained();
-            $table->foreignId('product_id')->constrained();
-            $table->foreignId('culture_id')->constrained();
+            $table->foreignId('service_id')->nullable()->constrained();
+            $table->foreignId('product_id')->nullable()->constrained();
+            $table->foreignId('culture_id')->nullable()->constrained();
             
 
         });

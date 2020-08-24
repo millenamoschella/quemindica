@@ -39,7 +39,7 @@
     <header class="container-fluid fixed-top nav-off">
 
         {{-- ÁRREA MENU --}}
-        <nav class="container mb-1 navbar navbar-expand-lg navbar-dark info-color">
+        <nav class="container-fluid mb-1 navbar navbar-expand-lg navbar-dark info-color">
 
             {{-- LOGO E QUEM INDICA --}}
             <div class="nav-brand logo-nav">
@@ -47,7 +47,7 @@
                     <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" alt="Logo Quem Indica" class="img-fluid">
                 </a>
                 <a class="navbar-brand titulo-quemindica" href="{{ url('home') }}">
-                    QUEM INDICA
+                    Quem Indica
                 </a>
             </div>
 
@@ -64,24 +64,24 @@
                     {{-- BOTÃO SUPORTE --}}
                     <li class="nav-item botao-suporte">
                         <a href="#" data-toggle="modal" data-target="#modalSuporte" class="nav-link">
-                            <img src="{{ asset('../icones/suporte-qi.png') }}" class="btn-suporte">
+                            <img src="{{ asset('../icones/suporte.png') }}" class="btn-suporte">
                         </a>
                     </li>
 
                     {{-- BOTÃO LOGIN --}}
                     <li class="nav-item botao-loginRegistrar">
                         <a href="#" data-toggle="modal" data-target="#modalEntrar" class="nav-link">
-                            <button class="botao-entrar">
-                                LOGIN
+                            <button class="btn-yellow">
+                                <strong>Login</strong>
                             </button>
                         </a>
                     </li>
 
                     {{-- BOTÃO REGISTRAR --}}
                     <li class="nav-item botao-loginRegistrar">
-                        <a href="{{ route('registrar') }}" class="nav-link">
-                            <button class="botao-registrar">
-                                REGISTRAR
+                    <a href="#" data-toggle="modal" data-target="#modalRegistrar" class="nav-link">
+                            <button class="btn-yellow">
+                                <strong>Registrar</strong>
                             </button>
                         </a>
                     </li>
