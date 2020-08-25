@@ -1,12 +1,11 @@
 /* CAPA PERFIL */
 
 .capa {
-    background-position: center;
+    background: url('../imagens/institucional/capa-perfil.jpg') center;
     background-size: cover;
-    height: 70vh;
-    box-shadow: 0 14px 28px #00000040,
-        0 10px 10px #00000038;
+    height: 400px;
 }
+
 
 .capa-perfil img {
     width: 100%;
@@ -21,12 +20,12 @@
 .secao-foto-user-perfil {
     position: relative;
     margin: 0 0 -80px;
-    background-color: #007592;
+    background-color: #00415e;
 }
 
 .perfil-quemindica {
     margin-top: 60px;
-    background-color: #007592;
+    background-color: #00415e;
 }
 
 
@@ -52,7 +51,7 @@
     margin: 0 auto -16px;
     border-radius: 100%;
 
-    box-shadow: 0 19px 38px #0000004d,
+    box-shadow: 1px 1px 2px #333,
         0 15px 12px #00000038;
 }
 
@@ -63,11 +62,23 @@
 
 }
 
-.nome-usuario-perfil {
+.stars {
     margin-top: -100px;
+}
+
+.stars i {
+    font-size: 1.5em;
+    color: #ffd559;
+    font-weight: 400;
+    /* margin-top: 50px; */
+    /* text-shadow: 1px 1px 1px #7a7a7a; */
+}
+
+.nome-usuario-perfil {
+    /* margin-top: -100px; */
     color: #fff;
     font-weight: bold;
-    text-shadow: 3px 3px 4px #013b49;
+    text-shadow: 1px 1px 2px #333;
 }
 
 
@@ -81,8 +92,8 @@
     font-size: 1em;
     font-weight: bold;
 
-    box-shadow: 0 10px 20px #00000030,
-        0 6px 6px #0000003b;
+    box-shadow: 1px 1px 2px #333,
+        0 3px 3px #0000003b;
 }
 
 .adicionar {
@@ -123,13 +134,13 @@
     color: #ffd559;
     font-weight: 400;
     margin-top: 50px;
-    text-shadow: 3px 3px 4px #7a7a7a;
+    /* text-shadow: 1px 1px 1px #7a7a7a; */
 }
 
 .pontuacao-feed-perfil span {
     font-size: 1em;
     font-weight: 600;
-    color: #ffd559;
+    color: #00415e;
 }
 
 /* ÁREA TAGS */
@@ -227,8 +238,8 @@ span {
 
 .card-footer-perfil i:hover,
 span:hover {
-    color: #ffd559;
-    font-weight: #ffd559;
+    color: #007592;
+    cursor: pointer;
 }
 
 .postagem-perfil {

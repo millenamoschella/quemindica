@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/admin.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/configuracao.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/modal.css') }}">
 
     {{-- FAVICON --}}
     <link rel="shortcut icon" href="{{ asset('../imagens/logo/logo-icon.svg') }}" type="image/x-icon">
@@ -30,6 +31,9 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!-- SCRIPTS -->
+    <script src="./js/app.js" async></script>
 </head>
 
 <body>

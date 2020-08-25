@@ -21,8 +21,8 @@
                     {{-- TEXTO --}}
                     <p class="text-center">
                         No Quem Indica você encontra o que precisa com indicações
-                        feitas pelas pessoas que você mais confia...
-                        Estamos prontos para ajudar você encontrar o profissional que precisa!
+                        feitas pelas pessoas que você mais confia e ainda ajuda profissionais autônomos sem a necessidade de cadastrá-los.
+                        <br>Estamos prontos para ajudar você encontrar o profissional que precisa!
                     </p>
 
                 </div>
@@ -50,9 +50,9 @@
                     <label class="sr-only" for="inlineFormInputGroup">Email</label>
                     <div class="input-group mb-2">
                         <div class="input-group-prepend arroba">
-                            <div class="input-group-text">@</div>
+                            <div class="input-group-text">#</div>
                         </div>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                        <input type="codigo" name="codigo" class="form-control" id="codigo" placeholder="Código de verificação">
                     </div>
                 </div>
 

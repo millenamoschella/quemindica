@@ -11,7 +11,7 @@
     {{-- CAPA PERFIL --}}
     <section class="capa-perfil">
         <div class="capa">
-            <img src="{{ asset('../imagens/institucional/capa-perfil.jpg') }}" alt="Foto capa perfil" class="img-fluid">
+        <!-- Foto no background do CSS -->
         </div>
     </section>
 
@@ -21,11 +21,24 @@
 
             {{-- FOTO USUÁRIO --}}
             <div class="foto-perfil-user">
+            <a href="#" data-toggle="modal" data-target="#modalFoto">
                 <img src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}" alt="Capa perfil usuário">
+            </a>
+                
             </div>
 
             {{-- NOME USUÁRIO --}}
+            <div class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+            <div>
+               
             <h1 class="nome-usuario-perfil">Shyrles Monteiro</h1>
+
+
 
             {{-- BOTÕES ADICIONAR E MENSAGEM --}}
             <div class="adicionar-mensagem-perfil">
@@ -59,7 +72,7 @@
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star-half-o" aria-hidden="true"></i>
                                         <i class="fa fa-star-o" aria-hidden="true"></i>
-                                        <div>
+                                    <div>
                                             <span>25 pontos</span>
                                         </div>
                                     </div>
@@ -355,3 +368,6 @@
 
 
 @endsection
+
+{{-- MODAL --}}
+@extends('layouts.modal')
