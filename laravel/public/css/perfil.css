@@ -1,18 +1,23 @@
 /* CAPA PERFIL */
-
+.capa-perfil {
+    position: relative;
+}
 .capa {
     background: url('../imagens/institucional/capa-perfil.jpg') center;
     background-size: cover;
     height: 400px;
 }
 
-
-.capa-perfil img {
-    width: 100%;
+.icon-change {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #00415e;
+    border-radius: 50%;
 }
-
-.capa img {
-    height: 80vh;
+.icon-change img {
+    padding: 8px;
+    width: 40px;
 }
 
 /* FOTO E NOME DO USUÁRIO */

@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
     <!-- SCRIPTS -->
-    <script src="./js/app.js" async></script>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </head>
 
 <body>

@@ -11,6 +11,11 @@
     {{-- CAPA PERFIL --}}
     <section class="capa-perfil">
         <div class="capa">
+            <div class="icon-change">
+            <a href="#" data-toggle="modal" data-target="#modalFotoCapa">
+                <img src="icones/pencil.svg" alt="Mudar foto de capa">
+            </a>
+            </div>
         <!-- Foto no background do CSS -->
         </div>
     </section>
