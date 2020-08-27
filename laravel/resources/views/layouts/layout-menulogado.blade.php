@@ -243,7 +243,7 @@
 
     {{-- FOOTER --}}
 
-    @extends('layouts.footer')
+    @extends('layouts.footer-logado')
 
 
     {{-- BOOTSTRAP --}}
