@@ -2,6 +2,7 @@
 .capa-perfil {
     position: relative;
 }
+
 .capa {
     background: url('../imagens/institucional/capa-perfil.jpg') center;
     background-size: cover;
@@ -15,6 +16,7 @@
     background: #00415e;
     border-radius: 50%;
 }
+
 .icon-change img {
     padding: 8px;
     width: 40px;
@@ -153,6 +155,10 @@
 }
 
 /* ÁREA TAGS */
+
+.secao-tags-perfil {
+    padding: 10px 0px;
+}
 
 .secao-tags-perfil h5 {
     padding: 15px 0;
