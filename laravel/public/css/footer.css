@@ -85,47 +85,8 @@ footer {
     margin-bottom: 0;
 }
 
+/* === FOOTER LOGADO === */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.secao-footer {}
+.footer-logado {
+    background-color: #00415e !important;
+}

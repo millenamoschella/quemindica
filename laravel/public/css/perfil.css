@@ -131,7 +131,10 @@
 
 .card-sticky {
     position: sticky;
-    top: 66px;
+    top: 76px;
+    height: 84vh;
+    overflow-y: scroll;
+    
 }
 
 /* ÁREA PONTOS E INDICAÇÕES */
@@ -443,10 +446,6 @@ span:hover {
 
 
 /* SEÇÃO AMIGOS PERFIL */
-
-/* .amigos-perfil {
-    margin-bottom: 20px;
-} */
 
 .amigos-perfil h5 {
     padding: 15px 0;

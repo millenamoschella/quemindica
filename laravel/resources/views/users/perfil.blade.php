@@ -113,7 +113,7 @@
 
 
                     {{-- POSTS DO USUÁRIO --}}
-                    <div class="col-lg-7 col-md-7 col-sm-12 mb-3 order-md-2 posts-perfil">
+                    <div class="col-lg-7 col-md-7 col-sm-12 order-md-2 posts-perfil">
 
                         {{-- EXEMPLO POST --}}
 
@@ -296,7 +296,7 @@
 
                         {{-- EXEMPLO POST --}}
 
-                        <div class="card shadow mb-3 area-post-perfil">
+                        <div class="card shadow area-post-perfil">
 
                             {{-- FOTO USUÁRIO E HORÁRIO POST
                             --}}
@@ -530,6 +530,141 @@
                                     </a>
 
                                 </div>
+                                <div class="cards-imagens-perfil">
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/sara.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/leonardo.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/marcia.png') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/Millena.png') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/vivian.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/sandra.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/joao.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/gabriel.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/michelle.png') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                </div>
+                                <div class="cards-imagens-perfil">
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/sara.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/leonardo.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/marcia.png') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/Millena.png') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/vivian.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/sandra.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/joao.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/gabriel.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/michelle.png') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                </div>
+                                <div class="cards-imagens-perfil">
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/sara.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/leonardo.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/marcia.png') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/Millena.png') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/vivian.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/sandra.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/joao.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/gabriel.jfif') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="{{ asset('imagens/minhaConta/michelle.png') }}"
+                                            class="img-fluid card-amigos-perfil">
+                                    </a>
+
+                                </div>
                             </div>
 
 
@@ -539,8 +674,13 @@
                                 <a href="#">Ver Mais</a>
                             </div>
 
+                            
+
                         </div>
+                        
                     </div>
+
+
 
                 </div>
             </div>
