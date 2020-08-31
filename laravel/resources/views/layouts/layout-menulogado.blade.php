@@ -33,12 +33,17 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
     <!-- SCRIPTS -->
-    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    <script defer type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+
+
+    {{-- SCRIPTS MODAIS - FOTO PERFIL E FOTO CAPA --}}
+    <script defer src="{{ asset('../js/modal-fotoPerfil.js') }}"></script>
+    <script defer src="{{ asset('../js/modal-fotoCapa.js') }}"></script>
+
+
 </head>
 
 <body>
-
-
 
     {{-- MENU --}}
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top menu-logado" id="mainNav">
@@ -52,7 +57,7 @@
 
         {{-- SEÇÃO MENU NOTIFICAÇÕES, PESQUISAR E SAIR --}}
 
-        {{-- BOTÃO MENU --}}
+        {{-- BOTÃO MENU RESPONSIVO--}}
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -67,23 +72,53 @@
                 {{-- FOTO USUÁRIO E LINKS --}}
                 <div class="dropdown ml-auto foto-links-menu-logado">
 
-                    {{-- FOTO USUÁRIO --}}
-                    <a class="dropdown-toggle seta-drop-menulog" id="messages" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false" href="#">
-                        <img src="{{ asset('../imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto usuário menu"
-                            class="img-fluid avatar-menu-logado">
-                    </a>
+                    {{-- MENU AUTH --}}
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
 
-                    {{-- MENU DROPDOWN --}}
-                    <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menulog"
-                        aria-labelledby="messages">
-                        <a class="dropdown-item" href="{{ url('feed') }}">Feed</a>
-                        <a class="dropdown-item" href="{{ route('perfil') }}">Meu Perfil</a>
-                        <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
-                        <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
-                        <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
-                        <a class="dropdown-item" href="{{ route('configuracao') }}">Editar Perfil</a>
+                            {{-- BOTÃO LOGIN E REGISTRAR --}}
+                            @guest
+                                {{-- LOGIN --}}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                                {{-- REGISTRAR --}}
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </li>
+                                @endif
+                            @else
+
+                                {{-- NOME DO USUÁRIO E FOTO USUÁRIO
+                                --}}
+
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle seta-drop-menulog" href="#"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+
+                                    <img src="{{ Auth::user()->photo }}" alt="Foto usuário menu"
+                                        class="img-fluid avatar-menu-logado">
+                                </a>
+
+
+                                {{-- MENU DROPDOWN --}}
+                                <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menulog"
+                                    aria-labelledby="messages">
+                                    <a class="dropdown-item" href="{{ url('feed') }}">Feed</a>
+                                    <a class="dropdown-item" href="{{ route('perfil') }}">Meu Perfil</a>
+                                    <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
+                                    <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
+                                    <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
+                                    <a class="dropdown-item" href="{{ route('configuracao') }}">Editar Perfil</a>
+                                </div>
+
+                            @endguest
+
+                        </ul>
                     </div>
+                    {{-- FINAL MENU AUTH --}}
+
                 </div>
 
 
@@ -202,9 +237,8 @@
             </ul>
         </div>
 
-
-
     </nav>
+
 
     {{-- MODAL SAIR --}}
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -225,16 +259,27 @@
                 <div class="modal-body texto-modal-sair">Selecione <b>sair</b> abaixo para sair da conta</div>
 
                 <div class="modal-footer">
-                    <button class="btn btn-botao-modal-menu-cancelar" type="button"
+
+                    {{-- BOTÃO CANCELAR --}}
+                    <button class="btn btn-sm btn-botao-modal-menu-cancelar" type="button"
                         data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-botao-modal-menu-sair" href="login.html">Sair</a>
+
+                    {{-- BOTÃO SAIR --}}
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                        <button class="btn btn-sm btn-botao-modal-menu-cancelar" type="button"
+                            data-dismiss="modal">{{ __('Logout') }}</button>
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+
                 </div>
 
             </div>
         </div>
     </div>
-
-
 
 
     {{-- CONTEÚDO FEED --}}

@@ -10,4 +10,9 @@ class FriendController extends Controller
     {
         return view('users.amigos');
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

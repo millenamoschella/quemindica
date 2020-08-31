@@ -1,6 +1,5 @@
 @extends('layouts.layout-menuoff')
 
-
 @section('content')
 
     {{-- ÁREA SEÇÃO BANNER --}}
@@ -21,7 +20,8 @@
                     {{-- TEXTO --}}
                     <p class="text-center">
                         No Quem Indica você encontra o que precisa com indicações
-                        feitas pelas pessoas que você mais confia e ainda ajuda profissionais autônomos sem a necessidade de cadastrá-los.
+                        feitas pelas pessoas que você mais confia e ainda ajuda profissionais autônomos sem a necessidade de
+                        cadastrá-los.
                         <br>Estamos prontos para ajudar você encontrar o profissional que precisa!
                     </p>
 
@@ -35,7 +35,7 @@
     {{-- ÁREA SEÇÃO CADASTRO --}}
 
     <section class="secao-cadastro">
-        <form action="{{ route('registrar') }}" method="POST">
+        <form action="{{ route('register') }}" method="POST">
             @csrf
             <div class="form-row justify-content-center">
 
@@ -52,7 +52,8 @@
                         <div class="input-group-prepend arroba">
                             <div class="input-group-text">#</div>
                         </div>
-                        <input type="codigo" name="codigo" class="form-control" id="codigo" placeholder="Código de verificação">
+                        <input type="codigo" name="codigo" class="form-control" id="codigo"
+                            placeholder="Código de verificação">
                     </div>
                 </div>
 

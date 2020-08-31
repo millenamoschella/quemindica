@@ -20,6 +20,7 @@
         </div>
     </section>
 
+
     {{-- SEÇÃO FOTO E NOME DO USUÁRIO --}}
     <section class="secao-foto-user-perfil">
         <div class="info-usuario-perfil">
@@ -39,18 +40,18 @@
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star-half-o" aria-hidden="true"></i>
                 <i class="fa fa-star-o" aria-hidden="true"></i>
-                <div>
+            </div>
 
-                    <h1 class="nome-usuario-perfil">Shyrles Monteiro</h1>
+            <h1 class="nome-usuario-perfil">Shyrles Monteiro</h1>
 
 
-                    {{-- BOTÕES ADICIONAR E MENSAGEM --}}
-                    <div class="adicionar-mensagem-perfil">
-                        <button class="adicionar">Adicionar</button>
-                        <button class="mensagem">Mensagem</button>
-                    </div>
+            {{-- BOTÕES ADICIONAR E MENSAGEM --}}
+            <div class="adicionar-mensagem-perfil">
+                <button class="adicionar">Adicionar</button>
+                <button class="mensagem">Mensagem</button>
+            </div>
 
-                </div>
+        </div>
     </section>
 
     <section class="stick-top">
@@ -60,7 +61,7 @@
                 <div class="row">
 
                     {{-- MENU ESQUERDO --}}
-                    <div class="col-lg-2 col-md-3 col-sm-12 order-md-1 d-sticky secao-usuario-perfil">
+                    <div class="col-lg-2 col-md-3 col-sm-12 order-md-1 secao-usuario-perfil">
                         <div class="card shadow card-sticky">
 
                             {{-- INFOS USUÁRIO --}}
@@ -674,10 +675,10 @@
                                 <a href="#">Ver Mais</a>
                             </div>
 
-                            
+
 
                         </div>
-                        
+
                     </div>
 
 

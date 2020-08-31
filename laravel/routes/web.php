@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 // ROTA HOME
 
@@ -9,9 +10,13 @@ Route::get('/home', 'HomeController@home')->name('home');
 
 // ROTAS AUTENTICAÇÃO
 
-Route::get('/registrar', 'RegistrarController@registrar')->name('registrar');
-Route::get('/login', 'LoginController@login')->name('login');
+// Route::get('/registrar', 'RegistrarController@registrar')->name('registrar');
+// Route::get('/login', 'LoginController@login')->name('login');
 
+
+Route::get('/logout', 'LoginController@logout')->name('logout');
+
+Auth::routes();
 
 
 // ROTAS SERVIÇOS
@@ -19,11 +24,9 @@ Route::get('/login', 'LoginController@login')->name('login');
 Route::get('/servicos', 'ServiceController@servicos')->name('servicos');
 
 
-
 // ROTAS AMIGOS 
 
 Route::get('/amigos', 'FriendController@amigosPag')->name('amigos');
-
 
 
 // ROTAS USUÁRIO 
@@ -31,7 +34,6 @@ Route::get('/amigos', 'FriendController@amigosPag')->name('amigos');
 Route::get('/feed', 'FeedController@feed')->name('home');
 Route::get('/configuracao', 'ConfiguracaoController@configuracao')->name('configuracao');
 Route::get('/perfil', 'PerfilController@perfil')->name('perfil');
-
 
 
 // ROTAS SITE 

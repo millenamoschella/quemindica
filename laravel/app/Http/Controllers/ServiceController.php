@@ -10,4 +10,9 @@ class ServiceController extends Controller
     {
         return view('users.servicos');
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

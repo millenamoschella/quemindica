@@ -10,4 +10,9 @@ class PerfilController extends Controller
     {
         return view('users.perfil');
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

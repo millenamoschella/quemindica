@@ -29,7 +29,6 @@
                                 </a>
 
                                 {{-- PONTUAÇÃO --}}
-
                                 <div class="pontuacao-feed">
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -41,10 +40,8 @@
                                     </div>
                                 </div>
 
-
                                 {{-- NOME --}}
                                 <h2 class="nome-usuario">Shyrles Monteiro</h2>
-
 
                                 {{-- BIO USUÁRIO --}}
                                 <p class="descricao-usuario">
@@ -53,15 +50,10 @@
 
                             </div>
 
-                            {{-- INDICAÇÕES E PONTOS --}}
-
-
                         </div>
                     </div>
 
                 </div>
-
-
 
                 {{-- LINKS --}}
                 <div class="card shadow links-feed ">
@@ -112,7 +104,6 @@
 
 
             </div>
-
 
             {{-- SEÇÃO ESCREVER POST --}}
             <div class="col-lg-8 col-md-7 col-sm-12 mb-3 order-md-2 posts-feed">
@@ -327,7 +318,6 @@
                 </div>
 
             </div>
-
 
             {{-- SEÇÃO SERVIÇOS MENU DIREITO --}}
             <div class="col-lg-2 col-md-2 mb-3 col-sm-12 order-md-3 servicos-feed text-center">

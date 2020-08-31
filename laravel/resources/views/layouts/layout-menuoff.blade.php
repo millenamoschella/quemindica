@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8">
@@ -23,6 +23,14 @@
     <link rel="stylesheet" href="{{ asset('../css/faq.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/politicas.css') }}">
 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    {{-- SCRIPTS --}}
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    {{-- CSRF TOKEN --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     {{-- FAVICON --}}
     <link rel="shortcut icon" href="{{ asset('../imagens/logo/logo-icon.svg') }}" type="image/x-icon">
 
@@ -31,6 +39,8 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
+
+
 
 <body>
 
@@ -57,9 +67,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+
             {{-- BOTÕES SUPORTE, LOGIN E REGISTRAR --}}
             <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
                 <ul class="navbar-nav ml-auto">
+
 
                     {{-- BOTÃO SUPORTE --}}
                     <li class="nav-item botao-suporte">
@@ -68,24 +80,53 @@
                         </a>
                     </li>
 
-                    {{-- BOTÃO LOGIN --}}
-                    <li class="nav-item botao-loginRegistrar">
-                        <a href="#" data-toggle="modal" data-target="#modalEntrar" class="nav-link">
-                            <button class="btn-yellow">
-                                <strong>Login</strong>
-                            </button>
-                        </a>
-                    </li>
+                    @guest
+                        {{-- BOTÃO LOGIN --}}
+                        <li class="nav-item botao-loginRegistrar">
+                            <a href="#" data-toggle="modal" data-target="#modalEntrar" class="nav-link">
+                                <button class="btn-yellow">
+                                    <strong>Login</strong>
+                                </button>
+                            </a>
+                        </li>
 
-                    {{-- BOTÃO REGISTRAR --}}
-                    <li class="nav-item botao-loginRegistrar">
-                    <a href="#" data-toggle="modal" data-target="#modalRegistrar" class="nav-link">
-                            <button class="btn-yellow">
-                                <strong>Registrar</strong>
-                            </button>
-                        </a>
-                    </li>
+                        @if (Route::has('register'))
+                            <li class="nav-item botao-loginRegistrar">
+                                <a class="nav-link" href="{{ route('register') }}">
+                                    <button class="btn-yellow">
+                                        <strong>{{ __('Registrar') }}</strong>
+                                    </button>
+                                </a>
+                            </li>
+                        @endif
 
+                    @else
+
+                        {{-- NOME DO USUÁRIO + BOTÃO LOGOUT
+                        --}}
+                        <li class="nav-item dropdown">
+
+                            {{-- NOME DO USUÁRIO --}}
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            {{-- BOTÃO SAIR --}}
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                                                            document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+
+                    @endguest
                 </ul>
             </div>
         </nav>
