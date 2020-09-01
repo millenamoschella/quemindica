@@ -1,3 +1,21 @@
+ /* === SCROLL === */
+    .scroll::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+    }
+     
+    /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+    .scroll::-webkit-scrollbar-track {
+    background: transparent;
+    }
+     
+    /* aqui é a alça da barra, que demonstra a altura que você está na página
+    estou colocando uma cor azul clara nela*/
+    .scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 0 0 20px 20px;
+    }
+
 /* CAPA PERFIL */
 .capa-perfil {
     position: relative;
@@ -134,6 +152,7 @@
     top: 76px;
     height: 84vh;
     overflow-y: scroll;
+    overflow-x: hidden;
 
 }
 
@@ -157,6 +176,50 @@
     color: #00415e;
 }
 
+/* BIO */
+
+.infos-usuario span {
+    font-weight: bold;
+}
+
+.infos-usuario p {
+    color: #00415e;
+    font-size: 0.9em;
+}
+
+/* ÁREA LINKS MENU ESQUERDO */
+
+.links-feed h5 {
+    font-weight: bold;
+    padding: 15px;
+}
+
+.links-feed a {
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #007592;
+    font-weight: bold;
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.links-feed a:hover {
+    color: #ffd559;
+    font-weight: #ffd559;
+}
+
+.links-feed i {
+    color: #007592;
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+.links-feed ul {
+    margin: 0;
+    padding: 0;
+}
+
+
 /* ÁREA TAGS */
 
 .secao-tags-perfil {
@@ -173,7 +236,7 @@
 }
 
 .tags-perfil a {
-    font-size: 0.8em;
+    font-size: 10px;
     text-decoration: none;
 }
 
@@ -187,7 +250,7 @@
     border: 1px solid #ffe8a1;
     background-color: #ffe8a1;
     border-radius: 25px;
-    padding: 6px 15px;
+    padding: 4px 8px;
     color: #00b2df;
     transition: all 300ms ease-in-out;
 }

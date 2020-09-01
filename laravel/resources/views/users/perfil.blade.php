@@ -54,7 +54,7 @@
         </div>
     </section>
 
-    <section class="stick-top">
+    <section>
         {{-- SEÇÃO MENU, POSTS E AMIGOS --}}
         <div class="container-fluid perfil-quemindica">
             <div class="col-12">
@@ -62,14 +62,17 @@
 
                     {{-- MENU ESQUERDO --}}
                     <div class="col-lg-2 col-md-3 col-sm-12 order-md-1 secao-usuario-perfil">
-                        <div class="card shadow card-sticky">
+                        <div class="card shadow card-sticky scroll">
 
                             {{-- INFOS USUÁRIO --}}
-                            <div class="card-body card-bio-user">
-                                <div class="row user-perfil text-center ">
+                            <div class="card-bio-user">
+                                <div class="user-perfil m-4">
 
                                     <div class="flex-grow-1 infos-usuario">
 
+                                    <span>Bio:</span>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A culpa exercitationem est, quaerat mollitia rem optio dolore explicabo! </p>
+<!-- 
                                         {{-- PONTUAÇÃO --}}
 
                                         <div class="pontuacao-feed-perfil">
@@ -78,19 +81,40 @@
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                             <i class="fa fa-star-half-o" aria-hidden="true"></i>
                                             <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            <div>
+                                        <div>
                                                 <span>25 pontos</span>
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                     </div>
                                 </div>
                             </div>
 
+                            {{-- LINKS --}}
+                            <div class="links-feed ml-4">
+                                <!-- <h5 class="mt-4">Navegação</h5> -->
+
+                                <ul class="d-flex flex-column mt-5">
+                                    <i class="fa fa-user-circle" aria-hidden="true"><a href="{{ route('perfil') }}"
+                                            title="">Perfil</a></i>
+
+                                    <i class="fa fa-users" aria-hidden="true"><a href="{{ route('amigos') }}" title="">Amigos</a></i>
+
+                                    <i class="fa fa-list-alt" aria-hidden="true"><a href="{{ route('servicos') }}"
+                                            title="">Serviços</a></i>
+
+                                    <i class="fa fa-question-circle" aria-hidden="true"><a href="{{ route('suporte') }}"
+                                            title="">Suporte</a></i>
+
+                                    <i class="fa fa-cog" aria-hidden="true"><a href="{{ route('configuracao') }}" title="">Editar
+                                            Perfil</a></i>
+                                </ul>
+
+                            </div>
 
                             {{-- TAGS --}}
                             <div class="secao-tags-perfil text-center">
-                                <div class="card-body tags-perfil">
+                                <div class="tags-perfil">
                                     <h5>Tags seguidas</h5>
 
                                     <div class="tags-seguidas-perfil">
@@ -479,7 +503,7 @@
 
                     {{-- SEÇÃO AMIGOS --}}
                     <div class="col-lg-3 col-md-2 col-sm-12 order-md-3 amigos-perfil text-center">
-                        <div class="card card-sticky">
+                        <div class="card card-sticky scroll">
                             <div class="amigos-cards">
 
                                 {{-- TÍTULO --}}
