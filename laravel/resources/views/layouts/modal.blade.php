@@ -40,7 +40,7 @@
 
 
 
-                                        {{-- EMAIL --}}
+                                        <!-- {{-- EMAIL --}}
                                         <div class="wrap-area-input-modal-suporte-modal-suporte">
                                             <input id="email"
                                                 class="area-input-modal-suporte @error('email') is-invalid @enderror"
@@ -48,6 +48,26 @@
                                                 required autocomplete="email">
 
                                             @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @enderror
+
+                                            <span class="focus-area-input-modal-suporte"></span>
+                                            <span class="icone-input-modal-suporte">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </span>
+
+                                        </div> -->
+
+                                        {{-- CELULAR --}}
+                                        <div class="wrap-area-input-modal-suporte-modal-suporte">
+                                            <input id="phone"
+                                                class="area-input-modal-suporte @error('phone') is-invalid @enderror"
+                                                type="tel" name="phone" placeholder="phone" value="{{ old('phone') }}"
+                                                required autocomplete="phone">
+
+                                            @error('phone')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>

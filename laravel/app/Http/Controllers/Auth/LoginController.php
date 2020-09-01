@@ -45,4 +45,10 @@ class LoginController extends Controller
         Auth::logout();
         return redirect('/home');
     }
+
+    public function username()
+    {
+        return 'phone';
+    }
+
 }
