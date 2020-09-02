@@ -129,10 +129,12 @@
     color: #8b8b8b;
 }
 
+
 .btn-botao-modal-menu-cancelar {
     background-color: #007592;
     font-weight: bold;
     color: #fff;
+    margin-left: 20px;
 }
 
 .btn-botao-modal-menu-cancelar:hover {

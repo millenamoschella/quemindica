@@ -14,7 +14,7 @@
     {{-- ASSETS --}}
     <link rel="stylesheet" href="{{ asset('../css/layout-menuoff.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/estilo.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/registrar.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/modal.css') }}">
@@ -116,7 +116,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                            document.getElementById('logout-form').submit();">
+                                                                                                    document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 

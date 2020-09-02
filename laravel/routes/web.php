@@ -52,6 +52,28 @@ Route::get('/admin-servicos', 'AdminController@servicos')->name('admin-servicos'
 
 
 
+// ROTAS IMAGEM USUÁRIO
+
+Route::get('/create', 'PerfilController@photoCreate')->name('create');
+
+Route::post('/store', 'PerfilController@photoStore')->name('store');
+
+Route::get('/edit{id}', 'PerfilController@photoEdit')->name('edit');
+
+Route::post('/update{id}', 'PerfilController@photoUpdate')->name('update');
+
+
+
+
+Route::get('/teste', function () {
+    return view('teste');
+});
+
+
+
+
+
+
 
 
 // Route::get('/post', 'PostController@post')->name('post');

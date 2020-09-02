@@ -27,10 +27,10 @@
                             {{-- FORMULÁRIO --}}
                             <div class="signup-form">
 
-                                <form action="upload.php" method="POST" enctype="multipart/form-data"
+                                <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data"
                                     class="register-form" id="register-form">
+                                    @csrf
                                     <div class="row">
-
 
                                         {{-- UPLOAD --}}
 

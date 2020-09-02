@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration
             $table->string('state', 2)->nullable();
             $table->integer('zip_code')->nullable();
             $table->string('about', 120)->nullable();
-            $table->string('photo')->nullable()->nullable();
+            $table->string('photo')->nullable();
             $table->date('born_date')->nullable();
             $table->rememberToken();
             $table->timestamps();

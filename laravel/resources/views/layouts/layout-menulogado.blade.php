@@ -97,6 +97,7 @@
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
 
+
                                     <img src="{{ Auth::user()->photo }}" alt="Foto usuário menu"
                                         class="img-fluid avatar-menu-logado">
                                 </a>
@@ -261,19 +262,22 @@
                 <div class="modal-footer">
 
                     {{-- BOTÃO CANCELAR --}}
-                    <button class="btn btn-sm btn-botao-modal-menu-cancelar" type="button"
-                        data-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-sm btn-botao-modal-menu-cancelar" type="button" data-dismiss="modal">Cancelar
+                    </button>
 
                     {{-- BOTÃO SAIR --}}
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
-                        <button class="btn btn-sm btn-botao-modal-menu-cancelar" type="button"
-                            data-dismiss="modal">{{ __('Logout') }}</button>
+                        <button class="btn btn-sm btn-botao-modal-menu-sair" type="button"
+                            data-dismiss="modal">{{ __('Logout') }}
+                        </button>
                     </a>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
+
+
 
                 </div>
 

@@ -12,9 +12,11 @@
     <section class="capa-perfil">
         <div class="capa">
             <div class="icon-change">
+
                 <a href="#" data-toggle="modal" data-target="#modalFotoCapa">
                     <img src="icones/pencil.svg" alt="Mudar foto de capa">
                 </a>
+
             </div>
             <!-- Foto no background do CSS -->
         </div>
@@ -27,8 +29,9 @@
 
             {{-- FOTO USUÁRIO --}}
             <div class="foto-perfil-user">
+
                 <a href="#" data-toggle="modal" data-target="#modalFoto">
-                    <img src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}" alt="Capa perfil usuário">
+                    <img src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto perfil usuário">
                 </a>
 
             </div>
@@ -70,21 +73,22 @@
 
                                     <div class="flex-grow-1 infos-usuario">
 
-                                    <span>Bio:</span>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A culpa exercitationem est, quaerat mollitia rem optio dolore explicabo! </p>
-<!-- 
-                                        {{-- PONTUAÇÃO --}}
+                                        <span>Bio:</span>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A culpa exercitationem
+                                            est, quaerat mollitia rem optio dolore explicabo! </p>
+                                        <!-- 
+                                                                    {{-- PONTUAÇÃO --}}
 
-                                        <div class="pontuacao-feed-perfil">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                        <div>
-                                                <span>25 pontos</span>
-                                            </div>
-                                        </div> -->
+                                                                    <div class="pontuacao-feed-perfil">
+                                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                                    <div>
+                                                                            <span>25 pontos</span>
+                                                                        </div>
+                                                                    </div> -->
 
                                     </div>
                                 </div>
@@ -98,7 +102,8 @@
                                     <i class="fa fa-user-circle" aria-hidden="true"><a href="{{ route('perfil') }}"
                                             title="">Perfil</a></i>
 
-                                    <i class="fa fa-users" aria-hidden="true"><a href="{{ route('amigos') }}" title="">Amigos</a></i>
+                                    <i class="fa fa-users" aria-hidden="true"><a href="{{ route('amigos') }}"
+                                            title="">Amigos</a></i>
 
                                     <i class="fa fa-list-alt" aria-hidden="true"><a href="{{ route('servicos') }}"
                                             title="">Serviços</a></i>
@@ -106,7 +111,8 @@
                                     <i class="fa fa-question-circle" aria-hidden="true"><a href="{{ route('suporte') }}"
                                             title="">Suporte</a></i>
 
-                                    <i class="fa fa-cog" aria-hidden="true"><a href="{{ route('configuracao') }}" title="">Editar
+                                    <i class="fa fa-cog" aria-hidden="true"><a href="{{ route('configuracao') }}"
+                                            title="">Editar
                                             Perfil</a></i>
                                 </ul>
 

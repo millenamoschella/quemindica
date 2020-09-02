@@ -64,7 +64,7 @@
                                         <div class="wrap-area-input-modal-suporte-modal-suporte">
                                             <input id="phone"
                                                 class="area-input-modal-suporte @error('phone') is-invalid @enderror"
-                                                type="tel" name="phone" placeholder="phone" value="{{ old('phone') }}"
+                                                type="tel" name="phone" placeholder="Celular" value="{{ old('phone') }}"
                                                 required autocomplete="phone">
 
                                             @error('phone')
@@ -75,7 +75,7 @@
 
                                             <span class="focus-area-input-modal-suporte"></span>
                                             <span class="icone-input-modal-suporte">
-                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
                                             </span>
 
                                         </div>
@@ -104,8 +104,8 @@
 
                                         {{-- LEMBRAR LOGIN
                                         --}}
-                                        <div class="form-group row">
-                                            <div class="col-md-6 offset-md-4">
+                                        <div class="form-group row lembrar-login">
+                                            <div class="col-md-12">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" name="remember"
                                                         id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -118,15 +118,15 @@
                                         </div>
 
 
-                                        {{-- ESQUECI A SENHA
-                                        --}}
 
                                         {{-- BOTÃO --}}
-                                        <div class="col-12 container-botao-modal-suporte">
-                                            <button class="btn-formulario-modal-suporte">
+                                        <div class="col-12 container-botao-modal-login">
+                                            <button class="btn-formulario-modal-login">
                                                 {{ __('Entar') }}
                                             </button>
 
+                                            {{-- ESQUECI A SENHA
+                                            --}}
                                             @if (Route::has('password.request'))
                                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                                     {{ __('Esqueceu a sua senha?') }}
