@@ -35,11 +35,11 @@
     <link rel="shortcut icon" href="{{ asset('../imagens/logo/logo-icon.svg') }}" type="image/x-icon">
 
     <!-- ÍCONES -->
-    {{--
+
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    {{-- --}}
-    {{-- <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"> --}} --}}
+
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <script defer src="https://kit.fontawesome.com/1dccee3303.js" crossorigin="anonymous"></script>
 </head>
 
@@ -119,7 +119,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                                                document.getElementById('logout-form').submit();">
+                                                                                                                    document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 

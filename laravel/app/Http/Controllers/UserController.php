@@ -88,8 +88,8 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
-        
+
+
         // $userPhoto = User::find($id);
         // $userPhoto->photo = $request->photo;
 
@@ -140,5 +140,4 @@ class UserController extends Controller
         return redirect()->route('perfil')
             ->with('success', 'Foto deletada com sucesso');
     }
-
 }

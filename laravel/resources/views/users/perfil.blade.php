@@ -34,26 +34,28 @@
             <div class="foto-perfil-user">
 
                 <a href="#" data-toggle="modal" data-target="#modalFoto">
-                @if((Auth::user()->photo) == null)
-                     <img src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}" width=170 height=170 alt="foto default">
-                @else 
-                    <img src="{{ asset('uploads/photos/'.Auth::user()->photo) }}" width=170 height=170 alt="Foto perfil usuário">
-                @endif
-                   
+                    @if (Auth::user()->photo == null)
+                        <img src="{{ asset('imagens/institucional/usuario.png') }}" width=170 height=170 alt="foto default">
+                    @else
+                        <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}" width=170 height=170
+                            alt="Foto perfil usuário">
+                    @endif
+
                 </a>
 
             </div>
 
-            {{-- NOME USUÁRIO --}}
+            {{-- PONTUAÇÃO USUÁRIO --}}
             <div class="stars">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="far fa-star"></i>
             </div>
 
-            <h1 class="nome-usuario-perfil">{{ Auth::user()->name . " " . Auth::user()->lastname  }}</h1>
+            {{-- NOME USUÁRIO --}}
+            <h1 class="nome-usuario-perfil">{{ Auth::user()->name . ' ' . Auth::user()->lastname }}</h1>
 
 
             {{-- BOTÕES ADICIONAR E MENSAGEM --}}
@@ -85,18 +87,18 @@
                                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A culpa exercitationem
                                             est, quaerat mollitia rem optio dolore explicabo! </p>
                                         <!-- 
-                                                                        {{-- PONTUAÇÃO --}}
+                                                                                                                                                                                                                                            {{-- PONTUAÇÃO --}}
 
-                                                                        <div class="pontuacao-feed-perfil">
-                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                                        <div>
-                                                                                <span>25 pontos</span>
-                                                                            </div>
-                                                                        </div> -->
+                                                                                                                                                                                                                                            <div class="pontuacao-feed-perfil">
+                                                                                                                                                                                                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                                                                                                                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                                                                                                                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                                                                                                                                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                                                                                                                                                                                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                                                                                                                                                                                                            <div>
+                                                                                                                                                                                                                                                    <span>25 pontos</span>
+                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                            </div> -->
 
                                     </div>
                                 </div>
@@ -168,15 +170,23 @@
                                         --}}
                                         <div class="mr-2">
                                             <a href="{{ route('perfil') }}">
-                                                <img class="rounded-circle" width="45"
-                                                    src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}"
-                                                    alt="Foto autor post" class="img-fluid">
+
+                                                @if (Auth::user()->photo == null)
+                                                    <img src="{{ asset('imagens/institucional/usuario.png') }}" width=30
+                                                        height=30 alt="foto default">
+                                                @else
+                                                    <img class="rounded-circle"
+                                                        src="{{ asset('uploads/photos/' . Auth::user()->photo) }}"
+                                                        alt="Foto autor post" width="30" height="30">
+                                                @endif
+
                                             </a>
                                         </div>
                                         <div class="ml-2">
 
                                             {{-- AUTOR --}}
-                                            <h5 class="nome-post-usuario-perfil">@shyrlesmonteiro</h5>
+                                            <h5 class="nome-post-usuario-perfil">
+                                                {{ '@' . Auth::user()->username }}</h5>
                                         </div>
                                     </div>
                                     <div>
@@ -729,5 +739,3 @@
 
 
 @endsection
-
-

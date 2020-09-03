@@ -27,18 +27,15 @@
     {{-- FAVICON --}}
     <link rel="shortcut icon" href="{{ asset('../imagens/logo/logo-icon.svg') }}" type="image/x-icon">
 
-    <!-- ÍCONES -->
-    {{--
+    {{-- ÍCONES --}}
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    --}}
-    {{--
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"> --}}
+
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <script defer src="https://kit.fontawesome.com/1dccee3303.js" crossorigin="anonymous"></script>
 
     <!-- SCRIPTS -->
     <script defer type="text/javascript" src="{{ asset('js/app.js') }}"></script>
-
 
     {{-- SCRIPTS MODAIS - FOTO PERFIL E FOTO CAPA --}}
     <script src="{{ asset('../js/modalFotoPerfil.js') }}" async></script>
@@ -101,10 +98,12 @@
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
 
-                                    @if((Auth::user()->photo) == null)
-                                        <img src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}" width=50 height=50 alt="foto default">
-                                    @else 
-                                        <img src="{{ asset('uploads/photos/'.Auth::user()->photo) }}" width=50 height=50>
+                                    @if (Auth::user()->photo == null)
+                                        <img src="{{ asset('imagens/institucional/usuario.png') }}" width=50 height=50
+                                            alt="foto default" class="rounded-circle">
+                                    @else
+                                        <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}" width=50 height=50
+                                            class="rounded-circle">
                                     @endif
 
                                 </a>
