@@ -34,7 +34,7 @@
             <div class="foto-perfil-user">
 
                 <a href="#" data-toggle="modal" data-target="#modalFoto">
-                    <img src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}" alt="Foto perfil usuário">
+                    <img src="{{ asset('uploads/photos/'.Auth::user()->photo) }}" width=170 height=170 alt="Foto perfil usuário">
                 </a>
 
             </div>

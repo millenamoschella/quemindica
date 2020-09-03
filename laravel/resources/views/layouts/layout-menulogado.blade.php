@@ -41,7 +41,7 @@
 
 
     {{-- SCRIPTS MODAIS - FOTO PERFIL E FOTO CAPA --}}
-    <script defer src="{{ asset('../js/modal-fotoPerfil.js') }}"></script>
+    <script src="{{ asset('../js/modalFotoPerfil.js') }}" async></script>
     <script defer src="{{ asset('../js/modal-fotoCapa.js') }}"></script>
 
 
@@ -102,7 +102,7 @@
                                     {{ Auth::user()->name }}
 
 
-                                    <img src="{{ Auth::user()->photo }}" alt="Foto usuário menu"
+                                    <img src="{{ asset('uploads/photos/'.Auth::user()->photo) }}" alt="Foto usuário menu"
                                         class="img-fluid avatar-menu-logado">
                                 </a>
 
