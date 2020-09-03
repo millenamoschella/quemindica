@@ -83,12 +83,13 @@
                             <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
 
                             <div class="col-md-6">
+
                                 <input id="username" type="text" class="area-input-modal-suporte form-control"
                                     name="username" required autocomplete="username" autofocus value="{{ old('username') }}"
-                                    placeholder="">
+                                    placeholder="" onkeyup="return forceLower(this)>
 
 
-                                <span class="focus-area-input-modal-suporte"></span>
+                                    <span class=" focus-area-input-modal-suporte"></span>
                                 <span class="icone-input-modal-suporte">
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                 </span>
