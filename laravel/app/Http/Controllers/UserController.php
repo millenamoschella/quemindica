@@ -30,16 +30,16 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        $photo = new User();
+        $photo = User::findOrFail($id);
 
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
             $file->move('uploads/photos', $filename);
-            // $file->move('public/imagens/minhaConta', $filename);
+            // $file->move('uploads/photos', $filename);
             $photo->photo = $filename;
         } else {
             return $request;
@@ -88,10 +88,17 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
+        
+        // $userPhoto = User::find($id);
+        // $userPhoto->photo = $request->photo;
+
+        // $result = $userPhoto->save();
+        // return redirect()->route('perfil');
 
         $photo = User::findOrFail($id);
 
-        $photoAntiga = 'public/imagens/minhaConta' . $photo->photo;
+        $photoAntiga = 'uploads/photos' . $photo->photo;
 
         if ($request->hasFile('photo')) {
 
@@ -100,7 +107,7 @@ class UserController extends Controller
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $file->move('public/imagens/minhaConta', $filename);
+            $file->move('uploads/photos', $filename);
             $photo->photo = $filename;
         } else {
             return $request;
@@ -125,7 +132,7 @@ class UserController extends Controller
 
         $photo = User::findOrFail($id);
 
-        $image_path = 'public/imagens/minhaConta' . $photo->photo;
+        $image_path = 'uploads/photos' . $photo->photo;
         unlink($image_path);
 
         $photo->delete();
