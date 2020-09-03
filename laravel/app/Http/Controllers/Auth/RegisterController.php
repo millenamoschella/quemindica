@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServizip_coderovider;
+use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -56,14 +56,14 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'cpf' => ['string', 'min:8', 'max:13'],
             'phone' => ['required', 'string', 'min:11', 'max:14', 'unique:users'],
-            'zip_code' => ['string', 'max:11'],
-            'street' => ['string', 'max:25'],
-            'neighborhood' => ['string', 'max:20'],
-            'city' => ['string', 'max:20'],
-            'state' => ['string', 'max:2'],
-            'born_date' => ['date_format:Y-m-d'],
+            // 'zip_code' => ['string', 'max:11'],
+            // 'street' => ['string', 'max:25'],
+            // 'neighborhood' => ['string', 'max:20'],
+            // 'city' => ['string', 'max:20'],
+            // 'state' => ['string', 'max:2'],
+            // 'born_date' => ['date_format:Y-m-d'],
             // 'photo' => ['string', 'max:255'],
-            'about' => ['string', 'max:50'],
+            // 'about' => ['string', 'max:50'],
         ]);
     }
 
@@ -82,14 +82,14 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'cpf' => $data['cpf'],
             'phone' => $data['phone'],
-            'zip_code' => $data['zip_code'],
-            'street' => $data['street'],
-            'neighborhood' => $data['neighborhood'],
-            'city' => $data['city'],
-            'state' => $data['state'],
-            'born_date' => $data['born_date'],
+            // 'zip_code' => $data['zip_code'],
+            // 'street' => $data['street'],
+            // 'neighborhood' => $data['neighborhood'],
+            // 'city' => $data['city'],
+            // 'state' => $data['state'],
+            // 'born_date' => $data['born_date'],
             // 'photo' => $data['photo'],
-            'about' => $data['about'],
+            // 'about' => $data['about'],
         ]);
     }
 }

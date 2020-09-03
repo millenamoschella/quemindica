@@ -1,5 +1,8 @@
 @extends('layouts.layout-menulogado')
 
+{{-- MODAL --}}
+@extends('layouts.modalPhoto')
+
 
 @section('content')
 
@@ -722,5 +725,4 @@
 
 @endsection
 
-{{-- MODAL --}}
-{{-- @extends('layouts.modal') --}}
+
