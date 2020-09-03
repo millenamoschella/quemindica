@@ -45,7 +45,7 @@
                                         --}}
                                         <div class="input-group mt-5 px-2 py-2 input-upload">
 
-                                            <input id="upload" type="file" onchange="readURL(this);"
+                                            <input id="upload" type="file" name="photo" value="photo" onchange="readURL(this);"
                                                 class="form-control border-0">
 
                                             <label id="upload-label" for="upload"

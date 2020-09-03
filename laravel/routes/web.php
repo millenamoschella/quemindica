@@ -64,9 +64,9 @@ Route::get('/admin-servicos', 'AdminController@servicos')->name('admin-servicos'
 
 
 
-Route::get('/teste', 'TesteController@create')->name('create');
+Route::get('/create', 'UserController@create')->name('create');
 
-Route::post('/store', 'TesteController@store')->name('store');
+Route::post('/store', 'UserController@store')->name('store');
 
 // Route::get('/show{id}', 'TesteController@show')->name('show');
 

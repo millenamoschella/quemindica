@@ -18,70 +18,70 @@ class PerfilController extends Controller
     }
 
 
-    public function photoCreate()
-    {
-        return view('photo.create');
-    }
+    // public function photoCreate()
+    // {
+    //     return view('photo.create');
+    // }
 
 
-    public function photoStore(Request $request)
-    {
-        $photo = new User();
+    // public function photoStore(Request $request)
+    // {
+    //     $photo = new User();
 
-        $photo->photo = $request->input('upload');
+    //     $photo->photo = $request->input('upload');
 
-        if ($request->hasFile('photo')) {
-            $file = $request->file('photo');
-            $extension = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $extension;
-            $file->move('public/imagens/minhaConta', $filename);
-            $photo->photo = $filename;
-        } else {
-            return $request;
-            $photo->photo = '';
-        }
+    //     if ($request->hasFile('photo')) {
+    //         $file = $request->file('photo');
+    //         $extension = $file->getClientOriginalExtension();
+    //         $filename = time() . '.' . $extension;
+    //         $file->move('public/imagens/minhaConta', $filename);
+    //         $photo->photo = $filename;
+    //     } else {
+    //         return $request;
+    //         $photo->photo = '';
+    //     }
 
-        $photo->save();
-
-
-        return redirect()->route('perfil')
-            ->with('success', 'photo criada com sucesso');
-    }
-
-    public function photoEdit($id)
-    {
-        $photo = User::find($id);
-        return view('photo.edit', compact('photo'));
-    }
+    //     $photo->save();
 
 
-    public function update(Request $request, $id)
-    {
+    //     return redirect()->route('perfil')
+    //         ->with('success', 'photo criada com sucesso');
+    // }
 
-        $photo = User::findOrFail($id);
-
-        $photoDefault = 'storage/app/public/photos/' . $photo->photo;
-
-        $photo->photo = $request->input('photo');
-
-        if ($request->hasFile('photo')) {
-
-            unlink($photoDefault);
-
-            $file = $request->file('photo');
-            $extension = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $extension;
-            $file->move('public/imagens/minhaConta', $filename);
-            $photo->photo = $filename;
-        } else {
-            return $request;
-            $photo->photo = '';
-        }
-
-        $photo->save();
+    // public function photoEdit($id)
+    // {
+    //     $photo = User::find($id);
+    //     return view('photo.edit', compact('photo'));
+    // }
 
 
-        return redirect()->route('perfil')
-            ->with('success', 'photo atualizada com sucesso');
-    }
+    // public function update(Request $request, $id)
+    // {
+
+    //     $photo = User::findOrFail($id);
+
+    //     $photoDefault = 'storage/app/public/photos/' . $photo->photo;
+
+    //     $photo->photo = $request->input('photo');
+
+    //     if ($request->hasFile('photo')) {
+
+    //         unlink($photoDefault);
+
+    //         $file = $request->file('photo');
+    //         $extension = $file->getClientOriginalExtension();
+    //         $filename = time() . '.' . $extension;
+    //         $file->move('public/imagens/minhaConta', $filename);
+    //         $photo->photo = $filename;
+    //     } else {
+    //         return $request;
+    //         $photo->photo = '';
+    //     }
+
+    //     $photo->save();
+
+
+    //     return redirect()->route('perfil')
+    //         ->with('success', 'photo atualizada com sucesso');
+    // }
 }
