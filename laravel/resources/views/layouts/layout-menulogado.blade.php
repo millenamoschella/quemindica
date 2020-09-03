@@ -101,9 +101,12 @@
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
 
+                                    @if((Auth::user()->photo) == null)
+                                        <img src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}" width=50 height=50 alt="foto default">
+                                    @else 
+                                        <img src="{{ asset('uploads/photos/'.Auth::user()->photo) }}" width=50 height=50>
+                                    @endif
 
-                                    <img src="{{ asset('uploads/photos/'.Auth::user()->photo) }}" alt="Foto usuário menu"
-                                        class="img-fluid avatar-menu-logado">
                                 </a>
 
 

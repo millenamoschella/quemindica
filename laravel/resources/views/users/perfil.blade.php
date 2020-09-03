@@ -34,8 +34,11 @@
             <div class="foto-perfil-user">
 
                 <a href="#" data-toggle="modal" data-target="#modalFoto">
-                   
+                @if((Auth::user()->photo) == null)
+                     <img src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}" width=170 height=170 alt="foto default">
+                @else 
                     <img src="{{ asset('uploads/photos/'.Auth::user()->photo) }}" width=170 height=170 alt="Foto perfil usuário">
+                @endif
                    
                 </a>
 

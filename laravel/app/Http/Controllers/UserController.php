@@ -141,10 +141,4 @@ class UserController extends Controller
             ->with('success', 'Foto deletada com sucesso');
     }
 
-    public function photoDefault ()
-    {
-        if(Auth::user()->photo = null) {
-            <img src="{{ asset ('../imagens/minhaConta/fotoUsuario.jpg') }}" alt="">;
-        } 
-    }
 }
