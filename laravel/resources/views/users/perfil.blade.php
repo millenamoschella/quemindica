@@ -77,18 +77,18 @@
                                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A culpa exercitationem
                                             est, quaerat mollitia rem optio dolore explicabo! </p>
                                         <!-- 
-                                                                    {{-- PONTUAÇÃO --}}
+                                                                        {{-- PONTUAÇÃO --}}
 
-                                                                    <div class="pontuacao-feed-perfil">
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                                    <div>
-                                                                            <span>25 pontos</span>
-                                                                        </div>
-                                                                    </div> -->
+                                                                        <div class="pontuacao-feed-perfil">
+                                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                                        <div>
+                                                                                <span>25 pontos</span>
+                                                                            </div>
+                                                                        </div> -->
 
                                     </div>
                                 </div>
@@ -720,13 +720,7 @@
     </section>
 
 
-
-
-
-
-
-
 @endsection
 
 {{-- MODAL --}}
-@extends('layouts.modal')
+{{-- @extends('layouts.modal') --}}

@@ -10,13 +10,12 @@ Route::get('/home', 'HomeController@home')->name('home');
 
 // ROTAS AUTENTICAÇÃO
 
+
+Auth::routes();
+Route::get('/logout', 'LoginController@logout')->name('logout');
 // Route::get('/registrar', 'RegistrarController@registrar')->name('registrar');
 // Route::get('/login', 'LoginController@login')->name('login');
 
-
-Route::get('/logout', 'LoginController@logout')->name('logout');
-
-Auth::routes();
 
 
 // ROTAS SERVIÇOS
@@ -54,20 +53,31 @@ Route::get('/admin-servicos', 'AdminController@servicos')->name('admin-servicos'
 
 // ROTAS IMAGEM USUÁRIO
 
-Route::get('/create', 'PerfilController@photoCreate')->name('create');
+// Route::get('/perfil/create', 'PerfilController@photoCreate')->name('create');
 
-Route::post('/store', 'PerfilController@photoStore')->name('store');
+// Route::post('/perfil/store', 'PerfilController@photoStore')->name('store');
 
-Route::get('/edit{id}', 'PerfilController@photoEdit')->name('edit');
+// Route::get('/perfil/edit{id}', 'PerfilController@photoEdit')->name('edit');
 
-Route::post('/update{id}', 'PerfilController@photoUpdate')->name('update');
-
-
+// Route::post('/perfil/update{id}', 'PerfilController@photoUpdate')->name('update');
 
 
-Route::get('/teste', function () {
-    return view('teste');
-});
+
+
+Route::get('/teste', 'TesteController@create')->name('create');
+
+Route::post('/store', 'TesteController@store')->name('store');
+
+// Route::get('/show{id}', 'TesteController@show')->name('show');
+
+// Route::get('/edit{id}', 'TesteController@edit')->name('edit');
+
+// Route::get('/delete{id}', 'TesteController@destroy')->name('delete');
+
+// Route::post('/update{id}', 'TesteController@update')->name('update');
+
+
+
 
 
 

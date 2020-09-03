@@ -4,17 +4,17 @@
     <div class="container registrar">
         <div class="card secao-config-user">
 
-            <h4 class="">Registrar</h4>
+            <h4 class="text-center">Registrar</h4>
 
             <div class="card-body">
 
                 {{-- FORMULÁRIO --}}
                 <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" class="register-form"
-                    id="register-form">
+                    id="register-form" class="">
                     @csrf
 
                     {{-- CODIGO --}}
-                    <div class="w-100">
+                    <div class="col-6 m-auto">
                         <small>
                             <label class="text-center" for="codigo">
                                 Já foi indicado? Digite o código que recebeu por SMS:
@@ -30,13 +30,12 @@
                     </div>
 
                     {{-- IMAGEM --}}
-                    <div class="signup-img">
+                    <div class="signup-img text-center">
                         <img src="{{ asset('../imagens/institucional/register.svg') }}" class="img-fluid"
-                            alt="Banner Suporte">
+                            alt="Banner Suporte" style="width: 600px">
                     </div>
 
-
-                    <div class="signup-form">
+                    <div class="signup-form col-12">
 
                         {{-- NOME --}}
                         <div class="form-group row">
@@ -157,7 +156,7 @@
 
                                 <span class="focus-area-input-modal-suporte"></span>
                                 <span class="icone-input-modal-suporte">
-                                    <i class="fa fa-born_date" aria-hidden="true"></i>
+                                    <i class="fa fa-id-badge" aria-hidden="true"></i>
                                 </span>
                             </div>
                         </div>
@@ -190,11 +189,11 @@
 
                             <div class="col-md-6">
                                 <input id="zip_code" type="text" class="form-control area-input-modal-suporte"
-                                    name="zip_codep" value="{{ old('zip_code') }}" required autocomplete="zip_code">
+                                    name="zip_code" value="{{ old('zip_code') }}" required autocomplete="zip_code">
 
                                 <span class="focus-area-input-modal-suporte"></span>
                                 <span class="icone-input-modal-suporte">
-                                    <i class="fa fa-born_date" aria-hidden="true"></i>
+                                    <i class="fas fa-search-location" aria-hidden="true"></i>
                                 </span>
                             </div>
                         </div>
@@ -210,7 +209,7 @@
 
                                 <span class="focus-area-input-modal-suporte"></span>
                                 <span class="icone-input-modal-suporte">
-                                    <i class="fa fa-born_date" aria-hidden="true"></i>
+                                    <i class="fa fa-road" aria-hidden="true"></i>
                                 </span>
                             </div>
                         </div>
@@ -226,10 +225,9 @@
                                     autocomplete="neighborhood">
 
 
-
                                 <span class="focus-area-input-modal-suporte"></span>
                                 <span class="icone-input-modal-suporte">
-                                    <i class="fa fa-born_date" aria-hidden="true"></i>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 </span>
                             </div>
                         </div>
@@ -245,7 +243,7 @@
 
                                 <span class="focus-area-input-modal-suporte"></span>
                                 <span class="icone-input-modal-suporte">
-                                    <i class="fa fa-city" aria-hidden="true"></i>
+                                    <i class="fas fa-city" aria-hidden="true"></i>
                                 </span>
                             </div>
                         </div>
@@ -259,10 +257,9 @@
                                     value="{{ old('state') }}" required autocomplete="state">
 
 
-
                                 <span class="focus-area-input-modal-suporte"></span>
                                 <span class="icone-input-modal-suporte">
-                                    <i class="fa fa-born_date" aria-hidden="true"></i>
+                                    <i class="fas fa-city" aria-hidden="true"></i>
                                 </span>
                             </div>
                         </div>
@@ -278,7 +275,7 @@
 
                                 <span class="focus-area-input-modal-suporte"></span>
                                 <span class="icone-input-modal-suporte">
-                                    <i class="fa fa-born_date" aria-hidden="true"></i>
+                                    <i class="fa fa-birthday-cake" aria-hidden="true"></i>
                                 </span>
                             </div>
                         </div>
@@ -310,7 +307,7 @@
 
                                 <span class="focus-area-input-modal-suporte"></span>
                                 <span class="icone-input-modal-suporte">
-                                    <i class="fa fa-born_date" aria-hidden="true"></i>
+                                    <i class="fa fa-id-card-o" aria-hidden="true"></i>
                                 </span>
                             </div>
                         </div>
@@ -318,18 +315,24 @@
                         {{--CHECKBOX
                         TERMOS--}}
 
-                        <div class="mb-3 col-12">
-                            <small class="d-block">
-                                <input type="radio" id="terms" name="terms" value="accept">
-                                <label for="terms">Lí e aceito os termos e condições.</label><br>
-                                <a href="{{ route('politicas-termos') }}" target="_blank">Política de
-                                    privacidade</a>
-                            </small><br>
-                        </div>
 
                         {{-- BOTÃO CADASTRAR --}}
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="form-group row mb-0 text-center">
+
+                            <div class="col-md-6 offset-md-4 text-center">
+                                <small class="d-block">
+                                    <input type="radio" id="terms" name="terms" value="accept" required>
+                                    <label for="terms">Lí e aceito os termos e condições.</label><br>
+
+                                    <a href="{{ route('politicas-termos') }}" target="_blank"
+                                        class="termos-politicas-register">
+                                        Política de privacidade
+                                    </a>
+
+                                </small>
+                            </div>
+
+                            <div class="col-md-6 offset-md-4 mt-3">
                                 <button type="submit" class="btn-formulario-modal-suporte">
                                     {{ __('Cadastrar') }}
                                 </button>
