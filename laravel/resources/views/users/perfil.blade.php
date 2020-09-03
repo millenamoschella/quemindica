@@ -48,7 +48,7 @@
                 <i class="fa fa-star-o" aria-hidden="true"></i>
             </div>
 
-            <h1 class="nome-usuario-perfil">Shyrles Monteiro</h1>
+            <h1 class="nome-usuario-perfil">{{ Auth::user()->name }}</h1>
 
 
             {{-- BOTÕES ADICIONAR E MENSAGEM --}}
