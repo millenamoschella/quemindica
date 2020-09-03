@@ -34,7 +34,9 @@
             <div class="foto-perfil-user">
 
                 <a href="#" data-toggle="modal" data-target="#modalFoto">
+                   
                     <img src="{{ asset('uploads/photos/'.Auth::user()->photo) }}" width=170 height=170 alt="Foto perfil usuário">
+                   
                 </a>
 
             </div>
@@ -48,7 +50,7 @@
                 <i class="fa fa-star-o" aria-hidden="true"></i>
             </div>
 
-            <h1 class="nome-usuario-perfil">{{ Auth::user()->name }}</h1>
+            <h1 class="nome-usuario-perfil">{{ Auth::user()->name . " " . Auth::user()->lastname  }}</h1>
 
 
             {{-- BOTÕES ADICIONAR E MENSAGEM --}}
