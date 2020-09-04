@@ -163,7 +163,13 @@
                         <form action="{{ route('post_insert') }}" method="POST" enctype="multipart/form-data">
                             @csrf
 
-                            {{-- TEXTAREA --}}
+                            {{-- TITULO --}}
+                            <div class="form-group">
+                                <textarea class="form-control" rows="1"
+                                    placeholder="Título" name="titulo"
+                                    id="titulo"></textarea>
+                            </div>
+                            {{-- CONTEÚDO --}}
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"
                                     placeholder="Qual a sua indicação de hoje?" name="conteudo"

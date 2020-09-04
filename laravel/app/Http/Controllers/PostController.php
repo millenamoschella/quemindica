@@ -22,6 +22,7 @@ class PostController extends Controller
          
       //    $request->get('nome_do_campo_no_form')
         //  $post->titulo = $request->get('titulo');
+         $post->titulo = $request->get('titulo');
          $post->conteudo = $request->get('conteudo');
          $post->user_id = Auth::user()->id;
         //  $post->user_id = $request->get('user_id');
