@@ -157,8 +157,171 @@
                         {{-- SEÇÃO ESCREVER POST --}}
                         <div class="posts-feed">
 
-                            {{-- ESCREVER POST --}}
-                            <div class="card shadow card-sticky">
+                        {{-- ESCOLHER TIPO DE POST --}}
+
+                        <div class="card noScroll shadow card-sticky" id="choosePost">
+                                <div class="card-body">
+                                    
+                                        <p>Quero indicar:</p>
+                                        <div class="d-flex">
+                                            <div id="cardCulture" class="postCard">
+                                                <img src="{{ asset('icones/video-player.svg') }}" alt="Imagem de vídeo player">
+                                                <div class="text-center mb-1">
+                                                    <small><b>Arte/lazer</b></small> 
+                                                </div>
+                                            </div>
+                                            <div id="cardService" class="postCard">
+                                                <img src="{{ asset('icones/quality.svg') }}" alt="Imagem de serviços">
+                                                <div class="text-center mb-1">
+                                                    <small><b>Serviço</b></small> 
+                                                </div>
+                                            </div>
+                                            <div id="cardProduct" class="postCard">
+                                                <img src="{{ asset('icones/products.svg') }}" alt="Imagem de produtos">
+                                                <div class="text-center mb-1">
+                                                    <small><b>Produto</b></small> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+
+                            {{-- ESCREVER POST CULTURA --}}
+                            <div class="card shadow card-sticky displayNone" id="culturePost">
+                                <div class="card-body">
+                                    <form action="{{ route('post_insert') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        {{-- SEGMENTO --}}
+
+                                        <div class="form-group col-md-4 px-0">
+                                            <label for="cultureSegment">Segmento</label>
+                                            <select id="cultureSegment" class="form-control">
+                                                <option selected>Escolha uma opção</option>
+                                                <option>Filmes e Séries</option>
+                                                <option>Música</option>
+                                                <option>Livro</option>
+                                            </select>
+                                        </div>
+                                        
+                                        {{-- PLATAFORMA --}}
+
+                                        <div class="form-group col-md-4 px-0">
+                                            <label for="plataforma">Plataforma</label>
+                                            <select id="plataforma" class="form-control">
+                                                <option selected>Escolha uma opção</option>
+                                                <option>Netflix</option>
+                                                <option>HBO GO</option>
+                                                <option>Prime Video</option>
+                                                <option>Kindle (e-book)</option>
+                                                <option>Livro de papel</option>
+                                                <option>Spotify</option>
+                                                <option>Deezer</option>
+                                                <option>Outros</option>
+                                            </select>
+                                        </div>
+
+                                        {{-- TITULO --}}
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="1" placeholder="Título" name="titulo"
+                                                id="titulo"></textarea>
+                                        </div>
+                                        <!-- {{-- AUTOR --}}
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="3"
+                                                placeholder="Autor(es)" name="autor"
+                                                id="autor"></textarea>
+                                        </div>
+
+                                        {{-- ANO --}}
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="3"
+                                                placeholder="Ano" name="ano"
+                                                id="ano"></textarea>
+                                        </div> -->
+
+                                        {{-- NOTA --}}
+                                        <label for="">Avaliação:</label>
+                                        <div class="estrelas">
+                                            <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                                            <label for="cm_star-1"><i class="fas fa-star"></i></label>
+                                            <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                                            <label for="cm_star-2"><i class="fas fa-star"></i></label>
+                                            <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                                            <label for="cm_star-3"><i class="fas fa-star"></i></label>
+                                            <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                                            <label for="cm_star-4"><i class="fas fa-star"></i></label>
+                                            <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                                            <label for="cm_star-5"><i class="fas fa-star"></i></label>
+                                            <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                                        </div>
+
+                                        {{-- COMENTÁRIO --}}
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="3"
+                                                placeholder="Comentário" name="comentario"
+                                                id="comentario"></textarea>
+                                        </div>
+
+                                        <div class="form-group icones-postagem">
+                                            {{-- ADICIONAR IMAGEM
+                                            --}}
+
+                                            {{-- <input type="file">
+                                            --}}
+                                            <button class="btn"><i class="fa fa-paperclip" aria-hidden="true"></i></button>
+                                            <button class="btn"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
+                                            <button class="btn"><i class="fa fa-user" aria-hidden="true"></i></button>
+
+                                            {{-- POSTAR --}}
+                                            <button class="btn float-right"><i class="fa fa-paper-plane-o"
+                                                    aria-hidden="true"></i>
+                                                <span>Postar</span></button>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            {{-- ESCREVER POST SERVIÇO --}}
+                            <div class="card shadow card-sticky displayNone" id="servicePost">
+                                <div class="card-body">
+                                    <form action="{{ route('post_insert') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+
+                                        {{-- TITULO --}}
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="1" placeholder="Título" name="titulo"
+                                                id="titulo"></textarea>
+                                        </div>
+                                        {{-- CONTEÚDO --}}
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="3"
+                                                placeholder="Qual a sua indicação de hoje?" name="conteudo"
+                                                id="conteudo"></textarea>
+                                        </div>
+
+                                        <div class="form-group icones-postagem">
+                                            {{-- ADICIONAR IMAGEM
+                                            --}}
+
+                                            {{-- <input type="file">
+                                            --}}
+                                            <button class="btn"><i class="fa fa-paperclip" aria-hidden="true"></i></button>
+                                            <button class="btn"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
+                                            <button class="btn"><i class="fa fa-user" aria-hidden="true"></i></button>
+
+                                            {{-- POSTAR --}}
+                                            <button class="btn float-right"><i class="fa fa-paper-plane-o"
+                                                    aria-hidden="true"></i>
+                                                <span>Postar</span></button>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            {{-- ESCREVER POST PRODUTO --}}
+                            <div class="card shadow card-sticky displayNone" id="productPost">
                                 <div class="card-body">
                                     <form action="{{ route('post_insert') }}" method="POST" enctype="multipart/form-data">
                                         @csrf

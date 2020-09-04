@@ -258,6 +258,43 @@
 }
 
 /* SEÇÃO POSTS */
+.displayNone {
+    display: none;
+}
+.noScroll {
+    overflow: hidden;
+}
+
+.postCard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 80px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.postCard:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.postCard img {
+    width: 100%;
+    padding: 15%;
+    margin: 0 auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.estrelas input[type=radio] {
+    display: none;
+}
+    .estrelas label i.fas:before {
+    content:'\f005';
+    color: #FC0;
+}
+    .estrelas input[type=radio]:checked ~ label i.fas:before {
+    color: #CCC;
+}
 
 .nome-post-usuario-perfil {
     margin: -10px;

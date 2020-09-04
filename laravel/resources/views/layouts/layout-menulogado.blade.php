@@ -39,6 +39,7 @@
 
     {{-- SCRIPTS MODAIS - FOTO PERFIL E FOTO CAPA --}}
     <script src="{{ asset('../js/modalFotoPerfil.js') }}" async></script>
+    <script src="{{ asset('../js/app.js') }}" async></script>
     <script defer src="{{ asset('../js/modal-fotoCapa.js') }}"></script>
 
 
