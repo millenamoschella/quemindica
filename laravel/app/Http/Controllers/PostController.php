@@ -20,17 +20,18 @@ class PostController extends Controller
 
      public function insert(Request $request)
      {
-          $post = new Post();
-          // $culture = new Culture();
 
+          $post = new Post();
+          
           $post->titulo = $request->get('titulo');
           $post->conteudo = $request->get('conteudo');
           $post->user_id = Auth::user()->id;
 
-
-
+          
+          
+          
           if ($post->save()) {
-
+               
                return redirect()->route('perfil');
           }
           return 'Erro ao criar o post';

@@ -258,8 +258,8 @@
                                         {{-- COMENTÁRIO --}}
                                         <div class="form-group">
                                             <textarea class="form-control" rows="3"
-                                                placeholder="Comentário" name="comentario"
-                                                id="comentario"></textarea>
+                                                placeholder="Comentário" name="conteudo"
+                                                id="conteudo"></textarea>
                                         </div>
 
                                         <div class="form-group icones-postagem">

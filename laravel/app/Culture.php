@@ -9,6 +9,10 @@ use App\Culture_Segment;
 
 class Culture extends Model
 {
+    protected $fillable = [
+        'titulo', 'conteudo', 'plataforma'
+    ]; 
+
     public function genre()
     {
         return $this->belongsTo(Genre::class);
