@@ -91,7 +91,7 @@
 .stars i {
     font-size: 1.5em;
     color: #ffd559;
-    font-weight: 400;
+    /* font-weight: 400; */
     /* margin-top: 50px; */
 }
 
@@ -161,11 +161,10 @@
 }
 
 .pontuacao-feed-perfil i {
-    font-size: 1.5em;
+    font-size: 1em;
     color: #ffd559;
-    font-weight: 400;
+    /* font-weight: 400; */
     margin-top: 50px;
-    /* text-shadow: 1px 1px 1px #7a7a7a; */
 }
 
 .pontuacao-feed-perfil span {

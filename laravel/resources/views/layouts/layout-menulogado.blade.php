@@ -31,8 +31,8 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <script defer src="https://kit.fontawesome.com/1dccee3303.js" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/05e16292f5.js" crossorigin="anonymous"></script>
 
     <!-- SCRIPTS -->
     <script defer type="text/javascript" src="{{ asset('js/app.js') }}"></script>

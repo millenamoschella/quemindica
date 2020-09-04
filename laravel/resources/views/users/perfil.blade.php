@@ -47,10 +47,10 @@
 
             {{-- PONTUAÇÃO USUÁRIO --}}
             <div class="stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
                 <i class="far fa-star"></i>
             </div>
 
@@ -83,23 +83,21 @@
 
                                     <div class="flex-grow-1 infos-usuario">
 
+                                    <div class="pontuacao-feed-perfil">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                            <div>
+                                                <span>25 pontos</span>
+                                            </div>
+                                        </div>
+
                                         <span>Bio:</span>
                                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A culpa exercitationem
                                             est, quaerat mollitia rem optio dolore explicabo! </p>
-                                        <!-- 
-                                                                                                                                                                                                                                            {{-- PONTUAÇÃO --}}
-
-                                                                                                                                                                                                                                            <div class="pontuacao-feed-perfil">
-                                                                                                                                                                                                                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                                                                                                                                                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                                                                                                                                                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                                                                                                                                                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                                                                                                                                                                                                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                                                                                                                                                                                                            <div>
-                                                                                                                                                                                                                                                    <span>25 pontos</span>
-                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                            </div> -->
-
+ 
                                     </div>
                                 </div>
                             </div>
