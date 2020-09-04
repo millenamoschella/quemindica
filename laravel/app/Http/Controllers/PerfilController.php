@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Post;
 
 class PerfilController extends Controller
 {
     public function perfil()
     {
-        return view('users.perfil');
+
+        $postsUser = Post::All();
+
+        return view('users.perfil', compact('postsUser'));
     }
 
     public function __construct()

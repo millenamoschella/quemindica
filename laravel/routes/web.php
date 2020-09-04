@@ -89,7 +89,7 @@ Route::get('/post/create', 'PostController@create')->name('post_create'); //dent
 
 Route::post('/post/insert', 'PostController@insert')->name('post_insert');
 
-Route::get('/post/read', 'PostController@read')->name('post_read');
+Route::get('/post/read/{id}', 'PostController@read')->name('post_read');
 
 Route::get('/post/delete/{post_id}', 'PostController@delete')->name('post_delete');
 
