@@ -143,10 +143,15 @@
 
 .card-sticky {
     position: sticky;
-    top: 76px;
+    top: 90px;
     height: 84vh;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+.posts-feed .card-sticky {
+    height: auto;
+
 }
 
 /* ÁREA PONTOS E INDICAÇÕES */

@@ -11,6 +11,10 @@ use App\Reaction;
 
 class Post extends Model
 {
+    protected $fillable = [
+        'conteudo', 'user_id'
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);

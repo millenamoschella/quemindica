@@ -78,6 +78,20 @@ Route::post('/update{id}', 'UserController@update')->name('update');
 
 // Route::post('/update{id}', 'TesteController@update')->name('update');
 
+// Route::get('/perfil', 'PostController@createPost')->name('createPost');
+
+// Route::post('/storePost', 'PostController@storePost')->name('storePost');
+
+// Route::post('/deletePost{id}', 'PostController@deletePost')->name('deletePost');
+
+
+Route::get('/post/create', 'PostController@create')->name('post_create'); //dentro da view: {{ route('post_create') }}
+
+Route::post('/post/insert', 'PostController@insert')->name('post_insert');
+
+Route::get('/post/read', 'PostController@read')->name('post_read');
+
+Route::get('/post/delete/{post_id}', 'PostController@delete')->name('post_delete');
 
 
 
