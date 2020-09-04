@@ -118,6 +118,28 @@
                             </div>
                         </div>
 
+                        {{-- CELULAR --}}
+                        <div class="form-group row">
+                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Celular') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="phone" type="tel"
+                                    class="form-control area-input-modal-suporte @error('phone') is-invalid @enderror"
+                                    name="phone" value="{{ old('phone') }}" required autocomplete="phone">
+
+                                @error('phone')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+
+                                <span class="focus-area-input-modal-suporte"></span>
+                                <span class="icone-input-modal-suporte">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+
                         {{-- SENHA --}}
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Senha') }}</label>
@@ -157,7 +179,7 @@
 
                         </div>
 
-                        {{-- CPF --}}
+                        <!-- {{-- CPF --}}
                         <div class="form-group row">
                             <label for="cpf" class="col-md-4 col-form-label text-md-right">{{ __('CPF') }}</label>
 
@@ -177,31 +199,11 @@
                                     <i class="fa fa-id-badge" aria-hidden="true"></i>
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
 
-                        {{-- CELULAR --}}
-                        <div class="form-group row">
-                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Celular') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="phone" type="tel"
-                                    class="form-control area-input-modal-suporte @error('phone') is-invalid @enderror"
-                                    name="phone" value="{{ old('phone') }}" required autocomplete="phone">
 
-                                @error('phone')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-
-                                <span class="focus-area-input-modal-suporte"></span>
-                                <span class="icone-input-modal-suporte">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                </span>
-                            </div>
-                        </div>
-
-                        {{-- CEP --}}
+                        <!-- {{-- CEP --}}
                         <div class="form-group row">
                             <label for="born_date" class="col-md-4 col-form-label text-md-right">{{ __('Cep') }}</label>
 
@@ -214,9 +216,9 @@
                                     <i class="fas fa-search-location" aria-hidden="true"></i>
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
 
-                        {{-- RUA --}}
+                        <!-- {{-- RUA --}}
                         <div class="form-group row">
                             <label for="street" class="col-md-4 col-form-label text-md-right">{{ __('Rua') }}</label>
 
@@ -230,9 +232,9 @@
                                     <i class="fa fa-road" aria-hidden="true"></i>
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
 
-                        {{-- BAIRRO --}}
+                        <!-- {{-- BAIRRO --}}
                         <div class="form-group row">
                             <label for="neighborhood"
                                 class="col-md-4 col-form-label text-md-right">{{ __('Bairro') }}</label>
@@ -248,9 +250,9 @@
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
 
-                        {{-- CIDADE --}}
+                        <!-- {{-- CIDADE --}}
                         <div class="form-group row">
                             <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Cidade') }}</label>
 
@@ -264,9 +266,9 @@
                                     <i class="fas fa-city" aria-hidden="true"></i>
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
 
-                        {{-- ESTADO --}}
+                        <!-- {{-- ESTADO --}}
                         <div class="form-group row">
                             <label for="state" class="col-md-4 col-form-label text-md-right">{{ __('Estado') }}</label>
 
@@ -280,9 +282,9 @@
                                     <i class="fas fa-city" aria-hidden="true"></i>
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
 
-                        {{-- DATA DE NASCIMENTO --}}
+                        <!-- {{-- DATA DE NASCIMENTO --}}
                         <div class="form-group row">
                             <label for="born_date"
                                 class="col-md-4 col-form-label text-md-right">{{ __('Data de nascimento') }}</label>
@@ -296,9 +298,9 @@
                                     <i class="fa fa-birthday-cake" aria-hidden="true"></i>
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
 
-                        {{-- FOTO --}}
+                        <!-- {{-- FOTO --}}
                         <div class="form-group row">
                             <label for="photo" class="col-md-4 col-form-label text-md-right">{{ __('Foto') }}</label>
 
@@ -311,8 +313,8 @@
                                     <i class="fa fa-photo" aria-hidden="true"></i>
                                 </span>
                             </div>
-                        </div>
-
+                        </div> -->
+<!-- 
                         {{-- SOBRE --}}
                         <div class="form-group row">
                             <label for="about" class="col-md-4 col-form-label text-md-right">{{ __('Sobre') }}</label>
@@ -328,7 +330,7 @@
                                     <i class="fa fa-id-card-o" aria-hidden="true"></i>
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
 
                         {{--CHECKBOX
                         TERMOS--}}

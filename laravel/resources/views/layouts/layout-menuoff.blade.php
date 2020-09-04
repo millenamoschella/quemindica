@@ -95,13 +95,21 @@
                         </li>
 
                         @if (Route::has('register'))
-                            <li class="nav-item botao-loginRegistrar">
+                        <li class="nav-item botao-loginRegistrar">
+                            <a href="#" data-toggle="modal" data-target="#modalRegistrar" class="nav-link">
+                                <button class="btn-yellow">
+                                    <strong>{{ __('Registrar') }}</strong>
+                                </button>
+                            </a>
+                        </li>
+
+                            <!-- <li class="nav-item botao-loginRegistrar">
                                 <a class="nav-link" href="{{ route('register') }}">
                                     <button class="btn-yellow">
                                         <strong>{{ __('Registrar') }}</strong>
                                     </button>
                                 </a>
-                            </li>
+                            </li> -->
                         @endif
 
                     @else
