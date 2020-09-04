@@ -364,6 +364,7 @@
 
                                 {{-- FOTO USUÁRIO E HORÁRIO POST
                                 --}}
+                                @foreach($postsUser as $post)
                                 <div class="card-header">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="d-flex justify-content-between align-items-center">
@@ -373,14 +374,14 @@
                                             <div class="mr-2">
                                                 <a href="{{ route('perfil') }}">
                                                     <img class="rounded-circle" width="45"
-                                                        src="{{ asset('imagens/minhaConta/fotoUsuario.jpg') }}"
+                                                        src="{{ asset('uploads/photos/' . $post->user->photo) }}"
                                                         alt="Foto autor post" class="img-fluid">
                                                 </a>
                                             </div>
                                             <div class="ml-2">
 
                                                 {{-- AUTOR --}}
-                                                <h5 class="nome-post-usuario">{{ '@' . Auth::user()->username }}</h5>
+                                                <h5 class="nome-post-usuario">{{ '@' . $post->user->username }}</h5>
                                             </div>
                                         </div>
                                         <div>
@@ -408,13 +409,13 @@
                                 </div>
 
                                 {{-- POSTAGEM --}}
-                                @foreach ($postsUser as $post)
+
                                     <div class="card-body postagem-feed">
 
                                         {{-- TEMPO DO POST --}}
                                         <div class="mb-2 tempo-comentario-feed">
                                             <i class="fa fa-clock-o"></i>
-                                            <span class="tempo-feed">{{ $post->user_id . '' . $post->created_at }}</span>
+                                            <span class="tempo-feed">{{ $post->created_at->format('d/m/Y H:i:s') }}</span>
                                         </div>
 
                                         {{-- TÍTULO POST --}}
