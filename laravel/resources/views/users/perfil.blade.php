@@ -150,39 +150,38 @@
                         </div>
                     </div>
 
-
                     {{-- POSTS DO USUÁRIO --}}
                     <div class="col-lg-7 col-md-7 col-sm-12 order-md-2 posts-perfil">
 
                         {{-- SEÇÃO ESCREVER POST --}}
                         <div class="posts-feed">
 
-                        {{-- ESCOLHER TIPO DE POST --}}
+                            {{-- ESCOLHER TIPO DE POST --}}
 
-                        <div class="card noScroll shadow card-sticky" id="choosePost">
+                            <div class="card noScroll shadow card-sticky" id="choosePost">
                                 <div class="card-body">
-                                    
-                                        <p>Quero indicar:</p>
-                                        <div class="d-flex">
-                                            <div id="cardCulture" class="postCard">
-                                                <img src="{{ asset('icones/video-player.svg') }}" alt="Imagem de vídeo player">
-                                                <div class="text-center mb-1">
-                                                    <small><b>Arte/lazer</b></small> 
-                                                </div>
-                                            </div>
-                                            <div id="cardService" class="postCard">
-                                                <img src="{{ asset('icones/quality.svg') }}" alt="Imagem de serviços">
-                                                <div class="text-center mb-1">
-                                                    <small><b>Serviço</b></small> 
-                                                </div>
-                                            </div>
-                                            <div id="cardProduct" class="postCard">
-                                                <img src="{{ asset('icones/products.svg') }}" alt="Imagem de produtos">
-                                                <div class="text-center mb-1">
-                                                    <small><b>Produto</b></small> 
-                                                </div>
+
+                                    <p>Quero indicar:</p>
+                                    <div class="d-flex">
+                                        <div id="cardCulture" class="postCard">
+                                            <img src="{{ asset('icones/video-player.svg') }}" alt="Imagem de vídeo player">
+                                            <div class="text-center mb-1">
+                                                <small><b>Arte/lazer</b></small>
                                             </div>
                                         </div>
+                                        <div id="cardService" class="postCard">
+                                            <img src="{{ asset('icones/quality.svg') }}" alt="Imagem de serviços">
+                                            <div class="text-center mb-1">
+                                                <small><b>Serviço</b></small>
+                                            </div>
+                                        </div>
+                                        <div id="cardProduct" class="postCard">
+                                            <img src="{{ asset('icones/products.svg') }}" alt="Imagem de produtos">
+                                            <div class="text-center mb-1">
+                                                <small><b>Produto</b></small>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -202,7 +201,7 @@
                                                 <option>Livro</option>
                                             </select>
                                         </div>
-                                        
+
                                         {{-- PLATAFORMA --}}
 
                                         <div class="form-group col-md-4 px-0">
@@ -225,40 +224,27 @@
                                             <textarea class="form-control" rows="1" placeholder="Título" name="titulo"
                                                 id="titulo"></textarea>
                                         </div>
-                                        <!-- {{-- AUTOR --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="3"
-                                                placeholder="Autor(es)" name="autor"
-                                                id="autor"></textarea>
-                                        </div>
 
-                                        {{-- ANO --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="3"
-                                                placeholder="Ano" name="ano"
-                                                id="ano"></textarea>
-                                        </div> -->
 
                                         {{-- NOTA --}}
                                         <label for="">Avaliação:</label>
                                         <div class="estrelas">
-                                            <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                                            <input type="radio" id="cm_star-empty" name="fb" value="" checked />
                                             <label for="cm_star-1"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                                            <input type="radio" id="cm_star-1" name="fb" value="1" />
                                             <label for="cm_star-2"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                                            <input type="radio" id="cm_star-2" name="fb" value="2" />
                                             <label for="cm_star-3"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                                            <input type="radio" id="cm_star-3" name="fb" value="3" />
                                             <label for="cm_star-4"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                                            <input type="radio" id="cm_star-4" name="fb" value="4" />
                                             <label for="cm_star-5"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                                            <input type="radio" id="cm_star-5" name="fb" value="5" />
                                         </div>
 
                                         {{-- COMENTÁRIO --}}
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="3"
-                                                placeholder="Comentário" name="conteudo"
+                                            <textarea class="form-control" rows="3" placeholder="Comentário" name="conteudo"
                                                 id="conteudo"></textarea>
                                         </div>
 
@@ -364,51 +350,54 @@
 
                                 {{-- FOTO USUÁRIO E HORÁRIO POST
                                 --}}
-                                @foreach($postsUser as $post)
-                                <div class="card-header">
-                                    <div class="d-flex justify-content-between align-items-center">
+                                @foreach ($postsUser as $post)
+                                    <div class="card-header">
                                         <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center">
 
-                                            {{-- FOTO USUÁRIO AUTOR DO POST
-                                            --}}
-                                            <div class="mr-2">
-                                                <a href="{{ route('perfil') }}">
-                                                    <img class="rounded-circle" width="45"
-                                                        src="{{ asset('uploads/photos/' . $post->user->photo) }}"
-                                                        alt="Foto autor post" class="img-fluid">
-                                                </a>
-                                            </div>
-                                            <div class="ml-2">
+                                                {{-- FOTO USUÁRIO AUTOR DO POST
+                                                --}}
+                                                <div class="mr-2">
+                                                    <a href="{{ route('perfil') }}">
+                                                        <img class="rounded-circle" width="45"
+                                                            src="{{ asset('uploads/photos/' . $post->user->photo) }}"
+                                                            alt="Foto autor post" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="ml-2">
 
-                                                {{-- AUTOR --}}
-                                                <h5 class="nome-post-usuario">{{ '@' . $post->user->username }}</h5>
-                                            </div>
-                                        </div>
-                                        <div>
-
-                                            {{-- BOTÕES POSTAGEM
-                                            --}}
-                                            <div class="dropdown">
-                                                <button class="btn dropdown-toggle" type="button" id="gedf-drop1"
-                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                                                    {{-- ÍCONE
+                                                    {{-- AUTOR
                                                     --}}
-                                                    <i class="fa fa-ellipsis-h"></i>
-                                                </button>
+                                                    <h5 class="nome-post-usuario">{{ '@' . $post->user->username }}</h5>
+                                                </div>
+                                            </div>
+                                            <div>
 
-                                                {{-- OPÇÕES --}}
-                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                                    <a class="dropdown-item" href="#">Esconder</a>
-                                                    <a class="dropdown-item" href="#">Reportar</a>
+                                                {{-- BOTÕES POSTAGEM
+                                                --}}
+                                                <div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" id="gedf-drop1"
+                                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                        {{-- ÍCONE
+                                                        --}}
+                                                        <i class="fa fa-ellipsis-h"></i>
+                                                    </button>
+
+                                                    {{-- OPÇÕES
+                                                    --}}
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="gedf-drop1">
+                                                        <a class="dropdown-item" href="#">Esconder</a>
+                                                        <a class="dropdown-item" href="#">Reportar</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
 
-                                </div>
-
-                                {{-- POSTAGEM --}}
+                                    {{-- POSTAGEM --}}
 
                                     <div class="card-body postagem-feed">
 
@@ -541,17 +530,17 @@
                     </div>
 
 
-
-                    {{-- SEÇÃO AMIGOS --}}
+                    {{-- MENU DIREITO --}}
                     <div class="col-lg-3 col-md-2 col-sm-12 order-md-3 amigos-perfil text-center">
                         <div class="card card-sticky scroll">
-                            <div class="amigos-cards">
 
-                                {{-- TÍTULO --}}
-                                <h5>Amigos</h5>
+                            {{-- SEÇÃO AMIGOS --}}
+                            <div class="amigos-cards">
 
                                 {{-- IMAGEM SERVIÇO --}}
                                 <div class="cards-imagens-perfil">
+                                    {{-- TÍTULO --}}
+                                    <h5>Amigos</h5>
 
                                     <a href="#">
                                         <img src="{{ asset('imagens/minhaConta/sara.jfif') }}"
@@ -596,155 +585,57 @@
                                     </a>
 
                                 </div>
-                                <div class="cards-imagens-perfil">
 
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/sara.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/leonardo.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/marcia.png') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/Millena.png') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/vivian.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/sandra.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/joao.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/gabriel.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/michelle.png') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                </div>
-                                <div class="cards-imagens-perfil">
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/sara.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/leonardo.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/marcia.png') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/Millena.png') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/vivian.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/sandra.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/joao.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/gabriel.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/michelle.png') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                </div>
-                                <div class="cards-imagens-perfil">
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/sara.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/leonardo.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/marcia.png') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/Millena.png') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/vivian.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/sandra.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/joao.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/gabriel.jfif') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/michelle.png') }}"
-                                            class="img-fluid card-amigos-perfil">
-                                    </a>
-
+                                {{-- VER MAIS AMIGOS --}}
+                                <div class="card-footer card-footer-perfil">
+                                    <a href="{{ route('amigos') }}" target="_blank">Ver Mais</a>
                                 </div>
                             </div>
 
+                            {{-- SEÇÃO SERVIÇOS --}}
+                            <div class="card shadow">
 
+                                <div class="card-body">
 
-                            {{-- VER MAIS AMIGOS --}}
-                            <div class="card-footer card-footer-perfil">
-                                <a href="#">Ver Mais</a>
+                                    {{-- TÍTULO --}}
+                                    <h5>Serviços</h5>
+
+                                    {{-- IMAGEM SERVIÇO --}}
+                                    <div class="cards-imagens-feed">
+                                        <a href="#">
+                                            <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
+                                                class="img-fluid card-servico-feed">
+                                        </a>
+
+                                        <a href="#">
+                                            <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
+                                                class="img-fluid card-servico-feed">
+                                        </a>
+
+                                        <a href="#">
+                                            <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
+                                                class="img-fluid card-servico-feed">
+                                        </a>
+
+                                        <a href="#">
+                                            <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
+                                                class="img-fluid card-servico-feed">
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                {{-- VER MAIS SERVIÇOS --}}
+                                <div class="card-footer">
+                                    <a href="#">Ver Mais</a>
+                                </div>
+
                             </div>
-
-
 
                         </div>
 
                     </div>
+
 
 
 
