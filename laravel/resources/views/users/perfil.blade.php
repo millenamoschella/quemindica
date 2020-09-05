@@ -203,8 +203,8 @@
                                                 <option selected>Escolha uma opção</option>
                                                 <option value="1">Música</option>
                                                 <option value="2">Filme</option>
-                                                <option value="2">Série</option>
-                                                <option value="2">Livro</option>
+                                                <option value="3">Série</option>
+                                                <option value="4">Livro</option>
 
                                             </select>
                                         </div>
@@ -232,6 +232,11 @@
                                                 id="titulo"></textarea>
                                         </div>
 
+                                        {{-- COMENTÁRIO --}}
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="3" placeholder="Comentário" name="conteudo"
+                                                id="conteudo"></textarea>
+                                        </div>
 
                                         {{-- NOTA --}}
                                         <label for="">Avaliação:</label>
@@ -252,32 +257,7 @@
                                                     aria-hidden="true"></i>
                                                 <span>Postar</span></button>
                                         </form>
-                                        <form action="{{ route('post_insert') }}" method="POST" enctype="multipart/form-data">
-                                        @csrf
-
-                                        {{-- COMENTÁRIO --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="3" placeholder="Comentário" name="conteudo"
-                                                id="conteudo"></textarea>
-                                        </div>
-
-                                        <div class="form-group icones-postagem">
-                                            {{-- ADICIONAR IMAGEM
-                                            --}}
-
-                                            {{-- <input type="file">
-                                            --}}
-                                            <button class="btn"><i class="fa fa-paperclip" aria-hidden="true"></i></button>
-                                            <button class="btn"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
-                                            <button class="btn"><i class="fa fa-user" aria-hidden="true"></i></button>
-
-                                            {{-- POSTAR --}}
-                                            <button class="btn float-right"><i class="fa fa-paper-plane-o"
-                                                    aria-hidden="true"></i>
-                                                <span>Postar</span></button>
-
-                                        </div>
-                                    </form>
+                                                        
 
                                 </div>
                             </div>

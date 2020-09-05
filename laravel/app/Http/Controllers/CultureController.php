@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Culture;
 use App\Culture_Segment;
+use App\Post;
+use Auth;
 
 class CultureController extends Controller
 {
@@ -23,8 +25,16 @@ class CultureController extends Controller
          $culture->titulo = $request->get('titulo');
          $culture->plataforma = $request->get('plataforma');
 
+         $post = new Post();
+
+         $post->conteudo = $request->get('conteudo');
+         $post->user_id = Auth::user()->id;
+
+     //     $post = Post::all();
+
 
          $culture->save();
+         $post->save();
          return back();
     }
 
