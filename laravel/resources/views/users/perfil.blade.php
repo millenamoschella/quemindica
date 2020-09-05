@@ -267,6 +267,9 @@
 
                                         </div>
                                     </form>
+                                <div id="backIconCulture" class="backIcon">
+                                <img src="/icones/arrow.svg" alt="Voltar">
+                                </div>
                                 </div>
                             </div>
 
@@ -305,6 +308,9 @@
 
                                         </div>
                                     </form>
+                                <div id="backIconService" class="backIcon">
+                                <img src="/icones/arrow.svg" alt="Voltar">
+                                </div>
                                 </div>
                             </div>
 
@@ -343,6 +349,9 @@
 
                                         </div>
                                     </form>
+                                <div id="backIconProduct" class="backIcon">
+                                <img src="/icones/arrow.svg" alt="Voltar">
+                                </div>
                                 </div>
                             </div>
 
