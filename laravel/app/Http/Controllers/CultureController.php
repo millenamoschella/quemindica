@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Culture;
+use App\Culture_Segment;
 
 class CultureController extends Controller
 {
@@ -17,9 +18,11 @@ class CultureController extends Controller
     {
 
          $culture = new Culture();
-
+         
+         $culture->culture__segments_id = $request->get('culture__segments_id');
          $culture->titulo = $request->get('titulo');
-     //     $culture->plataforma = $request->get('plataforma');
+         $culture->plataforma = $request->get('plataforma');
+
 
          $culture->save();
          return back();

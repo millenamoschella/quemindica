@@ -13,7 +13,7 @@ class AddCultureSegmentsSeeder extends Seeder
      */
     public function run()
     {
-        Culture_Segment::create(['tipo' => Null]);
+        // Culture_Segment::create(['tipo' => Null]);
         Culture_Segment::create(['tipo' => 'Música']);
         Culture_Segment::create(['tipo' => 'Filme']);
         Culture_Segment::create(['tipo' => 'Série']);

@@ -199,11 +199,13 @@
 
                                         <div class="form-group col-md-4 px-0">
                                             <label for="cultureSegment">Segmento</label>
-                                            <select id="cultureSegment" class="form-control">
+                                            <select id="cultureSegment" class="form-control" name="culture__segments_id">
                                                 <option selected>Escolha uma opção</option>
-                                                <option>Filmes e Séries</option>
-                                                <option>Música</option>
-                                                <option>Livro</option>
+                                                <option value="1">Música</option>
+                                                <option value="2">Filme</option>
+                                                <option value="2">Série</option>
+                                                <option value="2">Livro</option>
+
                                             </select>
                                         </div>
 
@@ -211,15 +213,15 @@
 
                                         <div class="form-group col-md-4 px-0">
                                             <label for="plataforma">Plataforma</label>
-                                            <select id="plataforma" class="form-control">
+                                            <select id="plataforma" class="form-control" name="plataforma">
                                                 <option selected>Escolha uma opção</option>
-                                                <option>Netflix</option>
-                                                <option>HBO GO</option>
-                                                <option>Prime Video</option>
-                                                <option>Kindle (e-book)</option>
-                                                <option>Livro de papel</option>
-                                                <option>Spotify</option>
-                                                <option>Deezer</option>
+                                                <option value="Netflix">Netflix</option>
+                                                <option value="HBO GO">HBO GO</option>
+                                                <option value="Prime Video">Prime Video</option>
+                                                <option value="E-book">Kindle (e-book)</option>
+                                                <option value="Livro">Livro de papel</option>
+                                                <option valeu="Spotify">Spotify</option>
+                                                <option value="Deezer">Deezer</option>
                                                 <option>Outros</option>
                                             </select>
                                         </div>

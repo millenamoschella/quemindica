@@ -10,7 +10,7 @@ use App\Culture_Segment;
 class Culture extends Model
 {
     protected $fillable = [
-        'titulo', 'plataforma'
+        'titulo', 'plataforma', 'culture__segments_id'
     ]; 
 
     public function genre()
