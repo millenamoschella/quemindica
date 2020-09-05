@@ -361,11 +361,12 @@
                                                 --}}
                                                 <div class="mr-2">
                                                     <a href="{{ route('perfil') }}">
-                                                        <img class="rounded-circle" width="45"
+                                                        <img class="rounded-circle"
                                                             src="{{ asset('uploads/photos/' . $post->user->photo) }}"
-                                                            alt="Foto autor post" class="img-fluid">
+                                                            alt="Foto autor post" class="img-fluid" width="40" height="40">
                                                     </a>
                                                 </div>
+
                                                 <div class="ml-2">
 
                                                     {{-- AUTOR
@@ -464,7 +465,7 @@
                                                             <div class="avatar-autor-comentario">
                                                                 <a href="">
                                                                     <img src="{{ asset('uploads/photos/' . $comment->user->photo) }}"
-                                                                        alt="Foto autor comentário">
+                                                                        alt="Foto autor comentário" width="40" height="40">
                                                                 </a>
                                                             </div>
 

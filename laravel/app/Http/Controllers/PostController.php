@@ -27,37 +27,18 @@ class PostController extends Controller
           $post->conteudo = $request->get('conteudo');
           $post->user_id = Auth::user()->id;
 
-          if ($post->save()) {
 
-               return redirect()->route('perfil');
-          }
-          return 'Erro ao criar o post';
+          $post->save();
+          return back();
      }
-
-
-     // public function show($post)
-     // {
-     //      $post->load(['posts', function ($query) {
-     //           $query->where('user_id', auth()->id());
-     //      }]);
-     // }
 
 
      public function delete($post_id)
      {
-
           $post_id = decrypt($post_id);
-
           $post = Post::find($post_id);
 
-          if ($post === null) {
-               return 'Post não encontrado';
-          }
-
-          if ($post->delete()) {
-               return redirect()->route('post_read');
-          }
-
-          return 'Algum erro ocorreu ao excluir';
+          $post->delete();
+          return back();
      }
 }

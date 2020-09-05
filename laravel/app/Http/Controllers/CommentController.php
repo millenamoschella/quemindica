@@ -31,22 +31,13 @@ class CommentController extends Controller
 
 
 
-
     public function delete($comment_id)
     {
 
         $comment_id = decrypt($comment_id);
-
         $comment = Comment::find($comment_id);
 
-        if ($comment === null) {
-            return 'Comentário não encontrado';
-        }
-
-        if ($comment->delete()) {
-            return redirect()->route('comment_read');
-        }
-
-        return 'Algum erro ocorreu ao excluir';
+        $comment->delete();
+        return back();
     }
 }

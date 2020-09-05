@@ -25,6 +25,9 @@ Route::get('/admin-servicos', 'AdminController@servicos')->name('admin-servicos'
 Route::get('/perfil', 'PerfilController@perfil')->name('perfil');
 Route::get('/configuracao', 'ConfiguracaoController@configuracao')->name('configuracao');
 
+// Route::get('/perfil/{username}', 'PerfilController@perfil')->name('perfil');
+
+
 
 // ROTAS AMIGOS 
 
@@ -44,8 +47,6 @@ Route::get('/politicas-termos', 'SiteController@politicasTermos')->name('politic
 Route::get('/suporte', 'SiteController@suporte')->name('suporte');
 
 
-
-
 // ---------------------------- SEÇÃO ROTAS CRUD
 
 
@@ -56,12 +57,12 @@ Route::post('/store{id}', 'UserController@store')->name('store');
 Route::post('/update{id}', 'UserController@update')->name('update');
 
 
+
 // ROTAS POSTS
 
 Route::get('/post/create', 'PostController@create')->name('post_create');
 Route::post('/post/insert', 'PostController@insert')->name('post_insert');
 Route::get('/post/delete/{post_id}', 'PostController@delete')->name('post_delete');
-
 
 
 //ROTAS COMENTÁRIOS
