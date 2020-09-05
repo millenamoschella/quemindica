@@ -193,7 +193,7 @@
                                 <div id="backIconCulture" class="backIcon">
                                 <img src="/icones/arrow.svg" alt="Voltar">
                                 </div>
-                                    <form action="{{ route('post_insert') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('culture_insert') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         {{-- SEGMENTO --}}
 
@@ -246,6 +246,12 @@
                                             <label for="cm_star-5"><i class="fas fa-star"></i></label>
                                             <input type="radio" id="cm_star-5" name="fb" value="5" />
                                         </div>
+                                        <button class="btn float-right"><i class="fa fa-paper-plane-o"
+                                                    aria-hidden="true"></i>
+                                                <span>Postar</span></button>
+                                        </form>
+                                        <form action="{{ route('post_insert') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
 
                                         {{-- COMENTÁRIO --}}
                                         <div class="form-group">

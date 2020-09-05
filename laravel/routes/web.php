@@ -70,3 +70,9 @@ Route::get('/post/delete/{post_id}', 'PostController@delete')->name('post_delete
 Route::get('/comment/create', 'CommentController@create')->name('comment_create');
 Route::post('/comment/insert', 'CommentController@insert')->name('comment_insert');
 Route::get('/comment/delete/{comment_id}', 'CommentController@delete')->name('comment_delete');
+
+
+//ROTAS DE CULTURA
+Route::get('/culture/create', 'CultureController@create')->name('culture_create');
+Route::post('/culture/insert', 'CultureController@insert')->name('culture_insert');
+Route::get('/culture/delete/{culture_id}', 'CultureController@delete')->name('culture_delete');

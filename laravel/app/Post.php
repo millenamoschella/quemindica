@@ -12,7 +12,7 @@ use App\Reaction;
 class Post extends Model
 {
     protected $fillable = [
-        'titulo', 'conteudo', 'user_id'
+        'conteudo', 'user_id', 'culture_id'
     ];
 
     public function user()

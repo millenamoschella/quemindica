@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Post;
 use App\Comment;
+use App\Culture;
 use Illuminate\Support\Facades\Auth;
 
 class PerfilController extends Controller
@@ -20,9 +21,10 @@ class PerfilController extends Controller
     public function perfil(User $id)
     {
         $postsUser = Post::where('user_id', '=', Auth::user()->id)->get();
+        $postsCulture = Culture::All();
         $commentsUser = Comment::All();
 
-        return view('users.perfil', compact('postsUser', 'commentsUser'));
+        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture'));
     }
 
 
