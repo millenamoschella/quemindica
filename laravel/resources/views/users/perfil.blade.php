@@ -190,6 +190,9 @@
                             {{-- ESCREVER POST CULTURA --}}
                             <div class="card shadow card-sticky displayNone" id="culturePost">
                                 <div class="card-body">
+                                <div id="backIconCulture" class="backIcon">
+                                <img src="/icones/arrow.svg" alt="Voltar">
+                                </div>
                                     <form action="{{ route('post_insert') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         {{-- SEGMENTO --}}
@@ -267,12 +270,16 @@
 
                                         </div>
                                     </form>
+
                                 </div>
                             </div>
 
                             {{-- ESCREVER POST SERVIÇO --}}
                             <div class="card shadow card-sticky displayNone" id="servicePost">
                                 <div class="card-body">
+                                <div id="backIconService" class="backIcon">
+                                <img src="/icones/arrow.svg" alt="Voltar">
+                                </div>
                                     <form action="{{ route('post_insert') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
 
@@ -305,12 +312,16 @@
 
                                         </div>
                                     </form>
+
                                 </div>
                             </div>
 
                             {{-- ESCREVER POST PRODUTO --}}
                             <div class="card shadow card-sticky displayNone" id="productPost">
                                 <div class="card-body">
+                                <div id="backIconProduct" class="backIcon">
+                                <img src="/icones/arrow.svg" alt="Voltar">
+                                </div>
                                     <form action="{{ route('post_insert') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
 
@@ -343,6 +354,7 @@
 
                                         </div>
                                     </form>
+
                                 </div>
                             </div>
 
