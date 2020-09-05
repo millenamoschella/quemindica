@@ -25,7 +25,7 @@ class PostController extends Controller
 
           $post->conteudo = $request->get('conteudo');
           $post->user_id = Auth::user()->id;
-          $post->culture_id = Culture::findOrFail($id);
+          // $post->culture_id = Culture::findOrFail($id);
 
 
           $post->save();
