@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Post;
+use App\Comment;
 
 class PerfilController extends Controller
 {
@@ -12,8 +13,9 @@ class PerfilController extends Controller
     {
 
         $postsUser = Post::All();
+        $commentsUser = Comment::All();
 
-        return view('users.perfil', compact('postsUser'));
+        return view('users.perfil', compact('postsUser', 'commentsUser'));
     }
 
     public function __construct()

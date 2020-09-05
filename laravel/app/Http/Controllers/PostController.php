@@ -22,20 +22,25 @@ class PostController extends Controller
      {
 
           $post = new Post();
-          
+
           $post->titulo = $request->get('titulo');
           $post->conteudo = $request->get('conteudo');
           $post->user_id = Auth::user()->id;
 
-          
-          
-          
           if ($post->save()) {
-               
+
                return redirect()->route('perfil');
           }
           return 'Erro ao criar o post';
      }
+
+
+     // public function show($post)
+     // {
+     //      $post->load(['posts', function ($query) {
+     //           $query->where('user_id', auth()->id());
+     //      }]);
+     // }
 
 
      public function delete($post_id)

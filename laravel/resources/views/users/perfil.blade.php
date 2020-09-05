@@ -70,7 +70,9 @@
     <section>
         {{-- SEÇÃO MENU, POSTS E AMIGOS --}}
         <div class="container-fluid perfil-quemindica">
+
             <div class="col-12">
+
                 <div class="row">
 
                     {{-- MENU ESQUERDO --}}
@@ -344,7 +346,7 @@
                                 </div>
                             </div>
 
-                            {{-- EXEMPLO POST --}}
+                            {{-- POSTS --}}
 
                             <div class="card shadow mb-3 area-post-feed">
 
@@ -370,6 +372,7 @@
                                                     --}}
                                                     <h5 class="nome-post-usuario">{{ '@' . $post->user->username }}</h5>
                                                 </div>
+
                                             </div>
                                             <div>
 
@@ -404,7 +407,10 @@
                                         {{-- TEMPO DO POST --}}
                                         <div class="mb-2 tempo-comentario-feed">
                                             <i class="fa fa-clock-o"></i>
-                                            <span class="tempo-feed">{{ $post->created_at->format('d/m/Y H:i:s') }}</span>
+                                            {{-- <span
+                                                class="tempo-feed">{{ $post->created_at->format('d/m/Y H:i:s') }}</span>
+                                            --}}
+                                            <span class="tempo-feed">{{ $post->created_at->diffforhumans() }}</span>
                                         </div>
 
                                         {{-- TÍTULO POST --}}
@@ -440,95 +446,94 @@
 
                                     </div>
 
-
                                     {{-- SEÇÃO COMENTÁRIOS DO POST
                                     --}}
 
                                     <div class="user-post">
                                         <div class="area-comentario">
-                                            <ul class="comentarios">
 
-                                                {{-- SEÇÃO COMENTÁRIO
-                                                --}}
-                                                <li>
-                                                    {{-- FOTO AUTOR COMENTÁRIO
-                                                    --}}
-                                                    <div class="avatar-autor-comentario">
-                                                        <a href=""><img src="{{ asset('../imagens/minhaConta/sara.jfif') }}"
-                                                                alt="Foto autor comentário"></a>
-                                                    </div>
+                                            {{-- @foreach ($commentsUser as $comment) --}}
+                                                @foreach ($post->comments as $comment)
+                                                    <ul class="comentarios">
 
-                                                    {{-- COMENTÁRIO
-                                                    --}}
-                                                    <div class="secao-comentario">
-                                                        <div class="autor-hora">
-
-                                                            {{-- AUTOR COMENTÁRIO
+                                                        {{-- SEÇÃO COMENTÁRIO
+                                                        --}}
+                                                        <li>
+                                                            {{-- FOTO AUTOR COMENTÁRIO
                                                             --}}
-                                                            <h5>
-                                                                <a href="#" title="">Sara Margarido</a>
-                                                            </h5>
-
-                                                            {{-- TEMPO
-                                                            --}}
-                                                            <span class="tempo-comentario-feed">15 horas atrás</span>
-
-                                                            {{-- RESPONDER
-                                                            --}}
-                                                            <a class="responder-comentario" href="#"><i
-                                                                    class="fa fa-reply"></i></a>
-                                                        </div>
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                                                            maximus sed ex quis
-                                                            varius. Fusce tincidunt neque ex, auctor placerat lacus placerat
-                                                            et. Integer
-                                                            sodales nibh ac posuere ullamcorper. Nullam maximus libero ac
-                                                            diam suscipit
-                                                            ornare
-                                                        </p>
-                                                    </div>
-                                                </li>
-
-                                                {{-- VER TODOS OS COMENTÁRIOS
-                                                --}}
-                                                <li>
-                                                    <a href="#" class="vertodos-comentarios">Ver Todos</a>
-                                                </li>
-
-                                                {{-- COMENTÁRIO
-                                                --}}
-                                                <li class="post-comment">
-
-                                                    {{-- ÁREA COMENTAR
-                                                    --}}
-                                                    <div class="form-comentar">
-                                                        <form action="#" method="post">
-                                                            @csrf
-
-                                                            <div class="form-group area-text-comentar">
-                                                                <textarea class="form-control" id="comentario" rows="3"
-                                                                    placeholder="Faça um comentário..."></textarea>
-
-
-                                                                {{-- BOTÃO COMENTAR
-                                                                --}}
-                                                                <button type="submit" class="btn">Comentar</button>
+                                                            <div class="avatar-autor-comentario">
+                                                                <a href="">
+                                                                    <img src="{{ asset('uploads/photos/' . $comment->user->photo) }}"
+                                                                        alt="Foto autor comentário">
+                                                                </a>
                                                             </div>
-                                                        </form>
-                                                    </div>
-                                                </li>
 
-                                            </ul>
+                                                            {{-- COMENTÁRIO
+                                                            --}}
+                                                            <div class="secao-comentario">
+                                                                <div class="autor-hora">
+
+                                                                    {{-- AUTOR COMENTÁRIO
+                                                                    --}}
+                                                                    <h5>
+                                                                        <a href="#"
+                                                                            title="">{{ '@' . $comment->user->username }}</a>
+                                                                    </h5>
+
+                                                                    {{-- TEMPO
+                                                                    --}}
+                                                                    <span
+                                                                        class="tempo-comentario-feed">{{ $comment->created_at->diffforhumans() }}</span>
+
+                                                                    {{-- RESPONDER
+                                                                    --}}
+                                                                    <a class="responder-comentario" href="#"><i
+                                                                            class="fa fa-reply"></i></a>
+                                                                </div>
+                                                                <p>
+                                                                    {{ $comment->conteudo }}
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                @endforeach
+
+                                        </div>
+
+                                        {{-- VER TODOS OS COMENTÁRIOS
+                                        --}}
+                                        <div>
+                                            <a href="#" class="vertodos-comentarios">Ver Todos</a>
+                                        </div>
+
+                                        {{-- ÁREA COMENTAR --}}
+
+                                        <div class="post-comment">
+                                            <div class="form-comentar">
+                                                <form action="{{ route('comment_insert') }}" method="post">
+                                                    @csrf
+
+                                                    <input type="hidden" name="post_id" value="{{ $post->id }}">
+
+                                                    <div class="form-group area-text-comentar">
+                                                        <textarea class="form-control" id="comentario" rows="3"
+                                                            placeholder="Faça um comentário..." name="conteudo"></textarea>
+
+
+                                                        {{-- BOTÃO COMENTAR
+                                                        --}}
+                                                        <button type="submit" class="btn">Comentar</button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
 
                                     </div>
+
                                 @endforeach
                             </div>
                         </div>
-
                     </div>
-
 
                     {{-- MENU DIREITO --}}
                     <div class="col-lg-3 col-md-2 col-sm-12 order-md-3 amigos-perfil text-center">
@@ -636,13 +641,12 @@
 
                     </div>
 
-
-
-
                 </div>
+
             </div>
 
         </div>
+
     </section>
 
 

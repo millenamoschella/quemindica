@@ -61,3 +61,11 @@ Route::post('/update{id}', 'UserController@update')->name('update');
 Route::get('/post/create', 'PostController@create')->name('post_create');
 Route::post('/post/insert', 'PostController@insert')->name('post_insert');
 Route::get('/post/delete/{post_id}', 'PostController@delete')->name('post_delete');
+
+
+
+//ROTAS COMENTÁRIOS
+
+Route::get('/comment/create', 'CommentController@create')->name('comment_create');
+Route::post('/comment/insert', 'CommentController@insert')->name('comment_insert');
+Route::get('/comment/delete/{comment_id}', 'CommentController@delete')->name('comment_delete');
