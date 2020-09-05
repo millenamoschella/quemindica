@@ -24,16 +24,18 @@ class CultureController extends Controller
          $culture->culture__segments_id = $request->get('culture__segments_id');
          $culture->titulo = $request->get('titulo');
          $culture->plataforma = $request->get('plataforma');
+         $culture->save();
 
          $post = new Post();
 
          $post->conteudo = $request->get('conteudo');
          $post->user_id = Auth::user()->id;
+         $post->culture_id = $culture->id;
 
      //     $post = Post::all();
 
 
-         $culture->save();
+
          $post->save();
          return back();
     }

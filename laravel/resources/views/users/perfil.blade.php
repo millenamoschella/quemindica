@@ -195,6 +195,7 @@
                                 </div>
                                     <form action="{{ route('culture_insert') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
+
                                         {{-- SEGMENTO --}}
 
                                         <div class="form-group col-md-4 px-0">
@@ -278,6 +279,7 @@
                                         </div>
                                         {{-- CONTEÚDO --}}
                                         <div class="form-group">
+
                                             <textarea class="form-control" rows="3"
                                                 placeholder="Qual a sua indicação de hoje?" name="conteudo"
                                                 id="conteudo"></textarea>
