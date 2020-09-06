@@ -147,13 +147,18 @@
 
 /* --------------------MENU ESQUERDO */
 
-.card-sticky {
-    position: sticky;
-    top: 90px;
-    height: 84vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
+@media (min-width: 900px) {
+    .card-sticky {
+        position: sticky;
+        top: 90px;
+        height: 84vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        z-index: 99999;
+    }
+
 }
+
 
 /* ÁREA PONTOS E INDICAÇÕES */
 
@@ -164,7 +169,6 @@
 .rating-perfil i {
     font-size: 1em;
     color: #ffd559;
-    /* font-weight: 400; */
     margin-top: 50px;
 }
 
