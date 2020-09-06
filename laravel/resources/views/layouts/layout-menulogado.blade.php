@@ -76,7 +76,7 @@
 
                     {{-- MENU AUTH --}}
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
+                        <ul class="navbar-nav">
 
                             {{-- BOTÃO LOGIN E REGISTRAR --}}
                             @guest
@@ -100,13 +100,12 @@
                                     {{ Auth::user()->name }}
 
                                     @if (Auth::user()->photo == null)
-                                        <img src="{{ asset('imagens/institucional/usuario.png') }}" width=50 height=50
-                                            alt="foto default" class="rounded-circle">
+                                        <img src="{{ asset('imagens/institucional/usuario.png') }}" alt="foto default"
+                                            class="rounded-circle avatar-menu-logado">
                                     @else
-                                        <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}" width=50 height=50
-                                            class="rounded-circle">
+                                        <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}"
+                                            class="rounded-circle avatar-menu-logado">
                                     @endif
-
                                 </a>
 
 

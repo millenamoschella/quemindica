@@ -27,8 +27,11 @@
 
 .avatar-menu-logado {
     width: 40px;
-    margin-left: 30px;
-    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.avatar-menu-logado:hover {
+    border: 2px solid #FCDA73;
 }
 
 .seta-drop-menulog {
