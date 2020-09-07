@@ -32,73 +32,10 @@ class UserController extends Controller
      */
     public function store(Request $request, $id)
     {
-        $photo = User::findOrFail($id);
-
-        if ($request->hasFile('photo')) {
-            $file = $request->file('photo');
-            $extension = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $extension;
-            $file->move('uploads/photos', $filename);
-            // $file->move('uploads/photos', $filename);
-            $photo->photo = $filename;
-        } else {
-            return $request;
-            $photo->photo = '';
-        }
-
-        $photo->save();
-
-
-        return redirect()->route('perfil')
-            ->with('success', 'Foto criada com sucesso');
-    }
-
-
-    /**
-     * Controller para exibir detalhes das photos
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $photo = User::findOrFail($id);
-        return view('show', compact('photo'));
-    }
-
-    /**
-     * Controller para editar as photos
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-
-        $photo = User::find($id);
-        return view('edit', compact('photo'));
-    }
-
-    /**
-     * Controller para atualizar a photo no sistema
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-
-
-        // $userPhoto = User::find($id);
-        // $userPhoto->photo = $request->photo;
-
-        // $result = $userPhoto->save();
-        // return redirect()->route('perfil');
 
         $photo = User::findOrFail($id);
 
-        $photoAntiga = 'uploads/photos' . $photo->photo;
+        $photoAntiga = 'uploads/photos/' . $photo->photo;
 
         if ($request->hasFile('photo')) {
 
@@ -107,7 +44,7 @@ class UserController extends Controller
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $file->move('uploads/photos', $filename);
+            $file->move('uploads/photos/', $filename);
             $photo->photo = $filename;
         } else {
             return $request;
@@ -115,14 +52,23 @@ class UserController extends Controller
         }
 
         $photo->save();
-
-
-        return redirect()->route('perfil')
-            ->with('success', 'Foto atualizada com sucesso');
+        return back();
     }
 
     /**
-     * Controller para deletar um photo
+     * Controller para exibir detalhes das photos
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    // public function show($id)
+    // {
+    //     $photo = User::findOrFail($id);
+    //     return view('show', compact('photo'));
+    // }
+
+    /**
+     * Controller para deletar uma photo
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

@@ -294,7 +294,7 @@
     border-radius: 5px 5px 0 0;
 }
 
-/* stars-rating PARA AVALIAÇÃO */
+/* ESTRELAS PARA AVALIAÇÃO */
 
 .stars-rating input[type=radio] {
     display: none;
@@ -309,7 +309,7 @@
     color: #CCC;
 }
 
-/* BOTÃO VOLTAR PARA OS TIPOS DE INDICAÇÃO */
+/* BOTÃO VOLTAR PARA OS TIPOS DE INDICAÇÕES */
 .backIcon img {
     width: 20px;
     float: right;
@@ -334,6 +334,7 @@
     margin: -10px;
     font-size: 1em;
 }
+
 
 /* TEMPO DO POST */
 .post-time .time {
@@ -471,6 +472,7 @@ span:hover {
 }
 
 /* FOTO AUTOR COMENTÁRIO */
+
 
 .comment-author-avatar {
     display: table-cell;

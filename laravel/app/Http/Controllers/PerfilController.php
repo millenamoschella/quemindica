@@ -22,8 +22,8 @@ class PerfilController extends Controller
     {
 
         $postsUser = Post::where('user_id', '=', Auth::user()->id)->orderby('created_at', 'DESC')->get();
+        // $postsUser = Post::where('user_id', '=', Auth::user()->id)->orderby('created_at', 'DESC')->limit(3)->get();
         $postsCulture = Culture::All();
-        // $commentsUser = Comment::All();
         $commentsUser = Comment::All();
         $post = Post::find('culture_id');
 
@@ -34,14 +34,40 @@ class PerfilController extends Controller
 
 
 
-    // public function perfil(User $id, User $username)
-    // {
-    //     $postsUser = Post::where('user_id', '=', Auth::user()->id)->get();
-    //     $commentsUser = Comment::All();
 
-    //     $username = Auth::user()->username;
-    //     // dd($username);
 
-    //     return view('users.perfil', compact('postsUser', 'commentsUser', 'username'));
-    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function loadMore()
+    {
+        $this->perPage = $this->perPage + 3;
+    }
 }

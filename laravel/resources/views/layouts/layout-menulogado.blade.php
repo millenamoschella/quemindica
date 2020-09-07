@@ -31,11 +31,11 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/05e16292f5.js" crossorigin="anonymous"></script>
 
-    {{-- SCRIPTS MODAIS - FOTO PERFIL E FOTO CAPA --}}
-    <script defer type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    {{-- SCRIPTS --}}
+    <script src="{{ asset('js/app.js') }}" type="text/javascript" async></script>
     <script src="{{ asset('../js/modalFotoPerfil.js') }}" async></script>
     <script src="{{ asset('../js/app.js') }}" async></script>
-    <script defer src="{{ asset('../js/modal-fotoCapa.js') }}"></script>
+    <script src="{{ asset('../js/modal-fotoCapa.js') }}" async></script>
 
 
 </head>
@@ -258,31 +258,31 @@
 
                 <div class="modal-body texto-modal-sair">Selecione <b>sair</b> abaixo para sair da conta</div>
 
-                    <div class="modal-footer">
+                <div class="modal-footer">
 
-                        {{-- BOTÃO CANCELAR --}}
-                        <button class="btn btn-sm btn-botao-modal-menu-cancelar" type="button" data-dismiss="modal">Cancelar
-                        </button>
+                    {{-- BOTÃO CANCELAR --}}
+                    <button class="btn btn-sm btn-botao-modal-menu-cancelar" type="button" data-dismiss="modal">Cancelar
+                    </button>
 
-                        {{-- BOTÃO SAIR --}}
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                    {{-- BOTÃO SAIR --}}
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
-                            <button class="btn btn-sm btn-botao-modal-menu-sair" type="button"
-                                data-dismiss="modal">{{ __('Logout') }}
-                            </button>
-                        </a>
+                        <button class="btn btn-sm btn-botao-modal-menu-sair" type="button"
+                            data-dismiss="modal">{{ __('Logout') }}
+                        </button>
+                    </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
 
 
-
-                    </div>
 
                 </div>
+
             </div>
         </div>
+    </div>
     </div>
 
 

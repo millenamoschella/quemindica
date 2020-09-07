@@ -115,8 +115,13 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
 
-                                <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}"
-                                    class="rounded-circle avatar-menu-off">
+                                @if (Auth::user()->photo == null)
+                                    <img src="{{ asset('imagens/institucional/usuario.png') }}" alt="foto default"
+                                        class="rounded-circle avatar-menu-off">
+                                @else
+                                    <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}"
+                                        class="rounded-circle avatar-menu-off">
+                                @endif
                             </a>
 
                             {{-- BOTÃO SAIR --}}
@@ -129,9 +134,8 @@
                                 <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
                                 <a class="dropdown-item" href="{{ route('configuracao') }}">Editar Perfil</a>
 
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                                                                                document.getElementById('logout-form').submit();">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 

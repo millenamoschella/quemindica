@@ -6,9 +6,6 @@
     @extends('layouts.modalPhoto')
 
 
-    {{-- SEÇÃO CAPA PERFIL, NOME E FOTO DO USUÁRIO --}}
-    {{-- <div class="secao-capa-perfil"></div> --}}
-
     {{-- CAPA PERFIL --}}
     <section class="capa-perfil">
         <div class="capa">
@@ -33,12 +30,12 @@
 
                 <a href="#" data-toggle="modal" data-target="#modalFoto">
                     @if (Auth::user()->photo == null)
-                        <img src="{{ asset('imagens/institucional/usuario.png') }}" width=170 height=170 alt="foto default">
+                        <img src="{{ asset('imagens/institucional/usuario.png') }}" alt="foto default"
+                            class="default-photo-user">
                     @else
                         <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}" width=170 height=170
                             alt="Foto perfil usuário">
                     @endif
-
                 </a>
 
             </div>
@@ -129,9 +126,9 @@
                                 </ul>
                             </div>
 
-
                             {{-- TAGS --}}
                             <div class="tags-section text-center">
+
                                 <div class="profile-tags">
                                     <h5>Tags seguidas</h5>
 
@@ -386,7 +383,7 @@
                             {{-- ÁREA ONDE MOSTRA TODOS OS POSTS CRIADOS
                             --}}
 
-                            <div class="card shadow mb-3 posts-area">
+                            <div class="card shadow mb-3 posts-area" id="load-data">
                                 {{-- FOTO USUÁRIO E HORÁRIO POST
                                 --}}
                                 @foreach ($postsUser as $post)
@@ -402,17 +399,15 @@
                                                 --}}
                                                 <div class="mr-2">
                                                     <a href="{{ route('perfil') }}">
-
                                                         @if (Auth::user()->photo == null)
                                                             <img src="{{ asset('imagens/institucional/usuario.png') }}"
-                                                                width=40 height=40 alt="foto default">
+                                                                alt="foto default" class="photo-author-default">
                                                         @else
                                                             <img class="rounded-circle"
                                                                 src="{{ asset('uploads/photos/' . $post->user->photo) }}"
                                                                 alt="Foto autor post" class="img-fluid" width="40"
                                                                 height="40">
                                                         @endif
-
                                                     </a>
                                                 </div>
 
@@ -501,10 +496,9 @@
                                                         --}}
                                                         <div class="comment-author-avatar">
                                                             <a href="">
-
                                                                 @if (Auth::user()->photo == null)
                                                                     <img src="{{ asset('imagens/institucional/usuario.png') }}"
-                                                                        width=40 height=40 alt="foto default">
+                                                                        alt="foto default" class="photo-author-comment">
                                                                 @else
                                                                     <img src="{{ asset('uploads/photos/' . $comment->user->photo) }}"
                                                                         alt="Foto autor comentário">
@@ -527,7 +521,8 @@
                                                                 {{-- TEMPO
                                                                 --}}
                                                                 <span
-                                                                    class="comment-time">{{ $comment->created_at->diffforhumans() }}</span>
+                                                                    class="comment-time">{{ $comment->created_at->diffforhumans() }}
+                                                                </span>
 
                                                                 {{-- RESPONDER
                                                                 --}}
@@ -544,9 +539,11 @@
                                             @endforeach
                                             {{-- VER TODOS OS COMENTÁRIOS
                                             --}}
-                                            <div class="text-center">
-                                                <a href="#" class="see-more-comments">Ver Mais</a>
-                                            </div>
+                                            {{-- <div class="text-center">
+                                                <button>
+                                                    <a href="#" id="loadMoreComments" class="see-more-comments">Ver Mais</a>
+                                                </button>
+                                            </div> --}}
                                         </div>
 
 
@@ -575,6 +572,17 @@
                                     </div>
 
                                 @endforeach
+
+
+                                {{-- VER TODOS OS POSTS
+                                --}}
+
+                                {{-- <div class="text-center see-more-comments">
+                                    <button id="loadMore" class="loadmore-btn btn">
+                                        Ver mais
+                                    </button>
+                                </div> --}}
+
                             </div>
 
                         </div>
@@ -679,7 +687,7 @@
 
                                 {{-- VER MAIS SERVIÇOS --}}
                                 <div class="card-footer">
-                                    <a href="#">Ver Mais</a>
+                                    <a href="{{ route('servicos') }}" tagert="_blank">Ver Mais</a>
                                 </div>
 
                             </div>
@@ -691,8 +699,8 @@
 
             </div>
 
+        </div>
     </section>
-
 
 
 @endsection

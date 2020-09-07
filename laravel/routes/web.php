@@ -28,7 +28,6 @@ Route::get('/configuracao', 'ConfiguracaoController@configuracao')->name('config
 // Route::get('/perfil/{username}', 'PerfilController@perfil')->name('perfil');
 
 
-
 // ROTAS AMIGOS 
 
 Route::get('/amigos', 'FriendController@amigosPag')->name('amigos');
