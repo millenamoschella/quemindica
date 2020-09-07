@@ -1,10 +1,9 @@
 @extends('layouts.layout-menulogado')
 
+@section('content')
+
 {{-- MODAL --}}
 @extends('layouts.modalPhoto')
-
-
-@section('content')
 
 
 {{-- SEÇÃO CAPA PERFIL, NOME E FOTO DO USUÁRIO --}}
@@ -663,6 +662,7 @@
     </div>
 
 </section>
+
 
 
 @endsection
