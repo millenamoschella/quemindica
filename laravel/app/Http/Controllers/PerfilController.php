@@ -23,6 +23,7 @@ class PerfilController extends Controller
 
         $postsUser = Post::where('user_id', '=', Auth::user()->id)->orderby('created_at', 'DESC')->get();
         $postsCulture = Culture::All();
+        // $commentsUser = Comment::All();
         $commentsUser = Comment::All();
         $post = Post::find('culture_id');
 

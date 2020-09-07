@@ -40,16 +40,8 @@ class Post extends Model
         return $this->hasMany(Reaction::class);
     }
 
-
-
-
-
-
-
-
-
     public function comments()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Comment::class)->orderBy('created_at', 'DESC');;
     }
 }
