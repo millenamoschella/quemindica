@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="{{ asset('../css/estilo.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/suporte.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/servicos.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/feed.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/perfil.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/amigos.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
@@ -112,7 +111,6 @@
                                 {{-- MENU DROPDOWN --}}
                                 <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menulog"
                                     aria-labelledby="messages">
-                                    <a class="dropdown-item" href="{{ url('feed') }}">Feed</a>
                                     <a class="dropdown-item" href="{{ route('perfil') }}">Meu Perfil</a>
                                     <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
                                     <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>

@@ -95,21 +95,13 @@
                         </li>
 
                         @if (Route::has('register'))
-                        <li class="nav-item botao-loginRegistrar">
-                            <a href="#" data-toggle="modal" data-target="#modalRegistrar" class="nav-link">
-                                <button class="btn-yellow">
-                                    <strong>{{ __('Registrar') }}</strong>
-                                </button>
-                            </a>
-                        </li>
-
-                            <!-- <li class="nav-item botao-loginRegistrar">
-                                <a class="nav-link" href="{{ route('register') }}">
+                            <li class="nav-item botao-loginRegistrar">
+                                <a href="#" data-toggle="modal" data-target="#modalRegistrar" class="nav-link">
                                     <button class="btn-yellow">
                                         <strong>{{ __('Registrar') }}</strong>
                                     </button>
                                 </a>
-                            </li> -->
+                            </li>
                         @endif
 
                     @else
@@ -119,16 +111,27 @@
                         <li class="nav-item dropdown">
 
                             {{-- NOME DO USUÁRIO --}}
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle drop-menuoff" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
+
+                                <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}"
+                                    class="rounded-circle avatar-menu-off">
                             </a>
 
                             {{-- BOTÃO SAIR --}}
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menuoff"
+                                aria-labelledby="navbarDropdown">
+
+                                <a class="dropdown-item" href="{{ route('perfil') }}">Meu Perfil</a>
+                                <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
+                                <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
+                                <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
+                                <a class="dropdown-item" href="{{ route('configuracao') }}">Editar Perfil</a>
+
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                                                            document.getElementById('logout-form').submit();">
+                                                                                                            document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -142,6 +145,30 @@
                 </ul>
             </div>
         </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </header>
 

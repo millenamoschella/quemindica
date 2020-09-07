@@ -34,7 +34,7 @@ header {
     cursor: pointer;
     margin: auto;
     display: block;
-   
+
 }
 
 .botao-suporte img {
@@ -54,8 +54,8 @@ header {
 /* BOTÃO LOGIN E REGISTRAR */
 
 .btn-yellow {
-    background-color: #007592; 
-    color: #FCDA73; 
+    background-color: #007592;
+    color: #FCDA73;
     border: 1px solid #FCDA73;
     border-radius: 5px;
     padding: 8px 24px;
@@ -72,46 +72,37 @@ header {
 }
 
 
-/* .botao-entrar,
-.botao-registrar {
-    padding: 9px 15px;
-    box-shadow: inset 0px 0px 0px 1px #7fb6ca;
-    border: none;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #016983;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 0.9em;
-    position: relative;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    margin: auto;
-    display: block;
-} */
 
-/* .botao-entrar:focus,
-.botao-registrar:focus {
-    outline: 0;
-} */
+/* DROWPDOWN MENU */
 
-/* .botao-entrar:before,
-.botao-registrar:before {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    background-color: #01586e;
-    position: absolute;
-    content: "";
-    z-index: -1;
-    left: 0;
-    top: 0;
-    transition: all 0.3s ease;
-    transform: translate(8px, 8px);
-    text-decoration: none;
-} */
+.avatar-menu-off {
+    width: 40px;
+}
 
-/* .botao-entrar:hover:before,
-.botao-registrar:hover:before {
-    transform: translate(0px, 0px);
-} */
+.avatar-menu-off:hover {
+    border: 2px solid #FCDA73;
+}
+
+.drop-menuoff {
+    color: #FCDA73;
+}
+
+.drop-menuoff:hover {
+    color: #fff;
+}
+
+.menu-links-menuoff {
+    /* border: none; */
+    background-color: #007592;
+    border: 1px solid #FCDA73;
+}
+
+.menu-links-menuoff a {
+    color: #FCDA73;
+}
+
+.menu-links-menuoff a:hover {
+    color: #007592;
+    font-weight: bold;
+    background-color: #FCDA73;
+}
