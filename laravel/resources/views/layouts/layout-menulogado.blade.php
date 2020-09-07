@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('../css/amigos.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/admin.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/configuracao.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/editarperfil.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/modal.css') }}">
 
     {{-- FAVICON --}}
@@ -103,7 +103,6 @@
                                     @endif
                                 </a>
 
-
                                 {{-- MENU DROPDOWN --}}
                                 <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menulog"
                                     aria-labelledby="messages">
@@ -111,7 +110,7 @@
                                     <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
                                     <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
                                     <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
-                                    <a class="dropdown-item" href="{{ route('configuracao') }}">Editar Perfil</a>
+                                    <a class="dropdown-item" href="{{ route('editarperfil', $user->id) }}">Editar Perfil</a>
                                 </div>
 
                             @endguest

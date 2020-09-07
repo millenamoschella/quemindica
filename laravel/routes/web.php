@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-// ROTA HOME
+// ROTA HOME 
 
 Route::get('/home', 'HomeController@home')->name('home');
 
@@ -23,7 +23,8 @@ Route::get('/admin-servicos', 'AdminController@servicos')->name('admin-servicos'
 // ROTAS USUÁRIO 
 
 Route::get('/perfil', 'PerfilController@perfil')->name('perfil');
-Route::get('/configuracao', 'ConfiguracaoController@configuracao')->name('configuracao');
+Route::get('/editarperfil{id}', 'UserController@editProfile')->name('editarperfil');
+Route::post('/updateProfile{id}', 'UserController@updateProfile')->name('updateProfile');
 
 // Route::get('/perfil/{username}', 'PerfilController@perfil')->name('perfil');
 
@@ -49,12 +50,16 @@ Route::get('/suporte', 'SiteController@suporte')->name('suporte');
 // ---------------------------- SEÇÃO ROTAS CRUD
 
 
-// ROTAS IMAGEMS
+// ROTAS FOTO DO USUÁRIO
 
 Route::get('/create', 'UserController@create')->name('create');
 Route::post('/store{id}', 'UserController@store')->name('store');
-Route::post('/update{id}', 'UserController@update')->name('update');
 
+
+//ROTAS FOTO CAPA DO PERFIL
+
+Route::get('/createCover', 'UserController@createCover')->name('createCover');
+Route::post('/storeCover{id}', 'UserController@storeCover')->name('storeCover');
 
 
 // ROTAS POSTS
@@ -72,6 +77,7 @@ Route::get('/comment/delete/{comment_id}', 'CommentController@delete')->name('co
 
 
 //ROTAS DE CULTURA
+
 Route::get('/culture/create', 'CultureController@create')->name('culture_create');
 Route::post('/culture/insert', 'CultureController@insert')->name('culture_insert');
 Route::get('/culture/delete/{culture_id}', 'CultureController@delete')->name('culture_delete');

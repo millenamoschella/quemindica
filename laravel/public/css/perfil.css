@@ -483,6 +483,7 @@ span:hover {
 .comment-author-avatar img {
     border-radius: 100%;
     width: 40px;
+    height: 40px;
     margin-left: 60px;
 }
 

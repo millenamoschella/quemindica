@@ -96,8 +96,7 @@
 
                                         {{-- BIO DO USUÁRIO --}}
                                         <p class="text-center">
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A culpa exercitationem
-                                            est, quaerat mollitia rem optio dolore explicabo!
+                                            {{Auth::user()->about}}
                                         </p>
 
                                     </div>
@@ -120,7 +119,7 @@
                                     <i class="fa fa-question-circle" aria-hidden="true"><a href="{{ route('suporte') }}"
                                             title="">Suporte</a></i>
 
-                                    <i class="fa fa-cog" aria-hidden="true"><a href="{{ route('configuracao') }}"
+                                    <i class="fa fa-cog" aria-hidden="true"><a href="{{ route('editarperfil', $user->id) }}"
                                             title="">Editar
                                             Perfil</a></i>
                                 </ul>

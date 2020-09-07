@@ -56,15 +56,15 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'phone' => ['required', 'string', 'min:11', 'max:14', 'unique:users'],
-            // 'cpf' => ['string', 'min:8', 'max:13'],
-            // 'zip_code' => ['string', 'max:11'],
-            // 'street' => ['string', 'max:25'],
-            // 'neighborhood' => ['string', 'max:20'],
-            // 'city' => ['string', 'max:20'],
-            // 'state' => ['string', 'max:2'],
-            // 'born_date' => ['date_format:Y-m-d'],
-            // 'photo' => ['string', 'max:255'],
-            // 'about' => ['string', 'max:50'],
+
+            'cpf' => ['string', 'min:8', 'max:13'],
+            'zip_code' => ['string', 'max:11'],
+            'street' => ['string', 'max:25'],
+            'neighborhood' => ['string', 'max:20'],
+            'city' => ['string', 'max:20'],
+            'state' => ['string', 'max:2'],
+            'born_date' => ['date_format:Y-m-d'],
+            'about' => ['string', 'max:50'],
         ]);
     }
 
@@ -72,7 +72,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\User 
      */
     protected function create(array $data)
     {
@@ -83,15 +83,15 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'phone' => $data['phone'],
-            // 'cpf' => $data['cpf'],
-            // 'zip_code' => $data['zip_code'],
-            // 'street' => $data['street'],
-            // 'neighborhood' => $data['neighborhood'],
-            // 'city' => $data['city'],
-            // 'state' => $data['state'],
-            // 'born_date' => $data['born_date'],
-            // 'photo' => $data['photo'],
-            // 'about' => $data['about'],
+            'cpf' => $data['cpf'],
+            'zip_code' => $data['zip_code'],
+            'street' => $data['street'],
+            'neighborhood' => $data['neighborhood'],
+            'city' => $data['city'],
+            'state' => $data['state'],
+            'born_date' => $data['born_date'],
+            'photo' => $data['photo'],
+            'about' => $data['about'],
         ]);
     }
 }

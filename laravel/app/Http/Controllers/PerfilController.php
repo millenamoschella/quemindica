@@ -26,8 +26,9 @@ class PerfilController extends Controller
         $postsCulture = Culture::All();
         $commentsUser = Comment::All();
         $post = Post::find('culture_id');
+        $user = Auth::user();
 
-        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post'));
+        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user'));
     }
 
 

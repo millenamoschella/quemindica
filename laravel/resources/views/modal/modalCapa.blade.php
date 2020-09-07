@@ -27,10 +27,10 @@
                             {{-- FORMULÁRIO --}}
                             <div class="signup-form">
 
-                                <form action="upload.php" method="POST" enctype="multipart/form-data"
-                                    class="register-form" id="register-form">
+                                <form action="{{ route('storeCover', Auth::user()->id) }}" method="POST"
+                                    enctype="multipart/form-data" class="register-form" id="register-form">
+                                    @csrf
                                     <div class="row">
-
 
                                         {{-- UPLOAD --}}
 
@@ -45,8 +45,8 @@
                                         {{-- INPUT UPLOAD DE IMAGEM
                                         --}}
                                         <div class="input-group mt-5 px-2 py-2 input-upload">
-                                            <input id="upload" type="file" onchange="readURL(this);"
-                                                class="form-control border-0">
+                                            <input id="upload" name="cover" value="cover" type="file"
+                                                onchange="readURL(this);" class="form-control border-0">
 
                                             <label id="upload-label" for="upload"
                                                 class="font-weight-light text-muted">Escolha uma foto</label>

@@ -4,42 +4,32 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Post;
+use App\Comment;
+use App\Culture;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    /**
-     * Controller para listar todos os photos
-     *
-     * @return \Illuminate\Http\Response
-     */
 
+    // --------------- FUNÇÃO DE UPLOAD PARA FOTO PERFIL
 
-    /**
-     * Controller para criar novos photos
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('create');
     }
 
-    /**
-     * Controller para salvar os photos criados
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request, $id)
     {
 
         $photo = User::findOrFail($id);
 
-        $photoAntiga = 'uploads/photos/' . $photo->photo;
+        // $photoAntiga = 'uploads/photos' . $photo->photo;
 
         if ($request->hasFile('photo')) {
 
-            unlink($photoAntiga);
+            // unlink($photoAntiga);
 
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension();
@@ -55,35 +45,70 @@ class UserController extends Controller
         return back();
     }
 
-    /**
-     * Controller para exibir detalhes das photos
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    // public function show($id)
-    // {
-    //     $photo = User::findOrFail($id);
-    //     return view('show', compact('photo'));
-    // }
 
-    /**
-     * Controller para deletar uma photo
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    // --------------- FUNÇÃO DE UPLOAD PARA CAPA DO PERFIL
+
+    public function createCover()
+    {
+        return view('create');
+    }
+
+
+    public function storeCover(Request $request, $id)
     {
 
-        $photo = User::findOrFail($id);
+        $cover = User::findOrFail($id);
 
-        $image_path = 'uploads/photos' . $photo->photo;
-        unlink($image_path);
+        // $coverAntiga = 'uploads/photos/cover/' . $cover->cover;
 
-        $photo->delete();
+        if ($request->hasFile('cover')) {
 
-        return redirect()->route('perfil')
-            ->with('success', 'Foto deletada com sucesso');
+            // unlink($coverAntiga);
+
+            $fileCover = $request->file('cover');
+            $extensionCover = $fileCover->getClientOriginalExtension();
+            $filenameCover = time() . '.' . $extensionCover;
+            $fileCover->move('uploads/photos/cover/', $filenameCover);
+            $cover->cover = $filenameCover;
+        } else {
+            return $request;
+            $cover->cover = '';
+        }
+
+        $cover->save();
+        return back();
+    }
+
+
+
+    // --------------- FUNÇÕES PARA EDITAR O PERFIL
+
+    public function editProfile($id)
+    {
+        $user = User::find($id);
+        return view('users.editarperfil', compact('user'));
+    }
+
+
+    public function updateProfile(Request $request, $id)
+    {
+
+        $user = User::findOrFail($id);
+
+        $user->name = $request->input('name');
+        $user->lastname = $request->input('lastname');
+        $user->cpf = $request->input('cpf');
+        $user->zip_code = $request->input('zip_code');
+        $user->street = $request->input('street');
+        $user->neighborhood = $request->input('neighborhood');
+        $user->city = $request->input('city');
+        $user->state = $request->input('state');
+        $user->born_date = $request->input('born_date');
+        $user->about = $request->input('about');
+
+        $user->save();
+
+
+        return redirect()->route('perfil');
     }
 }
