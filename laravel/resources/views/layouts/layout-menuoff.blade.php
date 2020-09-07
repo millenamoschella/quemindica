@@ -80,7 +80,7 @@
                     {{-- BOTÃO SUPORTE --}}
                     <li class="nav-item botao-suporte">
                         <a href="#" data-toggle="modal" data-target="#modalSuporte" class="nav-link">
-                            <img src="{{ asset('../icones/suporte.png') }}" class="btn-suporte">
+                            <img src="{{ asset('../icones/support.png') }}" class="btn-suporte">
                         </a>
                     </li>
 
@@ -131,7 +131,7 @@
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                                            document.getElementById('logout-form').submit();">
+                                                                                                                document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 

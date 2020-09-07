@@ -39,11 +39,12 @@ header {
 
 .botao-suporte img {
     height: 36px;
-    padding: 2px;
+    padding: 5px;
     border-radius: 5px;
     border: 1px solid #FCDA73;
-
+    color: #FCDA73;
 }
+
 
 .btn-suporte:hover {
     font-weight: bold;
