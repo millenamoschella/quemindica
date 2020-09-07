@@ -8,6 +8,7 @@
 
 .modal-suporte {
     padding: 10px;
+    z-index: 9999;
 }
 
 /* TÍTULO FORMULÁRIO */
