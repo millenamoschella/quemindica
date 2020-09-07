@@ -545,7 +545,7 @@
                                             {{-- VER TODOS OS COMENTÁRIOS
                                             --}}
                                             <div class="text-center">
-                                                <a href="#" class="see-more-comments">Ver Todos</a>
+                                                <a href="#" class="see-more-comments">Ver Mais</a>
                                             </div>
                                         </div>
 

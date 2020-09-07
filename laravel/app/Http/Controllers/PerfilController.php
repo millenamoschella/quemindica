@@ -20,11 +20,12 @@ class PerfilController extends Controller
 
     public function perfil(User $id)
     {
-        $postsUser = Post::where('user_id', '=', Auth::user()->id)->get();
+
+        $postsUser = Post::where('user_id', '=', Auth::user()->id)->orderby('created_at', 'DESC')->get();
         $postsCulture = Culture::All();
         $commentsUser = Comment::All();
         $post = Post::find('culture_id');
-        
+
         return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post'));
     }
 
