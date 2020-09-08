@@ -11,17 +11,27 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-    {{-- ASSETS --}}
+
+    {{-- CSS LAYOUTS --}}
     <link rel="stylesheet" href="{{ asset('../css/layout-menulogado.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/estilo.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/suporte.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/servicos.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
+
+    {{-- CSS PÁGS. USUÁRIO --}}
     <link rel="stylesheet" href="{{ asset('../css/perfil.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/amigos.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/admin.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/editarperfil.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/servicos.css') }}">
+
+    {{-- CSS PÁGS. ADMIN --}}
+    <link rel="stylesheet" href="{{ asset('../css/admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/suporte.css') }}">
+
+    {{-- CSS PÁGS. MODAIS --}}
     <link rel="stylesheet" href="{{ asset('../css/modal.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/modalFotoPerfil.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('../css/estilo.css') }}">
+
 
     {{-- FAVICON --}}
     <link rel="shortcut icon" href="{{ asset('../imagens/logo/logo-icon.svg') }}" type="image/x-icon">

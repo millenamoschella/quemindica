@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+
+* {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+.section-modal-login {
+    padding: 20px;
+    z-index: 9999;
+    background-color: #027592;
+}
+
+/* TÍTULO FORMULÁRIO */
+
+.modal-title-login {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* INPUTS */
+
+.wrap-modal-login input {
+    display: block;
+    height: 50px;
+    border-radius: 5px;
+    padding: 0 30px 0 50px;
+    width: 100%;
+    background: #03a9d3;
+    font-size: 0.8em;
+    border: 2px solid #FCDA73;
+    color: #FCDA73;
+
+    background-color: #007592;
+
+    box-shadow: 0 1px 3px #0000001f,
+        0 1px 2px #0000003d;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+input.input-modal-login[name="email"] {
+    padding: 0 30px 0 54px;
+}
+
+input.input-modal-login:focus {
+    border: 1px solid #FCDA73;
+    background-color: #007592;
+}
+
+input.input-modal-login::placeholder {
+    color: #FCDA73;
+}
+
+.input-modal-login:focus+.focus-input-modal-login+.modal-login-icone {
+    color: #FCDA73;
+    padding-left: 22px;
+}
+
+.wrap-modal-login {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+/* FOCO INPUT */
+
+.modal-login-icone {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    pointer-events: none;
+    color: #aaaaaa;
+    font-size: 15px;
+    transition: all 0.4s;
+}
+
+
+/* BOTÃO */
+
+.div-btn-login {
+    padding-top: 20px;
+}
+
+.btn-login {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #fff;
+    transition: all 0.4s;
+    background: #027592;
+    outline: none;
+    border: none;
+}
+
+.btn-login:hover {
+    background: #aaaaaa;
+}
+
+.close-modal-login {
+    font-size: 1.3em;
+    float: right;
+    background: #027592;
+    width: 50px;
+    padding: 4px;
+    color: #FCDA73;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+}
+
+.close-modal-login:hover {
+    color: #027592;
+    background: #FCDA73;
+    border: none;
+    outline: none;
+}
+
+.div-btn-login {
+    padding-top: 10px;
+}
+
+
+.div-btn-login a:hover {
+    text-decoration: none;
+    color: #FCDA73;
+}
+
+.btn-login {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #FCDA73;
+    font-weight: bold;
+    transition: all 0.4s;
+    background: #027592;
+    border: solid 1px #FCDA73;
+    outline: none;
+}
+
+.btn-login:hover {
+    color: #027592;
+    font-weight: bold;
+    border: solid 1px #FCDA73;
+    background: #FCDA73;
+}
+
+.div-btn-login a {
+    color: #fff;
+    font-weight: 500;
+}
+
+.remember-me {
+    margin: auto;
+    padding: 10px;
+    color: #fff;
+}
+
+.remember-me input[type='checkbox'] {
+    display: block;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.remember-me input[type='checkbox']:after {
+    content: "";
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    font-size: 0.6em;
+    background-color: #f5f5f5;
+    border: 1px solid #FCDA73;
+    border-radius: 2px;
+}
+
+.remember-me input[type='checkbox']:hover:after,
+.remember-me input[type='checkbox']:checked:hover:after {
+    content: '\2714';
+    color: #FCDA73;
+    background-color: #006983;
+}
+
+.remember-me input[type='checkbox']:checked:after {
+    content: '\2714';
+    font-weight: bold;
+    color: #FCDA73;
+    font-weight: bold;
+    background-color: #006983;
+}

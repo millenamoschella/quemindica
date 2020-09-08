@@ -11,32 +11,35 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-    {{-- ASSETS --}}
+
+    {{-- CSS LAYOUTS --}}
     <link rel="stylesheet" href="{{ asset('../css/layout-menuoff.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/estilo.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/home.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/login.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/registrar.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/modal.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/sobre.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
+
+    {{-- CSS PÁGS. ESTÁTICAS --}}
+    <link rel="stylesheet" href="{{ asset('../css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/sobre.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/faq.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/politicas.css') }}">
 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- CSS MODAIS --}}
+    <link rel="stylesheet" href="{{ asset('../css/modalRegistrar.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/modalLogin.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/modalFotoPerfil.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/modalSuporte.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/modal.css') }}">
+
 
     {{-- SCRIPTS --}}
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('public/js/registerRules.js') }}" defer></script>
 
-    {{-- CSRF TOKEN --}}
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- FAVICON --}}
     <link rel="shortcut icon" href="{{ asset('../imagens/logo/logo-icon.svg') }}" type="image/x-icon">
 
-    <!-- ÍCONES -->
 
+    {{-- ÍCONES --}}
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -134,8 +137,9 @@
                                 <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
                                 <a class="dropdown-item" href="{{ route('editarperfil', $user->id) }}">Editar Perfil</a>
 
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                                                        document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
