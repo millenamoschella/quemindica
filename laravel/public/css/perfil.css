@@ -351,6 +351,12 @@
 
 /* POSTS */
 
+.post-title {
+    color: #007592;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
 .card-post {
     background-color: #f1f1f1;
 }

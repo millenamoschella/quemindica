@@ -96,7 +96,7 @@
 
                                         {{-- BIO DO USUÁRIO --}}
                                         <p class="text-center">
-                                            {{Auth::user()->about}}
+                                            {{ Auth::user()->about }}
                                         </p>
 
                                     </div>
@@ -450,6 +450,11 @@
                                             <i class="fa fa-clock-o"></i>
                                             <span class="time">{{ $post->created_at->diffforhumans() }}</span>
                                         </div>
+
+                                        {{-- TITULO POST --}}
+                                        <h6 class="card-text px-5 post-title">
+                                            {{ $post->culture->titulo }}
+                                        </h6>
 
                                         {{-- CONTEÚDO POST --}}
                                         <p class="card-text px-5">
