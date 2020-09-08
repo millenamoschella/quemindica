@@ -201,8 +201,10 @@
                                     {{-- BOTÃO VOLTAR AS OPÇÕES TIPO DE POST
                                     --}}
                                     <div id="backIconCulture" class="backIcon">
-                                        <img src="/icones/arrow.svg" alt="Voltar">
+                                        <i class="fas fa-arrow-left"></i>
                                     </div>
+
+
 
                                     {{-- ESCREVER INDICAÇÃO DE CULTURA
                                     --}}
@@ -285,7 +287,7 @@
                                     {{-- BOTÃO VOLTAR AS OPÇÕES TIPO DE POST
                                     --}}
                                     <div id="backIconService" class="backIcon">
-                                        <img src="/icones/arrow.svg" alt="Voltar">
+                                        <i class="fas fa-arrow-left"></i>
                                     </div>
 
                                     {{-- ESCREVER INDICAÇÃO DE SERVIÇO
@@ -336,7 +338,7 @@
                                     {{-- BOTÃO VOLTAR AS OPÇÕES TIPO DE POST
                                     --}}
                                     <div id="backIconProduct" class="backIcon">
-                                        <img src="/icones/arrow.svg" alt="Voltar">
+                                        <i class="fas fa-arrow-left"></i>
                                     </div>
 
                                     {{-- ESCREVER INDICAÇÃO DE PRODUTO

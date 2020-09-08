@@ -302,7 +302,7 @@
 
 .stars-rating label i.fas:before {
     content: '\f005';
-    color: #FC0;
+    color: #ffcd36;
 }
 
 .stars-rating input[type=radio]:checked~label i.fas:before {
@@ -310,9 +310,18 @@
 }
 
 /* BOTÃO VOLTAR PARA OS TIPOS DE INDICAÇÕES */
-.backIcon img {
+.backIcon i {
     width: 20px;
     float: right;
+    color: #007592;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.backIcon i:hover {
+    color: #ffcd36;
+    cursor: pointer;
 }
 
 
