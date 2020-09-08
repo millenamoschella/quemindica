@@ -13,7 +13,6 @@ class AddSegmentsSeeder extends Seeder
      */
     public function run()
     {
-        Segment::create(['tipo' => Null ]);
         Segment::create(['tipo' => 'Assistência Técnica']);
         Segment::create(['tipo' => 'Educação']);
         Segment::create(['tipo' => 'Design']);

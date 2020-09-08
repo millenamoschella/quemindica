@@ -42,16 +42,16 @@
     <script src="https://kit.fontawesome.com/05e16292f5.js" crossorigin="anonymous"></script>
 
     {{-- SCRIPTS --}}
-    <script src="{{ asset('js/app.js') }}" type="text/javascript" async></script>
-    <script src="{{ asset('../js/modalFotoPerfil.js') }}" async></script>
-    <script src="{{ asset('../js/app.js') }}" async></script>
-    <script src="{{ asset('../js/modal-fotoCapa.js') }}" async></script>
+    <script defer src="{{ asset('js/app.js') }}" type="text/javascript"></script>
+    <script defer src="{{ asset('../js/modalFotoPerfil.js') }}"></script>
+    <script defer src="{{ asset('../js/app.js') }}"></script>
+    <script defer src="{{ asset('../js/modal-fotoCapa.js') }}"></script>
 
 
 </head>
 
 <body>
-
+<header>
     {{-- MENU --}}
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top menu-logado" id="mainNav">
 
@@ -120,7 +120,7 @@
                                     <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
                                     <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
                                     <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
-                                    <a class="dropdown-item" href="{{ route('editarperfil', $user->id) }}">Editar Perfil</a>
+                                    <a class="dropdown-item" href="{{ route('editarperfil', Auth::user()->id) }}">Editar Perfil</a>
                                 </div>
 
                             @endguest
@@ -265,45 +265,48 @@
 
                 </div>
 
-                <div class="modal-body texto-modal-sair">Selecione <b>sair</b> abaixo para sair da conta</div>
+                    <div class="modal-body texto-modal-sair">Selecione <b>sair</b> abaixo para sair da conta</div>
 
-                <div class="modal-footer">
+                        <div class="modal-footer">
 
-                    {{-- BOTÃO CANCELAR --}}
-                    <button class="btn btn-sm btn-botao-modal-menu-cancelar" type="button" data-dismiss="modal">Cancelar
-                    </button>
+                            {{-- BOTÃO CANCELAR --}}
+                            <button class="btn btn-sm btn-botao-modal-menu-cancelar" type="button" data-dismiss="modal">Cancelar
+                            </button>
 
-                    {{-- BOTÃO SAIR --}}
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                        <button class="btn btn-sm btn-botao-modal-menu-sair" type="button"
-                            data-dismiss="modal">{{ __('Logout') }}
-                        </button>
-                    </a>
+                            {{-- BOTÃO SAIR --}}
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                <button class="btn btn-sm btn-botao-modal-menu-sair" type="button"
+                                    data-dismiss="modal">{{ __('Logout') }}
+                                </button>
+                            </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
 
 
 
-                </div>
+                        </div>
 
+                    </div>
             </div>
         </div>
     </div>
-    </div>
+</header>
+
 
 
     {{-- CONTEÚDO FEED --}}
 
     @yield('content')
 
+    @yield('modal')
+
     {{-- FOOTER --}}
 
     @extends('layouts.footer-logado')
-
-
+   
     {{-- BOOTSTRAP --}}
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

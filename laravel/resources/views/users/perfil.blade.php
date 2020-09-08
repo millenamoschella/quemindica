@@ -2,10 +2,6 @@
 
 @section('content')
 
-    {{-- MODAL --}}
-    @extends('layouts.modalPhoto')
-
-
     {{-- CAPA PERFIL --}}
     <section class="capa-perfil">
         <div class="capa">
@@ -461,7 +457,23 @@
 
                                         {{-- TITULO POST --}}
                                         <h6 class="card-text px-5 post-title">
-                                            {{ $post->culture->titulo }}
+                                        @switch($post)
+                                            @case($post->culture_id != null)
+                                                {{ $post->culture->titulo }}
+                                                @break
+
+                                            @case($post->service_id != null)
+                                                {{ $post->service->servico }}
+                                                @break
+                                            
+                                            @case($post->product_id != null)
+                                                {{ $post->product->titulo }}
+                                                @break
+
+                                            @default
+                                                {{ 'Erro' }}
+                                        @endswitch           
+                                            
                                         </h6>
 
                                         {{-- CONTEÚDO POST --}}
@@ -714,5 +726,9 @@
         </div>
     </section>
 
+@endsection
 
+@section('modal')
+    {{-- MODAL --}}
+    @extends('users.modalPhoto')
 @endsection

@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Auth;
 
 class ServiceController extends Controller
 {
-    public function servicos()
+    public function servicos(User $user)
     {
-        return view('users.servicos');
+        $user = Auth::user();
+        return view('users.servicos', compact('user'));
     }
 
     public function __construct()

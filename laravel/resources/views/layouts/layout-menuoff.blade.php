@@ -135,7 +135,7 @@
                                 <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
                                 <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
                                 <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
-                                <a class="dropdown-item" href="{{ route('editarperfil', $user->id) }}">Editar Perfil</a>
+                                <a class="dropdown-item" href="{{ route('editarperfil', Auth::user()->id) }}">Editar Perfil</a>
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
