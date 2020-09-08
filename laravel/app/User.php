@@ -61,17 +61,13 @@ class User extends Authenticatable
         return $this->belongsToMany('App\User', 'user_user', 'user_id', 'follower_id');
     }
 
-
-
-
-
-
-
-
-
-
     public function comments()
     {
         return $this->hasMany(Comment::class);
+    }
+
+    public function services()
+    {
+        return $this->hasMany(Service::class);
     }
 }
