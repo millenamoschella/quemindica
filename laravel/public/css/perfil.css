@@ -374,9 +374,30 @@
     font-size: 1.1em;
     color: #007592;
     font-weight: 600;
-
 }
 
+.button-posts span {
+    color: #007592;
+    font-weight: bold;
+}
+
+.button-posts span:hover {
+    color: #ffcd36;
+}
+
+.button-posts i {
+    color: #007592;
+    font-weight: bold;
+}
+
+.icon-post {
+    color: #007592;
+    font-weight: bold;
+}
+
+.icon-post i:hover {
+    color: #ffcd36;
+}
 
 /* NOTIFICAÇÕES DO POST */
 

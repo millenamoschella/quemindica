@@ -270,7 +270,7 @@
                                         </div>
 
                                         {{-- BOTÃO POSTAR --}}
-                                        <button class="btn float-right">
+                                        <button class="btn float-right button-posts">
                                             <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
                                             <span>Postar</span>
                                         </button>
@@ -314,13 +314,16 @@
 
                                             {{-- ÍCONES PARA MARCAR UMA PESSOA, ADD IMAGEM OU
                                             LOCAL A POSTAGEM --}}
-                                            <button class="btn"><i class="fa fa-paperclip" aria-hidden="true"></i></button>
-                                            <button class="btn"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
-                                            <button class="btn"><i class="fa fa-user" aria-hidden="true"></i></button>
+                                            <button class="btn icon-post"><i class="fa fa-paperclip"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn icon-post"><i class="fa fa-map-marker"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn icon-post"><i class="fa fa-user"
+                                                    aria-hidden="true"></i></button>
 
                                             {{-- BOTÃO POSTAR --}}
-                                            <button class="btn float-right"><i class="fa fa-paper-plane-o"
-                                                    aria-hidden="true"></i>
+                                            <button class="btn float-right button-posts">
+                                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
                                                 <span>Postar</span>
                                             </button>
 
@@ -364,13 +367,16 @@
 
                                             {{-- ÍCONES PARA MARCAR UMA PESSOA, ADD IMAGEM OU
                                             LOCAL A POSTAGEM --}}
-                                            <button class="btn"><i class="fa fa-paperclip" aria-hidden="true"></i></button>
-                                            <button class="btn"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
-                                            <button class="btn"><i class="fa fa-user" aria-hidden="true"></i></button>
+                                            <button class="btn icon-post"><i class="fa fa-paperclip"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn icon-post"><i class="fa fa-map-marker"
+                                                    aria-hidden="true"></i></button>
+                                            <button class="btn icon-post"><i class="fa fa-user"
+                                                    aria-hidden="true"></i></button>
 
                                             {{-- POSTAR --}}
-                                            <button class="btn float-right"><i class="fa fa-paper-plane-o"
-                                                    aria-hidden="true"></i>
+                                            <button class="btn float-right button-posts">
+                                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
                                                 <span>Postar</span>
                                             </button>
 
