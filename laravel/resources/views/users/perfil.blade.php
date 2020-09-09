@@ -385,17 +385,10 @@
 
 
 
-
-
-
-
-
+                            {{-- ÁREA ONDE MOSTRA TODOS OS POSTS CRIADOS
+                            --}}
 
                             @if (!$postsNull->isEmpty())
-
-
-                                {{-- ÁREA ONDE MOSTRA TODOS OS POSTS CRIADOS
-                                --}}
 
                                 <div class="card shadow mb-3 posts-area" id="load-data">
                                     {{-- FOTO USUÁRIO E HORÁRIO POST
@@ -638,10 +631,10 @@
 
                                 </div>
 
-
                             @else
 
-
+                                {{-- MENSAGEM DEIFAUL PARA QUANDO NÃO HÁ POSTS
+                                --}}
                                 <div class="container text-center mt-5 py-5">
                                     <img src="{{ asset('imagens/institucional/a-gente-no-pi.jpg') }}" alt="foto default"
                                         class="default-photo-user">
@@ -650,23 +643,6 @@
 
 
                             @endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                         </div>
 
