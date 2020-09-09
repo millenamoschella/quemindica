@@ -151,8 +151,6 @@
                         <div class="signup-content">
 
 
-
-
                             {{-- FORMULÁRIO --}}
                             <div class="signup-form">
 
@@ -162,18 +160,23 @@
 
                                     {{-- CODIGO --}}
                                     <div class="wrap-register-modal">
+
                                         <small>
                                             <label class="text-center" for="codigo">
                                                 Já foi indicado? Digite o código que recebeu por SMS:
                                             </label>
                                         </small>
+
                                         <div class="wrap-register-modal">
+
                                             <input class="input-modal-register" type="text" name="codigo"
                                                 placeholder="000000">
+
                                             <span class="focus-input-modal-register"></span>
                                             <span class="modal-register-icone">
                                                 <i class="fa fa-hashtag" aria-hidden="true"></i>
                                             </span>
+
                                         </div>
                                     </div>
 
@@ -188,9 +191,9 @@
                                         {{-- NOME --}}
                                         <div class="wrap-register-modal">
                                             <input id="name" type="text"
-                                                class="input-modal-register form-control @error('name') is-invalid @enderror"
+                                                class="input-modal-register @error('name') is-invalid @enderror"
                                                 name="name" value="{{ old('name') }}" placeholder="Nome" required
-                                                autocomplete="name" autofocus>
+                                                autocomplete="name">
 
                                             @error('name')
                                             <span class="invalid-feedback" role="alert">
@@ -208,8 +211,8 @@
 
                                         {{-- SOBRENOME --}}
                                         <div class="wrap-register-modal">
-                                            <input id="lastname" type="text" class="input-modal-register form-control "
-                                                name="lastname" required autocomplete="lastname" autofocus
+                                            <input id="lastname" type="text" class="input-modal-register"
+                                                name="lastname" required autocomplete="lastname"
                                                 value="{{ old('lastname') }}" placeholder="Sobrenome">
 
 
@@ -222,8 +225,8 @@
 
                                         {{-- USERNAME --}}
                                         <div class="wrap-register-modal">
-                                            <input id="username" type="text" class="input-modal-register form-control"
-                                                name="username" required autocomplete="username" autofocus
+                                            <input id="username" type="text" class="input-modal-register"
+                                                name="username" required autocomplete="username"
                                                 value="{{ old('username') }}" placeholder="username" onkeyup="return forceLower(this)>
 
 
@@ -237,7 +240,7 @@
                                         {{-- EMAIL --}}
                                         <div class="wrap-register-modal">
                                             <input id="email" type="email"
-                                                class="form-control input-modal-register @error('email') is-invalid @enderror"
+                                                class="input-modal-register @error('email') is-invalid @enderror"
                                                 name="email" value="{{ old('email') }}" required autocomplete="email"
                                                 placeholder="E-mail">
 
@@ -258,7 +261,7 @@
                                         <div class="wrap-register-modal">
 
                                             <input id="phone" type="tel"
-                                                class="form-control input-modal-register @error('phone') is-invalid @enderror"
+                                                class="input-modal-register @error('phone') is-invalid @enderror"
                                                 name="phone" value="{{ old('phone') }}" required autocomplete="phone"
                                                 placeholder="Celular">
 
@@ -279,7 +282,7 @@
                                         {{-- SENHA --}}
                                         <div class="wrap-register-modal">
                                             <input id="password" type="password"
-                                                class="form-control input-modal-register @error('password') is-invalid @enderror"
+                                                class="input-modal-register @error('password') is-invalid @enderror"
                                                 name="password" required autocomplete="new-password"
                                                 placeholder="Senha">
 
@@ -299,9 +302,9 @@
                                         {{-- CONFIRMAR SENHA
                                         --}}
                                         <div class="wrap-register-modal">
-                                            <input id="password-confirm" type="password"
-                                                class="form-control input-modal-register" name="password_confirmation"
-                                                required autocomplete="new-password" placeholder="Confirme sua senha">
+                                            <input id="password-confirm" type="password" class="input-modal-register"
+                                                name="password_confirmation" required autocomplete="new-password"
+                                                placeholder="Confirme sua senha">
 
                                             <span class="focus-input-modal-register"></span>
                                             <span class="modal-register-icone">

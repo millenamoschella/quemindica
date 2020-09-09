@@ -45,11 +45,14 @@ header {
     color: #FCDA73;
 }
 
-
 .btn-suporte:hover {
-    font-weight: bold;
-    border: solid 1px #016983;
+    border: solid 1px #FCDA73;
     background-color: #FCDA73;
+}
+
+
+.btn-suporte:focus {
+    outline: none;
 }
 
 /* BOTÃO LOGIN E REGISTRAR */
@@ -72,7 +75,9 @@ header {
     color: #007592;
 }
 
-
+.btn-yellow:focus {
+    outline: none;
+}
 
 /* DROWPDOWN MENU */
 

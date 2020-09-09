@@ -81,11 +81,21 @@
 
 
                     {{-- BOTÃO SUPORTE --}}
-                    <li class="nav-item botao-suporte">
+                    {{-- <li class="nav-item botao-suporte">
                         <a href="#" data-toggle="modal" data-target="#modalSuporte" class="nav-link">
                             <img src="{{ asset('../icones/support.png') }}" class="btn-suporte">
                         </a>
+                    </li> --}}
+                    <li class="nav-item botao-suporte">
+                        <a href="#" data-toggle="modal" data-target="#modalSuporte" class="nav-link">
+                            <img src="{{ asset('../icones/support.png') }}"
+                                onmouseover="this.src='{{ asset('../icones/support-after.png') }}';"
+                                onmouseout="this.src='{{ asset('../icones/support.png') }}';" class="btn-suporte">
+                        </a>
                     </li>
+
+
+
 
                     @guest
                         {{-- BOTÃO LOGIN --}}
@@ -135,11 +145,12 @@
                                 <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
                                 <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
                                 <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
-                                <a class="dropdown-item" href="{{ route('editarperfil', Auth::user()->id) }}">Editar Perfil</a>
+                                <a class="dropdown-item" href="{{ route('editarperfil', Auth::user()->id) }}">Editar
+                                    Perfil</a>
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                        document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                        document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
