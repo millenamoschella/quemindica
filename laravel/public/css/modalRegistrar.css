@@ -160,6 +160,10 @@
     border: none;
 }
 
+.modal-register-btn:focus {
+    outline: none;
+}
+
 .modal-register-btn:hover {
     background: #fcda73;
     color: #027592;
