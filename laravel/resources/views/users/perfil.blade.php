@@ -383,231 +383,290 @@
                                 </div>
                             </div>
 
-                            {{-- ÁREA ONDE MOSTRA TODOS OS POSTS CRIADOS
-                            --}}
 
-                            <div class="card shadow mb-3 posts-area" id="load-data">
-                                {{-- FOTO USUÁRIO E HORÁRIO POST
+
+
+
+
+
+
+
+                            @if (!$postsNull->isEmpty())
+
+
+                                {{-- ÁREA ONDE MOSTRA TODOS OS POSTS CRIADOS
                                 --}}
-                                @foreach ($postsUser as $post)
 
-                                    {{-- ÁREA POST --}}
-                                    <div class="card-header">
-                                        <div class="d-flex justify-content-between align-items-center">
+                                <div class="card shadow mb-3 posts-area" id="load-data">
+                                    {{-- FOTO USUÁRIO E HORÁRIO POST
+                                    --}}
+                                    @foreach ($postsUser as $post)
 
-                                            {{-- INFOS DO AUTOR DO POST
-                                            --}}
+                                        {{-- ÁREA POST
+                                        --}}
+                                        <div class="card-header">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                {{-- FOTO USUÁRIO AUTOR DO POST
+
+                                                {{-- INFOS DO AUTOR DO POST
                                                 --}}
-                                                <div class="mr-2">
-                                                    <a href="{{ route('perfil') }}">
-                                                        @if (Auth::user()->photo == null)
-                                                            <img src="{{ asset('imagens/institucional/usuario.png') }}"
-                                                                alt="foto default" class="photo-author-default">
-                                                        @else
-                                                            <img class="rounded-circle"
-                                                                src="{{ asset('uploads/photos/' . $post->user->photo) }}"
-                                                                alt="Foto autor post" class="img-fluid" width="40"
-                                                                height="40">
-                                                        @endif
-                                                    </a>
-                                                </div>
-
-                                                {{-- AUTOR --}}
-                                                <div class="ml-2">
-                                                    <h5 class="post-author">{{ '@' . $post->user->username }}</h5>
-                                                </div>
-
-                                            </div>
-
-                                            {{-- BOTÕES POSTAGEM PARA REPORTAR UM POST
-                                            --}}
-                                            <div>
-                                                <div class="dropdown">
-                                                    <button class="btn dropdown-toggle" type="button" id="gedf-drop1"
-                                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                                                        {{-- ÍCONE
-                                                        --}}
-                                                        <i class="fa fa-ellipsis-h"></i>
-                                                    </button>
-
-                                                    {{-- OPÇÕES
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    {{-- FOTO USUÁRIO AUTOR DO
+                                                    POST
                                                     --}}
-                                                    <div class="dropdown-menu dropdown-menu-right"
-                                                        aria-labelledby="gedf-drop1">
-                                                        <a class="dropdown-item" href="#">Esconder</a>
-                                                        <a class="dropdown-item" href="#">Reportar</a>
+                                                    <div class="mr-2">
+                                                        <a href="{{ route('perfil') }}">
+                                                            @if (Auth::user()->photo == null)
+                                                                <img src="{{ asset('imagens/institucional/usuario.png') }}"
+                                                                    alt="foto default" class="photo-author-post">
+                                                            @else
+                                                                <img src="{{ asset('uploads/photos/' . $post->user->photo) }}"
+                                                                    alt="Foto autor post" class="img-fluid" width="40"
+                                                                    height="40" class="photo-author-post">
+                                                            @endif
+                                                        </a>
+                                                    </div>
+
+                                                    {{-- AUTOR
+                                                    --}}
+                                                    <div class="ml-2">
+                                                        <h5 class="post-author">
+                                                            {{ '@' . $post->user->username }}
+                                                        </h5>
+                                                    </div>
+
+                                                </div>
+
+                                                {{-- BOTÕES POSTAGEM PARA REPORTAR
+                                                UM
+                                                POST
+                                                --}}
+                                                <div>
+                                                    <div class="dropdown">
+                                                        <button class="btn dropdown-toggle" type="button" id="gedf-drop1"
+                                                            data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+
+                                                            {{-- ÍCONE
+                                                            --}}
+                                                            <i class="fa fa-ellipsis-h"></i>
+                                                        </button>
+
+                                                        {{-- OPÇÕES
+                                                        --}}
+                                                        <div class="dropdown-menu dropdown-menu-right"
+                                                            aria-labelledby="gedf-drop1">
+                                                            <a class="dropdown-item" href="#">Esconder</a>
+                                                            <a class="dropdown-item" href="#">Reportar</a>
+                                                        </div>
                                                     </div>
                                                 </div>
+
+                                            </div>
+                                        </div>
+
+                                        {{-- POSTAGEM
+                                        --}}
+                                        <div class="card-body card-post">
+
+                                            {{-- TEMPO DO POST
+                                            --}}
+                                            <div class="mb-2 post-time">
+                                                <i class="fa fa-clock-o"></i>
+                                                <span class="time">{{ $post->created_at->diffforhumans() }}</span>
                                             </div>
 
+                                            {{-- TITULO POST
+                                            --}}
+                                            <h6 class="card-text px-5 post-title">
+                                                @switch($post)
+                                                    @case($post->culture_id != null)
+                                                    {{ $post->culture->titulo }}
+                                                    @break
+
+                                                    @case($post->service_id != null)
+                                                    {{ $post->service->servico }}
+                                                    @break
+
+                                                    @case($post->product_id != null)
+                                                    {{ $post->product->titulo }}
+                                                    @break
+
+                                                    @default
+                                                    {{ 'Erro' }}
+                                                @endswitch
+
+                                            </h6>
+
+                                            {{-- CONTEÚDO POST
+                                            --}}
+                                            <p class="card-text px-5">
+                                                {{ $post->conteudo }}
+                                            </p>
+
                                         </div>
-                                    </div>
 
-                                    {{-- POSTAGEM --}}
-                                    <div class="card-body card-post">
+                                        {{-- BOTÕES CURTIR, COMENTAR E
+                                        COMPARTILHAR
+                                        --}}
+                                        <div class="card-footer card-notification-post">
 
-                                        {{-- TEMPO DO POST --}}
-                                        <div class="mb-2 post-time">
-                                            <i class="fa fa-clock-o"></i>
-                                            <span class="time">{{ $post->created_at->diffforhumans() }}</span>
+                                            <a href="#" class="notification">
+                                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                <span class="badge">3</span>
+                                            </a>
+
+                                            <a href="#" class="notification">
+                                                <i class="fa fa-comment-o" aria-hidden="true"></i>
+                                                <span class="badge">3</span>
+                                            </a>
+
+                                            <a href="#" class="notification">
+                                                <i class="fa fa-share" aria-hidden="true"></i>
+                                                <span class="badge">3</span>
+                                            </a>
+
                                         </div>
 
-                                        {{-- TITULO POST --}}
-                                        <h6 class="card-text px-5 post-title">
-                                        @switch($post)
-                                            @case($post->culture_id != null)
-                                                {{ $post->culture->titulo }}
-                                                @break
+                                        {{-- SEÇÃO COMENTÁRIOS DO POST
+                                        --}}
+                                        <div class="user-comments">
 
-                                            @case($post->service_id != null)
-                                                {{ $post->service->servico }}
-                                                @break
-                                            
-                                            @case($post->product_id != null)
-                                                {{ $post->product->titulo }}
-                                                @break
+                                            {{-- COMENTÁRIOS
+                                            --}}
+                                            <div class="comments-section">
+                                                @foreach ($post->comments as $comment)
+                                                    <ul class="comments-area">
 
-                                            @default
-                                                {{ 'Erro' }}
-                                        @endswitch           
-                                            
-                                        </h6>
-
-                                        {{-- CONTEÚDO POST --}}
-                                        <p class="card-text px-5">
-                                            {{ $post->conteudo }}
-                                        </p>
-
-                                    </div>
-
-                                    {{-- BOTÕES CURTIR, COMENTAR E COMPARTILHAR
-                                    --}}
-                                    <div class="card-footer card-notification-post">
-
-                                        <a href="#" class="notification">
-                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                            <span class="badge">3</span>
-                                        </a>
-
-                                        <a href="#" class="notification">
-                                            <i class="fa fa-comment-o" aria-hidden="true"></i>
-                                            <span class="badge">3</span>
-                                        </a>
-
-                                        <a href="#" class="notification">
-                                            <i class="fa fa-share" aria-hidden="true"></i>
-                                            <span class="badge">3</span>
-                                        </a>
-
-                                    </div>
-
-                                    {{-- SEÇÃO COMENTÁRIOS DO POST
-                                    --}}
-                                    <div class="user-comments">
-
-                                        {{-- COMENTÁRIOS --}}
-                                        <div class="comments-section">
-                                            @foreach ($post->comments as $comment)
-                                                <ul class="comments-area">
-
-                                                    {{-- SEÇÃO COMENTÁRIO
-                                                    --}}
-                                                    <li>
-                                                        {{-- FOTO AUTOR COMENTÁRIO
+                                                        {{-- SEÇÃO COMENTÁRIO
                                                         --}}
-                                                        <div class="comment-author-avatar">
-                                                            <a href="">
-                                                                @if (Auth::user()->photo == null)
-                                                                    <img src="{{ asset('imagens/institucional/usuario.png') }}"
-                                                                        alt="foto default" class="photo-author-comment">
-                                                                @else
-                                                                    <img src="{{ asset('uploads/photos/' . $comment->user->photo) }}"
-                                                                        alt="Foto autor comentário">
-                                                                @endif
-                                                            </a>
-                                                        </div>
-
-                                                        {{-- COMENTÁRIO
-                                                        --}}
-                                                        <div class="comments">
-                                                            <div class="sectiont-author-time">
-
-                                                                {{-- AUTOR COMENTÁRIO
-                                                                --}}
-                                                                <h5>
-                                                                    <a href="#"
-                                                                        title="">{{ '@' . $comment->user->username }}</a>
-                                                                </h5>
-
-                                                                {{-- TEMPO
-                                                                --}}
-                                                                <span
-                                                                    class="comment-time">{{ $comment->created_at->diffforhumans() }}
-                                                                </span>
-
-                                                                {{-- RESPONDER
-                                                                --}}
-                                                                <a class="reply-comment" href="#"><i
-                                                                        class="fa fa-reply"></i></a>
+                                                        <li>
+                                                            {{-- FOTO AUTOR
+                                                            COMENTÁRIO
+                                                            --}}
+                                                            <div class="comment-author-avatar">
+                                                                <a href="">
+                                                                    @if (Auth::user()->photo == null)
+                                                                        <img src="{{ asset('imagens/institucional/usuario.png') }}"
+                                                                            alt="foto default" class="photo-author-comment">
+                                                                    @else
+                                                                        <img src="{{ asset('uploads/photos/' . $comment->user->photo) }}"
+                                                                            alt="Foto autor comentário">
+                                                                    @endif
+                                                                </a>
                                                             </div>
-                                                            <p>
-                                                                {{ $comment->conteudo }}
-                                                            </p>
-                                                        </div>
-                                                    </li>
 
-                                                </ul>
-                                            @endforeach
-                                            {{-- VER TODOS OS COMENTÁRIOS
-                                            --}}
-                                            {{-- <div class="text-center">
-                                                <button>
-                                                    <a href="#" id="loadMoreComments" class="see-more-comments">Ver Mais</a>
-                                                </button>
-                                            </div> --}}
-                                        </div>
+                                                            {{-- COMENTÁRIO
+                                                            --}}
+                                                            <div class="comments">
+                                                                <div class="sectiont-author-time">
 
+                                                                    {{-- AUTOR
+                                                                    COMENTÁRIO
+                                                                    --}}
+                                                                    <h5>
+                                                                        <a href="#"
+                                                                            title="">{{ '@' . $comment->user->username }}</a>
+                                                                    </h5>
 
-                                        {{-- ÁREA COMENTAR --}}
+                                                                    {{-- TEMPO
+                                                                    --}}
+                                                                    <span
+                                                                        class="comment-time">{{ $comment->created_at->diffforhumans() }}
+                                                                    </span>
 
-                                        <div class="post-comment text-center">
-                                            <div class="comment-form">
-                                                <form action="{{ route('comment_insert') }}" method="post">
-                                                    @csrf
+                                                                    {{-- RESPONDER
+                                                                    --}}
+                                                                    <a class="reply-comment" href="#"><i
+                                                                            class="fa fa-reply"></i></a>
+                                                                </div>
+                                                                <p>
+                                                                    {{ $comment->conteudo }}
+                                                                </p>
+                                                            </div>
+                                                        </li>
 
-                                                    <input type="hidden" name="post_id" value="{{ $post->id }}">
-
-                                                    <div class="form-group comment-textarea">
-                                                        <textarea class="form-control" id="comentario" rows="3"
-                                                            placeholder="Faça um comentário..." name="conteudo"></textarea>
-
-
-                                                        {{-- BOTÃO COMENTAR
-                                                        --}}
-                                                        <button type="submit" class="btn">Comentar</button>
-                                                    </div>
-                                                </form>
+                                                    </ul>
+                                                @endforeach
+                                                {{-- VER TODOS OS COMENTÁRIOS
+                                                --}}
+                                                {{-- <div class="text-center">
+                                                    <button>
+                                                        <a href="#" id="loadMoreComments" class="see-more-comments">Ver
+                                                            Mais</a>
+                                                    </button>
+                                                </div> --}}
                                             </div>
+
+
+                                            {{-- ÁREA COMENTAR
+                                            --}}
+
+                                            <div class="post-comment text-center">
+                                                <div class="comment-form">
+                                                    <form action="{{ route('comment_insert') }}" method="post">
+                                                        @csrf
+
+                                                        <input type="hidden" name="post_id" value="{{ $post->id }}">
+
+                                                        <div class="form-group comment-textarea">
+                                                            <textarea class="form-control" id="comentario" rows="3"
+                                                                placeholder="Faça um comentário..."
+                                                                name="conteudo"></textarea>
+
+
+                                                            {{-- BOTÃO COMENTAR
+                                                            --}}
+                                                            <button type="submit" class="btn">Comentar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+
                                         </div>
 
-                                    </div>
-
-                                @endforeach
+                                    @endforeach
 
 
-                                {{-- VER TODOS OS POSTS
-                                --}}
+                                    {{-- VER TODOS OS POSTS
+                                    --}}
 
-                                {{-- <div class="text-center see-more-comments">
-                                    <button id="loadMore" class="loadmore-btn btn">
-                                        Ver mais
-                                    </button>
-                                </div> --}}
+                                    {{-- <div class="text-center see-more-comments">
+                                        <button id="loadMore" class="loadmore-btn btn">
+                                            Ver mais
+                                        </button>
+                                    </div> --}}
 
-                            </div>
+                                </div>
+
+
+                            @else
+
+
+                                <div class="container text-center mt-5 py-5">
+                                    <img src="{{ asset('imagens/institucional/a-gente-no-pi.jpg') }}" alt="foto default"
+                                        class="default-photo-user">
+                                </div>
+
+
+
+                            @endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                         </div>
 
