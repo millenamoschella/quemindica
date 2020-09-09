@@ -28,12 +28,13 @@ class ServiceController extends Controller
     public function insert(Request $request)
     {
 
-        //  $provider = new User();
+         $provider = new User();
 
-        //  $provider->name = $request->get('name');
-        //  $provider->titulo = $request->get('titulo');
-        //  $provider->plataforma = $request->get('plataforma');
-        //  $provider->save();
+         $provider->name = $request->get('name');
+         $provider->phone = $request->get('phone');
+         $provider->email = $request->get('email');
+         $provider->password = bcrypt('12345678');
+         $provider->save();
 
         //  'name' => $data['name'],
         //  'lastname' => $data['lastname'],

@@ -288,13 +288,23 @@
 
                                     {{-- ESCREVER INDICAÇÃO DE SERVIÇO
                                     --}}
-                                    <form action="{{ route('post_insert') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('service_insert') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
 
-                                        {{-- TITULO --}}
+                                        {{-- NOME PRESTADOR --}}
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Título" name="titulo"
-                                                id="titulo"></textarea>
+                                            <textarea class="form-control" rows="1" placeholder="Nome" name="name"
+                                                id="name"></textarea>
+                                        </div>
+                                        {{-- Telefone --}}
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="1" placeholder="Telefone" name="phone"
+                                                id="phone"></textarea>
+                                        </div>
+                                        {{-- Email --}}
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="1" placeholder="Email" name="email"
+                                                id="email"></textarea>
                                         </div>
 
                                         {{-- CONTEÚDO --}}

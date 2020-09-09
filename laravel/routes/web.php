@@ -81,3 +81,5 @@ Route::get('/comment/delete/{comment_id}', 'CommentController@delete')->name('co
 Route::get('/culture/create', 'CultureController@create')->name('culture_create');
 Route::post('/culture/insert', 'CultureController@insert')->name('culture_insert');
 Route::get('/culture/delete/{culture_id}', 'CultureController@delete')->name('culture_delete');
+
+Route::post('/service/insert', 'ServiceController@insert')->name('service_insert');
