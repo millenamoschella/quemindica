@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{ asset('../css/sobre.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/faq.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/politicas.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/resetPassword.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/emailSend.css') }}">
 
     {{-- CSS MODAIS --}}
     <link rel="stylesheet" href="{{ asset('../css/modalRegistrar.css') }}">
@@ -150,7 +152,7 @@
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                                                                                                                                                                                        document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                                document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 

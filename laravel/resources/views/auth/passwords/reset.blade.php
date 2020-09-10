@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container mt-5 py-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
+                <div class="card py-5">
                     <div class="card-header">{{ __('Modificar senha') }}</div>
 
                     <div class="card-body">
@@ -14,6 +14,7 @@
 
                             <input type="hidden" name="token" value="{{ $token }}">
 
+                            {{-- EMAIL --}}
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
@@ -30,6 +31,7 @@
                                 </div>
                             </div>
 
+                            {{-- SENHA --}}
                             <div class="form-group row">
                                 <label for="password"
                                     class="col-md-4 col-form-label text-md-right">{{ __('Senha') }}</label>
@@ -47,6 +49,7 @@
                                 </div>
                             </div>
 
+                            {{-- CONFIRMAR SENHA --}}
                             <div class="form-group row">
                                 <label for="password-confirm"
                                     class="col-md-4 col-form-label text-md-right">{{ __('Confirmar senha') }}</label>
@@ -57,6 +60,7 @@
                                 </div>
                             </div>
 
+                            {{-- MODIFICAR SENHA --}}
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
@@ -64,6 +68,7 @@
                                     </button>
                                 </div>
                             </div>
+                            
                         </form>
                     </div>
                 </div>

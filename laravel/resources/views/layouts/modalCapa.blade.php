@@ -1,20 +1,20 @@
 {{-- MODAL FOTO CAPA--}}
 
 <div id="modalFotoCapa" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog ">
-        <div class="modal-content modal-suporte text-center">
+    <div class="modal-dialog">
+        <div class="modal-content modal-cover-section text-center">
 
             {{-- BOTÃO FECHAR --}}
 
             <div class="fechar">
-                <button type="button" class="btn-fechar-suporte" data-dismiss="modal">
+                <button type="button" class="close-modal-cover" data-dismiss="modal">
                     <i class="fa fa-times" aria-hidden="true"></i>
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                 </button>
             </div>
 
             {{-- TÍTULO MODAL FOTO --}}
-            <h4 class="modal-title-suporte">Foto de Capa</h4>
+            <h4 class="modal-title-cover">Foto de Capa</h4>
 
             {{-- CORPO MODAL FOTO --}}
             <div class="modal-body">
@@ -38,7 +38,7 @@
                                         --}}
 
                                         <div class="image-area mt-4">
-                                            <img id="resultadoFotoCapa" src="#" alt=""
+                                            <img id="coverResult" src="#" alt=""
                                                 class="img-fluid rounded shadow-sm mx-auto d-block">
                                         </div>
 
@@ -62,8 +62,8 @@
 
 
                                         {{-- BOTÃO --}}
-                                        <div class="col-12 container-botao-modal-suporte">
-                                            <button class="btn-formulario-modal-suporte">
+                                        <div class="col-12 container-btn-modal-cover">
+                                            <button class="btn-cover-modal">
                                                 Salvar
                                             </button>
                                         </div>

@@ -37,7 +37,7 @@
                                         {{-- ÁREA UPLOAD DE IMAGEM
                                         --}}
                                         <div class="image-area mt-4">
-                                            <img id="resultadoFotoUser" src="#" alt=""
+                                            <img id="photoResult" src="#" alt=""
                                                 class="img-fluid rounded shadow-sm mx-auto d-block">
                                         </div>
 

@@ -1,0 +1,141 @@
+/* CSS MODAL - SUPORTE E LOGIN */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+
+* {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+.section-reset-password {
+    background: #e0e0e0;
+    height: auto;
+    padding: 50px;
+}
+
+.reset-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.wrap-input-icone {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+/* TÍTULO FORMULÁRIO */
+
+.reset-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #027592;
+}
+
+/* FORMULÁRIO */
+
+.reset-form {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 1px 3px #0000001f,
+        0 1px 2px #0000003d;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.reset-form:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* MENSAGEM */
+
+.message {
+    margin: 15px 0;
+    font-size: 1em;
+    color: #027592;
+}
+
+/* INPUTS */
+
+.input-password {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    padding: 0 30px 0 50px;
+    display: block;
+    width: 100%;
+    background: #f3f3f3;
+    font-size: 0.8em;
+    line-height: 1.5;
+    color: #666666;
+
+    box-shadow: 0 1px 3px #0000001f,
+        0 1px 2px #0000003d;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.input-password:focus {
+    outline: none;
+    border: 1px solid #027592;
+    color: #027592;
+}
+
+.input-password::placeholder {
+    color: #007592;
+}
+
+/* INPUT ICONE */
+
+.icone-reset {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    pointer-events: none;
+    color: #aaaaaa;
+    font-size: 15px;
+    transition: all 0.4s;
+}
+
+.input-password:focus+.focus-icone-rest+.icone-reset {
+    color: #027592;
+    padding-left: 22px;
+}
+
+
+/* BOTÃO */
+
+
+.reset-password-btn {
+    border-radius: 5px;
+    outline: 0;
+    background: #027592;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 1em;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.reset-password-btn:focus {
+    outline: none;
+}
+
+.reset-password-btn:hover {
+    background: #fcda73;
+    color: #027592;
+}
