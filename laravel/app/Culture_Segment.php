@@ -7,9 +7,6 @@ use App\Culture;
 
 class Culture_Segment extends Model
 {
-    // protected $fillable = [
-    //     'tipo'
-    // ]; 
 
     public function culture()
     {

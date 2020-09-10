@@ -288,20 +288,22 @@
 
                                     {{-- ESCREVER INDICAÇÃO DE SERVIÇO
                                     --}}
-                                    <form action="{{ route('service_insert') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('service_insert') }}" method="POST"
+                                        enctype="multipart/form-data">
                                         @csrf
 
-                                        {{-- TÍTULO DE SERVIÇO --}}
+                                        {{-- TÍTULO DE SERVIÇO
+                                        --}}
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Serviço Prestado" name="servico"
-                                                id="service"></textarea>
+                                            <textarea class="form-control" rows="1" placeholder="Serviço Prestado"
+                                                name="servico" id="service"></textarea>
                                         </div>
 
                                         {{-- NOME PRESTADOR --}}
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Nome do profissional" name="name"
-                                                id="name"></textarea>
-                                        </div> 
+                                            <textarea class="form-control" rows="1" placeholder="Nome do profissional"
+                                                name="name" id="name"></textarea>
+                                        </div>
                                         {{-- Telefone --}}
                                         <div class="form-group">
                                             <textarea class="form-control" rows="1" placeholder="Telefone" name="phone"
@@ -357,7 +359,7 @@
                                                 placeholder="O que tem a dizer sobre este profissional?" name="conteudo"
                                                 id="conteudo"></textarea>
                                         </div>
-                                        
+
 
                                         {{-- BOTÕES POSTAR --}}
                                         <div class="form-group icones-postagem">
@@ -371,7 +373,7 @@
                                             <button class="btn icon-post"><i class="fa fa-user"
                                                     aria-hidden="true"></i></button>
 
-                                            
+
 
                                             {{-- BOTÃO POSTAR --}}
                                             <button class="btn float-right button-posts">
@@ -398,7 +400,8 @@
 
                                     {{-- ESCREVER INDICAÇÃO DE PRODUTO
                                     --}}
-                                    <form action="{{ route('product_insert') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('product_insert') }}" method="POST"
+                                        enctype="multipart/form-data">
                                         @csrf
 
                                         {{-- NOME DO PRODUTO --}}
@@ -429,7 +432,6 @@
                                                 <option value="9">Serviços domésticos</option>
                                                 <option value="10">Consertos</option>
                                                 <option value="11">Outros</option>
-                                                <option>Outros</option>
                                             </select>
                                         </div>
 
@@ -490,8 +492,6 @@
 
                                 </div>
                             </div>
-
-
 
                             {{-- ÁREA ONDE MOSTRA TODOS OS POSTS CRIADOS
                             --}}
@@ -747,8 +747,6 @@
                                     <img src="{{ asset('imagens/institucional/a-gente-no-pi.jpg') }}" alt="foto default"
                                         class="default-photo-user">
                                 </div>
-
-
 
                             @endif
 
