@@ -291,6 +291,12 @@
                                     <form action="{{ route('service_insert') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
 
+                                        {{-- TÍTULO DE SERVIÇO --}}
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="1" placeholder="Serviço Prestado" name="servico"
+                                                id="service"></textarea>
+                                        </div>
+
                                         {{-- NOME PRESTADOR --}}
                                         <div class="form-group">
                                             <textarea class="form-control" rows="1" placeholder="Nome" name="name"
@@ -305,6 +311,27 @@
                                         <div class="form-group">
                                             <textarea class="form-control" rows="1" placeholder="Email" name="email"
                                                 id="email"></textarea>
+                                        </div>
+
+                                        {{-- SEGMENTO --}}
+
+                                        <div class="form-group col-md-4 px-0">
+                                            <label for="segments">Segmento</label>
+                                            <select id="segments" class="form-control" name="segment_id">
+                                                <option selected>Escolha uma opção</option>
+                                                <option value="1">Assistência Técnica</option>
+                                                <option value="2">Educação</option>
+                                                <option value="3">Design</option>
+                                                <option value="4">Eventos</option>
+                                                <option value="5">Moda</option>
+                                                <option valeu="6">Cosméticos</option>
+                                                <option value="7">Reformas</option>
+                                                <option value="8">Saúde</option>
+                                                <option value="9">Serviços domésticos</option>
+                                                <option value="10">Consertos</option>
+                                                <option value="11">Outros</option>
+                                                <option>Outros</option>
+                                            </select>
                                         </div>
 
                                         {{-- CONTEÚDO --}}

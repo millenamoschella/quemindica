@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Service;
+use App\Segment;
 use App\User;
+use App\Post;
 use Auth;
 
 class ServiceController extends Controller
@@ -29,8 +32,8 @@ class ServiceController extends Controller
     {
 
          $provider = new User();
-
          $provider->name = $request->get('name');
+         $provider->username = $request->get('name').rand(1, 99999);
          $provider->phone = $request->get('phone');
          $provider->email = $request->get('email');
          $provider->password = bcrypt('12345678');
@@ -44,27 +47,28 @@ class ServiceController extends Controller
         //  'phone' => $data['phone'],
 
 
-        //  $culture = new Culture();
+         $service = new Service();
 
-        //  $culture->culture__segments_id = $request->get('culture__segments_id');
-        //  $culture->titulo = $request->get('titulo');
-        //  $culture->plataforma = $request->get('plataforma');
-        //  $culture->save();
+         $service->segment_id = $request->get('segment_id');
+         $service->nome_prestador = $provider->name;
+         $service->user_id = $provider->id;
+         $service->servico = $request->get('servico');
+         $service->save();
 
 
 
 
-        //  $post = new Post();
+         $post = new Post();
 
-        //  $post->conteudo = $request->get('conteudo');
-        //  $post->user_id = Auth::user()->id;
-        //  $post->culture_id = $culture->id;
+         $post->conteudo = $request->get('conteudo');
+         $post->user_id = Auth::user()->id;
+         $post->service_id = $service->id;
 
         //     $post = Post::all();
 
 
 
-        //  $post->save();
-        //  return back();
+         $post->save();
+         return back();
     }
 }
