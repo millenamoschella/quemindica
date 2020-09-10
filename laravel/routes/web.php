@@ -83,3 +83,5 @@ Route::post('/culture/insert', 'CultureController@insert')->name('culture_insert
 Route::get('/culture/delete/{culture_id}', 'CultureController@delete')->name('culture_delete');
 
 Route::post('/service/insert', 'ServiceController@insert')->name('service_insert');
+
+Route::post('/product/insert', 'ProductController@insert')->name('product_insert');
