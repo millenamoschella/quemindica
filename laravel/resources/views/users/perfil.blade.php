@@ -523,8 +523,8 @@
                                                                     alt="foto default" class="photo-author-post">
                                                             @else
                                                                 <img src="{{ asset('uploads/photos/' . $post->user->photo) }}"
-                                                                    alt="Foto autor post" class="img-fluid" width="40"
-                                                                    height="40" class="photo-author-post">
+                                                                    alt="Foto autor post"
+                                                                    class="img-fluid photo-author-post">
                                                             @endif
                                                         </a>
                                                     </div>
