@@ -30,7 +30,7 @@
                             <div class="card-user">
 
                                 {{-- FOTO AMIGO --}}
-                                <a href="#" data-toggle="modal" data-target="#modalFoto">
+                                <a href="{{ route('user', $user->username) }}" target="_blank">
                                     @if ($user->photo == null)
                                         <img src="{{ asset('imagens/institucional/user-default.jpg') }}" alt="foto default"
                                             class="">
