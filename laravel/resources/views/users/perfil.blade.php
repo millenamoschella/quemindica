@@ -26,7 +26,7 @@
 
                 <a href="#" data-toggle="modal" data-target="#modalFoto">
                     @if ($user->photo == null)
-                        <img src="{{ asset('imagens/institucional/usuario.png') }}" alt="foto default"
+                        <img src="{{ asset('imagens/institucional/user-default.jpg') }}" alt="foto default"
                             class="default-photo-user">
                     @else
                         <img src="{{ asset('uploads/photos/' . $user->photo) }}" alt="Foto perfil usuário"
@@ -522,7 +522,7 @@
                                                     <div class="mr-2">
                                                         <a href="{{ route('user', $user->username) }}">
                                                             @if ($user->photo == null)
-                                                                <img src="{{ asset('imagens/institucional/usuario.png') }}"
+                                                                <img src="{{ asset('imagens/institucional/user-default.jpg') }}"
                                                                     alt="foto default" class="photo-author-post">
                                                             @else
                                                                 <img src="{{ asset('uploads/photos/' . $post->user->photo) }}"
@@ -655,11 +655,12 @@
                                                                 <a href="{{ route('user', $comment->user->username) }}">
 
                                                                     @if ($user->photo == null)
-                                                                        <img src="{{ asset('imagens/institucional/usuario.png') }}"
+                                                                        <img src="{{ asset('imagens/institucional/user-default.jpg') }}"
                                                                             alt="foto default" class="photo-author-comment">
                                                                     @else
                                                                         <img src="{{ asset('uploads/photos/' . $comment->user->photo) }}"
-                                                                            alt="Foto autor comentário">
+                                                                            alt="Foto autor comentário"
+                                                                            class="photo-author-comment">
                                                                     @endif
                                                                 </a>
                                                             </div>
@@ -774,12 +775,14 @@
                                     @foreach ($users as $user)
 
                                         @if ($user->photo == null)
-                                            <img src="{{ asset('imagens/institucional/usuario.png') }}" alt="foto default"
-                                                class="card-friend">
+                                            <a href="{{ route('user', $user->username) }}">
+                                                <img src="{{ asset('imagens/institucional/user-default.jpg') }}"
+                                                    alt="foto default" class="card-friend">
+                                            </a>
                                         @else
                                             <a href="{{ route('user', $user->username) }}">
                                                 <img src="{{ asset('uploads/photos/' . $user->photo) }}"
-                                                    class="img-fluid card-friend">
+                                                    class="card-friend">
                                             </a>
                                         @endif
                                     @endforeach
