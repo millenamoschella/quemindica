@@ -56,10 +56,6 @@ class User extends Authenticatable
         return $this->hasMany(Reaction::class);
     }
 
-    public function followers()
-    {
-        return $this->belongsToMany('App\User', 'user_user', 'user_id', 'follower_id');
-    }
 
     public function comments()
     {
@@ -69,5 +65,17 @@ class User extends Authenticatable
     public function services()
     {
         return $this->hasMany(Service::class);
+    }
+
+
+    public function followers()
+    {
+        return $this->belongsToMany(User::class, 'followers', 'user_id', 'follower_id');
+    }
+
+
+    public function followings()
+    {
+        return $this->belongsToMany(User::class, 'followers', 'follower_id', 'user_id');
     }
 }

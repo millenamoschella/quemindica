@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserUser extends Migration
+class CreateFollowersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,18 @@ class CreateUserUser extends Migration
      */
     public function up()
     {
-        Schema::create('user_user', function (Blueprint $table) {
+        Schema::create('followers', function (Blueprint $table) {
+            $table->id();
+
+            $table->foreignId('user_id')->constrained();
+
             $table->unsignedBigInteger('follower_id');
 
             $table->foreign('follower_id')
-            ->references('id')
-            ->on('users');
+                ->references('id')
+                ->on('users');
 
-            $table->foreignId('user_id')->constrained();
+            $table->timestamps();
         });
     }
 
@@ -31,6 +35,6 @@ class CreateUserUser extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_user');
+        Schema::dropIfExists('followers');
     }
 }

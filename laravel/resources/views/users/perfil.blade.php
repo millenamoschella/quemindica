@@ -52,8 +52,19 @@
 
             {{-- BOTÕES ADICIONAR E MENSAGEM --}}
             <div class="add-friend-send-message-perfil">
-                <button class="add-friend">Adicionar</button>
-                <button class="send-message">Mensagem</button>
+
+
+                {{-- ÁREA PARA SEGUIR UM USUÁRIO --}}
+                @if ($follower == null))
+                    <a href="{{route('seguir', $user->id)}}">
+                        <button class="add-friend">Seguir</button>
+                    </a>
+
+                @else
+                    <button class="add-friend">Seguindo</button>
+
+                @endif
+
             </div>
 
         </div>

@@ -8,6 +8,7 @@ use App\Post;
 use App\Comment;
 use App\Culture;
 use Illuminate\Support\Facades\Auth;
+use App\Follower;
 
 class UserController extends Controller
 {
@@ -134,10 +135,13 @@ class UserController extends Controller
         $postsCulture = Culture::All();
         $post = Post::find('culture_id');
 
-        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users'));
+        // variável pra identificar se o usuário já segue alguém
+        $follower = Follower::where('follower_id', '=', $user->id)->first();
+
+        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower'));
     }
 
-
+ 
 
     // --------------- MOSTRAR TODOS OS USUÁRIOS
     public function users(User $user)

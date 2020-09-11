@@ -34,6 +34,11 @@ Route::get('/users', 'UserController@users')->name('users');
 Route::get('/seguindo', 'FriendController@followingUsers')->name('seguindo');
 
 
+// ROTA PARA SEGUIR UM USUÁRIO
+
+Route::get('/following/{id}', 'FriendController@following')->name('seguir');
+
+
 // ROTAS SERVIÇOS
 
 Route::get('/servicos', 'ServiceController@servicos')->name('servicos');
