@@ -35,13 +35,8 @@ class LoginController extends Controller
     protected function redirectTo()
     {
 
-        $user = User::all();
 
-        if (auth()->user()->role_id == 1) {
-            // return '/user/$username';
-            return redirect('user/' . $user->username);
-        }
-        return '/home';
+        return 'user/' . Auth::user()->username;
     }
 
     /**
