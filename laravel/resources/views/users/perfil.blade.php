@@ -770,47 +770,16 @@
                                     --}}
                                     <h5>Amigos</h5>
 
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/sara.jfif') }}"
-                                            class="img-fluid card-friend">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/leonardo.jfif') }}"
-                                            class="img-fluid card-friend">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/marcia.png') }}"
-                                            class="img-fluid card-friend">
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/Millena.png') }}"
-                                            class="img-fluid card-friend">
-                                    </a>
+ 
+                                    @foreach ($users as $user)
 
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/vivian.jfif') }}"
-                                            class="img-fluid card-friend">
-                                    </a>
+                                        {{-- <a href="{{('user' $user->username)}}"> --}}
+                                        <a href="{{ route('user', $user->username) }}">
+                                            <img src="{{ asset('uploads/photos/' . $user->photo) }}"
+                                                class="img-fluid card-friend">
+                                        </a>
+                                    @endforeach
 
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/sandra.jfif') }}"
-                                            class="img-fluid card-friend">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/joao.jfif') }}"
-                                            class="img-fluid card-friend">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/gabriel.jfif') }}"
-                                            class="img-fluid card-friend">
-                                    </a>
-
-                                    <a href="#">
-                                        <img src="{{ asset('imagens/minhaConta/michelle.png') }}"
-                                            class="img-fluid card-friend">
-                                    </a>
 
                                 </div>
 
