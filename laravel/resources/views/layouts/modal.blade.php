@@ -97,7 +97,7 @@
                                         {{-- BOTÃO --}}
                                         <div class="col-12 div-btn-login">
                                             <button class="btn-login">
-                                                {{ __('Entar') }}
+                                                {{ __('Entrar') }}
                                             </button>
 
                                             {{-- ESQUECI A SENHA
