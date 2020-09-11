@@ -648,7 +648,7 @@
                                                             --}}
                                                             <div class="comment-author-avatar">
 
-                                                                <a href="{{ route('user', $user->username) }}">
+                                                                <a href="{{ route('user', $comment->user->username) }}">
 
                                                                     @if ($user->photo == null)
                                                                         <img src="{{ asset('imagens/institucional/usuario.png') }}"
