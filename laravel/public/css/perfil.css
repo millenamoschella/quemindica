@@ -335,6 +335,13 @@
 
 /* SEÇÃO POSTS */
 
+.default-message {
+    color: #ffd559;
+    font-size: 1.5em;
+    margin-top: 100px;
+    padding: 40px;
+}
+
 .posts-area button {
     border: none;
 }

@@ -497,10 +497,13 @@
                             --}}
 
                             @if (!$postsUser->count())
-                                <p class="container text-centerb py-5">Sem posts</p>
+
+                                <div class="container text-center default-message">
+                                    <p>Você ainda não fez nenhuma indicação</p>
+                                </div>
                             @else
 
-                                <div class="card shadow mb-3 posts-area" id="load-data">
+                                <div class="card shadow mb-3 posts-area">
                                     {{-- FOTO USUÁRIO E HORÁRIO POST
                                     --}}
                                     @foreach ($postsUser as $post)
