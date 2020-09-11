@@ -22,7 +22,8 @@
 
                             {{-- EXCLUIR OU BLOQUEAR --}}
                             <div class="card-links">
-                                <span><a href=""><i class="fas fa-plus" aria-hidden="true" title="Seguir"></i></a></span>
+                                <span><a href=""><i class="fas fa-minus" aria-hidden="true"
+                                            title="Parar de Seguir"></i></a></span>
                                 <span><a href=""><i class="fa fa-ban" aria-hidden="true" title="Bloquear"></i></a></span>
                             </div>
 

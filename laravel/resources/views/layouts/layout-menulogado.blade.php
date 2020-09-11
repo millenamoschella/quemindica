@@ -18,7 +18,8 @@
 
     {{-- CSS PÁGS. USUÁRIO --}}
     <link rel="stylesheet" href="{{ asset('../css/perfil.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/amigos.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/users.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/following.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/editarperfil.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/servicos.css') }}">
 
