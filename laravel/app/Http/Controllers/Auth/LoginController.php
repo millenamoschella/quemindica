@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class LoginController extends Controller
 {
@@ -28,7 +29,20 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = ('/user/{username}');
+    // protected $redirectTo = ('/user/$username');
+
+
+    protected function redirectTo()
+    {
+
+        $user = User::all();
+
+        if (auth()->user()->role_id == 1) {
+            // return '/user/$username';
+            return redirect('user/' . $user->username);
+        }
+        return '/home';
+    }
 
     /**
      * Create a new controller instance.

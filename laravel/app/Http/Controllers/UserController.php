@@ -115,6 +115,7 @@ class UserController extends Controller
 
     public function username($username)
     {
+
         $user = User::where('username', $username)->first();
 
         if (!$user)
@@ -131,6 +132,6 @@ class UserController extends Controller
         $postsCulture = Culture::All();
         $post = Post::find('culture_id');
 
-        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user',));
+        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user'));
     }
 }

@@ -120,13 +120,13 @@
                             {{-- NOME DO USUÁRIO --}}
                             <a id="navbarDropdown" class="nav-link dropdown-toggle drop-menuoff" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ $user->name }}
+                                {{ Auth::user()->name }}
 
-                                @if ($user->photo == null)
+                                @if (Auth::user()->photo == null)
                                     <img src="{{ asset('imagens/institucional/usuario.png') }}" alt="foto default"
                                         class="rounded-circle avatar-menu-off">
                                 @else
-                                    <img src="{{ asset('uploads/photos/' . $user->photo) }}"
+                                    <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}"
                                         class="rounded-circle avatar-menu-off">
                                 @endif
                             </a>
@@ -135,17 +135,17 @@
                             <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menuoff"
                                 aria-labelledby="navbarDropdown">
 
-                                <a class="dropdown-item" href="{{ route('user', $user->username) }}">Meu
+                                <a class="dropdown-item" href="{{ route('user', Auth::user()->username) }}">Meu
                                     Perfil</a>
                                 <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
                                 <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
                                 <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
-                                <a class="dropdown-item" href="{{ route('editarperfil', $user->id) }}">Editar
+                                <a class="dropdown-item" href="{{ route('editarperfil', Auth::user()->id) }}">Editar
                                     Perfil</a>
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                                                                                    document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
