@@ -8,7 +8,7 @@
             <div class="icon-change">
 
                 <a href="#" data-toggle="modal" data-target="#modalFotoCapa">
-                    <img src="icones/pencil.svg" alt="Mudar foto de capa">
+                    <img src="{{asset('icones/pencil.svg')}}" alt="Mudar foto de capa">
                 </a>
 
             </div>
