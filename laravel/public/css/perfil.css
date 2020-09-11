@@ -344,6 +344,16 @@
     font-size: 1em;
 }
 
+.post-author a {
+    color: #8f8f8f;
+    font-weight: bold;
+}
+
+.post-author :hover {
+    text-decoration: none;
+    color: #007592;
+}
+
 .photo-author-post {
     width: 40px;
     height: 40px;

@@ -533,7 +533,8 @@
                                                     --}}
                                                     <div class="ml-2">
                                                         <h5 class="post-author">
-                                                            {{ '@' . $post->user->username }}
+                                                            <a href="{{ route('user', $user->username) }}">
+                                                                {{ '@' . $post->user->username }} </a>
                                                         </h5>
                                                     </div>
 
@@ -669,7 +670,7 @@
                                                                     COMENTÁRIO
                                                                     --}}
                                                                     <h5>
-                                                                        <a href="#"
+                                                                        <a href="{{ route('user', $comment->user->username) }}"
                                                                             title="">{{ '@' . $comment->user->username }}</a>
                                                                     </h5>
 
