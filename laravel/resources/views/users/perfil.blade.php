@@ -25,11 +25,11 @@
             <div class="user-photo">
 
                 <a href="#" data-toggle="modal" data-target="#modalFoto">
-                    @if (Auth::user()->photo == null)
+                    @if ($user->photo == null)
                         <img src="{{ asset('imagens/institucional/usuario.png') }}" alt="foto default"
                             class="default-photo-user">
                     @else
-                        <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}" width=170 height=170
+                        <img src="{{ asset('uploads/photos/' . $user->photo) }}" width=170 height=170
                             alt="Foto perfil usuário">
                     @endif
                 </a>
@@ -46,7 +46,8 @@
             </div>
 
             {{-- NOME USUÁRIO --}}
-            <h1 class="user-name">{{ Auth::user()->name . ' ' . Auth::user()->lastname }}</h1>
+            <h1 class="user-name">{{ $user->name . ' ' . $user->lastname }}
+            </h1>
 
 
             {{-- BOTÕES ADICIONAR E MENSAGEM --}}
@@ -92,7 +93,7 @@
 
                                         {{-- BIO DO USUÁRIO --}}
                                         <p class="text-center">
-                                            {{ Auth::user()->about }}
+                                            {{ $user->about }}
                                         </p>
 
                                     </div>
@@ -103,8 +104,7 @@
                             {{-- LINKS --}}
                             <div class="menu-links ">
                                 <ul class="d-flex flex-column">
-                                    <i class="fa fa-user-circle" aria-hidden="true"><a href="{{ route('perfil') }}"
-                                            title="">Perfil</a></i>
+                                    <i class="fa fa-user-circle" aria-hidden="true"><a href="#" title="">Perfil</a></i>
 
                                     <i class="fa fa-users" aria-hidden="true"><a href="{{ route('amigos') }}"
                                             title="">Amigos</a></i>
@@ -149,7 +149,7 @@
                     {{-- CONTEÚDO --}}
                     <div class="col-lg-7 col-md-7 col-sm-12 order-md-2 section-posts">
 
-                        {{-- SEÇÃO ESCREVER POST --}}
+                        {{-- SEÇÃO POSTS --}}
                         <div class="section-posts">
 
                             {{-- ESCOLHER TIPO DE POST --}}
@@ -286,7 +286,7 @@
                                         <i class="fas fa-arrow-left"></i>
                                     </div>
 
-                                    {{-- ESCREVER INDICAÇÃO DE SERVIÇO
+                                    {{-- ESCREVER INDICAÇÃO DE SERVIÇOmen
                                     --}}
                                     <form action="{{ route('service_insert') }}" method="POST"
                                         enctype="multipart/form-data">
@@ -496,7 +496,9 @@
                             {{-- ÁREA ONDE MOSTRA TODOS OS POSTS CRIADOS
                             --}}
 
-                            @if (!$postsNull->isEmpty())
+                            @if (!$postsUser->count())
+                                <p class="container text-centerb py-5">Sem posts</p>
+                            @else
 
                                 <div class="card shadow mb-3 posts-area" id="load-data">
                                     {{-- FOTO USUÁRIO E HORÁRIO POST
@@ -515,8 +517,8 @@
                                                     POST
                                                     --}}
                                                     <div class="mr-2">
-                                                        <a href="{{ route('perfil') }}">
-                                                            @if (Auth::user()->photo == null)
+                                                        <a href="{{ route('user', $user->username) }}">
+                                                            @if ($user->photo == null)
                                                                 <img src="{{ asset('imagens/institucional/usuario.png') }}"
                                                                     alt="foto default" class="photo-author-post">
                                                             @else
@@ -537,7 +539,8 @@
 
                                                 </div>
 
-                                                {{-- BOTÕES POSTAGEM PARA REPORTAR
+                                                {{-- BOTÕES POSTAGEM PARA
+                                                REPORTAR
                                                 UM
                                                 POST
                                                 --}}
@@ -595,7 +598,6 @@
                                                     @default
                                                     {{ 'Erro' }}
                                                 @endswitch
-
                                             </h6>
 
                                             {{-- CONTEÚDO POST
@@ -645,8 +647,10 @@
                                                             COMENTÁRIO
                                                             --}}
                                                             <div class="comment-author-avatar">
-                                                                <a href="">
-                                                                    @if (Auth::user()->photo == null)
+
+                                                                <a href="{{ route('user', $user->username) }}">
+
+                                                                    @if ($user->photo == null)
                                                                         <img src="{{ asset('imagens/institucional/usuario.png') }}"
                                                                             alt="foto default" class="photo-author-comment">
                                                                     @else
@@ -675,7 +679,8 @@
                                                                         class="comment-time">{{ $comment->created_at->diffforhumans() }}
                                                                     </span>
 
-                                                                    {{-- RESPONDER
+                                                                    {{--
+                                                                    RESPONDER
                                                                     --}}
                                                                     <a class="reply-comment" href="#"><i
                                                                             class="fa fa-reply"></i></a>
@@ -715,7 +720,8 @@
                                                                 name="conteudo"></textarea>
 
 
-                                                            {{-- BOTÃO COMENTAR
+                                                            {{-- BOTÃO
+                                                            COMENTAR
                                                             --}}
                                                             <button type="submit" class="btn">Comentar</button>
                                                         </div>
@@ -739,15 +745,6 @@
 
                                 </div>
 
-                            @else
-
-                                {{-- MENSAGEM DEIFAUL PARA QUANDO NÃO HÁ POSTS
-                                --}}
-                                <div class="container text-center mt-5 py-5">
-                                    <img src="{{ asset('imagens/institucional/a-gente-no-pi.jpg') }}" alt="foto default"
-                                        class="default-photo-user">
-                                </div>
-
                             @endif
 
                         </div>
@@ -758,12 +755,15 @@
                     <div class="col-lg-3 col-md-2 col-sm-12 order-md-3 text-center section-right-menu ">
                         <div class="card card-sticky scroll">
 
-                            {{-- SEÇÃO AMIGOS --}}
+                            {{-- SEÇÃO AMIGOS
+                            --}}
                             <div class="friends-section">
 
-                                {{-- IMAGEM AMIGOS --}}
+                                {{-- IMAGEM AMIGOS
+                                --}}
                                 <div class="friends-cards">
-                                    {{-- TÍTULO --}}
+                                    {{-- TÍTULO
+                                    --}}
                                     <h5>Amigos</h5>
 
                                     <a href="#">
@@ -810,22 +810,26 @@
 
                                 </div>
 
-                                {{-- VER MAIS AMIGOS --}}
+                                {{-- VER MAIS AMIGOS
+                                --}}
                                 <div class="card-footer see-more-friends">
                                     <a href="{{ route('amigos') }}" target="_blank">Ver Mais</a>
                                 </div>
 
                             </div>
 
-                            {{-- SEÇÃO SERVIÇOS --}}
+                            {{-- SEÇÃO SERVIÇOS
+                            --}}
                             <div class="services-section">
 
                                 <div class="card-body">
 
-                                    {{-- TÍTULO --}}
+                                    {{-- TÍTULO
+                                    --}}
                                     <h5>Serviços</h5>
 
-                                    {{-- IMAGEM SERVIÇO --}}
+                                    {{-- IMAGEM SERVIÇO
+                                    --}}
                                     <div class="services-area">
                                         <a href="#">
                                             <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
@@ -850,7 +854,8 @@
 
                                 </div>
 
-                                {{-- VER MAIS SERVIÇOS --}}
+                                {{-- VER MAIS SERVIÇOS
+                                --}}
                                 <div class="card-footer">
                                     <a href="{{ route('servicos') }}" tagert="_blank">Ver Mais</a>
                                 </div>

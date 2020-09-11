@@ -22,11 +22,11 @@ Route::get('/admin-servicos', 'AdminController@servicos')->name('admin-servicos'
 
 // ROTAS USUÁRIO 
 
-Route::get('/perfil', 'PerfilController@perfil')->name('perfil');
+Route::get('/user/{username}', 'UserController@username')->name('user');
+
 Route::get('/editarperfil{id}', 'UserController@editProfile')->name('editarperfil');
 Route::post('/updateProfile{id}', 'UserController@updateProfile')->name('updateProfile');
 
-// Route::get('/perfil/{username}', 'PerfilController@perfil')->name('perfil');
 
 
 // ROTAS AMIGOS 

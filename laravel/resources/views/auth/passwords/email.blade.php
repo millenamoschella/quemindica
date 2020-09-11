@@ -2,6 +2,8 @@
 
 @section('content')
 
+    {{-- PÁGINA ENVIAR EMAIL PARA RESTEAR SENH --}}
+
     <div class="section-reset-password">
 
         <div class="reset-page">

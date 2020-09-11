@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = ('/perfil');
+    protected $redirectTo = ('/user/{username}');
 
     /**
      * Create a new controller instance.
@@ -50,5 +50,4 @@ class LoginController extends Controller
     {
         return 'phone';
     }
-
 }

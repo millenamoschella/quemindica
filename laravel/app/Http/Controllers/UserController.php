@@ -111,4 +111,26 @@ class UserController extends Controller
 
         return redirect()->route('perfil');
     }
+
+
+    public function username($username)
+    {
+        $user = User::where('username', $username)->first();
+
+        if (!$user)
+            abort(404);
+
+        $postsUser = Post::where(function ($query) use ($user) {
+            $query->where('user_id', $user->id)
+                ->orWhere('user_id', $user->id);
+        })
+            ->orderBy('created_at', 'desc')->get();
+
+
+        $commentsUser = Comment::orderBy('updated_at', 'desc')->limit(3)->get();
+        $postsCulture = Culture::All();
+        $post = Post::find('culture_id');
+
+        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user',));
+    }
 }

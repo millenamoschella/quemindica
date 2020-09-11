@@ -18,58 +18,17 @@ class PerfilController extends Controller
     }
 
 
-    public function perfil(User $id)
+    public function perfil(User $id, $username)
     {
 
-        $postsUser = Post::where('user_id', '=', Auth::user()->id)->orderby('created_at', 'DESC')->get();
-        // $postsUser = Post::where('user_id', '=', Auth::user()->id)->orderby('created_at', 'DESC')->limit(3)->get();
+        $postsUser = Post::orderby('created_at', 'DESC')->get();
         $postsCulture = Culture::All();
         $commentsUser = Comment::All();
         $post = Post::find('culture_id');
         $user = Auth::user();
-        $postsNull = Post::all();
 
-        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'postsNull'));
-    }
+        $postsNull = Post::All();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public function loadMore()
-    {
-        $this->perPage = $this->perPage + 3;
+        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'postsNull', 'user'));
     }
 }

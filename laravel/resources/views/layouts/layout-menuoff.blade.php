@@ -14,6 +14,7 @@
 
     {{-- CSS LAYOUTS --}}
     <link rel="stylesheet" href="{{ asset('../css/layout-menuoff.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
 
     {{-- CSS PÁGS. ESTÁTICAS --}}
@@ -82,12 +83,6 @@
                 <ul class="navbar-nav ml-auto">
 
 
-                    {{-- BOTÃO SUPORTE --}}
-                    {{-- <li class="nav-item botao-suporte">
-                        <a href="#" data-toggle="modal" data-target="#modalSuporte" class="nav-link">
-                            <img src="{{ asset('../icones/support.png') }}" class="btn-suporte">
-                        </a>
-                    </li> --}}
                     <li class="nav-item botao-suporte">
                         <a href="#" data-toggle="modal" data-target="#modalSuporte" class="nav-link">
                             <img src="{{ asset('../icones/support.png') }}"
@@ -95,9 +90,6 @@
                                 onmouseout="this.src='{{ asset('../icones/support.png') }}';" class="btn-suporte">
                         </a>
                     </li>
-
-
-
 
                     @guest
                         {{-- BOTÃO LOGIN --}}
@@ -128,13 +120,13 @@
                             {{-- NOME DO USUÁRIO --}}
                             <a id="navbarDropdown" class="nav-link dropdown-toggle drop-menuoff" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
+                                {{ $user->name }}
 
-                                @if (Auth::user()->photo == null)
+                                @if ($user->photo == null)
                                     <img src="{{ asset('imagens/institucional/usuario.png') }}" alt="foto default"
                                         class="rounded-circle avatar-menu-off">
                                 @else
-                                    <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}"
+                                    <img src="{{ asset('uploads/photos/' . $user->photo) }}"
                                         class="rounded-circle avatar-menu-off">
                                 @endif
                             </a>
@@ -143,16 +135,17 @@
                             <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menuoff"
                                 aria-labelledby="navbarDropdown">
 
-                                <a class="dropdown-item" href="{{ route('perfil') }}">Meu Perfil</a>
+                                <a class="dropdown-item" href="{{ route('user', $user->username) }}">Meu
+                                    Perfil</a>
                                 <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
                                 <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
                                 <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
-                                <a class="dropdown-item" href="{{ route('editarperfil', Auth::user()->id) }}">Editar
+                                <a class="dropdown-item" href="{{ route('editarperfil', $user->id) }}">Editar
                                     Perfil</a>
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                                                                                document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 

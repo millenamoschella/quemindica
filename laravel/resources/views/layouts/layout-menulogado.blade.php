@@ -106,13 +106,13 @@
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle seta-drop-menulog" href="#"
                                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                         v-pre>
-                                        {{ Auth::user()->name }}
+                                        {{ $user->name }}
 
-                                        @if (Auth::user()->photo == null)
+                                        @if ($user->photo == null)
                                             <img src="{{ asset('imagens/institucional/usuario.png') }}" alt="foto default"
                                                 class="rounded-circle avatar-menu-logado">
                                         @else
-                                            <img src="{{ asset('uploads/photos/' . Auth::user()->photo) }}"
+                                            <img src="{{ asset('uploads/photos/' . $user->photo) }}"
                                                 class="rounded-circle avatar-menu-logado">
                                         @endif
                                     </a>
@@ -120,11 +120,12 @@
                                     {{-- MENU DROPDOWN --}}
                                     <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menulog"
                                         aria-labelledby="messages">
-                                        <a class="dropdown-item" href="{{ route('perfil') }}">Meu Perfil</a>
+                                        <a class="dropdown-item" href="{{ route('user', $user->username) }}">Meu
+                                            Perfil</a>
                                         <a class="dropdown-item" href="{{ route('amigos') }}">Amigos</a>
                                         <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
                                         <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
-                                        <a class="dropdown-item" href="{{ route('editarperfil', Auth::user()->id) }}">Editar
+                                        <a class="dropdown-item" href="{{ route('editarperfil', $user->id) }}">Editar
                                             Perfil</a>
                                     </div>
 
@@ -205,15 +206,12 @@
 
                             <a class="dropdown-item" href="#">
 
-                                <strong class="nome-user-not">Marcia quer ser sua amiga</strong>
+                                <strong class="nome-user-not">Marcia está te seguindo</strong>
 
                                 <span class="small float-right text-muted">10:04</span>
 
-                                <div class="dropdown-message small">
-                                    This is an automated server response message. All
-                                    systems are online.
-                                </div>
                             </a>
+
                             <div class="dropdown-divider"></div>
 
                             {{-- VER TODAS AS NOTIFICAÇÕES
