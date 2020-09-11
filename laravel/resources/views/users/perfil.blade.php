@@ -8,7 +8,7 @@
             <div class="icon-change">
 
                 <a href="#" data-toggle="modal" data-target="#modalFotoCapa">
-                    <img src="{{asset('icones/pencil.svg')}}" alt="Mudar foto de capa">
+                    <img src="{{ asset('icones/pencil.svg') }}" alt="Mudar foto de capa">
                 </a>
 
             </div>
@@ -106,8 +106,10 @@
                                 <ul class="d-flex flex-column">
                                     <i class="fa fa-user-circle" aria-hidden="true"><a href="#" title="">Perfil</a></i>
 
-                                    <i class="fa fa-users" aria-hidden="true"><a href="{{ route('amigos') }}"
-                                            title="">Amigos</a></i>
+                                    <i class="fa fa-users" aria-hidden="true"><a href="#" title="">Usuários</a></i>
+
+                                    <i class="fas fa-user-friends" aria-hidden="true"><a href="{{ route('seguindo') }}"
+                                            title="">Seguindo</a></i>
 
                                     <i class="fa fa-list-alt" aria-hidden="true"><a href="{{ route('servicos') }}"
                                             title="">Serviços</a></i>
@@ -760,16 +762,16 @@
                     <div class="col-lg-3 col-md-2 col-sm-12 order-md-3 text-center section-right-menu ">
                         <div class="card card-sticky scroll">
 
-                            {{-- SEÇÃO AMIGOS
+                            {{-- SEÇÃO USUÁRIOS SEGUIDOS
                             --}}
                             <div class="friends-section">
 
-                                {{-- IMAGEM AMIGOS
+                                {{-- IMAGEM USUÁRIOS SEGUIDOS
                                 --}}
                                 <div class="friends-cards">
                                     {{-- TÍTULO
                                     --}}
-                                    <h5>Amigos</h5>
+                                    <h5>Seguindo</h5>
 
 
                                     @foreach ($users as $user)
@@ -790,10 +792,10 @@
 
                                 </div>
 
-                                {{-- VER MAIS AMIGOS
+                                {{-- VER MAIS
                                 --}}
                                 <div class="card-footer see-more-friends">
-                                    <a href="{{ route('amigos') }}" target="_blank">Ver Mais</a>
+                                    <a href="{{ route('seguindo') }}" target="_blank">Ver Mais</a>
                                 </div>
 
                             </div>

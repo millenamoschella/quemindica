@@ -11,10 +11,10 @@ use App\Culture;
 
 class FriendController extends Controller
 {
-    public function amigosPag(User $user)
+    public function followingUsers(User $user)
     {
-        $user = Auth::user();
-        return view('users.amigos');
+        $users = User::all();
+        return view('users.following', compact('users'));
     }
 
     public function __construct()

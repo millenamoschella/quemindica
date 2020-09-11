@@ -113,6 +113,7 @@ class UserController extends Controller
     }
 
 
+    // --------------- FUNÇÃO USERNAME URL
     public function username($username)
     {
 
@@ -135,5 +136,14 @@ class UserController extends Controller
         $post = Post::find('culture_id');
 
         return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users'));
+    }
+
+
+
+    // --------------- MOSTRAR TODOS OS USUÁRIOS
+    public function users(User $user)
+    {
+        $users = User::all();
+        return view('users.users', compact('users'));
     }
 }

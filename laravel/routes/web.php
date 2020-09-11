@@ -26,12 +26,12 @@ Route::get('/user/{username}', 'UserController@username')->name('user');
 
 Route::get('/editarperfil{id}', 'UserController@editProfile')->name('editarperfil');
 Route::post('/updateProfile{id}', 'UserController@updateProfile')->name('updateProfile');
+Route::get('/users', 'UserController@users')->name('users');
 
 
+// ROTAS USUÁRIOS SEGUIDOS PELO USER 
 
-// ROTAS AMIGOS 
-
-Route::get('/amigos', 'FriendController@amigosPag')->name('amigos');
+Route::get('/seguindo', 'FriendController@followingUsers')->name('seguindo');
 
 
 // ROTAS SERVIÇOS
