@@ -153,7 +153,7 @@
                         <div class="section-posts">
 
                             {{-- ESCOLHER TIPO DE POST --}}
-                            <div class="card noScroll shadow card-sticky" id="choosePost">
+                            <div class="card noScroll shadow card-sticky choose-post" id="choosePost">
                                 <div class="card-body">
 
                                     <p>Quero indicar:</p>

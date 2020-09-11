@@ -264,6 +264,13 @@
 
 /* TIPO DE INDICAÇÃO */
 
+
+.choose-post p {
+    font-size: 1.1em;
+    color: #007592;
+    font-weight: bold;
+}
+
 .displayNone {
     display: none;
 }
@@ -275,7 +282,7 @@
 /* CARDS - ESCOLHER O TIPO DE INDICAÇÃO */
 
 .postCard {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 #00000033;
     transition: 0.3s;
     width: 80px;
     border-radius: 5px;
@@ -284,7 +291,7 @@
 
 .postCard:hover {
     cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 #00000033;
 }
 
 .postCard img {
