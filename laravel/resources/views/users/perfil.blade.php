@@ -115,8 +115,8 @@
                                     <i class="fa fa-question-circle" aria-hidden="true"><a href="{{ route('suporte') }}"
                                             title="">Suporte</a></i>
 
-                                    <i class="fa fa-cog" aria-hidden="true"><a href="{{ route('editarperfil', $user->id) }}"
-                                            title="">Editar
+                                    <i class="fa fa-cog" aria-hidden="true"><a
+                                            href="{{ route('editarperfil', Auth::user()->id) }}" title="">Editar
                                             Perfil</a></i>
                                 </ul>
                             </div>
@@ -770,14 +770,18 @@
                                     --}}
                                     <h5>Amigos</h5>
 
- 
+
                                     @foreach ($users as $user)
 
-                                        {{-- <a href="{{('user' $user->username)}}"> --}}
-                                        <a href="{{ route('user', $user->username) }}">
-                                            <img src="{{ asset('uploads/photos/' . $user->photo) }}"
-                                                class="img-fluid card-friend">
-                                        </a>
+                                        @if ($user->photo == null)
+                                            <img src="{{ asset('imagens/institucional/usuario.png') }}" alt="foto default"
+                                                class="card-friend">
+                                        @else
+                                            <a href="{{ route('user', $user->username) }}">
+                                                <img src="{{ asset('uploads/photos/' . $user->photo) }}"
+                                                    class="img-fluid card-friend">
+                                            </a>
+                                        @endif
                                     @endforeach
 
 
