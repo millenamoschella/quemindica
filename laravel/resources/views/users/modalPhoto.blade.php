@@ -27,7 +27,7 @@
                             {{-- FORMULÁRIO --}}
                             <div class="signup-form">
 
-                                <form action="{{ route('store', $user->id) }}" method="POST"
+                                <form action="{{ route('store', Auth::user()->id) }}" method="POST"
                                     enctype="multipart/form-data" class="register-form" id="register-form">
                                     @csrf
                                     <div class="row">
