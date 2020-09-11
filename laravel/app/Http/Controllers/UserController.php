@@ -109,7 +109,7 @@ class UserController extends Controller
         $user->save();
 
 
-        return redirect()->route('perfil');
+        return redirect()->route('user', Auth::user()->username);
     }
 
 

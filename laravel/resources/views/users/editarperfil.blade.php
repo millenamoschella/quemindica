@@ -5,7 +5,7 @@
 
     <div class="edit">
         <div class="card container mt-5 mb-5 edit-section">
-            <form method="POST" action="{{ url('updateProfile' . $user->id) }}" enctype="multipart/form-data"
+            <form method="POST" action="{{ url('updateProfile/' . $user->id) }}" enctype="multipart/form-data"
                 class="register-form" id="register-form">
                 @csrf
 

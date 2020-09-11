@@ -24,8 +24,8 @@ Route::get('/admin-servicos', 'AdminController@servicos')->name('admin-servicos'
 
 Route::get('/user/{username}', 'UserController@username')->name('user');
 
-Route::get('/editarperfil{id}', 'UserController@editProfile')->name('editarperfil');
-Route::post('/updateProfile{id}', 'UserController@updateProfile')->name('updateProfile');
+Route::get('/editarperfil/{id}', 'UserController@editProfile')->name('editarperfil');
+Route::post('/updateProfile/{id}', 'UserController@updateProfile')->name('updateProfile');
 Route::get('/users', 'UserController@users')->name('users');
 
 
