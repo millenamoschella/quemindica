@@ -29,7 +29,7 @@ Route::post('/updateProfile/{id}', 'UserController@updateProfile')->name('update
 Route::get('/users', 'UserController@users')->name('users');
 
 
-// ROTAS USUÁRIOS SEGUIDOS PELO USER 
+// ROTAS USUÁRIOS SEGUIDOS PELO USER  
 
 Route::get('/seguindo', 'FriendController@followingUsers')->name('seguindo');
 

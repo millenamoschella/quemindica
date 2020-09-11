@@ -118,7 +118,6 @@ class UserController extends Controller
     {
 
         $user = User::where('username', $username)->first();
-        // $users = User::all();
         $users = User::orderby('created_at', 'DESC')->limit(9)->get();
 
         if (!$user)
@@ -128,10 +127,10 @@ class UserController extends Controller
             $query->where('user_id', $user->id)
                 ->orWhere('user_id', $user->id);
         })
-            ->orderBy('created_at', 'desc')->get();
+            ->orderBy('created_at', 'DESC')->get();
 
 
-        $commentsUser = Comment::orderBy('updated_at', 'desc')->limit(3)->get();
+        $commentsUser = Comment::limit(3)->get();
         $postsCulture = Culture::All();
         $post = Post::find('culture_id');
 
