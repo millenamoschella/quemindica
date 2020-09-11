@@ -678,12 +678,6 @@ span:hover {
     padding: 4px;
 }
 
-
-.friends-cards img {
-    margin: 7px 3px;
-    height: 110px;
-}
-
 .card-friend {
     margin-top: 10px;
     border-radius: 15px;
@@ -694,6 +688,11 @@ span:hover {
 
 .card-friend:hover {
     box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
+}
+
+.friends-cards img {
+    margin: 7px 3px;
+    height: 110px;
 }
 
 .section-right-menu a {

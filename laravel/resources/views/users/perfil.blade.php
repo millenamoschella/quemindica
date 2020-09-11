@@ -29,8 +29,8 @@
                         <img src="{{ asset('imagens/institucional/usuario.png') }}" alt="foto default"
                             class="default-photo-user">
                     @else
-                        <img src="{{ asset('uploads/photos/' . $user->photo) }}" width=170 height=170
-                            alt="Foto perfil usuário">
+                        <img src="{{ asset('uploads/photos/' . $user->photo) }}" alt="Foto perfil usuário"
+                            class="default-photo-user">
                     @endif
                 </a>
 

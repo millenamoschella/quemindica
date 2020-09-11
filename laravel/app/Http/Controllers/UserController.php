@@ -117,7 +117,8 @@ class UserController extends Controller
     {
 
         $user = User::where('username', $username)->first();
-        $users = User::all();
+        // $users = User::all();
+        $users = User::orderby('created_at', 'DESC')->limit(9)->get();
 
         if (!$user)
             abort(404);
