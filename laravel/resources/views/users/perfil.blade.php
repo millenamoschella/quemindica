@@ -104,9 +104,11 @@
                             {{-- LINKS --}}
                             <div class="menu-links ">
                                 <ul class="d-flex flex-column">
-                                    <i class="fa fa-user-circle" aria-hidden="true"><a href="#" title="">Perfil</a></i>
+                                    <i class="fa fa-user-circle" aria-hidden="true"><a
+                                            href="{{ route('user', Auth::user()->username) }}" title="">Perfil</a></i>
 
-                                    <i class="fa fa-users" aria-hidden="true"><a href="#" title="">Usuários</a></i>
+                                    <i class="fa fa-users" aria-hidden="true"><a href="{{ route('users') }}"
+                                            title="">Usuários</a></i>
 
                                     <i class="fas fa-user-friends" aria-hidden="true"><a href="{{ route('seguindo') }}"
                                             title="">Seguindo</a></i>
