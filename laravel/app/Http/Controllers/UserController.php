@@ -136,8 +136,9 @@ class UserController extends Controller
         $post = Post::find('culture_id');
 
         // variável pra identificar se o usuário já segue alguém
-        $follower = Follower::where('follower_id', '=', $user->id)->first();
-
+        $follower = Follower::where('follower_id', '=', $user->id)
+                                ->where('user_id', '=', Auth::user()->id)->first();
+                              
 
 
         return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower'));

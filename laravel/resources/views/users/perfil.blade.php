@@ -55,16 +55,13 @@
 
 
                 {{-- ÁREA PARA SEGUIR UM USUÁRIO --}}
-                @if ($user->id != Auth::user()->id))
-                    <a href="{{ route('follow', $user->id) }}">
-                        <button class="add-friend">Seguir</button>
-                    </a>
+                @if ($user->id != Auth::user()->id)
 
+                    
                     @if (is_null($follower))
                         <a href="{{ route('follow', $user->id) }}">
                             <button class="add-friend">Seguir</button>
                         </a>
-
                     @else
 
                     <a href="{{ route('unfollow', $user->id) }}">
@@ -74,6 +71,9 @@
                     @endif
 
                 @endif
+
+
+
 
 
 
