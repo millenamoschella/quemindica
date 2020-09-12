@@ -333,7 +333,8 @@
                                         </div>
                                         {{-- Telefone --}}
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Telefone" name="phone"
+                                            <textarea class="form-control" rows="1" placeholder="Telefone" name="phone" 
+                                            value="$user->phone"
                                                 id="phone"></textarea>
                                         </div>
                                         {{-- Email --}}
@@ -615,11 +616,15 @@
                                             <h6 class="card-text px-5 post-title">
                                                 @switch($post)
                                                     @case($post->culture_id != null)
+                                                    {{ $post->culture->culture_segment->tipo . " em "}} 
+                                                    {{ $post->culture->plataforma }}
                                                     {{ $post->culture->titulo }}
                                                     @break
 
                                                     @case($post->service_id != null)
-                                                    {{ $post->service->servico }}
+                                                    <small>Segmento: {{ $post->service->segment->tipo }}</small><br>
+                                                    {{ $post->service->servico . " com "}}
+                                                    <a href="{{route('user', $post->service->user->username)}}">{{ $post->service->nome_prestador }}</a>
                                                     @break
 
                                                     @case($post->product_id != null)

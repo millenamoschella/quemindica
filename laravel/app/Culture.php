@@ -25,7 +25,7 @@ class Culture extends Model
     
     public function culture_segment()
     {
-        return $this->belongsTo(Culture_Segment::class);
+        return $this->belongsTo(Culture_Segment::class, 'culture__segments_id');
     }
     
     public function cultureRating()

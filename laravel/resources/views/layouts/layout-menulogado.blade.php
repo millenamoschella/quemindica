@@ -58,11 +58,11 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top menu-logado" id="mainNav">
 
             {{-- TÍTULO --}}
-            <a href="{{ url('home') }}">
+            <a href="{{ route('user', Auth::user()->username) }}">
                 <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" class="img-fluid logo-menu-logado">
             </a>
 
-            <a class="navbar-brand titulo-menu-logado" href="{{ route('home') }}">QUEM INDICA</a>
+            <a class="navbar-brand titulo-menu-logado" href="{{ route('user', Auth::user()->username) }}">QUEM INDICA</a>
 
             {{-- SEÇÃO MENU NOTIFICAÇÕES, PESQUISAR E SAIR
             --}}

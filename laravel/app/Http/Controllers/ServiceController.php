@@ -30,7 +30,11 @@ class ServiceController extends Controller
 
     public function insert(Request $request)
     {
-
+        // $phone = User::findOrFail($phone);
+        // $phone->phone = $request->input('phone');
+        // if (!$phone) {
+        // }
+        
         $provider = new User();
         $provider->name = $request->get('name');
         $provider->username = $request->get('name') . rand(1, 99999);
@@ -38,8 +42,7 @@ class ServiceController extends Controller
         $provider->email = $request->get('email');
         $provider->password = bcrypt('12345678');
         $provider->save();
-
-
+        
         $service = new Service();
 
         $service->segment_id = $request->get('segment_id');
