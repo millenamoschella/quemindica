@@ -366,18 +366,18 @@
 
                                         {{-- NOTA --}}
                                         <label for="">Avaliação:</label>
-                                        <div class="stars-rating">
-                                            <input type="radio" id="cm_star-empty" name="fb" value="" checked />
+                                        <div class="stars-rating-service">
+                                            <input type="radio" id="cm_star-empty-service" name="fb" value="" checked />
                                             <label for="cm_star-1"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-1" name="fb" value="1" />
+                                            <input type="radio" id="cm_star-1-service" name="fb" value="1" />
                                             <label for="cm_star-2"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-2" name="fb" value="2" />
+                                            <input type="radio" id="cm_star-2-service" name="fb" value="2" />
                                             <label for="cm_star-3"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-3" name="fb" value="3" />
+                                            <input type="radio" id="cm_star-3-service" name="fb" value="3" />
                                             <label for="cm_star-4"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-4" name="fb" value="4" />
+                                            <input type="radio" id="cm_star-4-service" name="fb" value="4" />
                                             <label for="cm_star-5"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-5" name="fb" value="5" />
+                                            <input type="radio" id="cm_star-5-service" name="fb" value="5" />
                                         </div>
 
                                         {{-- CONTEÚDO --}}
@@ -622,12 +622,15 @@
                                                     @break
 
                                                     @case($post->service_id != null)
+                                                    Indicação de Serviço: <br>
                                                     <small>Segmento: {{ $post->service->segment->tipo }}</small><br>
                                                     {{ $post->service->servico . " com "}}
                                                     <a href="{{route('user', $post->service->user->username)}}">{{ $post->service->nome_prestador }}</a>
                                                     @break
 
                                                     @case($post->product_id != null)
+                                                    Indicação de produto: <br>
+                                                    <small>Segmento: {{ $post->product->segment->tipo }}</small><br>
                                                     {{ $post->product->nome }}
                                                     @break
 

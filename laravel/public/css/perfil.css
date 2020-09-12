@@ -319,6 +319,19 @@
     color: #CCC;
 }
 
+.stars-rating-service input[type=radio] {
+    display: none;
+}
+
+.stars-rating-service label i.fas:before {
+    content: '\f005';
+    color: #ffcd36;
+}
+
+.stars-rating-service input[type=radio]:checked~label i.fas:before {
+    color: #CCC;
+}
+
 /* BOTÃO VOLTAR PARA OS TIPOS DE INDICAÇÕES */
 .backIcon i {
     width: 20px;
