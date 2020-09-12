@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -29,7 +30,12 @@ class RegisterController extends Controller
      *
      * @var string 
      */
-    protected $redirectTo = ('/home');
+    // protected $redirectTo = ('/home');
+
+    protected function redirectTo()
+    {
+        return 'user/' . Auth::user()->username;
+    }
 
     /**
      * Create a new controller instance.

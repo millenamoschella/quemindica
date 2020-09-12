@@ -55,15 +55,27 @@
 
 
                 {{-- ÁREA PARA SEGUIR UM USUÁRIO --}}
-                @if ($follower == null))
-                    <a href="{{route('seguir', $user->id)}}">
+                @if ($user->id != Auth::user()->id))
+                    <a href="{{ route('follow', $user->id) }}">
                         <button class="add-friend">Seguir</button>
                     </a>
 
-                @else
-                    <button class="add-friend">Seguindo</button>
+                    @if (is_null($follower))
+                        <a href="{{ route('follow', $user->id) }}">
+                            <button class="add-friend">Seguir</button>
+                        </a>
+
+                    @else
+
+                    <a href="{{ route('unfollow', $user->id) }}">
+                        <button class="add-friend">Unfollow</button>
+                    </a>
+
+                    @endif
 
                 @endif
+
+
 
             </div>
 
@@ -786,17 +798,16 @@
                                     --}}
                                     <h5>Seguindo</h5>
 
+                                    @foreach ($user->followers as $follower)
 
-                                    @foreach ($users as $user)
-
-                                        @if ($user->photo == null)
-                                            <a href="{{ route('user', $user->username) }}">
+                                        @if ($follower->photo == null)
+                                            <a href="{{ route('user', $follower->username) }}">
                                                 <img src="{{ asset('imagens/institucional/user-default.jpg') }}"
                                                     alt="foto default" class="card-friend">
                                             </a>
                                         @else
-                                            <a href="{{ route('user', $user->username) }}">
-                                                <img src="{{ asset('uploads/photos/' . $user->photo) }}"
+                                            <a href="{{ route('user', $follower->username) }}">
+                                                <img src="{{ asset('uploads/photos/' . $follower->photo) }}"
                                                     class="card-friend">
                                             </a>
                                         @endif
@@ -808,7 +819,7 @@
                                 {{-- VER MAIS
                                 --}}
                                 <div class="card-footer see-more-friends">
-                                    <a href="{{ route('seguindo') }}" target="_blank">Ver Mais</a>
+                                    <a href="{{ route('seguindo') }}">Ver Mais</a>
                                 </div>
 
                             </div>
@@ -852,7 +863,7 @@
                                 {{-- VER MAIS SERVIÇOS
                                 --}}
                                 <div class="card-footer">
-                                    <a href="{{ route('servicos') }}" tagert="_blank">Ver Mais</a>
+                                    <a href="{{ route('servicos') }}">Ver Mais</a>
                                 </div>
 
                             </div>

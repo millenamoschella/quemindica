@@ -66,7 +66,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Service::class);
     }
-
+ 
 
     public function followers()
     {
@@ -78,4 +78,14 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(User::class, 'followers', 'follower_id', 'user_id');
     }
+
+
+
+
+    public function unfollow(User $user)
+    {
+    return $this->followers()->detach($user->id);
+    }
+
+
 }

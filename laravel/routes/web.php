@@ -36,7 +36,8 @@ Route::get('/seguindo', 'FriendController@followingUsers')->name('seguindo');
 
 // ROTA PARA SEGUIR UM USUÁRIO
 
-Route::get('/following/{id}', 'FriendController@following')->name('seguir');
+Route::get('/following/{id}', 'FriendController@following')->name('follow');
+Route::get('/unfollow/{id}', 'FriendController@unfollow')->name('unfollow');
 
 
 // ROTAS SERVIÇOS

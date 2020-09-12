@@ -26,7 +26,7 @@ class FriendController extends Controller
 
 
 
-// --------- FUNÇÃO PARA SEGUIR UM USUÁRIO
+    // --------- FUNÇÃO PARA SEGUIR UM USUÁRIO
 
     public function following($id)
     {
@@ -37,4 +37,15 @@ class FriendController extends Controller
 
         return back();
     }
+
+
+
+ 
+    public function unfollow ($id)
+    {
+        $user = User::find($id);
+    Auth::user()->unfollow($user);
+    return back();
+    }
+
 }

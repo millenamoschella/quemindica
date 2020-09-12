@@ -30,7 +30,7 @@
                             <div class="card-user">
 
                                 {{-- FOTO AMIGO --}}
-                                <a href="{{ route('user', $user->username) }}" target="_blank">
+                                <a href="{{ route('user', $user->username) }}">
                                     @if ($user->photo == null)
                                         <img src="{{ asset('imagens/institucional/user-default.jpg') }}" alt="foto default"
                                             class="">

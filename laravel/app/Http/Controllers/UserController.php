@@ -138,10 +138,16 @@ class UserController extends Controller
         // variável pra identificar se o usuário já segue alguém
         $follower = Follower::where('follower_id', '=', $user->id)->first();
 
+
+
         return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower'));
     }
 
- 
+
+
+
+
+
 
     // --------------- MOSTRAR TODOS OS USUÁRIOS
     public function users(User $user)
