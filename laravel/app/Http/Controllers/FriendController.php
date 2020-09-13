@@ -7,16 +7,11 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Post;
 use App\Comment;
-use App\Culture;
+use App\Culture; 
 use App\Follower;
 
 class FriendController extends Controller
 {
-    public function followingUsers(User $user)
-    {
-        $users = User::all();
-        return view('users.following', compact('users'));
-    }
 
     public function __construct()
     {
@@ -24,6 +19,13 @@ class FriendController extends Controller
     }
 
 
+ 
+    public function followingUsers($username)
+    {
+        $user = User::where('username', $username)->first();
+    
+        return view('users.following', compact( 'user'));
+    }
 
 
     // --------- FUNÇÃO PARA SEGUIR UM USUÁRIO
@@ -44,8 +46,8 @@ class FriendController extends Controller
     public function unfollow ($id)
     {
         $user = User::find($id);
-    Auth::user()->unfollow($user);
-    return back();
+        Auth::user()->unfollow($user);
+        return back();
     }
 
 }

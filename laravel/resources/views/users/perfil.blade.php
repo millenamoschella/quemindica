@@ -73,10 +73,6 @@
                 @endif
 
 
-
-
-
-
             </div>
 
         </div>
@@ -133,7 +129,7 @@
                                     <i class="fa fa-users" aria-hidden="true"><a href="{{ route('users') }}"
                                             title="">Usuários</a></i>
 
-                                    <i class="fas fa-user-friends" aria-hidden="true"><a href="{{ route('seguindo') }}"
+                                    <i class="fas fa-user-friends" aria-hidden="true"><a href="{{ route('seguindo', $user->username) }}"
                                             title="">Seguindo</a></i>
 
                                     <i class="fa fa-list-alt" aria-hidden="true"><a href="{{ route('servicos') }}"
@@ -801,21 +797,21 @@
 
                                 {{-- IMAGEM USUÁRIOS SEGUIDOS
                                 --}}
-                                <div class="friends-cards">
+                                <div class="friends-cards"> 
                                     {{-- TÍTULO
                                     --}}
                                     <h5>Seguindo</h5>
 
                                     @foreach ($user->followers as $follower)
 
-                                        @if ($follower->photo == null)
                                             <a href="{{ route('user', $follower->username) }}">
+                                        @if ($follower->photo == null)
                                                 <img src="{{ asset('imagens/institucional/user-default.jpg') }}"
                                                     alt="foto default" class="card-friend">
-                                            </a>
-                                        @else
-                                            <a href="{{ route('user', $follower->username) }}">
-                                                <img src="{{ asset('uploads/photos/' . $follower->photo) }}"
+                                          
+                                        @else 
+                                        
+                                                 <img src="{{ asset('uploads/photos/' . $follower->photo) }}"
                                                     class="card-friend">
                                             </a>
                                         @endif
@@ -827,7 +823,7 @@
                                 {{-- VER MAIS
                                 --}}
                                 <div class="card-footer see-more-friends">
-                                    <a href="{{ route('seguindo') }}">Ver Mais</a>
+                                    <a href="{{ route('seguindo', $user->username) }}">Ver Mais</a>
                                 </div>
 
                             </div>

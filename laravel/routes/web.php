@@ -31,7 +31,7 @@ Route::get('/users', 'UserController@users')->name('users');
 
 // ROTAS USUÁRIOS SEGUIDOS PELO USER  
 
-Route::get('/seguindo', 'FriendController@followingUsers')->name('seguindo');
+Route::get('/seguindo/{username}', 'FriendController@followingUsers')->name('seguindo');
 
 
 // ROTA PARA SEGUIR UM USUÁRIO

@@ -13,8 +13,8 @@
 
             {{-- USUÁRIO --}}
 
-            @foreach ($users as $user)
-
+            @foreach ($user->followers as $follower)
+  
 
                 <div class="col-lg-2 col-md-4 col-sm-12">
                     <div class="card-amigo">
@@ -29,23 +29,24 @@
 
                             {{-- INFOS AMIGO --}}
                             <div class="card-user">
-
+ 
                                 {{-- FOTO AMIGO --}}
-                                <a href="{{ route('user', $user->username) }}">
-                                    @if ($user->photo == null)
+                                <a href="{{ route('user', $follower->username) }}">
+                                    @if ($follower->photo == null)
                                         <img src="{{ asset('imagens/institucional/user-default.jpg') }}" alt="foto default"
                                             class="">
                                     @else
-                                        <img src="{{ asset('uploads/photos/' . $user->photo) }}" alt="Foto perfil usuário"
+                                        <img src="{{ asset('uploads/photos/' . $follower->photo) }}" alt="Foto perfil usuário"
                                             class="">
                                     @endif
                                 </a>
 
                                 {{-- NOME AMIGO E USERNAME --}}
-                                <h5>{{ $user->name . ' ' . $user->lastname }}</h5>
+                                <h5>{{ $follower->name . ' ' . $follower->lastname }}</h5>
 
                                 <i><a href="{{ route('user', $user->username) }}">
-                                        {{ '@' . $user->username }} </a></i>
+                                        {{ '@' . $follower->username }} 
+                                        </a></i>
 
                                 {{-- INFOS --}}
                                 <div class="user-info">

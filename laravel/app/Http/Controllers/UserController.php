@@ -146,10 +146,6 @@ class UserController extends Controller
 
 
 
-
-
-
-
     // --------------- MOSTRAR TODOS OS USUÁRIOS
     public function users(User $user)
     {
