@@ -12,24 +12,24 @@ use Illuminate\Support\Facades\Auth;
 class PerfilController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
 
-    public function perfil(User $id, $username)
-    {
+    // public function perfil(User $id, $username)
+    // {
 
-        $postsUser = Post::orderby('created_at', 'DESC')->get();
+    //     $postsUser = Post::orderby('created_at', 'DESC')->get();
 
-        $postsCulture = Culture::All();
-        $commentsUser = Comment::All();
-        $post = Post::find('culture_id');
-        $user = Auth::user();
+    //     $postsCulture = Culture::All();
+    //     $commentsUser = Comment::All();
+    //     $post = Post::find('culture_id');
+    //     $user = Auth::user();
 
-        $postsNull = Post::All();
+    //     $postsNull = Post::All();
 
-        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'postsNull', 'user'));
-    }
+    //     return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'postsNull', 'user'));
+    // }
 }

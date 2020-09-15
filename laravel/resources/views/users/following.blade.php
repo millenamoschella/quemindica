@@ -11,56 +11,64 @@
 
         <div class="row">
 
-            {{-- USUÁRIO --}}
+            {{-- PESSOA SEGUIDAS --}}
 
-            @foreach ($user->followers as $follower)
-  
+            @if (!$user->followers->count())
+                <div class="container text-center default-message-follow-page">
+                    <p>Você ainda não está seguindo nenhum usuário</p>
+                </div>
+            @else
 
-                <div class="col-lg-2 col-md-4 col-sm-12">
-                    <div class="card-amigo">
-                        <div class="card-front">
+                @foreach ($user->followers as $follower)
 
-                            {{-- EXCLUIR OU BLOQUEAR --}}
-                            <div class="card-links">
-                                <span><a href=""><i class="fas fa-minus" aria-hidden="true"
-                                            title="Parar de Seguir"></i></a></span>
-                                <span><a href=""><i class="fa fa-ban" aria-hidden="true" title="Bloquear"></i></a></span>
-                            </div>
+                    <div class="col-lg-2 col-md-4 col-sm-12">
+                        <div class="card-amigo">
+                            <div class="card-front">
 
-                            {{-- INFOS AMIGO --}}
-                            <div class="card-user">
- 
-                                {{-- FOTO AMIGO --}}
-                                <a href="{{ route('user', $follower->username) }}">
-                                    @if ($follower->photo == null)
-                                        <img src="{{ asset('imagens/institucional/user-default.jpg') }}" alt="foto default"
-                                            class="">
-                                    @else
-                                        <img src="{{ asset('uploads/photos/' . $follower->photo) }}" alt="Foto perfil usuário"
-                                            class="">
-                                    @endif
-                                </a>
+                                {{-- EXCLUIR OU BLOQUEAR --}}
+                                <div class="card-links">
+                                    <span><a href=""><i class="fas fa-minus" aria-hidden="true"
+                                                title="Parar de Seguir"></i></a></span>
+                                    <span><a href=""><i class="fa fa-ban" aria-hidden="true"
+                                                title="Bloquear"></i></a></span>
+                                </div>
 
-                                {{-- NOME AMIGO E USERNAME --}}
-                                <h5>{{ $follower->name . ' ' . $follower->lastname }}</h5>
+                                {{-- INFOS AMIGO --}}
+                                <div class="card-user">
 
-                                <i><a href="{{ route('user', $user->username) }}">
-                                        {{ '@' . $follower->username }} 
+                                    {{-- FOTO AMIGO --}}
+                                    <a href="{{ route('user', $follower->username) }}">
+                                        @if ($follower->photo == null)
+                                            <img src="{{ asset('imagens/institucional/user-default.jpg') }}"
+                                                alt="foto default" class="">
+                                        @else
+                                            <img src="{{ asset('uploads/photos/' . $follower->photo) }}"
+                                                alt="Foto perfil usuário" class="">
+                                        @endif
+                                    </a>
+
+                                    {{-- NOME AMIGO E USERNAME
+                                    --}}
+                                    <h5>{{ $follower->name . ' ' . $follower->lastname }}</h5>
+
+                                    <i><a href="{{ route('user', $user->username) }}">
+                                            {{ '@' . $follower->username }}
                                         </a></i>
 
-                                {{-- INFOS --}}
-                                <div class="user-info">
-                                    <span>13<b>Indicações</b></span>
-                                    <span>65<b>Pontos</b></span>
+                                    {{-- INFOS --}}
+                                    <div class="user-info">
+                                        <span>13<b>Indicações</b></span>
+                                        <span>65<b>Pontos</b></span>
+                                    </div>
+
                                 </div>
 
                             </div>
-
                         </div>
                     </div>
-                </div>
+                @endforeach
 
-            @endforeach
+            @endif
 
         </div>
 

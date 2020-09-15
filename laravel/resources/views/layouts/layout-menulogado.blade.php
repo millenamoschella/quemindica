@@ -62,7 +62,8 @@
                 <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" class="img-fluid logo-menu-logado">
             </a>
 
-            <a class="navbar-brand titulo-menu-logado" href="{{ route('user', Auth::user()->username) }}">QUEM INDICA</a>
+            <a class="navbar-brand titulo-menu-logado" href="{{ route('user', Auth::user()->username) }}">QUEM
+                INDICA</a>
 
             {{-- SEÇÃO MENU NOTIFICAÇÕES, PESQUISAR E SAIR
             --}}
@@ -85,21 +86,6 @@
                         {{-- MENU AUTH --}}
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
-
-                                {{-- BOTÃO LOGIN E REGISTRAR
-                                --}}
-                                {{-- @guest --}}
-                                {{-- LOGIN --}}
-                                {{-- <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li> --}}
-                                {{-- REGISTRAR --}}
-                                {{-- @if (Route::has('register'))
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                    </li>
-                                @endif
-                                @else --}}
 
                                 {{-- NOME DO USUÁRIO E FOTO USUÁRIO
                                 --}}
@@ -124,7 +110,9 @@
                                     <a class="dropdown-item" href="{{ route('user', Auth::user()->username) }}">Meu
                                         Perfil</a>
                                     <a class="dropdown-item" href="{{ route('users') }}">Usuários</a>
-                                    <a class="dropdown-item" href="{{ route('seguindo', $user->username) }}">Seguindo</a>
+                                    <a class="dropdown-item"
+                                        href="{{ route('seguindo', $user->username) }}">Seguindo</a>
+                                    <a class="dropdown-item" href="#">Seguidores</a>
                                     <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
                                     <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
                                     <a class="dropdown-item" href="{{ route('editarperfil', Auth::user()->id) }}">Editar

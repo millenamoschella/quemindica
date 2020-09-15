@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('../css/layout-menuoff.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/estilo.css') }}">
 
     {{-- CSS PÁGS. ESTÁTICAS --}}
     <link rel="stylesheet" href="{{ asset('../css/home.css') }}">
@@ -63,10 +64,10 @@
 
             {{-- LOGO E QUEM INDICA --}}
             <div class="nav-brand logo-nav">
-                <a class="navbar-brand" href="{{ url('home') }}">
+                <a class="navbar-brand" href="{{ route('user', Auth::user()->username) }}">
                     <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" alt="Logo Quem Indica" class="img-fluid">
                 </a>
-                <a class="navbar-brand titulo-quemindica" href="{{ url('home') }}">
+                <a class="navbar-brand titulo-quemindica" href="{{ route('user', Auth::user()->username) }}">
                     Quem Indica
                 </a>
             </div>
@@ -135,18 +136,9 @@
                             <div class="dropdown-menu dropdown-menu-right rounded-0 menu-links-menuoff"
                                 aria-labelledby="navbarDropdown">
 
-                                <a class="dropdown-item" href="{{ route('user', Auth::user()->username) }}">Meu
-                                    Perfil</a>
-                                <a class="dropdown-item" href="{{ route('users') }}">Usuários</a>
-                                <a class="dropdown-item" href="{{ route('seguindo') }}">Seguindo</a>
-                                <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
-                                <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
-                                <a class="dropdown-item" href="{{ route('editarperfil', Auth::user()->id) }}">Editar
-                                    Perfil</a>
-
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                                                        document.getElementById('logout-form').submit();">
+                                {{-- BOTÃO SAIR --}}
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                    document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 

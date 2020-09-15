@@ -412,21 +412,109 @@
 
 /* POSTS */
 
-.post-title {
+.post-result {
+    padding: 5px;
+}
+
+/* POST DE CULTURA  */
+
+.culture-segment {
     color: #007592;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.1em;
+    margin: 0;
 }
+
+.culture-tittle {
+    color: #696969;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+}
+
+
+/* POST DE SERVIÇO */
+
+.service-title {
+    color: #007592;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.service-segment {
+    color: #696969;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+}
+
+.service-provider {
+    display: block;
+    font-weight: bold;
+    color: #007592;
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+
+.service-post a {
+    color: #777777;
+    font-weight: bold;
+}
+
+.service-post a:hover {
+    color: #ffd559;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* POST DE PRODUTO */
+
+.product-title {
+    color: #007592;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.product-segment {
+    color: #696969;
+    font-size: 0.8em;
+}
+
+.product-name {
+    display: block;
+    font-weight: bold;
+    color: #007592;
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+
+.product-store {
+    display: block;
+    color: #007592;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+
+
+/* CONTEÚDO DO POST */
 
 .card-post {
     background-color: #f1f1f1;
 }
 
 .card-post p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #007592;
-    font-weight: 600;
+    font-weight: bold;
+    /* margin-top: 20px; */
 }
+
+
+/* BOTÕES DO POST - REPORTAR E ESCONDER*/
 
 .button-posts span {
     color: #007592;
@@ -699,7 +787,6 @@ span:hover {
     padding: 15px;
     margin-top: 5px;
     font-weight: 600;
-
 }
 
 .card-friend {

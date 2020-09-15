@@ -41,7 +41,7 @@
 
                         <a href="#tab5" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab5"
                             aria-selected="false">
-                            <i class="fa fa-star-half-o p-2" aria-hidden="true"></i>
+                            <i class="fas fa-star-half-alt p-2" aria-hidden="true"></i>
                             Pontuação
                         </a>
 

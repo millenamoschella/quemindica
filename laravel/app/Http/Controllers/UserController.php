@@ -13,6 +13,12 @@ use App\Follower;
 class UserController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     // --------------- FUNÇÃO DE UPLOAD PARA FOTO PERFIL
 
     public function create()
@@ -137,8 +143,8 @@ class UserController extends Controller
 
         // variável pra identificar se o usuário já segue alguém
         $follower = Follower::where('follower_id', '=', $user->id)
-                                ->where('user_id', '=', Auth::user()->id)->first();
-                              
+            ->where('user_id', '=', Auth::user()->id)->first();
+
 
 
         return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower'));

@@ -613,34 +613,56 @@
                                                 <span class="time">{{ $post->created_at->diffforhumans() }}</span>
                                             </div>
 
-                                            {{-- TITULO POST
+                                            {{-- RESULTADO POSTS
                                             --}}
-                                            <h6 class="card-text px-5 post-title">
+                                            <div class="card-text px-5 post-result">
                                                 @switch($post)
                                                     @case($post->culture_id != null)
-                                                    {{ $post->culture->culture_segment->tipo . ' em ' }}
-                                                    {{ $post->culture->plataforma }}
-                                                    {{ $post->culture->titulo }}
+                                                    <div class="culture-post">
+
+                                                        <h6 class="culture-segment">
+                                                            {{ $post->culture->culture_segment->tipo . ' em ' }}
+                                                            {{ $post->culture->plataforma }}
+                                                        </h6>
+                                                        <h6 class="culture-tittle">{{ $post->culture->titulo }}</h6>
+
+                                                    </div>
                                                     @break
 
                                                     @case($post->service_id != null)
-                                                    Indicação de Serviço: <br>
-                                                    <small>Segmento: {{ $post->service->segment->tipo }}</small><br>
-                                                    {{ $post->service->servico . ' com ' }}
-                                                    <a
-                                                        href="{{ route('user', $post->service->user->username) }}">{{ $post->service->nome_prestador }}</a>
+                                                    <div class="service-post">
+
+                                                        <h6 class="service-title">Indicação de Serviço</h6>
+                                                        <h6 class="service-segment">Segmento:
+                                                            {{ $post->service->segment->tipo }}
+                                                        </h6>
+                                                        <h6 class="service-provider">{{ $post->service->servico . ' com ' }}
+                                                            <a href="{{ route('user', $post->service->user->username) }}">{{ $post->service->nome_prestador }}
+                                                            </a>
+                                                        </h6>
+
+                                                    </div>
                                                     @break
 
                                                     @case($post->product_id != null)
-                                                    Indicação de produto: <br>
-                                                    <small>Segmento: {{ $post->product->segment->tipo }}</small><br>
-                                                    {{ $post->product->nome }}
+                                                    <div class="product-post">
+
+                                                        <h6 class="product-title">Indicação de produto</h6>
+                                                        <h6 class="product-segment">Segmento:
+                                                            {{ $post->product->segment->tipo }}
+                                                        </h6>
+                                                        <h6 class="product-name">Produto: {{ $post->product->nome }}
+                                                        </h6>
+                                                        <h6 class="product-store">Loja: {{ $post->product->loja }}
+                                                        </h6>
+
+                                                    </div>
                                                     @break
 
                                                     @default
                                                     {{ 'Erro' }}
                                                 @endswitch
-                                            </h6>
+                                            </div>
 
                                             {{-- CONTEÚDO POST
                                             --}}
@@ -775,16 +797,6 @@
                                         </div>
 
                                     @endforeach
-
-
-                                    {{-- VER TODOS OS POSTS
-                                    --}}
-
-                                    {{-- <div class="text-center see-more-comments">
-                                        <button id="loadMore" class="loadmore-btn btn">
-                                            Ver mais
-                                        </button>
-                                    </div> --}}
 
                                 </div>
 

@@ -85,8 +85,10 @@ footer {
     margin-bottom: 0;
 }
 
+
+
 /* === FOOTER LOGADO === */
 
 .footer-logado {
-    background-color: #00415e !important;
+    bottom: 0;
 }

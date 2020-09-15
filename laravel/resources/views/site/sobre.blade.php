@@ -142,9 +142,7 @@
                             </li>
                             <li class="list-inline-item"><a
                                     href="https://www.linkedin.com/in/marcia-tiemi-miashiro-yokota-245046170/"
-                                    class="social-link" target="_blank"><i
-                                        class=" fa
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        fa-linkedin"></i></a>
+                                    class="social-link" target="_blank"><i class=" fa fa-linkedin"></i></a>
                             </li>
 
                         </ul>
@@ -166,9 +164,7 @@
                                     target="_blank"><i class="fa fa-github"></i></a>
                             </li>
                             <li class="list-inline-item"><a href="https://www.linkedin.com/in/millenamoschella/"
-                                    class="social-link" target="_blank"><i
-                                        class=" fa
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        fa-linkedin"></i></a>
+                                    class="social-link" target="_blank"><i class=" fa fa-linkedin"></i></a>
                             </li>
 
                         </ul>
@@ -248,6 +244,10 @@
         </div>
     </div>
 
+    {{-- VOLTAR PARA O TOPO - CSS NO ESTILO.CSS --}}
 
+    <a href="#" id="toTopBtn" class="btn toTopBtn" data-abc="true">
+        <i class="fa fa-arrow-up"></i>
+    </a>
 
 @endsection

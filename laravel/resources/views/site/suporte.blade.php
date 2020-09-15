@@ -1,4 +1,4 @@
-@extends('layouts.layout-menulogado')
+@extends('layouts.layout-menuoff')
 
 @section('content')
 
