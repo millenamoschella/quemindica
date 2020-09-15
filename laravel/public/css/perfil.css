@@ -694,6 +694,14 @@ span:hover {
     padding: 4px;
 }
 
+.default-message-follow {
+    color: #007592;
+    padding: 15px;
+    margin-top: 5px;
+    font-weight: 600;
+
+}
+
 .card-friend {
     margin-top: 10px;
     border-radius: 15px;

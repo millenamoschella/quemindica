@@ -57,16 +57,18 @@
                 {{-- ÁREA PARA SEGUIR UM USUÁRIO --}}
                 @if ($user->id != Auth::user()->id)
 
-                    
+
                     @if (is_null($follower))
                         <a href="{{ route('follow', $user->id) }}">
-                            <button class="add-friend">Seguir</button>
+                            <button class="add-friend">
+                                Seguir
+                            </button>
                         </a>
                     @else
 
-                    <a href="{{ route('unfollow', $user->id) }}">
-                        <button class="add-friend">Unfollow</button>
-                    </a>
+                        <a href="{{ route('unfollow', $user->id) }}">
+                            <button class="add-friend">Unfollow</button>
+                        </a>
 
                     @endif
 
@@ -129,8 +131,11 @@
                                     <i class="fa fa-users" aria-hidden="true"><a href="{{ route('users') }}"
                                             title="">Usuários</a></i>
 
-                                    <i class="fas fa-user-friends" aria-hidden="true"><a href="{{ route('seguindo', $user->username) }}"
-                                            title="">Seguindo</a></i>
+                                    <i class="fas fa-user-friends" aria-hidden="true"><a
+                                            href="{{ route('seguindo', $user->username) }}" title="">Seguindo</a></i>
+
+                                    <i class="fas fa-user-friends" aria-hidden="true"><a href="#"
+                                            title="">Seguidores</a></i>
 
                                     <i class="fa fa-list-alt" aria-hidden="true"><a href="{{ route('servicos') }}"
                                             title="">Serviços</a></i>
@@ -208,8 +213,8 @@
                                             </div>
                                         </div>
 
-                                       @if(Session::has('message'))
-                                        <p class="alert alert-info">{{ Session::get('message') }}</p>
+                                        @if (Session::has('message'))
+                                            <p class="alert alert-info">{{ Session::get('message') }}</p>
                                         @endif
                                     </div>
 
@@ -225,8 +230,6 @@
                                     <div id="backIconCulture" class="backIcon">
                                         <i class="fas fa-arrow-left"></i>
                                     </div>
-
-
 
                                     {{-- ESCREVER INDICAÇÃO DE CULTURA
                                     --}}
@@ -257,7 +260,7 @@
                                                 <option value="Prime Video">Prime Video</option>
                                                 <option value="E-book">Kindle (e-book)</option>
                                                 <option value="Livro">Livro de papel</option>
-                                                <option valeu="Spotify">Spotify</option>
+                                                <option value="Spotify">Spotify</option>
                                                 <option value="Deezer">Deezer</option>
                                                 <option>Outros</option>
                                             </select>
@@ -332,8 +335,8 @@
                                         </div>
                                         {{-- Telefone --}}
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Telefone" name="phone" 
-                                            id="phone"></textarea>
+                                            <textarea class="form-control" rows="1" placeholder="Telefone" name="phone"
+                                                id="phone"></textarea>
                                         </div>
                                         {{-- Email --}}
                                         <div class="form-group">
@@ -451,7 +454,7 @@
                                                 <option value="3">Design</option>
                                                 <option value="4">Eventos</option>
                                                 <option value="5">Moda</option>
-                                                <option valeu="6">Cosméticos</option>
+                                                <option value="6">Cosméticos</option>
                                                 <option value="7">Reformas</option>
                                                 <option value="8">Saúde</option>
                                                 <option value="9">Serviços domésticos</option>
@@ -573,26 +576,28 @@
                                                 UM
                                                 POST
                                                 --}}
-                                                <div>
+                                                {{-- <div>
                                                     <div class="dropdown">
                                                         <button class="btn dropdown-toggle" type="button" id="gedf-drop1"
                                                             data-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false">
+                                                            aria-expanded="false"> --}}
 
                                                             {{-- ÍCONE
                                                             --}}
-                                                            <i class="fa fa-ellipsis-h"></i>
-                                                        </button>
+                                                            {{-- <i
+                                                                class="fa fa-ellipsis-h"></i>
+                                                        </button> --}}
 
                                                         {{-- OPÇÕES
                                                         --}}
-                                                        <div class="dropdown-menu dropdown-menu-right"
+                                                        {{-- <div
+                                                            class="dropdown-menu dropdown-menu-right"
                                                             aria-labelledby="gedf-drop1">
                                                             <a class="dropdown-item" href="#">Esconder</a>
                                                             <a class="dropdown-item" href="#">Reportar</a>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> --}}
 
                                             </div>
                                         </div>
@@ -613,7 +618,7 @@
                                             <h6 class="card-text px-5 post-title">
                                                 @switch($post)
                                                     @case($post->culture_id != null)
-                                                    {{ $post->culture->culture_segment->tipo . " em "}} 
+                                                    {{ $post->culture->culture_segment->tipo . ' em ' }}
                                                     {{ $post->culture->plataforma }}
                                                     {{ $post->culture->titulo }}
                                                     @break
@@ -621,8 +626,9 @@
                                                     @case($post->service_id != null)
                                                     Indicação de Serviço: <br>
                                                     <small>Segmento: {{ $post->service->segment->tipo }}</small><br>
-                                                    {{ $post->service->servico . " com "}}
-                                                    <a href="{{route('user', $post->service->user->username)}}">{{ $post->service->nome_prestador }}</a>
+                                                    {{ $post->service->servico . ' com ' }}
+                                                    <a
+                                                        href="{{ route('user', $post->service->user->username) }}">{{ $post->service->nome_prestador }}</a>
                                                     @break
 
                                                     @case($post->product_id != null)
@@ -790,36 +796,44 @@
 
                     {{-- MENU DIREITO --}}
                     <div class="col-lg-3 col-md-2 col-sm-12 order-md-3 text-center section-right-menu ">
+
+                        {{-- SEÇÃO AMIGOS --}}
                         <div class="card card-sticky scroll">
 
                             {{-- SEÇÃO USUÁRIOS SEGUIDOS
                             --}}
                             <div class="friends-section">
 
-                                {{-- IMAGEM USUÁRIOS SEGUIDOS
-                                --}}
-                                <div class="friends-cards"> 
-                                    {{-- TÍTULO
-                                    --}}
-                                    <h5>Seguindo</h5>
+                                @if (!$user->followers->count())
+                                    <div class="container text-center default-message-follow">
+                                        <p>Você ainda não está seguindo nenhum usuário</p>
+                                    </div>
+                                @else
 
-                                    @foreach ($user->followers as $follower)
+                                    <div class="friends-cards">
+                                        {{-- TÍTULO
+                                        --}}
+                                        <h5>Seguindo</h5>
 
-                                            <a href="{{ route('user', $follower->username) }}">
-                                        @if ($follower->photo == null)
-                                                <img src="{{ asset('imagens/institucional/user-default.jpg') }}"
-                                                    alt="foto default" class="card-friend">
-                                          
-                                        @else 
-                                        
-                                                 <img src="{{ asset('uploads/photos/' . $follower->photo) }}"
-                                                    class="card-friend">
-                                            </a>
-                                        @endif
-                                    @endforeach
+                                        @foreach ($user->followers as $follower)
 
+                                            @if ($follower->photo == null)
+                                                <a href="{{ route('user', $follower->username) }}">
+                                                    <img src="{{ asset('imagens/institucional/user-default.jpg') }}"
+                                                        alt="foto default" class="card-friend">
+                                                </a>
 
-                                </div>
+                                            @else
+                                                <a href="{{ route('user', $follower->username) }}">
+                                                    <img src="{{ asset('uploads/photos/' . $follower->photo) }}"
+                                                        class="card-friend">
+                                                </a>
+                                            @endif
+                                        @endforeach
+
+                                    </div>
+
+                                @endif
 
                                 {{-- VER MAIS
                                 --}}
@@ -828,6 +842,7 @@
                                 </div>
 
                             </div>
+
 
                             {{-- SEÇÃO SERVIÇOS
                             --}}
