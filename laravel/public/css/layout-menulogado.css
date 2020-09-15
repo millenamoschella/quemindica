@@ -63,17 +63,19 @@
     max-height: 75vh;
 }
 
-.fa-envelope,
 .fa-bell {
+    margin-top: 5px;
+    margin-left: -10px;
     color: #fff;
 }
 
-.fa-envelope:hover,
 .fa-bell:hover {
     color: #FCDA73;
 }
 
 .fa-circle {
+    margin-top: 2px;
+    margin-left: -10px;
     color: #FCDA73;
 }
 

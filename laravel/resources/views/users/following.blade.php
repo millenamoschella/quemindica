@@ -27,10 +27,18 @@
 
                                 {{-- EXCLUIR OU BLOQUEAR --}}
                                 <div class="card-links">
-                                    <span><a href=""><i class="fas fa-minus" aria-hidden="true"
-                                                title="Parar de Seguir"></i></a></span>
-                                    <span><a href=""><i class="fa fa-ban" aria-hidden="true"
-                                                title="Bloquear"></i></a></span>
+
+                                    {{-- ADICIONAR --}}
+                                    <span>
+                                        <a href=""><i class="fas fa-minus" aria-hidden="true" title="Parar de Seguir"></i>
+                                        </a>
+                                    </span>
+
+                                    {{-- BLOQUEAR --}}
+                                    <span>
+                                        <a href=""><i class="fa fa-ban" aria-hidden="true" title="Bloquear"></i>
+                                        </a>
+                                    </span>
                                 </div>
 
                                 {{-- INFOS AMIGO --}}

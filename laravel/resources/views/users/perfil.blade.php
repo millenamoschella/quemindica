@@ -827,21 +827,43 @@
                                         --}}
                                         <h5>Seguindo</h5>
 
-                                        @foreach ($user->followers as $follower)
+                                        @if (!$user->followers->count())
+                                            <div class="container text-center default-message-follow">
+                                                <p>Você ainda não está seguindo nenhum usuário</p>
+                                            </div>
+                                        @else
 
-                                            @if ($follower->photo == null)
-                                                <a href="{{ route('user', $follower->username) }}">
-                                                    <img src="{{ asset('imagens/institucional/user-default.jpg') }}"
-                                                        alt="foto default" class="card-friend">
-                                                </a>
+                                            <div class="friend-list clearfix">
+                                                @foreach ($user->followers as $follower)
+                                                    <ul>
+                                                        <li class="following">
 
-                                            @else
-                                                <a href="{{ route('user', $follower->username) }}">
-                                                    <img src="{{ asset('uploads/photos/' . $follower->photo) }}"
-                                                        class="card-friend">
-                                                </a>
-                                            @endif
-                                        @endforeach
+                                                            @if ($follower->photo == null)
+                                                                <a href="{{ route('user', $follower->username) }}">
+                                                                    <img src="{{ asset('imagens/institucional/user-default.jpg') }}"
+                                                                        alt="foto default" class="card-friend">
+                                                                </a>
+
+                                                            @else
+
+                                                                <a href="{{ route('user', $follower->username) }}">
+                                                                    <img src="{{ asset('uploads/photos/' . $follower->photo) }}"
+                                                                        class="card-friend">
+                                                                </a>
+                                                            @endif
+
+                                                            {{-- NOME
+                                                            --}}
+                                                            <span class="name">
+                                                                {{ $follower->name . ' ' . $follower->lastname }}
+                                                            </span>
+
+                                                        </li>
+                                                    </ul>
+                                                @endforeach
+                                            </div>
+
+                                        @endif
 
                                     </div>
 
@@ -854,6 +876,16 @@
                                 </div>
 
                             </div>
+
+
+
+
+
+
+
+
+
+
 
 
                             {{-- SEÇÃO SERVIÇOS

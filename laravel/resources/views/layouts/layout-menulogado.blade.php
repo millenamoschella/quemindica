@@ -127,57 +127,13 @@
 
                     </div>
 
-
-                    {{-- ÁREA NOTIFICAÇÕES MENSAGENS --}}
-                    <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-fw fa-envelope"></i>
-
-                            <span class="d-lg-none titulo-not-mobile-menulog">Mensagens
-                                <span class="badge badge-pill not-badge-mobile">1 Nova</span>
-                            </span>
-
-                            <span class="indicator text-primary d-none d-lg-block">
-                                <i class="fa fa-fw fa-circle"></i>
-                            </span>
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="messagesDropdown">
-                            <h6 class="dropdown-header">Novas Mensagens</h6>
-                            <div class="dropdown-divider"></div>
-
-                            {{-- EXEMPLO NOTIFICAÇÃO MENSAGEM
-                            --}}
-                            <a class="dropdown-item" href="#">
-
-                                <strong class="nome-user-not">Sara Margarido</strong>
-
-                                <span class="small float-right text-muted">15:45</span>
-
-                                <div class="dropdown-message small">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Proin at eros magna. Maecenas
-                                    ultricies orci ac purus vestibulum tincidunt.
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-
-                            {{-- BOTÃO VER TODAS AS MENSAGENS
-                            --}}
-                            <a class="dropdown-item small ver-mais-menu" href="#">Ver Todas</a>
-
-                        </div>
-                    </li>
-
-
                     {{-- ÁREA NOTIFICAÇÕES GERAIS --}}
                     <li class="nav-item dropdown">
 
                         <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
 
+                            {{-- ÍCONE NOTIFICAÇÃO --}}
                             <i class="fa fa-fw fa-bell"></i>
 
                             <span class="d-lg-none titulo-not-mobile-menulog">Notificações

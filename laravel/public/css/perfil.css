@@ -111,8 +111,7 @@
 
 /* BOTÕES ADICIONAR E MENSAGEM */
 
-.add-friend,
-.send-message {
+.add-friend {
     padding: 8px;
     margin: 10px 5px;
     border-radius: 5px;
@@ -128,12 +127,6 @@
     color: #007592;
 }
 
-.send-message {
-    background-color: #e6ebee;
-    border: solid 1px #e6ebee;
-    color: #007592;
-}
-
 .add-friend:hover {
     background-color: #e6ebee;
     border: solid 1px #e6ebee;
@@ -141,11 +134,8 @@
     font-weight: bold;
 }
 
-.send-message:hover {
-    background-color: #ffd559;
-    border: solid 1px #ffd559;
-    color: #007592;
-    font-weight: bold;
+.add-friend:focus {
+    outline: none;
 }
 
 /* --------------------MENU ESQUERDO */
@@ -772,8 +762,6 @@ span:hover {
 }
 
 
-
-
 /* -----------MENU DIREITO */
 /* SEÇÃO AMIGOS PERFIL */
 
@@ -800,6 +788,10 @@ span:hover {
     font-weight: 600;
 }
 
+.friends-cards {
+    display: block;
+}
+
 .card-friend {
     margin-top: 10px;
     border-radius: 15px;
@@ -808,13 +800,42 @@ span:hover {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.card-friend:hover {
-    box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
+.friend-list {
+    margin-top: 15px;
 }
 
-.friends-cards img {
-    margin: 7px 3px;
-    height: 100px;
+.friend-list ul li {
+    position: relative;
+    list-style: none;
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+
+.friend-list ul li img {
+    border-radius: 100%;
+    border: 3px solid #ffd559;
+}
+
+.friend-list ul li img {
+    width: 70px;
+    height: 70px;
+}
+
+.friend-list ul li span.name {
+    position: relative;
+    width: 100%;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #007592;
+}
+
+
+.card-friend:hover {
+    box-shadow: 0 8px 16px 0 #00000033;
 }
 
 .section-right-menu a {
@@ -829,6 +850,7 @@ span:hover {
 
 .see-more-friends {
     padding: 20px;
+    margin-top: 20px;
 }
 
 .see-more-friends a {
@@ -841,7 +863,40 @@ span:hover {
     color: #ffd559;
 }
 
-/* SEÇÃO SERVIÇOS FEED */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SEÇÃO SERVIÇOS */
 
 .services-section a {
     font-weight: bold;
@@ -864,6 +919,5 @@ span:hover {
 }
 
 .services-cards:hover {
-    box-shadow: 0 14px 28px #00000040,
-        0 10px 10px #00000038;
+    box-shadow: 0 8px 16px 0 #00000033;
 }
