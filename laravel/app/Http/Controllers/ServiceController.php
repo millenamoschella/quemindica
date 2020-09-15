@@ -8,6 +8,7 @@ use App\Segment;
 use App\User;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 
 class ServiceController extends Controller
 {
@@ -30,11 +31,30 @@ class ServiceController extends Controller
 
     public function insert(Request $request)
     {
-        // $phone = User::findOrFail($phone);
-        // $phone->phone = $request->input('phone');
-        // if (!$phone) {
-        // }
-        
+        $phone = $request->input('phone');
+        if (User::where('phone', '=', $phone)->count() > 0) {
+            $provider = User::where('phone', '=', $phone)->first();
+            $service = new Service();
+
+            $service->segment_id = $request->get('segment_id');
+            $service->nome_prestador = $provider->name;
+            $service->user_id = $provider->id;
+            $service->servico = $request->get('servico');
+            $service->save();
+    
+    
+            $post = new Post();
+    
+            $post->conteudo = $request->get('conteudo');
+            $post->user_id = Auth::user()->id;
+            $post->service_id = $service->id;
+    
+    
+            $post->save();
+            return back()->with('success', 'serviço criado com sucesso');
+         }
+       
+
         $provider = new User();
         $provider->name = $request->get('name');
         $provider->username = $request->get('name') . rand(1, 99999);
@@ -62,4 +82,5 @@ class ServiceController extends Controller
         $post->save();
         return back();
     }
+
 }

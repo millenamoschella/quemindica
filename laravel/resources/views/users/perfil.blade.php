@@ -309,7 +309,7 @@
                                         <i class="fas fa-arrow-left"></i>
                                     </div>
 
-                                    {{-- ESCREVER INDICAÇÃO DE SERVIÇOmen
+                                    {{-- ESCREVER INDICAÇÃO DE SERVIÇO
                                     --}}
                                     <form action="{{ route('service_insert') }}" method="POST"
                                         enctype="multipart/form-data">
@@ -329,9 +329,8 @@
                                         </div>
                                         {{-- Telefone --}}
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Telefone" name="phone" 
-                                            value="$user->phone"
-                                                id="phone"></textarea>
+                                            <input class="form-control" rows="1" placeholder="Telefone" name="phone" 
+                                            id="phone"></input>
                                         </div>
                                         {{-- Email --}}
                                         <div class="form-group">
