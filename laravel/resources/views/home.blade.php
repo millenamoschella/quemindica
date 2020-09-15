@@ -1,4 +1,23 @@
-@extends('layouts.layout-menuoff')
+@extends('layouts.layout')
+
+@section('title', 'Home')
+
+@section('style')
+    @parent
+    <link rel="stylesheet" href="{{ asset('/css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/layout-menuoff.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/estilo.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/modal.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('/css/modalRegistrar.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/modalLogin.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/modalSuporte.css') }}">
+@endsection
+
+@section('header')
+    @include('layouts.layout-menuoff')
+@endsection
 
 @section('content')
 
@@ -123,4 +142,13 @@
         <i class="fa fa-arrow-up"></i>
     </a>
 
+    
+@endsection
+
+@section('modal')
+    @include('layouts.modal')
+@endsection
+
+@section('footer')
+    @include('layouts.footer')
 @endsection
