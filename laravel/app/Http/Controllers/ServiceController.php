@@ -8,7 +8,7 @@ use App\Segment;
 use App\User;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 
 class ServiceController extends Controller
 {
@@ -51,7 +51,8 @@ class ServiceController extends Controller
     
     
             $post->save();
-            return back()->with('success', 'serviço criado com sucesso');
+            Session::flash('message', 'Profissional indicado com sucesso!'); 
+            return back();
          }
        
 

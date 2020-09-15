@@ -208,6 +208,9 @@
                                             </div>
                                         </div>
 
+                                       @if(Session::has('message'))
+                                        <p class="alert alert-info">{{ Session::get('message') }}</p>
+                                        @endif
                                     </div>
 
                                 </div>
@@ -329,8 +332,8 @@
                                         </div>
                                         {{-- Telefone --}}
                                         <div class="form-group">
-                                            <input class="form-control" rows="1" placeholder="Telefone" name="phone" 
-                                            id="phone"></input>
+                                            <textarea class="form-control" rows="1" placeholder="Telefone" name="phone" 
+                                            id="phone"></textarea>
                                         </div>
                                         {{-- Email --}}
                                         <div class="form-group">
@@ -349,13 +352,12 @@
                                                 <option value="3">Design</option>
                                                 <option value="4">Eventos</option>
                                                 <option value="5">Moda</option>
-                                                <option valeu="6">Cosméticos</option>
+                                                <option value="6">Cosméticos</option>
                                                 <option value="7">Reformas</option>
                                                 <option value="8">Saúde</option>
                                                 <option value="9">Serviços domésticos</option>
                                                 <option value="10">Consertos</option>
                                                 <option value="11">Outros</option>
-                                                <option>Outros</option>
                                             </select>
                                         </div>
 
