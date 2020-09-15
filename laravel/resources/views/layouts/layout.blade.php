@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     {{-- SCRIPTS --}}
+    @stack('scripts')
     <script src="{{ asset('public/js/fontAwesome.js') }}" crossorigin="anonymous"></script>
 
     <meta charset="UTF-8">
@@ -15,11 +16,14 @@
     {{-- CSS --}}
     @section('style')
     <link rel="stylesheet" href="{{ asset('../css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
     @show
 
     {{-- FONT AWESOME --}}
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/05e16292f5.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 

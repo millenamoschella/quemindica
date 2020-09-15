@@ -1,20 +1,21 @@
+
 {{-- MODAL FOTO CAPA--}}
 
 <div id="modalFotoCapa" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog">
-        <div class="modal-content modal-cover-section text-center">
+        <div class="modal-content modal-photo-section text-center">
 
             {{-- BOTÃO FECHAR --}}
 
             <div class="fechar">
-                <button type="button" class="close-modal-cover" data-dismiss="modal">
+                <button type="button" class="close-modal-photo" data-dismiss="modal">
                     <i class="fa fa-times" aria-hidden="true"></i>
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                 </button>
             </div>
 
             {{-- TÍTULO MODAL FOTO --}}
-            <h4 class="modal-title-cover">Foto de Capa</h4>
+            <h4 class="modal-title-photo">Foto de Capa</h4>
 
             {{-- CORPO MODAL FOTO --}}
             <div class="modal-body">
@@ -27,7 +28,7 @@
                             {{-- FORMULÁRIO --}}
                             <div class="signup-form">
 
-                                <form action="{{ route('storeCover', Auth::user()->id) }}" method="POST"
+                                <form action="#" method="POST"
                                     enctype="multipart/form-data" class="register-form" id="register-form">
                                     @csrf
                                     <div class="row">
@@ -45,7 +46,7 @@
                                         {{-- INPUT UPLOAD DE IMAGEM
                                         --}}
                                         <div class="input-group mt-5 px-2 py-2 input-upload">
-                                            <input id="upload" name="cover" value="cover" type="file"
+                                            <input id="upload" name="photo" value="photo" type="file"
                                                 onchange="readURL(this);" class="form-control border-0">
 
                                             <label id="upload-label" for="upload"
@@ -62,8 +63,8 @@
 
 
                                         {{-- BOTÃO --}}
-                                        <div class="col-12 container-btn-modal-cover">
-                                            <button class="btn-cover-modal">
+                                        <div class="col-12 container-btn-modal-photo">
+                                            <button class="btn-photo-modal">
                                                 Salvar
                                             </button>
                                         </div>

@@ -1,9 +1,3 @@
-{{-- @section('style')
-@parent
-<link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
-@endsection --}}
-
-  
 <footer>
     <div class="secao-footer">
         <div class="container">

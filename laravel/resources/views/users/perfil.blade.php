@@ -1,4 +1,22 @@
-@extends('layouts.layout-menulogado')
+@extends('layouts.layout')
+
+@prepend('scripts')
+    <script defer src="{{ asset ('/js/app.js') }}" ></script>
+    {{-- <script defer src="{{ asset ('/js/modalfotoPerfil.js') }}"></script> --}}
+@endprepend
+
+@section('title', Auth::user()->name . ' ' . Auth::user()->lastname)
+
+@section('style')
+    @parent
+    <link rel="stylesheet" href="{{ asset('/css/perfil.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/modalFotoPerfil.css') }}">
+
+@endsection
+
+@section('header')
+    @include('layouts.layout-menulogado')
+@endsection
 
 @section('content')
 
@@ -937,5 +955,15 @@
 
 @section('modal')
     {{-- MODAL --}}
-    @extends('users.modalPhoto')
+    @include('users.modalPhoto')
+    @include('users.modalCapa')
 @endsection
+
+@section('footer')
+    @include('layouts.footer-logado')
+@endsection
+
+<script src="{{ asset('/js/modalfotoPerfil.js') }}"></script>
+<script src="{{ asset('/js/modalfotoCapa.js') }}"></script>
+
+

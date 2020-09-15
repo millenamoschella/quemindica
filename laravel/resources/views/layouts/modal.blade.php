@@ -1,5 +1,3 @@
-{{-- @extends('layouts.layout')
-@section('modal') --}}
 {{-- MODAL LOGIN --}}
 
 <div id="modalEntrar" class="modal fade" tabindex="-1" role="dialog">
@@ -449,4 +447,4 @@
         </div>
     </div>
 </div>
-{{-- @endsection --}}
+

@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="{{ asset('/css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/layout-menuoff.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/estilo.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/modal.css') }}">
 
     <link rel="stylesheet" href="{{ asset('/css/modalRegistrar.css') }}">
