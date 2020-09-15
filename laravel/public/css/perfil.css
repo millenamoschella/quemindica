@@ -788,10 +788,6 @@ span:hover {
     font-weight: 600;
 }
 
-.friends-cards {
-    display: block;
-}
-
 .card-friend {
     margin-top: 10px;
     border-radius: 15px;
@@ -800,11 +796,11 @@ span:hover {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.friend-list {
+.following-list {
     margin-top: 15px;
 }
 
-.friend-list ul li {
+.following-list ul li {
     position: relative;
     list-style: none;
     float: left;
@@ -812,22 +808,17 @@ span:hover {
     text-align: center;
 }
 
-.friend-list ul li img {
+.following-list ul li img {
     border-radius: 100%;
     border: 3px solid #ffd559;
-}
-
-.friend-list ul li img {
     width: 70px;
     height: 70px;
+    margin-bottom: 10px;
 }
 
-.friend-list ul li span.name {
+.name-following {
     position: relative;
-    width: 100%;
-    left: 0;
-    text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.8em;
     font-weight: 600;
     letter-spacing: 0.5px;
     color: #007592;

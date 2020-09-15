@@ -833,7 +833,7 @@
                                             </div>
                                         @else
 
-                                            <div class="friend-list clearfix">
+                                            <div class="following-list clearfix">
                                                 @foreach ($user->followers as $follower)
                                                     <ul>
                                                         <li class="following">
@@ -854,7 +854,7 @@
 
                                                             {{-- NOME
                                                             --}}
-                                                            <span class="name">
+                                                            <span class="name-following">
                                                                 {{ $follower->name . ' ' . $follower->lastname }}
                                                             </span>
 
