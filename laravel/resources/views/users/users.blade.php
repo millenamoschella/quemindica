@@ -21,10 +21,35 @@
                         <div class="card-front">
 
                             {{-- EXCLUIR OU BLOQUEAR --}}
+
                             <div class="card-links">
-                                <span><a href=""><i class="fas fa-plus" aria-hidden="true" title="Seguir"></i></a></span>
-                                <span><a href=""><i class="fa fa-ban" aria-hidden="true" title="Bloquear"></i></a></span>
+
+                                {{-- SEGUIR AMIGO --}}
+
+                                {{-- @if ($user->id != Auth::user()->id)
+
+                                    @if (is_null($follower))
+                                        <a href="{{ route('follow', $user->id) }}" data-title="Seguir">
+                                            <i class="fas fa-plus" aria-hidden="true"></i>
+                                        </a>
+                                        @else
+
+                                        <a href="{{ route('unfollow', $user->id) }}" data-title="Parar de seguir">
+                                            <i class="fas fa-minus" aria-hidden="true"></i>
+                                        </a>
+
+                                    @endif
+
+                                @endif --}}
+
+                                {{-- BLOQUEAR --}}
+                                <span>
+                                    <a href="" data-title="Bloquear"><i class="fa fa-ban" aria-hidden="true"></i>
+                                    </a>
+                                </span>
+
                             </div>
+
 
                             {{-- INFOS AMIGO --}}
                             <div class="card-user">

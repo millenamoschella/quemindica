@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function home(User $user)
     {
-        $user = Auth::user();
+        $user = User::all();
 
         return view('home', compact('user'));
     }

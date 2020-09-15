@@ -109,7 +109,7 @@
                                     aria-labelledby="messages">
                                     <a class="dropdown-item" href="{{ route('user', Auth::user()->username) }}">Meu
                                         Perfil</a>
-                                    <a class="dropdown-item" href="{{ route('users') }}">Usuários</a>
+                                    <a class="dropdown-item" href="{{ route('users', $user->username) }}">Usuários</a>
                                     <a class="dropdown-item"
                                         href="{{ route('seguindo', $user->username) }}">Seguindo</a>
                                     <a class="dropdown-item" href="#">Seguidores</a>

@@ -66,7 +66,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Service::class);
     }
- 
+
 
     public function followers()
     {
@@ -80,12 +80,21 @@ class User extends Authenticatable
     }
 
 
+    public function isFollowing(User $user)
+    {
+        return !!$this->following()->where('follower_id', $user->id)->count();
+    }
+
+
+    public function isFollowedBy(User $user)
+    {
+        return !!$this->followers()->where('user_id', $user->id)->count();
+    }
+
 
 
     public function unfollow(User $user)
     {
-    return $this->followers()->detach($user->id);
+        return $this->followers()->detach($user->id);
     }
-
-
 }

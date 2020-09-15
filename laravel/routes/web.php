@@ -26,7 +26,7 @@ Route::get('/user/{username}', 'UserController@username')->name('user');
 
 Route::get('/editarperfil/{id}', 'UserController@editProfile')->name('editarperfil');
 Route::post('/updateProfile/{id}', 'UserController@updateProfile')->name('updateProfile');
-Route::get('/users', 'UserController@users')->name('users');
+Route::get('/users/{username}', 'UserController@users')->name('users');
 
 
 // ROTAS USUÁRIOS SEGUIDOS PELO USER  

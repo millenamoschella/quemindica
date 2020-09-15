@@ -146,16 +146,22 @@ class UserController extends Controller
             ->where('user_id', '=', Auth::user()->id)->first();
 
 
-
         return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower'));
     }
 
 
 
     // --------------- MOSTRAR TODOS OS USUÁRIOS
-    public function users(User $user)
+    public function users($username)
     {
-        $users = User::all();
-        return view('users.users', compact('users'));
+
+        $user = User::where('username', $username)->first();
+        $users = User::orderby('created_at', 'DESC')->limit(9)->get();
+
+        $follower = Follower::where('follower_id', '=', $user->id)
+            ->where('user_id', '=', Auth::user()->id)->first();
+
+
+        return view('users.users', compact('users', 'follower', 'user'));
     }
 }

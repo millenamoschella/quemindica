@@ -67,7 +67,7 @@
                     @else
 
                         <a href="{{ route('unfollow', $user->id) }}">
-                            <button class="add-friend">Unfollow</button>
+                            <button class="add-friend">Deixar de seguir</button>
                         </a>
 
                     @endif
@@ -128,8 +128,8 @@
                                     <i class="fa fa-user-circle" aria-hidden="true"><a
                                             href="{{ route('user', Auth::user()->username) }}" title="">Perfil</a></i>
 
-                                    <i class="fa fa-users" aria-hidden="true"><a href="{{ route('users') }}"
-                                            title="">Usuários</a></i>
+                                    <i class="fa fa-users" aria-hidden="true"><a
+                                            href="{{ route('users', $user->username) }}" title="">Usuários</a></i>
 
                                     <i class="fas fa-user-friends" aria-hidden="true"><a
                                             href="{{ route('seguindo', $user->username) }}" title="">Seguindo</a></i>
@@ -150,7 +150,7 @@
                             </div>
 
                             {{-- TAGS --}}
-                            <div class="tags-section text-center">
+                            {{-- <div class="tags-section text-center">
 
                                 <div class="profile-tags">
                                     <h5>Tags seguidas</h5>
@@ -169,7 +169,7 @@
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> --}}
 
                         </div>
                     </div>
@@ -876,16 +876,6 @@
                                 </div>
 
                             </div>
-
-
-
-
-
-
-
-
-
-
 
 
                             {{-- SEÇÃO SERVIÇOS

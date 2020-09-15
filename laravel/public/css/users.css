@@ -49,9 +49,38 @@
     color: #007592;
 }
 
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+
+[data-title]:after {
+    content: attr(data-title);
+    background-color: #007592;
+    color: #fdcf46;
+    font-size: 0.9em;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -1.6em;
+    left: 100%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #007592;
+    opacity: 0;
+    border: 1px solid #007592;
+    z-index: 99999;
+    visibility: hidden;
+}
+
+[data-title] {
+    position: relative;
+}
+
 .card-links span:last-child {
     float: right;
 }
+
+
 
 .card-user img {
     width: 100px;
@@ -79,7 +108,7 @@
     font-size: 0.9em;
     text-align: center;
     display: block;
-    color: #fff;
+    color: #007592;
 }
 
 .card-user a {

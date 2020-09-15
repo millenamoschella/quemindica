@@ -64,10 +64,10 @@
 
             {{-- LOGO E QUEM INDICA --}}
             <div class="nav-brand logo-nav">
-                <a class="navbar-brand" href="{{ route('user', Auth::user()->username) }}">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img src="{{ asset('../imagens/logo/logo-icon.svg') }}" alt="Logo Quem Indica" class="img-fluid">
                 </a>
-                <a class="navbar-brand titulo-quemindica" href="{{ route('user', Auth::user()->username) }}">
+                <a class="navbar-brand titulo-quemindica" href="{{ route('home') }}">
                     Quem Indica
                 </a>
             </div>
@@ -137,8 +137,9 @@
                                 aria-labelledby="navbarDropdown">
 
                                 {{-- BOTÃO SAIR --}}
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                    document.getElementById('logout-form').submit();">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                                                document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
