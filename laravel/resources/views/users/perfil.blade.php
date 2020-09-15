@@ -956,7 +956,7 @@
 @section('modal')
     {{-- MODAL --}}
     @include('users.modalPhoto')
-    @include('users.modalCapa')
+    {{-- @include('users.modalCapa') --}}
 @endsection
 
 @section('footer')
@@ -964,6 +964,6 @@
 @endsection
 
 <script src="{{ asset('/js/modalfotoPerfil.js') }}"></script>
-<script src="{{ asset('/js/modalfotoCapa.js') }}"></script>
+{{-- <script src="{{ asset('/js/modalfotoCapa.js') }}"></script> --}}
 
 
