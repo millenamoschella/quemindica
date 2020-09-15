@@ -1,15 +1,17 @@
 .secao-amigos {
     margin-top: 40px;
-    padding: 30px;
+    padding-bottom: 270px;
+    background: #00415e;
 }
 
 .secao-amigos h1 {
     font-weight: bold;
     margin-top: 30px;
+    color: #fdcf46;
 }
 
 .default-message-follow-page {
-    color: #fdcf46;
+    color: #b3b3b3;
     margin-top: 10%;
     padding: 40px;
     font-weight: 600;

@@ -82,7 +82,7 @@
 
 
     {{-- SEÇÃO MENU, POSTS E AMIGOS --}}
-    <section>
+    <section class="content-user">
         <div class="container-fluid content-perfil">
 
             <div class="col-12">
@@ -807,7 +807,7 @@
                     </div>
 
                     {{-- MENU DIREITO --}}
-                    <div class="col-lg-3 col-md-2 col-sm-12 order-md-3 text-center section-right-menu ">
+                    <div class="col-lg-3 col-md-2 col-sm-12 order-md-3 text-center section-right-menu">
 
                         {{-- SEÇÃO AMIGOS --}}
                         <div class="card card-sticky scroll">
@@ -911,6 +911,7 @@
     </section>
 
 @endsection
+
 
 @section('modal')
     {{-- MODAL --}}

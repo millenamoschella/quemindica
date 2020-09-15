@@ -1,11 +1,13 @@
 .secao-amigos {
     margin-top: 40px;
     padding: 30px;
+    background: #00415e;
 }
 
 .secao-amigos h1 {
     font-weight: bold;
     margin-top: 30px;
+    color: #fdcf46;
 }
 
 .card-amigo {
