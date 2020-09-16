@@ -1,12 +1,13 @@
 .secao-amigos {
-    margin-top: 40px;
-    padding-bottom: 270px;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
     background: #00415e;
 }
 
 .secao-amigos h1 {
     font-weight: bold;
-    margin-top: 30px;
+    padding-top: 100px;
     color: #fff;
 }
 

@@ -5,13 +5,6 @@
 @section('style')
     @parent
     <link rel="stylesheet" href="{{ asset('/css/home.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/layout-menuoff.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/estilo.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/modal.css') }}">
-
-    <link rel="stylesheet" href="{{ asset('/css/modalRegistrar.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/modalLogin.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/modalSuporte.css') }}">
 @endsection
 
 @section('header')
@@ -33,7 +26,7 @@
                 <div class="secao-banner-texto box">
 
                     {{-- TÍTULO --}}
-                    <h4 class="text-center">Procura um serviço?</h4>
+                    <h4 class="text-center white mb-3">Procura um serviço?</h4>
 
                     {{-- TEXTO --}}
                     <p class="text-center">
@@ -90,7 +83,7 @@
         <div class="container ">
             <div class="row align-items-center">
                 <div class="col-xs-8 col-sm-6">
-                    <h4 class="text-center">O que indica?</h4>
+                    <h4 class="text-center mb-3">O que indica?</h4>
                     <p class="text-center px-5">
                         Não só de serviços e produtos que vivemos... aqui seu encontro
                         é perfeito
@@ -137,9 +130,9 @@
 
     {{-- VOLTAR PARA O TOPO - CSS NO ESTILO.CSS --}}
 
-    <a href="#" id="toTopBtn" class="btn toTopBtn" data-abc="true">
+    <button onclick="topFunction()" title="Go to top" id="toTopBtn" class="btn toTopBtn" data-abc="true">
         <i class="fa fa-arrow-up"></i>
-    </a>
+    </button>
 
     
 @endsection
@@ -151,3 +144,6 @@
 @section('footer')
     @include('layouts.footer')
 @endsection
+
+
+

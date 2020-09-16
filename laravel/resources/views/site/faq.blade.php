@@ -1,5 +1,15 @@
-@extends('layouts.layout-menuoff')
+@extends('layouts.layout')
 
+@section('title', 'FAQ')
+
+@section('style')
+    @parent
+    <link rel="stylesheet" href="{{ asset('/css/faq.css') }}">
+@endsection
+
+@section('header')
+    @include('layouts.layout-menuoff')
+@endsection
 
 @section('content')
 
@@ -470,4 +480,12 @@
     </div>
 
 
+@endsection
+
+@section('modal')
+    @include('layouts.modal')
+@endsection
+
+@section('footer')
+    @include('layouts.footer')
 @endsection

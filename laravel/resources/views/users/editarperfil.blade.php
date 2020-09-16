@@ -1,4 +1,15 @@
-@extends('layouts.layout-menulogado')
+@extends('layouts.layout')
+
+@section('title', 'Editar')
+
+@section('style')
+    @parent
+    <link rel="stylesheet" href="{{ asset('/css/editarperfil.css') }}">
+@endsection
+
+@section('header')
+    @include('layouts.layout-menulogado')
+@endsection
 
 
 @section('content')

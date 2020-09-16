@@ -1,3 +1,9 @@
+@section('style')
+    @parent
+    <link rel="stylesheet" href="{{ asset('/css/modalRegistrar.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/modalLogin.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/modalSuporte.css') }}">
+@endsection
 {{-- MODAL LOGIN --}}
 
 <div id="modalEntrar" class="modal fade" tabindex="-1" role="dialog">

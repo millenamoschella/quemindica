@@ -1,4 +1,15 @@
-@extends('layouts.layout-menuoff')
+@extends('layouts.layout')
+
+@section('title', 'Sobre')
+
+@section('style')
+    @parent
+    <link rel="stylesheet" href="{{ asset('/css/sobre.css') }}">
+@endsection
+
+@section('header')
+    @include('layouts.layout-menuoff')
+@endsection
 
 
 @section('content')
@@ -119,7 +130,7 @@
 
                 {{-- TÍTULO --}}
                 <div class="col-lg-12">
-                    <h2 class="display-4">Quem faz parte!</h2>
+                    <h2 class="display-4 dark-gray">Quem faz parte!</h2>
                 </div>
 
             </div>
@@ -246,8 +257,16 @@
 
     {{-- VOLTAR PARA O TOPO - CSS NO ESTILO.CSS --}}
 
-    <a href="#" id="toTopBtn" class="btn toTopBtn" data-abc="true">
+    <button onclick="topFunction()" title="Go to top" id="toTopBtn" class="btn toTopBtn" data-abc="true">
         <i class="fa fa-arrow-up"></i>
-    </a>
+    </button>
 
+@endsection
+
+@section('modal')
+    @include('layouts.modal')
+@endsection
+
+@section('footer')
+    @include('layouts.footer')
 @endsection

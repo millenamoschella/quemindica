@@ -1,4 +1,16 @@
-@extends('layouts.layout-menulogado')
+@extends('layouts.layout')
+
+@section('title', 'Seguindo')
+
+@section('style')
+    @parent
+    <link rel="stylesheet" href="{{ asset('/css/following.css') }}">
+@endsection
+
+@section('header')
+    @include('layouts.layout-menulogado')
+@endsection
+
 
 
 @section('content')
@@ -98,4 +110,8 @@
     </div>
 
 
+@endsection
+
+@section('footer')
+    @include('layouts.footer-logado')
 @endsection

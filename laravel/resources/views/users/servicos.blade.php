@@ -1,4 +1,15 @@
-@extends('layouts.layout-menulogado')
+@extends('layouts.layout')
+
+@section('title', 'Serviços')
+
+@section('style')
+    @parent
+    <link rel="stylesheet" href="{{ asset('/css/servicos.css') }}">
+@endsection
+
+@section('header')
+    @include('layouts.layout-menulogado')
+@endsection
 
 
 @section('content')
@@ -477,11 +488,8 @@
         </div>
     </div>
 
+@endsection
 
-
-
-
-
-
-
+@section('footer')
+    @include('layouts.footer-logado')
 @endsection

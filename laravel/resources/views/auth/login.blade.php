@@ -1,4 +1,15 @@
-@extends('layouts.layout-menuoff')
+@extends('layouts.layout')
+
+@section('title', 'Login')
+
+@section('style')
+    @parent
+    <link rel="stylesheet" href="{{ asset('/css/login.css') }}">
+@endsection
+
+@section('header')
+    @include('layouts.layout-menuoff')
+@endsection
 
 @section('content')
 
@@ -105,16 +116,8 @@
         </div>
     </div>
 
+@endsection
 
-
-
-
-
-
-
-
-
-
-
-
+@section('footer')
+    @include('layouts.footer')
 @endsection

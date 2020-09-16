@@ -26,6 +26,15 @@ h5 {
     color: #007592;
 }
 
+
+.dark-gray {
+    color: #333;
+}
+
+.white {
+    color: white;
+}
+
 /* LOGO */
 #quemindica {
     margin-top: 90px;
@@ -41,8 +50,8 @@ h5 {
     z-index: 98;
     padding: 15px;
     border-radius: 5px;
-    color: #fff;
-    background-color: #027592;
+    color: #fff !important;
+    background-color: #027592 !important;
 
     box-shadow: 0 1px 3px #0000001f,
         0 1px 2px #0000003d;
@@ -51,8 +60,8 @@ h5 {
 
 .toTopBtn:hover {
     font-weight: bold;
-    background-color: #FCDA73;
-    color: #027592;
+    background-color: #FCDA73 !important;
+    color: #027592 !important;
     box-shadow: 0 14px 28px #00000040,
         0 10px 10px #00000038;
 }

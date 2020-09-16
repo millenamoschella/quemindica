@@ -1,9 +1,7 @@
-
-    {{-- @section('style')
+@section('style')
     @parent
-    <link rel="stylesheet" href="{{ asset('../css/layout-menuoff.css') }}">
-    <link rel="stylesheet" href="{{ asset('../css/estilo.css') }}">
-    @endsection --}}
+    <link rel="stylesheet" href="{{ asset('/css/layout-menuoff.css') }}">
+@endsection
 
 
     {{-- MENU --}}

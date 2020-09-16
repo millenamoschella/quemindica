@@ -1,4 +1,15 @@
-@extends('layouts.layout-menuoff')
+@extends('layouts.layout')
+
+@section('title', 'Termos')
+
+@section('style')
+    @parent
+    <link rel="stylesheet" href="{{ asset('/css/politicas.css') }}">
+@endsection
+
+@section('header')
+    @include('layouts.layout-menuoff')
+@endsection
 
 
 @section('content')
@@ -170,4 +181,12 @@
     </section>
 
 
+@endsection
+
+@section('modal')
+    @include('layouts.modal')
+@endsection
+
+@section('footer')
+    @include('layouts.footer')
 @endsection

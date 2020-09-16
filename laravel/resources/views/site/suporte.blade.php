@@ -1,4 +1,10 @@
-@extends('layouts.layout-menuoff')
+@extends('layouts.layout')
+
+@section('title', 'Suporte')
+
+@section('header')
+    @include('layouts.layout-menuoff')
+@endsection
 
 @section('content')
 
@@ -69,4 +75,12 @@
 
     </section>
 
+@endsection
+
+@section('modal')
+    @include('layouts.modal')
+@endsection
+
+@section('footer')
+    @include('layouts.footer')
 @endsection
