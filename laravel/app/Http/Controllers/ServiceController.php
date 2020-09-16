@@ -7,6 +7,7 @@ use App\Service;
 use App\Segment;
 use App\User;
 use App\Post;
+use App\Rating;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
@@ -40,9 +41,15 @@ class ServiceController extends Controller
             $service->nome_prestador = $provider->name;
             $service->user_id = $provider->id;
             $service->servico = $request->get('servico');
+            $service->local = $request->get('local');
             $service->save();
     
-    
+            $rating = new Rating();
+         
+            $rating->nota = $request->get('nota');
+            $rating->user_id = Auth::user()->id;
+            $rating->save();
+
             $post = new Post();
     
             $post->conteudo = $request->get('conteudo');
@@ -70,7 +77,16 @@ class ServiceController extends Controller
         $service->nome_prestador = $provider->name;
         $service->user_id = $provider->id;
         $service->servico = $request->get('servico');
+        $service->local = $request->get('local');
         $service->save();
+
+        request()->validate(['rate' => 'required']);
+        
+        $rating = new Rating();
+         
+        $rating->nota = $request->get('nota');
+        $rating->user_id = Auth::user()->id;
+        $rating->save();
 
 
         $post = new Post();

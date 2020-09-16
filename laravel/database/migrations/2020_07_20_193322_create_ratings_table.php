@@ -15,7 +15,7 @@ class CreateRatingsTable extends Migration
     {
         Schema::create('ratings', function (Blueprint $table) {
             $table->id();
-            $table->decimal('nota', 2, 1);
+            $table->float('nota', 2, 1);
             $table->timestamps();
 
             $table->foreignId('user_id')->constrained();

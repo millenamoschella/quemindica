@@ -322,12 +322,12 @@
     display: none;
 }
 
-.stars-rating-service label i.fas:before {
+.stars-rating-service label i.fas .starService:before {
     content: '\f005';
     color: #ffcd36;
 }
 
-.stars-rating-service input[type=radio]:checked~label i.fas:before {
+.stars-rating-service input[type=radio]:checked~label i.fas .starService:before {
     color: #CCC;
 }
 
@@ -904,12 +904,13 @@ span:hover {
 .services-cards {
     margin: 10px 10px;
     border-radius: 15px;
-    width: 120px;
+    width: 70px;
 
     box-shadow: 0 1px 3px #0000001f,
         0 1px 2px #0000003d;
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
+
 
 .services-cards:hover {
     box-shadow: 0 8px 16px 0 #00000033;

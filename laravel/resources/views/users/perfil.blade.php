@@ -251,77 +251,78 @@
                                     <div id="backIconCulture" class="backIcon">
                                         <i class="fas fa-arrow-left"></i>
                                     </div>
+                                    
+                                    
+                            {{-- ESCREVER INDICAÇÃO DE CULTURA
+                            --}}
+                            <form action="{{ route('culture_insert') }}" method="POST"
+                                enctype="multipart/form-data">
+                                @csrf
 
-                                    {{-- ESCREVER INDICAÇÃO DE CULTURA
-                                    --}}
-                                    <form action="{{ route('culture_insert') }}" method="POST"
-                                        enctype="multipart/form-data">
-                                        @csrf
+                                {{-- SEGMENTO --}}
+                                <div class="form-group col-md-4 px-0">
+                                    <label for="cultureSegment">Segmento</label>
+                                    <select id="cultureSegment" class="form-control" name="culture__segments_id">
+                                        <option selected>Escolha uma opção</option>
+                                        <option value="1">Música</option>
+                                        <option value="2">Filme</option>
+                                        <option value="3">Série</option>
+                                        <option value="4">Livro</option>
 
-                                        {{-- SEGMENTO --}}
-                                        <div class="form-group col-md-4 px-0">
-                                            <label for="cultureSegment">Segmento</label>
-                                            <select id="cultureSegment" class="form-control" name="culture__segments_id">
-                                                <option selected>Escolha uma opção</option>
-                                                <option value="1">Música</option>
-                                                <option value="2">Filme</option>
-                                                <option value="3">Série</option>
-                                                <option value="4">Livro</option>
+                                    </select>
+                                </div>
 
-                                            </select>
-                                        </div>
+                                {{-- PLATAFORMA --}}
+                                <div class="form-group col-md-4 px-0">
+                                    <label for="plataforma">Plataforma</label>
+                                    <select id="plataforma" class="form-control" name="plataforma">
+                                        <option selected>Escolha uma opção</option>
+                                        <option value="Netflix">Netflix</option>
+                                        <option value="HBO GO">HBO GO</option>
+                                        <option value="Prime Video">Prime Video</option>
+                                        <option value="E-book">Kindle (e-book)</option>
+                                        <option value="Livro">Livro de papel</option>
+                                        <option value="Spotify">Spotify</option>
+                                        <option value="Deezer">Deezer</option>
+                                        <option>Outros</option>
+                                    </select>
+                                </div>
 
-                                        {{-- PLATAFORMA --}}
-                                        <div class="form-group col-md-4 px-0">
-                                            <label for="plataforma">Plataforma</label>
-                                            <select id="plataforma" class="form-control" name="plataforma">
-                                                <option selected>Escolha uma opção</option>
-                                                <option value="Netflix">Netflix</option>
-                                                <option value="HBO GO">HBO GO</option>
-                                                <option value="Prime Video">Prime Video</option>
-                                                <option value="E-book">Kindle (e-book)</option>
-                                                <option value="Livro">Livro de papel</option>
-                                                <option value="Spotify">Spotify</option>
-                                                <option value="Deezer">Deezer</option>
-                                                <option>Outros</option>
-                                            </select>
-                                        </div>
+                                {{-- TITULO --}}
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="1" placeholder="Título" name="titulo"
+                                        id="titulo"></textarea>
+                                </div>
 
-                                        {{-- TITULO --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Título" name="titulo"
-                                                id="titulo"></textarea>
-                                        </div>
+                                {{-- COMENTÁRIO --}}
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3" placeholder="Comentário" name="conteudo"
+                                        id="conteudo"></textarea>
+                                </div>
 
-                                        {{-- COMENTÁRIO --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="3" placeholder="Comentário" name="conteudo"
-                                                id="conteudo"></textarea>
-                                        </div>
+                                {{-- NOTA --}}
+                                {{-- <label for="">Avaliação:</label>
+                                <div class="stars-rating">
+                                    <input type="radio" id="cm_star-empty" name="fb" value="" checked />
+                                    <label for="cm_star-1"><i class="fas fa-star"></i></label>
+                                    <input type="radio" id="cm_star-1" name="fb" value="1" />
+                                    <label for="cm_star-2"><i class="fas fa-star"></i></label>
+                                    <input type="radio" id="cm_star-2" name="fb" value="2" />
+                                    <label for="cm_star-3"><i class="fas fa-star"></i></label>
+                                    <input type="radio" id="cm_star-3" name="fb" value="3" />
+                                    <label for="cm_star-4"><i class="fas fa-star"></i></label>
+                                    <input type="radio" id="cm_star-4" name="fb" value="4" />
+                                    <label for="cm_star-5"><i class="fas fa-star"></i></label>
+                                    <input type="radio" id="cm_star-5" name="fb" value="5" />
+                                </div> --}}
 
-                                        {{-- NOTA --}}
-                                        <label for="">Avaliação:</label>
-                                        <div class="stars-rating">
-                                            <input type="radio" id="cm_star-empty" name="fb" value="" checked />
-                                            <label for="cm_star-1"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-1" name="fb" value="1" />
-                                            <label for="cm_star-2"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-2" name="fb" value="2" />
-                                            <label for="cm_star-3"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-3" name="fb" value="3" />
-                                            <label for="cm_star-4"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-4" name="fb" value="4" />
-                                            <label for="cm_star-5"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-5" name="fb" value="5" />
-                                        </div>
+                                {{-- BOTÃO POSTAR --}}
+                                <button class="btn float-right button-posts">
+                                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                    <span>Postar</span>
+                                </button>
 
-                                        {{-- BOTÃO POSTAR --}}
-                                        <button class="btn float-right button-posts">
-                                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                                            <span>Postar</span>
-                                        </button>
-
-                                    </form>
+                            </form>
 
                                 </div>
                             </div>
@@ -336,103 +337,7 @@
                                         <i class="fas fa-arrow-left"></i>
                                     </div>
 
-                                    {{-- ESCREVER INDICAÇÃO DE SERVIÇO
-                                    --}}
-                                    <form action="{{ route('service_insert') }}" method="POST"
-                                        enctype="multipart/form-data">
-                                        @csrf
-
-                                        {{-- TÍTULO DE SERVIÇO
-                                        --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Serviço Prestado"
-                                                name="servico" id="service"></textarea>
-                                        </div>
-
-                                        {{-- NOME PRESTADOR --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Nome do profissional"
-                                                name="name" id="name"></textarea>
-                                        </div>
-                                        {{-- Telefone --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Telefone" name="phone"
-                                                id="phone"></textarea>
-                                        </div>
-                                        {{-- Email --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Email" name="email"
-                                                id="email"></textarea>
-                                        </div>
-
-                                        {{-- SEGMENTO --}}
-
-                                        <div class="form-group col-md-4 px-0">
-                                            <label for="segments">Segmento</label>
-                                            <select id="segments" class="form-control" name="segment_id">
-                                                <option selected>Escolha uma opção</option>
-                                                <option value="1">Assistência Técnica</option>
-                                                <option value="2">Educação</option>
-                                                <option value="3">Design</option>
-                                                <option value="4">Eventos</option>
-                                                <option value="5">Moda</option>
-                                                <option value="6">Cosméticos</option>
-                                                <option value="7">Reformas</option>
-                                                <option value="8">Saúde</option>
-                                                <option value="9">Serviços domésticos</option>
-                                                <option value="10">Consertos</option>
-                                                <option value="11">Outros</option>
-                                            </select>
-                                        </div>
-
-                                        {{-- NOTA --}}
-                                        <label for="">Avaliação:</label>
-                                        <div class="stars-rating-service">
-                                            <input type="radio" id="cm_star-empty-service" name="fb" value="" checked />
-                                            <label for="cm_star-1"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-1-service" name="fb" value="1" />
-                                            <label for="cm_star-2"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-2-service" name="fb" value="2" />
-                                            <label for="cm_star-3"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-3-service" name="fb" value="3" />
-                                            <label for="cm_star-4"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-4-service" name="fb" value="4" />
-                                            <label for="cm_star-5"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-5-service" name="fb" value="5" />
-                                        </div>
-
-                                        {{-- CONTEÚDO --}}
-                                        <div class="form-group">
-
-                                            <textarea class="form-control" rows="3"
-                                                placeholder="O que tem a dizer sobre este profissional?" name="conteudo"
-                                                id="conteudo"></textarea>
-                                        </div>
-
-
-                                        {{-- BOTÕES POSTAR --}}
-                                        <div class="form-group icones-postagem">
-
-                                            {{-- ÍCONES PARA MARCAR UMA PESSOA, ADD IMAGEM OU
-                                            LOCAL A POSTAGEM --}}
-                                            <button class="btn icon-post"><i class="fa fa-paperclip"
-                                                    aria-hidden="true"></i></button>
-                                            <button class="btn icon-post"><i class="fa fa-map-marker"
-                                                    aria-hidden="true"></i></button>
-                                            <button class="btn icon-post"><i class="fa fa-user"
-                                                    aria-hidden="true"></i></button>
-
-
-
-                                            {{-- BOTÃO POSTAR --}}
-                                            <button class="btn float-right button-posts">
-                                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                                                <span>Postar</span>
-                                            </button>
-
-                                        </div>
-
-                                    </form>
+                                    @include('forms.service')
 
                                 </div>
                             </div>
@@ -446,98 +351,8 @@
                                     <div id="backIconProduct" class="backIcon">
                                         <i class="fas fa-arrow-left"></i>
                                     </div>
-
-                                    {{-- ESCREVER INDICAÇÃO DE PRODUTO
-                                    --}}
-                                    <form action="{{ route('product_insert') }}" method="POST"
-                                        enctype="multipart/form-data">
-                                        @csrf
-
-                                        {{-- NOME DO PRODUTO --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Produto" name="nome"
-                                                id="nome"></textarea>
-                                        </div>
-                                        {{-- MARCA --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Marca" name="marca"
-                                                id="marca"></textarea>
-                                        </div>
-
-                                        {{-- SEGMENTO --}}
-
-                                        <div class="form-group col-md-4 px-0">
-                                            <label for="segments">Segmento</label>
-                                            <select id="segments" class="form-control" name="segment_id">
-                                                <option selected>Escolha uma opção</option>
-                                                <option value="1">Assistência Técnica</option>
-                                                <option value="2">Educação</option>
-                                                <option value="3">Design</option>
-                                                <option value="4">Eventos</option>
-                                                <option value="5">Moda</option>
-                                                <option value="6">Cosméticos</option>
-                                                <option value="7">Reformas</option>
-                                                <option value="8">Saúde</option>
-                                                <option value="9">Serviços domésticos</option>
-                                                <option value="10">Consertos</option>
-                                                <option value="11">Outros</option>
-                                            </select>
-                                        </div>
-
-                                        {{-- PREÇO --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Preço" name="valor"
-                                                id="valor"></textarea>
-                                        </div>
-                                        {{-- LOJA --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="1" placeholder="Loja" name="loja"
-                                                id="loja"></textarea>
-                                        </div>
-
-                                        {{-- NOTA --}}
-                                        <label for="">Avaliação:</label>
-                                        <div class="stars-rating">
-                                            <input type="radio" id="cm_star-empty" name="fb" value="" checked />
-                                            <label for="cm_star-1"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-1" name="fb" value="1" />
-                                            <label for="cm_star-2"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-2" name="fb" value="2" />
-                                            <label for="cm_star-3"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-3" name="fb" value="3" />
-                                            <label for="cm_star-4"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-4" name="fb" value="4" />
-                                            <label for="cm_star-5"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="cm_star-5" name="fb" value="5" />
-                                        </div>
-                                        {{-- CONTEÚDO --}}
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="3"
-                                                placeholder="Qual a sua indicação de hoje?" name="conteudo"
-                                                id="conteudo"></textarea>
-                                        </div>
-
-                                        {{-- BOTÕES POSTAR --}}
-                                        <div class="form-group icones-postagem">
-
-                                            {{-- ÍCONES PARA MARCAR UMA PESSOA, ADD IMAGEM OU
-                                            LOCAL A POSTAGEM --}}
-                                            <button class="btn icon-post"><i class="fa fa-paperclip"
-                                                    aria-hidden="true"></i></button>
-                                            <button class="btn icon-post"><i class="fa fa-map-marker"
-                                                    aria-hidden="true"></i></button>
-                                            <button class="btn icon-post"><i class="fa fa-user"
-                                                    aria-hidden="true"></i></button>
-
-                                            {{-- POSTAR --}}
-                                            <button class="btn float-right button-posts">
-                                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                                                <span>Postar</span>
-                                            </button>
-
-                                        </div>
-
-                                    </form>
+                                        
+                                    @include('forms.product')
 
                                 </div>
                             </div>
@@ -552,7 +367,7 @@
                                 </div>
                             @else
 
-                                <div class="card shadow mb-3 posts-area">
+                                <div class="card shadow my-3 posts-area">
                                     {{-- FOTO USUÁRIO E HORÁRIO POST
                                     --}}
                                     @foreach ($postsUser as $post)
@@ -913,6 +728,7 @@
                                     --}}
                                     <div class="services-area">
                                         <a href="#">
+                                            
                                             <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
                                                 class="img-fluid services-cards">
                                         </a>

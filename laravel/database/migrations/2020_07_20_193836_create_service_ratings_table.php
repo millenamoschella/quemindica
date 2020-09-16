@@ -17,6 +17,7 @@ class CreateServiceRatingsTable extends Migration
            
             $table->foreignId('rating_id')->constrained();
             $table->foreignId('service_id')->constrained();
+            $table->timestamps();
         });
     }
 

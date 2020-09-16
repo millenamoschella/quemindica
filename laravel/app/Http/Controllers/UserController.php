@@ -9,6 +9,7 @@ use App\Comment;
 use App\Culture;
 use Illuminate\Support\Facades\Auth;
 use App\Follower;
+use App\Rating;
 
 class UserController extends Controller
 {
@@ -140,13 +141,14 @@ class UserController extends Controller
         $commentsUser = Comment::limit(3)->get();
         $postsCulture = Culture::All();
         $post = Post::find('culture_id');
+        $rating = Rating::all();
 
         // variável pra identificar se o usuário já segue alguém
         $follower = Follower::where('follower_id', '=', $user->id)
             ->where('user_id', '=', Auth::user()->id)->first();
 
 
-        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower'));
+        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower', 'rating'));
     }
 
 
