@@ -141,14 +141,17 @@ class UserController extends Controller
         $commentsUser = Comment::limit(3)->get();
         $postsCulture = Culture::All();
         $post = Post::find('culture_id');
-        $rating = Rating::all();
+        $rating = Rating::All();
+        $notas = Rating::where('nota', $rating->nota)->get();
+        $sum = array_sum($notas);
+        $result = $sum/5;
 
         // variável pra identificar se o usuário já segue alguém
         $follower = Follower::where('follower_id', '=', $user->id)
             ->where('user_id', '=', Auth::user()->id)->first();
 
 
-        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower', 'rating'));
+        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower', 'rating', 'result'));
     }
 
 

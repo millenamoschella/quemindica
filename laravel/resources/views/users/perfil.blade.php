@@ -59,11 +59,36 @@
 
             {{-- PONTUAÇÃO USUÁRIO --}}
             <div class="stars">
-                <i class="fas fa-star"></i>
+                {{-- <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i>
+                <i class="far fa-star"></i> --}}
+                @php $result ; @endphp  
+
+                <p>
+                    <div class="placeholder" style="color: lightgray;">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="small">({{ $rating }})</span>
+                    </div>
+            
+                    <div class="overlay" style="position: relative;top: -22px;">
+                        
+                        @while($rating>0)
+                            @if($rating >0.5)
+                                <i class="fas fa-star"></i>
+                            @else
+                                <i class="fas fa-star-half"></i>
+                            @endif
+                            @php $rating--; @endphp
+                        @endwhile
+            
+                    </div> 
+                </p>
             </div>
 
             {{-- NOME USUÁRIO --}}
