@@ -152,7 +152,7 @@ class UserController extends Controller
 
         $ratings = Rating::whereIn('service_id', $serviceUser)->pluck('nota');
 
-        dd($ratings);
+        // dd($ratings);
       
 
         // variável pra identificar se o usuário já segue alguém
@@ -160,7 +160,7 @@ class UserController extends Controller
             ->where('user_id', '=', Auth::user()->id)->first();
 
 
-        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower', 'ratings', 'serviceUser'));
+        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower', 'ratings'));
     }
 
 

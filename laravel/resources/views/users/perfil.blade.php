@@ -174,7 +174,7 @@
                                             <i class="fas fa-star-half-alt"></i>
                                             <i class="far fa-star"></i>
                                             <div>
-                                                <span>25 pontos</span>
+                                                <span>{{ $ratings }} pontos</span>
                                             </div>
                                         </div>
 
