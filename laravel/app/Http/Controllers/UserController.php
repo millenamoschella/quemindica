@@ -147,28 +147,20 @@ class UserController extends Controller
         $postsCulture = Culture::All();
         $post = Post::find('culture_id');
 
-
-        // $ratings = Rating::all();
+        // Pegando as notas de um usuário:
         $serviceUser = Service::where('user_id', '=', $user->id)->pluck('id');
-        // $serviceUser = $serviceUser->all();
-        
-        $ratings = Rating::where('service_id', '=', $serviceUser)->pluck('nota');
+
+        $ratings = Rating::whereIn('service_id', $serviceUser)->pluck('nota');
+
         dd($ratings);
-        // $userRating = $ratings->nota;
-
-
-
-
-
-
-        
+      
 
         // variável pra identificar se o usuário já segue alguém
         $follower = Follower::where('follower_id', '=', $user->id)
             ->where('user_id', '=', Auth::user()->id)->first();
 
 
-        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower','ratings', 'serviceUser'));
+        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower', 'ratings', 'serviceUser'));
     }
 
 

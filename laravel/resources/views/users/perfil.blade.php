@@ -522,6 +522,9 @@
                                                             <a href="{{ route('user', $post->service->user->username) }}">{{ $post->service->nome_prestador }}
                                                             </a>
                                                         </h6>
+                                                        {{-- @foreach ($ratings as rating)
+                                                    <h1>{{ $rating->nota }}</h1>
+                                                        @endforeach --}}
 
                                                     </div>
                                                     @break
