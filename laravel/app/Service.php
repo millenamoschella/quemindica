@@ -6,16 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Segment;
 use App\Post;
+use App\Rating;
 
 class Service extends Model
 {
-    protected $fillable=[
-       'servico', 'nome_prestador', 'telefone', 'valor', 'coordenadas' 
+    protected $fillable = [
+        'servico', 'nome_prestador', 'telefone', 'valor', 'coordenadas'
     ];
 
-    public function segment()
+    public function user()
     {
-        return $this->belongsTo(Segment::class);
+        return $this->belongsTo(User::class);
     }
 
     public function post()
@@ -23,13 +24,14 @@ class Service extends Model
         return $this->hasMany(Post::class);
     }
 
-    public function serviceRating()
+    public function segment()
     {
-        return $this->belongsToMany('App\ServiceRating','service_ratings_id');
+        return $this->belongsTo(Segment::class);
     }
 
-    public function user()
+
+    public function rating()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Rating::class);
     }
 }

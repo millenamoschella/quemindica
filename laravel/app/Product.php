@@ -4,12 +4,13 @@ namespace App;
 
 use App\Segment;
 use App\Post;
+use App\Rating;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    public function segment ()
+    public function segment()
     {
         return $this->belongsTo(Segment::class);
     }
@@ -19,8 +20,8 @@ class Product extends Model
         return $this->hasMany(Post::class);
     }
 
-    public function productRating()
+    public function rating()
     {
-        return $this->belongsToMany('App\ProductRating','product_ratings_id');
+        return $this->hasMany(Rating::class);
     }
 }

@@ -8,7 +8,7 @@ class CreateRatingsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * 
      * @return void
      */
     public function up()
@@ -19,6 +19,9 @@ class CreateRatingsTable extends Migration
             $table->timestamps();
 
             $table->foreignId('user_id')->constrained();
+            $table->foreignId('service_id')->nullable()->constrained();
+            $table->foreignId('product_id')->nullable()->constrained();
+            $table->foreignId('culture_id')->nullable()->constrained();
         });
     }
 

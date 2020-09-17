@@ -43,25 +43,26 @@ class ServiceController extends Controller
             $service->servico = $request->get('servico');
             $service->local = $request->get('local');
             $service->save();
-    
+
             $rating = new Rating();
-         
+
             $rating->nota = $request->get('nota');
             $rating->user_id = Auth::user()->id;
+            $rating->service_id = $service->id;
             $rating->save();
 
             $post = new Post();
-    
+
             $post->conteudo = $request->get('conteudo');
             $post->user_id = Auth::user()->id;
             $post->service_id = $service->id;
-    
-    
+
+
             $post->save();
-            Session::flash('message', 'Profissional indicado com sucesso!'); 
+            Session::flash('message', 'Profissional indicado com sucesso!');
             return back();
-         }
-       
+        }
+
 
         $provider = new User();
         $provider->name = $request->get('name');
@@ -70,7 +71,7 @@ class ServiceController extends Controller
         $provider->email = $request->get('email');
         $provider->password = bcrypt('12345678');
         $provider->save();
-        
+
         $service = new Service();
 
         $service->segment_id = $request->get('segment_id');
@@ -81,9 +82,9 @@ class ServiceController extends Controller
         $service->save();
 
         request()->validate(['rate' => 'required']);
-        
+
         $rating = new Rating();
-         
+
         $rating->nota = $request->get('nota');
         $rating->user_id = Auth::user()->id;
         $rating->save();
@@ -99,5 +100,4 @@ class ServiceController extends Controller
         $post->save();
         return back();
     }
-
 }

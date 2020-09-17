@@ -3,13 +3,17 @@
 namespace App;
 
 use App\User;
+use App\Service;
+use App\Culture;
+use App\Product;
+
 
 use Illuminate\Database\Eloquent\Model;
 
 class Rating extends Model
 {
     protected $fillable = [
-        'nota', 'user_id'
+        'nota', 'user_id', 'service'
     ];
 
     public function user()
@@ -19,16 +23,16 @@ class Rating extends Model
 
     public function serviceRating()
     {
-        return $this->belongsToMany('App\ServiceRating', 'service_ratings_id');
-    }
-
-    public function cultureRating()
-    {
-        return $this->belongsToMany('App\CultureRating','culture_ratings_id');
+        return $this->belongsTo(Service::class);
     }
 
     public function productRating()
     {
-        return $this->belongsToMany('App\ProductRating', 'product_ratings_id');
+        return $this->belongsTo(Product::class);
+    }
+
+    public function cultureRating()
+    {
+        return $this->belongsTo(Culture::class);
     }
 }
