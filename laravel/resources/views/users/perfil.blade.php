@@ -59,12 +59,12 @@
 
             {{-- PONTUAÇÃO USUÁRIO --}}
             <div class="stars">
-                {{-- <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i> --}}
-                @php $result ; @endphp  
+                <i class="far fa-star"></i>
+                {{-- @php $result ; @endphp  
 
                 <p>
                     <div class="placeholder" style="color: lightgray;">
@@ -88,7 +88,7 @@
                         @endwhile
             
                     </div> 
-                </p>
+                </p> --}}
             </div>
 
             {{-- NOME USUÁRIO --}}
