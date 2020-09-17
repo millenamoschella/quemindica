@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 class Rating extends Model
 {
     protected $fillable = [
-        'nota', 'user_id', 'service'
+        'nota', 'user_id', 'service_id', 'culture_id', 'product_id'
     ];
 
     public function user()
@@ -23,7 +23,7 @@ class Rating extends Model
 
     public function serviceRating()
     {
-        return $this->belongsTo(Service::class);
+        return $this->belongsTo(Service::class, 'service_id', 'id');
     }
 
     public function productRating()

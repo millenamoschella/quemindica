@@ -19,16 +19,17 @@ class Culture extends Model
         return $this->belongsTo(Genre::class);
     }
 
-    public function post()
-    {
-        return $this->hasMany(Post::class);
-    }
+    
 
     public function culture_segment()
     {
         return $this->belongsTo(Culture_Segment::class, 'culture__segments_id');
     }
 
+    public function post()
+    {
+        return $this->hasMany(Post::class);
+    }
 
     public function rating()
     {

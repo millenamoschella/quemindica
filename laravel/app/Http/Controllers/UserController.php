@@ -10,6 +10,7 @@ use App\Culture;
 use Illuminate\Support\Facades\Auth;
 use App\Follower;
 use App\Rating;
+use App\Service;
 
 class UserController extends Controller
 {
@@ -128,6 +129,8 @@ class UserController extends Controller
         $user = User::where('username', $username)->first();
         $users = User::orderby('created_at', 'DESC')->limit(9)->get();
 
+
+
         if (!$user)
             abort(404);
 
@@ -139,40 +142,49 @@ class UserController extends Controller
 
 
         $commentsUser = Comment::limit(3)->get();
+
+
         $postsCulture = Culture::All();
         $post = Post::find('culture_id');
 
 
-
-
-
-        $rating = Rating::all();
-
-
-
-
-
-
-
+        // $ratings = Rating::all();
+        $serviceUser = Service::where('user_id', '=', $user->id)->pluck('id');
+        // $serviceUser = $serviceUser->all();
+        
+        $ratings = Rating::where('service_id', '=', $serviceUser)->pluck('nota');
+        dd($ratings);
+        // $userRating = $ratings->nota;
 
 
 
 
 
 
-
-
-
-
-
+        
 
         // variável pra identificar se o usuário já segue alguém
         $follower = Follower::where('follower_id', '=', $user->id)
             ->where('user_id', '=', Auth::user()->id)->first();
 
 
-        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower'));
+        return view('users.perfil', compact('postsUser', 'commentsUser', 'postsCulture', 'post', 'user', 'users', 'follower','ratings', 'serviceUser'));
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

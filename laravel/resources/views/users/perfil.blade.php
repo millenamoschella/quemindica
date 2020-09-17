@@ -94,6 +94,18 @@
 
 
 
+                    {{-- @foreach ($ratings as $rating)
+
+
+                        <p>{{$rating->service->servico}}</p>
+                        
+                    @endforeach --}}
+
+
+                    
+
+
+
 
 
 
@@ -403,6 +415,7 @@
                                 <div class="card shadow my-3 posts-area">
                                     {{-- FOTO USUÁRIO E HORÁRIO POST
                                     --}}
+                                    
                                     @foreach ($postsUser as $post)
 
                                         {{-- ÁREA POST
@@ -666,6 +679,22 @@
                                         </div>
 
                                     @endforeach
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                                 </div>
 

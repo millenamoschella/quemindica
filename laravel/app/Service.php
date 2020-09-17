@@ -18,18 +18,18 @@ class Service extends Model
     {
         return $this->belongsTo(User::class);
     }
-
-    public function post()
-    {
-        return $this->hasMany(Post::class);
-    }
-
     public function segment()
     {
         return $this->belongsTo(Segment::class);
     }
 
 
+    public function post()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    
     public function rating()
     {
         return $this->hasMany(Rating::class);

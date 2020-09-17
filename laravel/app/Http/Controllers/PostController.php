@@ -18,22 +18,6 @@ class PostController extends Controller
      }
 
 
-     // public function insert(Request $request)
-     // {
-
-     //      $post = new Post();
-
-     //      $post->conteudo = $request->get('conteudo');
-     //      $post->user_id = Auth::user()->id;
-     //      $post->culture_id = $request->get('culture_id');
-     //      // $post->culture_id = Culture::findOrFail($id);
-
-
-     //      $post->save();
-     //      return back();
-     // }
-
-
      public function delete($post_id)
      {
           $post_id = decrypt($post_id);
