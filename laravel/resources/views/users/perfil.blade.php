@@ -59,36 +59,30 @@
 
             {{-- PONTUAÇÃO USUÁRIO --}}
             <div class="stars">
-                <i class="fas fa-star"></i>
+                {{-- <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i>
-                {{-- @php $result ; @endphp
+                <i class="far fa-star"></i> --}}
+                @php $nota = $ratings; @endphp
 
                 <p>
-                <div class="placeholder" style="color: lightgray;">
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span class="small">({{ $rating }})</span>
-                </div>
 
-                <div class="overlay" style="position: relative;top: -22px;">
-
-                    @while ($rating > 0)
-                        @if ($rating > 0.5)
-                            <i class="fas fa-star"></i>
-                            @else
-                            <i class="fas fa-star-half"></i>
+                    {{--Start Rating--}}
+                    @for ($i = 0; $i < 5; $i++)
+                        @if (floor($nota) - $i >= 1)
+                            {{--Full Start--}}
+                            <i class="fas fa-star "> </i>
+                        @elseif ($nota - $i > 0)
+                            {{--Half Start--}}
+                            <i class="fas fa-star-half-alt "> </i>
+                        @else
+                            {{--Empty Start--}}
+                            <i class="far fa-star "> </i>
                         @endif
-                        @php $rating--; @endphp
-                    @endwhile
-
-                </div>
-                </p> --}}
+                    @endfor
+                    <span class="small">({{ $nota }})</span>
+                </p>
 
 
 
@@ -167,6 +161,7 @@
 
                                         {{-- PONTUAÇÃO DO USUÁRIO
                                         --}}
+                                        
                                         <div class="rating-perfil text-center">
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
@@ -522,9 +517,14 @@
                                                             <a href="{{ route('user', $post->service->user->username) }}">{{ $post->service->nome_prestador }}
                                                             </a>
                                                         </h6>
-                                                        {{-- @foreach ($ratings as rating)
-                                                    <h1>{{ $rating->nota }}</h1>
-                                                        @endforeach --}}
+                                                    <h1> 
+                                                        {{-- {{ $ratingServiceId }}
+                                                        {{ $post->service_id }} --}}
+                                                        {{ "Nota " . $post->service->rating[0]->nota }}
+                                                        
+                                                        
+                                                    </h1>
+
 
                                                     </div>
                                                     @break
