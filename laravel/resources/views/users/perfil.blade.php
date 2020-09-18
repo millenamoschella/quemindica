@@ -521,6 +521,25 @@
                                                         {{-- {{ $ratingServiceId }}
                                                         {{ $post->service_id }} --}}
                                                         {{ "Nota " . $post->service->rating[0]->nota }}
+                                                       
+
+                                                        <p>
+                                        
+                                                            {{--Start Rating--}}
+                                                            @for ($i = 0; $i < 5; $i++)
+                                                                @if (floor($post->service->rating[0]->nota) - $i >= 1)
+                                                                    {{--Full Start--}}
+                                                                    <i class="fas fa-star "> </i>
+                                                                @elseif ($post->service->rating[0]->nota - $i > 0)
+                                                                    {{--Half Start--}}
+                                                                    <i class="fas fa-star-half-alt "> </i>
+                                                                @else
+                                                                    {{--Empty Start--}}
+                                                                    <i class="far fa-star "> </i>
+                                                                @endif
+                                                            @endfor
+                                                            <span class="small">({{ $post->service->rating[0]->nota }})</span>
+                                                        </p>
                                                         
                                                         
                                                     </h1>
