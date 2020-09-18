@@ -1,19 +1,15 @@
-
 {{-- ESCREVER INDICAÇÃO DE PRODUTO
 --}}
-<form action="{{ route('product_insert') }}" method="POST"
-    enctype="multipart/form-data">
+<form action="{{ route('product_insert') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     {{-- NOME DO PRODUTO --}}
     <div class="form-group">
-        <textarea class="form-control" rows="1" placeholder="Produto" name="nome"
-            id="nome"></textarea>
+        <textarea class="form-control" rows="1" placeholder="Produto" name="nome" id="nome"></textarea>
     </div>
     {{-- MARCA --}}
     <div class="form-group">
-        <textarea class="form-control" rows="1" placeholder="Marca" name="marca"
-            id="marca"></textarea>
+        <textarea class="form-control" rows="1" placeholder="Marca" name="marca" id="marca"></textarea>
     </div>
 
     {{-- SEGMENTO --}}
@@ -38,17 +34,15 @@
 
     {{-- PREÇO --}}
     <div class="form-group">
-        <textarea class="form-control" rows="1" placeholder="Preço" name="valor"
-            id="valor"></textarea>
+        <textarea class="form-control" rows="1" placeholder="Preço" name="valor" id="valor"></textarea>
     </div>
     {{-- LOJA --}}
     <div class="form-group">
-        <textarea class="form-control" rows="1" placeholder="Loja" name="loja"
-            id="loja"></textarea>
+        <textarea class="form-control" rows="1" placeholder="Loja" name="loja" id="loja"></textarea>
     </div>
 
     {{-- NOTA --}}
-    <label for="">Avaliação:</label>
+    {{-- <label for="">Avaliação:</label>
     <div class="stars-rating">
         <input type="radio" id="cm_star-empty" name="fb" value="" checked />
         <label for="cm_star-1"><i class="fas fa-star"></i></label>
@@ -61,11 +55,10 @@
         <input type="radio" id="cm_star-4" name="fb" value="4" />
         <label for="cm_star-5"><i class="fas fa-star"></i></label>
         <input type="radio" id="cm_star-5" name="fb" value="5" />
-    </div>
+    </div> --}}
     {{-- CONTEÚDO --}}
     <div class="form-group">
-        <textarea class="form-control" rows="3"
-            placeholder="Qual a sua indicação de hoje?" name="conteudo"
+        <textarea class="form-control" rows="3" placeholder="Qual a sua indicação de hoje?" name="conteudo"
             id="conteudo"></textarea>
     </div>
 
@@ -74,12 +67,9 @@
 
         {{-- ÍCONES PARA MARCAR UMA PESSOA, ADD IMAGEM OU
         LOCAL A POSTAGEM --}}
-        <button class="btn icon-post"><i class="fa fa-paperclip"
-                aria-hidden="true"></i></button>
-        <button class="btn icon-post"><i class="fa fa-map-marker"
-                aria-hidden="true"></i></button>
-        <button class="btn icon-post"><i class="fa fa-user"
-                aria-hidden="true"></i></button>
+        <button class="btn icon-post"><i class="fa fa-paperclip" aria-hidden="true"></i></button>
+        <button class="btn icon-post"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
+        <button class="btn icon-post"><i class="fa fa-user" aria-hidden="true"></i></button>
 
         {{-- POSTAR --}}
         <button class="btn float-right button-posts">
