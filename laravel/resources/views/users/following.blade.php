@@ -40,7 +40,7 @@
 
                                 {{-- EXCLUIR OU BLOQUEAR --}}
 
-                                <div class="card-links">
+                                {{-- <div class="card-links"> --}}
 
                                     {{-- SEGUIR AMIGO --}}
 
@@ -61,12 +61,12 @@
                                     @endif --}}
 
                                     {{-- BLOQUEAR --}}
-                                    <span>
+                                    {{-- <span>
                                         <a href="" data-title="Bloquear"><i class="fa fa-ban" aria-hidden="true"></i>
                                         </a>
-                                    </span>
+                                    </span> --}}
 
-                                </div>
+                                {{-- </div> --}}
 
                                 {{-- INFOS AMIGO --}}
                                 <div class="card-user">
@@ -91,10 +91,10 @@
                                         </a></i>
 
                                     {{-- INFOS --}}
-                                    <div class="user-info">
+                                    {{-- <div class="user-info">
                                         <span>13<b>Indicações</b></span>
                                         <span>65<b>Pontos</b></span>
-                                    </div>
+                                    </div> --}}
 
                                 </div>
 

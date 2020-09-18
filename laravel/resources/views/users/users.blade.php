@@ -20,7 +20,7 @@
 
         <h1 class="text-center">Usuários</h1>
 
-        <div class="row">
+        <div class="row section-users-card">
 
             {{-- USUÁRIO --}}
 
@@ -62,16 +62,18 @@
                             {{-- INFOS AMIGO --}}
                             <div class="card-user">
 
-                                {{-- FOTO AMIGO --}}
-                                <a href="{{ route('user', $user->username) }}">
-                                    @if ($user->photo == null)
-                                        <img src="{{ asset('imagens/institucional/user-default.jpg') }}" alt="foto default"
+                                <div class="users-photo">
+                                    {{-- FOTO AMIGO --}}
+                                    <a href="{{ route('user', $user->username) }}">
+                                        @if ($user->photo == null)
+                                            <img src="{{ asset('imagens/institucional/user-default.jpg') }}" alt="foto default"
                                             class="">
-                                    @else
-                                        <img src="{{ asset('uploads/photos/' . $user->photo) }}" alt="Foto perfil usuário"
+                                        @else
+                                            <img src="{{ asset('uploads/photos/' . $user->photo) }}" alt="Foto perfil usuário"
                                             class="">
-                                    @endif
-                                </a>
+                                        @endif
+                                    </a>
+                                </div>
 
                                 {{-- NOME AMIGO E USERNAME --}}
                                 <h5>{{ $user->name . ' ' . $user->lastname }}</h5>
@@ -80,10 +82,10 @@
                                         {{ '@' . $user->username }} </a></i>
 
                                 {{-- INFOS --}}
-                                <div class="user-info">
+                                {{-- <div class="user-info">
                                     <span>13<b>Indicações</b></span>
                                     <span>65<b>Pontos</b></span>
-                                </div>
+                                </div> --}}
 
                             </div>
 
