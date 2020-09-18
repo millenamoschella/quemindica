@@ -724,7 +724,9 @@
                                                         alt="Foto Serviço" class="img-fluid services-cards">
                                                 </a>
                                             @endif
+                                            <span class="small caption-service">{{ $post->service->servico }}</span>
                                         @endforeach
+
 
                                     </div>
 
