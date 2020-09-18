@@ -81,14 +81,12 @@ class ServiceController extends Controller
         $service->local = $request->get('local');
         $service->save();
 
-        request()->validate(['rate' => 'required']);
-
         $rating = new Rating();
 
         $rating->nota = $request->get('nota');
         $rating->user_id = Auth::user()->id;
+        $rating->service_id = $service->id;
         $rating->save();
-
 
         $post = new Post();
 

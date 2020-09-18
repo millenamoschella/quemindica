@@ -28,12 +28,11 @@
         <div class="capa">
             <div class="icon-change">
 
-                <a href="#" data-toggle="modal" data-target="#modalFotoCapa">
+                {{-- <a href="#" data-toggle="modal" data-target="#modalFotoCapa">
                     <img src="{{ asset('icones/pencil.svg') }}" alt="Mudar foto de capa">
-                </a>
+                </a> --}}
 
             </div>
-            <!-- Foto no background do CSS -->
         </div>
     </section>
 
@@ -70,7 +69,7 @@
                 @endfor
 
                 @if ($countRatings == null)
-                    <p class="text-points">(0 / 0)</p>
+                    <p class="text-points">(0/0)</p>
                 @else
 
                     <p class="text-points">({{ $ratings->sum() . '/' . $countRatings * 5 }})</p>
@@ -92,10 +91,8 @@
             <h1 class="user-name">{{ $user->name . ' ' . $user->lastname }}
             </h1>
 
-
             {{-- BOTÕES ADICIONAR E MENSAGEM --}}
             <div class="add-friend-send-message-perfil">
-
 
                 {{-- ÁREA PARA SEGUIR UM USUÁRIO --}}
                 @if ($user->id != Auth::user()->id)
@@ -118,8 +115,6 @@
                     </button>
 
                 @endif
-
-
 
             </div>
 
@@ -149,33 +144,24 @@
                                         --}}
 
                                         <div class="rating-perfil text-center">
-                                            <p>
-                                                {{--Start
-                                                Rating--}}
-                                                @for ($i = 0; $i < 5; $i++)
-                                                    @if (floor($avaregeRating) - $i >= 1)
-                                                        {{--Full
-                                                        Start--}}
-                                                        <i class="fas fa-star "> </i>
-                                                    @elseif ($avaregeRating - $i > 0)
-                                                        {{--Half
-                                                        Start--}}
-                                                        <i class="fas fa-star-half-alt "> </i>
-                                                    @else
-                                                        {{--Empty
-                                                        Start--}}
-                                                        <i class="far fa-star "> </i>
-                                                    @endif
-                                                @endfor
-                                                @if ($countRatings == null)
 
+                                            @for ($i = 0; $i < 5; $i++)
+                                                @if (floor($avaregeRating) - $i >= 1)
+                                                    <i class="fas fa-star "> </i>
+                                                @elseif ($avaregeRating - $i > 0)
+                                                    <i class="fas fa-star-half-alt "> </i>
                                                 @else
-                                                    <span
-                                                        class="small">({{ $ratings->sum() . '/' . $countRatings * 5 }})</span>
-
+                                                    <i class="far fa-star "> </i>
                                                 @endif
+                                            @endfor
+                                            @if ($countRatings == null)
+                                                <span class="left-raiting-points">(0/0)</span>
+                                            @else
+                                                <span class="left-raiting-points">
+                                                    ({{ $ratings->sum() . '/' . $countRatings * 5 }})
+                                                </span>
+                                            @endif
 
-                                            </p>
                                         </div>
 
                                         {{-- BIO DO USUÁRIO --}}

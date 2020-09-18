@@ -168,18 +168,16 @@
         overflow-x: hidden;
         z-index: 999;
     }
-
 }
-
 
 /* ÁREA PONTOS E INDICAÇÕES */
 
 .section-left-menu {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .rating-perfil {
-    margin-top: -40px;
+    margin-top: -60px;
 }
 
 .rating-perfil i {
@@ -189,9 +187,9 @@
 }
 
 .rating-perfil span {
-    font-size: 1em;
+    font-size: 0.7em;
     font-weight: 600;
-    color: #00415e;
+    color: #808080;
 }
 
 
@@ -272,7 +270,7 @@
 /* ------------ CONTEUDO */
 
 .section-posts {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .section-posts .card-sticky {
@@ -785,7 +783,7 @@ span:hover {
 /* SEÇÃO AMIGOS PERFIL */
 
 .section-right-menu {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 /* AMIGOS */
