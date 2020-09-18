@@ -59,21 +59,13 @@
 
             {{-- PONTUAÇÃO USUÁRIO --}}
             <div class="stars">
-                {{-- <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i> --}}
-                @php $nota = $ratings; @endphp
-
                 <p>
-
                     {{--Start Rating--}}
                     @for ($i = 0; $i < 5; $i++)
-                        @if (floor($nota) - $i >= 1)
+                        @if (floor($avaregeRating) - $i >= 1)
                             {{--Full Start--}}
                             <i class="fas fa-star "> </i>
-                        @elseif ($nota - $i > 0)
+                        @elseif ($avaregeRating - $i > 0)
                             {{--Half Start--}}
                             <i class="fas fa-star-half-alt "> </i>
                         @else
@@ -81,7 +73,23 @@
                             <i class="far fa-star "> </i>
                         @endif
                     @endfor
-                    <span class="small">({{ $nota }})</span>
+                    <br>
+                    @if ($countRatings == null)
+                       
+                    
+                    @else 
+                    <span class="small">({{ $ratings->sum() . "/" . ($countRatings * 5) }})</span>
+                    <br>
+                    <span class="small">{{ "Total de " . $ratings->sum() }}
+                        @if ($countRatings == 1)
+                        {{" ponto de " . $countRatings . " avaliação."}}
+                        @else
+                        {{" pontos de " . $countRatings . " avaliações."}}
+                        @endif
+                    </span>
+                    
+                    @endif
+
                 </p>
 
 
@@ -163,14 +171,28 @@
                                         --}}
                                         
                                         <div class="rating-perfil text-center">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                            <i class="far fa-star"></i>
-                                            <div>
-                                                <span>{{ $ratings }} pontos</span>
-                                            </div>
+                                            <p>
+                                                {{--Start Rating--}}
+                                                @for ($i = 0; $i < 5; $i++)
+                                                    @if (floor($avaregeRating) - $i >= 1)
+                                                        {{--Full Start--}}
+                                                        <i class="fas fa-star "> </i>
+                                                    @elseif ($avaregeRating - $i > 0)
+                                                        {{--Half Start--}}
+                                                        <i class="fas fa-star-half-alt "> </i>
+                                                    @else
+                                                        {{--Empty Start--}}
+                                                        <i class="far fa-star "> </i>
+                                                    @endif
+                                                @endfor
+                                                @if ($countRatings == null)
+                                                                                                   
+                                                @else 
+                                                <span class="small">({{ $ratings->sum() . "/" . ($countRatings * 5) }})</span>
+                                             
+                                                @endif
+                            
+                                            </p>
                                         </div>
 
                                         {{-- BIO DO USUÁRIO --}}
