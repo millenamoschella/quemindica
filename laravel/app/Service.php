@@ -29,7 +29,7 @@ class Service extends Model
         return $this->hasMany(Post::class);
     }
 
-    
+
     public function rating()
     {
         return $this->hasMany(Rating::class);

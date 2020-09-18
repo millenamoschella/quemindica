@@ -141,8 +141,7 @@ class UserController extends Controller
         //     ->orderBy('created_at', 'DESC')->get();
 
 
-        $postsUser = Post::all();
-
+        $postsUser = Post::orderBy('created_at', 'DESC')->get();
 
         $commentsUser = Comment::limit(3)->get();
 
