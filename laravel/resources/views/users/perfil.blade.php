@@ -112,12 +112,13 @@
                         </a>
                     @endif
 
+                    {{-- BOTÃO MENSAGEM --}}
+                    <button class="messaga-button">
+                        Mensagem
+                    </button>
+
                 @endif
 
-                {{-- BOTÃO MENSAGEM --}}
-                <button class="messaga-button">
-                    Mensagem
-                </button>
 
 
             </div>
