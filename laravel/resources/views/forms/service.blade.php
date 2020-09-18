@@ -4,7 +4,7 @@
     enctype="multipart/form-data">
     @csrf
 
-    {{-- TÍTULO DE SERVIÇO
+    {{-- TÍTULO DE SERVIÇO 
     --}}
     <div class="form-group">
         <textarea class="form-control" rows="1" placeholder="Serviço Prestado"
@@ -31,6 +31,14 @@
         <textarea class="form-control" rows="1" placeholder="Cidade/local" name="local"
             id="local"></textarea>
     </div>
+
+
+    <div class="form-group">
+        <input type="file" class="photo" name="photo" value="photo">
+    </div>
+
+
+
 
     {{-- SEGMENTO --}}
 

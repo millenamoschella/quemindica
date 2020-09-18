@@ -1,7 +1,24 @@
+.seção-servicos-geral {
+    height: auto;
+    padding-bottom: 30px;
+}
+
 .side-filtros {
     background: #007592;
     padding: 50px;
 }
+
+@media (min-width: 900px) {
+    .side-filtros .card-sticky {
+        position: sticky;
+        top: 90px;
+        height: 84vh;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        z-index: 999;
+    }
+}
+
 
 /* SEÇÃO PESQUISA */
 
@@ -136,7 +153,7 @@
 
 .secao-servicos {
     margin-top: 40px;
-    padding: 5px 40px;
+    padding: 50px 40px;
     background-color: #fff;
 }
 
@@ -177,4 +194,9 @@
 
 .card-servicos p {
     color: #6b6b6b;
+}
+
+.card-servicos img {
+    width: 225px;
+    height: 150px;
 }

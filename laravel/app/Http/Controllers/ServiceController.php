@@ -13,16 +13,23 @@ use Illuminate\Support\Facades\Session;
 
 class ServiceController extends Controller
 {
-    public function servicos(User $user)
-    {
-        $user = Auth::user();
-        return view('users.servicos', compact('user'));
-    }
 
     public function __construct()
     {
         $this->middleware('auth');
     }
+
+
+    public function servicos(User $user)
+    {
+        $user = Auth::user();
+
+        $postsUser = Post::all();
+
+
+        return view('users.servicos', compact('user', 'postsUser'));
+    }
+
 
     public function create()
     {
@@ -35,6 +42,7 @@ class ServiceController extends Controller
         $phone = $request->input('phone');
         if (User::where('phone', '=', $phone)->count() > 0) {
             $provider = User::where('phone', '=', $phone)->first();
+
             $service = new Service();
 
             $service->segment_id = $request->get('segment_id');
@@ -42,6 +50,22 @@ class ServiceController extends Controller
             $service->user_id = $provider->id;
             $service->servico = $request->get('servico');
             $service->local = $request->get('local');
+
+
+            // UPOLOAD DE IMAGEM
+
+            if ($request->hasFile('photo')) {
+                $file = $request->file('photo');
+                $extension = $file->getClientOriginalExtension();
+                $filename = time() . '.' . $extension;
+                $file->move('uploads/photos/services/', $filename);
+                $service->photo = $filename;
+            } else {
+                return $request;
+                $service->photo = '';
+            }
+
+
             $service->save();
 
             $rating = new Rating();
@@ -79,6 +103,22 @@ class ServiceController extends Controller
         $service->user_id = $provider->id;
         $service->servico = $request->get('servico');
         $service->local = $request->get('local');
+
+
+        // UPOLOAD DE IMAGEM
+
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads/photos/services/', $filename);
+            $service->photo = $filename;
+        } else {
+            return $request;
+            $service->photo = '';
+        }
+
+
         $service->save();
 
         $rating = new Rating();

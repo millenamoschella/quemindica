@@ -134,18 +134,21 @@ class UserController extends Controller
         if (!$user)
             abort(404);
 
-        $postsUser = Post::where(function ($query) use ($user) {
-            $query->where('user_id', $user->id)
-                ->orWhere('user_id', $user->id);
-        })
-            ->orderBy('created_at', 'DESC')->get();
+        // $postsUser = Post::where(function ($query) use ($user) {
+        //     $query->where('user_id', $user->id)
+        //         ->orWhere('user_id', $user->id);
+        // })
+        //     ->orderBy('created_at', 'DESC')->get();
+
+
+        $postsUser = Post::all();
 
 
         $commentsUser = Comment::limit(3)->get();
 
 
         $postsCulture = Culture::All();
-        
+
         // $post = Post::find('culture_id');
         // $postId = Post::all();
 
@@ -155,20 +158,29 @@ class UserController extends Controller
         $ratings = Rating::whereIn('service_id', $serviceUser)->pluck('nota');
         $countRatings = count($ratings);
         if ($countRatings > 0) {
-        $avaregeRating = $ratings->sum() / $countRatings;
-        // dd($countRatings);
+            $avaregeRating = $ratings->sum() / $countRatings;
+            // dd($countRatings);
         } else {
             $avaregeRating = 0;
         }
 
-     
+
         // variável pra identificar se o usuário já segue alguém
         $follower = Follower::where('follower_id', '=', $user->id)
             ->where('user_id', '=', Auth::user()->id)->first();
 
 
-        return view('users.perfil', compact('postsUser', 'commentsUser', 
-        'postsCulture', 'user', 'users', 'follower', 'ratings', 'avaregeRating', 'countRatings'));
+        return view('users.perfil', compact(
+            'postsUser',
+            'commentsUser',
+            'postsCulture',
+            'user',
+            'users',
+            'follower',
+            'ratings',
+            'avaregeRating',
+            'countRatings'
+        ));
     }
 
 

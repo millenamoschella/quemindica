@@ -22,6 +22,8 @@
             {{-- SEÇÃO FILTROS --}}
             <div class="col-lg-3 col-md-4 col-sm-12 side-filtros">
 
+            <div class="card-sticky">
+
                 {{-- ÁREA PESQUISA --}}
                 <div class="row pesquisa-servico">
                     <div class="container-fluid">
@@ -104,6 +106,8 @@
 
             </div>
 
+            </div>
+
 
             {{-- SEÇÃO SERVIÇOS --}}
             <div class="col-lg-9 col-md-8 col-sm-12 secao-servicos">
@@ -114,371 +118,56 @@
                 <div class="row">
 
                     {{-- SERVIÇO 1 --}}
+                @foreach ($postsUser as $post)
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card">
 
-                            {{-- ÁREA FOREACH PARA PUXAR OS SERVIÇOS DO
-                            BANCO
-                            DE
-                            DADOS
-                            --}}
-
                             <div class="card-servicos">
-
                                 {{-- IMAGEM SERVIÇO
                                 --}}
-                                <img class="card-img" src="{{ asset('../imagens/servicos/servico-3.jpg') }}"
-                                    alt="Card Serviço">
+
+                                
+                                    @if ($post->service->photo == null)
+                                        <img src="{{ asset('../imagens/servicos/servico-3.jpg') }}"
+                                        alt="Card Serviço" class="img-fluid">
+                                    @else
+                                        <img src="{{ asset('uploads/photos/services/' . $post->service->photo) }}" alt="Foto Serviço"
+                                            class="default-photo-user img-fluid">
+                                    @endif
+                                
+
 
                                 {{-- BOTÃO
                                 --}}
-                                <div class="card-img-overlay">
+                                {{-- <div class="card-img-overlay">
                                     <a href="{{ url('home') }}">
                                         <button class="btn">Contratar
                                             <i class="fa fa-check-square-o"></i>
                                         </button>
                                     </a>
-                                </div>
+                                </div> --}}
 
                                 <div class="card-body">
-
+                                    
                                     {{-- TÍTULO SERVIÇO
                                     --}}
-                                    <h4 class="card-title">Título do Serviço</h4>
+                                    <h4 class="card-title">{{  $post->service->servico}}</h4>
+                                    <h4 class="card-title">{{  $post->service->nome_prestador}}</h4>
+                                    <h4 class="card-title">{{  $post->service->local}}</h4>
 
                                     {{-- DESCRIÇÃO SERVIÇO
                                     --}}
                                     <p class="card-text">
-                                        Descrição do Serviço
+                                        {{ $post->conteudo }}
                                     </p>
 
+                                    
                                 </div>
                             </div>
-
+                        
                         </div>
                     </div>
-
-
-                    {{-- SERVIÇO 2 --}}
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="card">
-
-                            {{-- ÁREA FOREACH PARA PUXAR OS SERVIÇOS DO
-                            BANCO
-                            DE
-                            DADOS
-                            --}}
-
-                            <div class="card-servicos">
-
-                                {{-- IMAGEM SERVIÇO
-                                --}}
-                                <img class="card-img" src="{{ asset('../imagens/servicos/servico-3.jpg') }}"
-                                    alt="Card Serviço">
-
-                                {{-- BOTÃO
-                                --}}
-                                <div class="card-img-overlay">
-                                    <a href="{{ url('home') }}">
-                                        <button class="btn">Contratar
-                                            <i class="fa fa-check-square-o"></i>
-                                        </button>
-                                    </a>
-                                </div>
-
-                                <div class="card-body">
-
-                                    {{-- TÍTULO SERVIÇO
-                                    --}}
-                                    <h4 class="card-title">Título do Serviço</h4>
-
-                                    {{-- DESCRIÇÃO SERVIÇO
-                                    --}}
-                                    <p class="card-text">
-                                        Descrição do Serviço
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    {{-- SERVIÇO 3 --}}
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="card">
-
-                            {{-- ÁREA FOREACH PARA PUXAR OS SERVIÇOS DO
-                            BANCO
-                            DE
-                            DADOS
-                            --}}
-
-                            <div class="card-servicos">
-
-                                {{-- IMAGEM SERVIÇO
-                                --}}
-                                <img class="card-img" src="{{ asset('../imagens/servicos/servico-3.jpg') }}"
-                                    alt="Card Serviço">
-
-                                {{-- BOTÃO
-                                --}}
-                                <div class="card-img-overlay">
-                                    <a href="{{ url('home') }}">
-                                        <button class="btn">Contratar
-                                            <i class="fa fa-check-square-o"></i>
-                                        </button>
-                                    </a>
-                                </div>
-
-                                <div class="card-body">
-
-                                    {{-- TÍTULO SERVIÇO
-                                    --}}
-                                    <h4 class="card-title">Título do Serviço</h4>
-
-                                    {{-- DESCRIÇÃO SERVIÇO
-                                    --}}
-                                    <p class="card-text">
-                                        Descrição do Serviço
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    {{-- SERVIÇO 4 --}}
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="card">
-
-                            {{-- ÁREA FOREACH PARA PUXAR OS SERVIÇOS DO
-                            BANCO
-                            DE
-                            DADOS
-                            --}}
-
-                            <div class="card-servicos">
-
-                                {{-- IMAGEM SERVIÇO
-                                --}}
-                                <img class="card-img" src="{{ asset('../imagens/servicos/servico-3.jpg') }}"
-                                    alt="Card Serviço">
-
-                                {{-- BOTÃO
-                                --}}
-                                <div class="card-img-overlay">
-                                    <a href="{{ url('home') }}">
-                                        <button class="btn">Contratar
-                                            <i class="fa fa-check-square-o"></i>
-                                        </button>
-                                    </a>
-                                </div>
-
-                                <div class="card-body">
-
-                                    {{-- TÍTULO SERVIÇO
-                                    --}}
-                                    <h4 class="card-title">Título do Serviço</h4>
-
-                                    {{-- DESCRIÇÃO SERVIÇO
-                                    --}}
-                                    <p class="card-text">
-                                        Descrição do Serviço
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    {{-- SERVIÇO 5 --}}
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="card">
-
-                            {{-- ÁREA FOREACH PARA PUXAR OS SERVIÇOS DO
-                            BANCO
-                            DE
-                            DADOS
-                            --}}
-
-                            <div class="card-servicos">
-
-                                {{-- IMAGEM SERVIÇO
-                                --}}
-                                <img class="card-img" src="{{ asset('../imagens/servicos/servico-3.jpg') }}"
-                                    alt="Card Serviço">
-
-                                {{-- BOTÃO
-                                --}}
-                                <div class="card-img-overlay">
-                                    <a href="{{ url('home') }}">
-                                        <button class="btn">Contratar
-                                            <i class="fa fa-check-square-o"></i>
-                                        </button>
-                                    </a>
-                                </div>
-
-                                <div class="card-body">
-
-                                    {{-- TÍTULO SERVIÇO
-                                    --}}
-                                    <h4 class="card-title">Título do Serviço</h4>
-
-                                    {{-- DESCRIÇÃO SERVIÇO
-                                    --}}
-                                    <p class="card-text">
-                                        Descrição do Serviço
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    {{-- SERVIÇO 6 --}}
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="card">
-
-                            {{-- ÁREA FOREACH PARA PUXAR OS SERVIÇOS DO
-                            BANCO
-                            DE
-                            DADOS
-                            --}}
-
-                            <div class="card-servicos">
-
-                                {{-- IMAGEM SERVIÇO
-                                --}}
-                                <img class="card-img" src="{{ asset('../imagens/servicos/servico-3.jpg') }}"
-                                    alt="Card Serviço">
-
-                                {{-- BOTÃO
-                                --}}
-                                <div class="card-img-overlay">
-                                    <a href="{{ url('home') }}">
-                                        <button class="btn">Contratar
-                                            <i class="fa fa-check-square-o"></i>
-                                        </button>
-                                    </a>
-                                </div>
-
-                                <div class="card-body">
-
-                                    {{-- TÍTULO SERVIÇO
-                                    --}}
-                                    <h4 class="card-title">Título do Serviço</h4>
-
-                                    {{-- DESCRIÇÃO SERVIÇO
-                                    --}}
-                                    <p class="card-text">
-                                        Descrição do Serviço
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    {{-- SERVIÇO 7 --}}
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="card">
-
-                            {{-- ÁREA FOREACH PARA PUXAR OS SERVIÇOS DO
-                            BANCO
-                            DE
-                            DADOS
-                            --}}
-
-                            <div class="card-servicos">
-
-                                {{-- IMAGEM SERVIÇO
-                                --}}
-                                <img class="card-img" src="{{ asset('../imagens/servicos/servico-3.jpg') }}"
-                                    alt="Card Serviço">
-
-                                {{-- BOTÃO
-                                --}}
-                                <div class="card-img-overlay">
-                                    <a href="{{ url('home') }}">
-                                        <button class="btn">Contratar
-                                            <i class="fa fa-check-square-o"></i>
-                                        </button>
-                                    </a>
-                                </div>
-
-                                <div class="card-body">
-
-                                    {{-- TÍTULO SERVIÇO
-                                    --}}
-                                    <h4 class="card-title">Título do Serviço</h4>
-
-                                    {{-- DESCRIÇÃO SERVIÇO
-                                    --}}
-                                    <p class="card-text">
-                                        Descrição do Serviço
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    {{-- SERVIÇO 8 --}}
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="card">
-
-                            {{-- ÁREA FOREACH PARA PUXAR OS SERVIÇOS DO
-                            BANCO
-                            DE
-                            DADOS
-                            --}}
-
-                            <div class="card-servicos">
-
-                                {{-- IMAGEM SERVIÇO
-                                --}}
-                                <img class="card-img" src="{{ asset('../imagens/servicos/servico-3.jpg') }}"
-                                    alt="Card Serviço">
-
-                                {{-- BOTÃO
-                                --}}
-                                <div class="card-img-overlay">
-                                    <a href="{{ url('home') }}">
-                                        <button class="btn">Contratar
-                                            <i class="fa fa-check-square-o"></i>
-                                        </button>
-                                    </a>
-                                </div>
-
-                                <div class="card-body">
-
-                                    {{-- TÍTULO SERVIÇO
-                                    --}}
-                                    <h4 class="card-title">Título do Serviço</h4>
-
-                                    {{-- DESCRIÇÃO SERVIÇO
-                                    --}}
-                                    <p class="card-text">
-                                        Descrição do Serviço
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                @endforeach
 
                 </div>
 
