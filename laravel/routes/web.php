@@ -43,6 +43,7 @@ Route::get('/unfollow/{id}', 'FriendController@unfollow')->name('unfollow');
 // ROTAS SERVIÇOS
 
 Route::get('/servicos', 'ServiceController@servicos')->name('servicos');
+Route::get('/servicos/{id}', 'ServiceController@show')->name('servico.show');
 
 
 // ROTAS SITE 
@@ -72,14 +73,14 @@ Route::post('/storeCover{id}', 'UserController@storeCover')->name('storeCover');
 
 Route::get('/post/create', 'PostController@create')->name('post_create');
 Route::post('/post/insert', 'PostController@insert')->name('post_insert');
-Route::get('/post/delete/{post_id}', 'PostController@delete')->name('post_delete');
+// Route::get('/post/delete/{post_id}', 'PostController@delete')->name('post_delete');
 
 
 //ROTAS COMENTÁRIOS
 
 Route::get('/comment/create', 'CommentController@create')->name('comment_create');
 Route::post('/comment/insert', 'CommentController@insert')->name('comment_insert');
-Route::get('/comment/delete/{comment_id}', 'CommentController@delete')->name('comment_delete');
+// Route::get('/comment/delete/{comment_id}', 'CommentController@delete')->name('comment_delete');
 
 
 //ROTAS DE CULTURA

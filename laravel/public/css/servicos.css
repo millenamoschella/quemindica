@@ -186,15 +186,29 @@
     margin-left: -20px;
     color: #006983;
     font-weight: bold;
+    background-color: #ffffffb9;
+}
+
+.card-servicos button:hover {
+    color: #333;
 }
 
 .card-title {
     font-weight: bold;
 }
 
-.card-servicos p {
+.service-card-title {
     color: #6b6b6b;
+    font-weight: bold;
+    font-size: 0.9em;
 }
+
+.service-text-card {
+    color: #006983;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
 
 .card-servicos img {
     width: 225px;

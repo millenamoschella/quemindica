@@ -129,8 +129,6 @@ class UserController extends Controller
         $user = User::where('username', $username)->first();
         $users = User::orderby('created_at', 'DESC')->limit(9)->get();
 
-
-
         if (!$user)
             abort(404);
 
@@ -142,14 +140,9 @@ class UserController extends Controller
 
 
         $postsUser = Post::orderBy('created_at', 'DESC')->get();
-
         $commentsUser = Comment::limit(3)->get();
-
-
         $postsCulture = Culture::All();
 
-        // $post = Post::find('culture_id');
-        // $postId = Post::all();
 
         // Pegando as notas de um usuário:
         $serviceUser = Service::where('user_id', '=', $user->id)->pluck('id'); // retorna id de serviço QUANDO é daquele usuário

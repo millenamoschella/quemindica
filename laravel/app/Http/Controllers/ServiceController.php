@@ -28,7 +28,6 @@ class ServiceController extends Controller
 
         $postsUser = Post::all();
 
-
         return view('users.servicos', compact('user', 'postsUser'));
     }
 
@@ -52,6 +51,7 @@ class ServiceController extends Controller
             $service->user_id = $provider->id;
             $service->servico = $request->get('servico');
             $service->local = $request->get('local');
+            $service->valor = $request->get('valor');
 
 
             // UPOLOAD DE IMAGEM
@@ -109,6 +109,7 @@ class ServiceController extends Controller
         $service->user_id = $provider->id;
         $service->servico = $request->get('servico');
         $service->local = $request->get('local');
+        $service->valor = $request->get('valor');
 
 
         // UPOLOAD DE IMAGEM
@@ -148,5 +149,37 @@ class ServiceController extends Controller
 
 
         return back();
+    }
+
+
+    public function show($id)
+    {
+        $user = Auth::user();
+        $postContent = Post::first('conteudo');
+        $service = Service::findOrFail($id);
+        $post = Post::all();
+
+
+        $serviceUser = Service::where('user_id', '=', $user->id)->pluck('id'); // retorna id de serviço QUANDO é daquele usuário
+
+        $ratings = Rating::whereIn('service_id', $serviceUser)->pluck('nota');
+        $countRatings = count($ratings);
+        if ($countRatings > 0) {
+            $avaregeRating = $ratings->sum() / $countRatings;
+            // dd($countRatings);
+        } else {
+            $avaregeRating = 0;
+        }
+
+
+        return view('users.servico-page', compact(
+            'service',
+            'user',
+            'post',
+            'postContent',
+            'ratings',
+            'avaregeRating',
+            'countRatings'
+        ));
     }
 }

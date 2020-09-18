@@ -22,89 +22,90 @@
             {{-- SEÇÃO FILTROS --}}
             <div class="col-lg-3 col-md-4 col-sm-12 side-filtros">
 
-            <div class="card-sticky">
+                <div class="card-sticky">
 
-                {{-- ÁREA PESQUISA --}}
-                <div class="row pesquisa-servico">
-                    <div class="container-fluid">
+                    {{-- ÁREA PESQUISA --}}
+                    <div class="row pesquisa-servico">
+                        <div class="container-fluid">
 
-                        <div class="input-group">
+                            <div class="input-group">
 
-                            <input type="text" class="input-pesquisa-servico form-control" placeholder="Pesquisar serviço">
+                                <input type="text" class="input-pesquisa-servico form-control"
+                                    placeholder="Pesquisar serviço">
 
-                            {{-- BOTÃO PESQUISAR SERVIÇO
-                            --}}
-                            <button class="btn botao-pesquisar-servico" type="button">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </button>
+                                {{-- BOTÃO PESQUISAR SERVIÇO
+                                --}}
+                                <button class="btn botao-pesquisar-servico" type="button">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
 
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                {{-- ÁREA FILTRO POR PREÇO --}}
-                <div class="card pesquisa-preco">
+                    {{-- ÁREA FILTRO POR PREÇO --}}
+                    <div class="card pesquisa-preco">
 
-                    <div class="card-header">
-                        <h6 class="title text-center">Faixa de Preço</h6>
-                    </div>
+                        <div class="card-header">
+                            <h6 class="title text-center">Faixa de Preço</h6>
+                        </div>
 
-                    <div class="card-body">
-                        <div class="form-row">
+                        <div class="card-body">
+                            <div class="form-row">
 
-                            <div class="form-group col-md-6">
-                                <label>Min</label>
-                                <input type="number" class="form-control input-faixa-preco-servico" id="min-prec"
-                                    placeholder="R$ 0,00">
+                                <div class="form-group col-md-6">
+                                    <label>Min</label>
+                                    <input type="number" class="form-control input-faixa-preco-servico" id="min-prec"
+                                        placeholder="R$ 0,00">
+                                </div>
+
+                                <div class="form-group col-md-6 text-right">
+                                    <label>Max</label>
+                                    <input type="number" class="form-control input-faixa-preco-servico" id="max-prec"
+                                        placeholder="R$ 1.000,00">
+                                </div>
+
                             </div>
-
-                            <div class="form-group col-md-6 text-right">
-                                <label>Max</label>
-                                <input type="number" class="form-control input-faixa-preco-servico" id="max-prec"
-                                    placeholder="R$ 1.000,00">
-                            </div>
-
                         </div>
                     </div>
-                </div>
 
-                {{-- ÁREA FILTRO POR CATEGORIA DO SERVIÇO
-                --}}
-                <div class="card pesquisa-categoria">
+                    {{-- ÁREA FILTRO POR CATEGORIA DO SERVIÇO
+                    --}}
+                    <div class="card pesquisa-categoria">
 
-                    <div class="card-header">
-                        <h6 class="title text-center">Categoria</h6>
+                        <div class="card-header">
+                            <h6 class="title text-center">Categoria</h6>
+                        </div>
+
+                        <div class="card-body">
+                            <form>
+
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="decoracao">
+                                    <span class="form-check-label">
+                                        Decoração
+                                    </span>
+                                </label>
+
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="moda">
+                                    <span class="form-check-label">
+                                        Moda
+                                    </span>
+                                </label>
+
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="saude">
+                                    <span class="form-check-label">
+                                        Saúde
+                                    </span>
+                                </label>
+
+                            </form>
+                        </div>
                     </div>
 
-                    <div class="card-body">
-                        <form>
-
-                            <label class="form-check">
-                                <input class="form-check-input" type="checkbox" value="decoracao">
-                                <span class="form-check-label">
-                                    Decoração
-                                </span>
-                            </label>
-
-                            <label class="form-check">
-                                <input class="form-check-input" type="checkbox" value="moda">
-                                <span class="form-check-label">
-                                    Moda
-                                </span>
-                            </label>
-
-                            <label class="form-check">
-                                <input class="form-check-input" type="checkbox" value="saude">
-                                <span class="form-check-label">
-                                    Saúde
-                                </span>
-                            </label>
-
-                        </form>
-                    </div>
                 </div>
-
-            </div>
 
             </div>
 
@@ -118,56 +119,58 @@
                 <div class="row">
 
                     {{-- SERVIÇO 1 --}}
-                @foreach ($postsUser as $post)
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="card">
+                    @foreach ($postsUser as $post)
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
 
-                            <div class="card-servicos">
-                                {{-- IMAGEM SERVIÇO
-                                --}}
+                                <div class="card-servicos">
+                                    {{-- IMAGEM SERVIÇO
+                                    --}}
 
-                                
+
                                     @if ($post->service->photo == null)
-                                        <img src="{{ asset('../imagens/servicos/servico-3.jpg') }}"
-                                        alt="Card Serviço" class="img-fluid">
+                                        <img src="{{ asset('../imagens/servicos/servico-3.jpg') }}" alt="Card Serviço"
+                                            class="img-fluid">
                                     @else
-                                        <img src="{{ asset('uploads/photos/services/' . $post->service->photo) }}" alt="Foto Serviço"
-                                            class="default-photo-user img-fluid">
+                                        <img src="{{ asset('uploads/photos/services/' . $post->service->photo) }}"
+                                            alt="Foto Serviço" class="default-photo-user img-fluid">
                                     @endif
-                                
 
 
-                                {{-- BOTÃO
-                                --}}
-                                {{-- <div class="card-img-overlay">
-                                    <a href="{{ url('home') }}">
-                                        <button class="btn">Contratar
-                                            <i class="fa fa-check-square-o"></i>
-                                        </button>
-                                    </a>
-                                </div> --}}
 
-                                <div class="card-body">
-                                    
-                                    {{-- TÍTULO SERVIÇO
+                                    {{-- BOTÃO
                                     --}}
-                                    <h4 class="card-title">{{  $post->service->servico}}</h4>
-                                    <h4 class="card-title">{{  $post->service->nome_prestador}}</h4>
-                                    <h4 class="card-title">{{  $post->service->local}}</h4>
+                                    <div class="card-img-overlay">
+                                        <a href="{{ route('servico.show', $post->service->id) }}">
+                                            <button class="btn Auth::user()->">Contratar
+                                                <i class="fa fa-check-square-o"></i>
+                                            </button>
+                                        </a>
+                                    </div>
 
-                                    {{-- DESCRIÇÃO SERVIÇO
-                                    --}}
-                                    <p class="card-text">
-                                        {{ $post->conteudo }}
-                                    </p>
+                                    <div class="card-body">
 
-                                    
+                                        {{-- TÍTULO SERVIÇO
+                                        --}}
+
+                                        <div class="text-service">
+                                            <span class="service-card-title">Serviço: </span>
+                                            <span class="service-text-card"> {{ $post->service->servico }}</span>
+                                        </div>
+                                        <div class="text-service">
+                                            <span class="service-card-title">Prestador: </span>
+                                            <span class="service-text-card"> {{ $post->service->nome_prestador }}</span>
+                                        </div>
+                                        <div class="text-service">
+                                            <span class="service-card-title">Local: </span>
+                                            <span class="service-text-card"> {{ $post->service->local }}</span>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
-                        
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
 
                 </div>
 
@@ -178,6 +181,8 @@
     </div>
 
 @endsection
+
+
 
 @section('footer')
     @include('layouts.footer-logado')
