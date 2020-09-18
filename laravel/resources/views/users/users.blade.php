@@ -33,11 +33,9 @@
 
                             {{-- EXCLUIR OU BLOQUEAR --}}
 
-                            <div class="card-links">
+                            {{-- <div class="card-links">
 
-                                {{-- SEGUIR AMIGO --}}
-
-                                {{-- @if ($user->id != Auth::user()->id)
+                                @if ($user->id != Auth::user()->id)
 
                                     @if (is_null($follower))
                                         <a href="{{ route('follow', $user->id) }}" data-title="Seguir">
@@ -49,17 +47,16 @@
                                             <i class="fas fa-minus" aria-hidden="true"></i>
                                         </a>
 
-                                    @endif
+                                    @endif 
 
-                                @endif --}}
+                                @endif
 
-                                {{-- BLOQUEAR --}}
                                 <span>
                                     <a href="" data-title="Bloquear"><i class="fa fa-ban" aria-hidden="true"></i>
                                     </a>
                                 </span>
 
-                            </div>
+                            </div> --}}
 
 
                             {{-- INFOS AMIGO --}}

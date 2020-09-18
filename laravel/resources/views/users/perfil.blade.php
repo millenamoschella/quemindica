@@ -92,21 +92,23 @@
             </h1>
 
             {{-- BOTÕES ADICIONAR E MENSAGEM --}}
-            <div class="add-friend-send-message-perfil">
+            <div class="add-message-perfil">
 
                 {{-- ÁREA PARA SEGUIR UM USUÁRIO --}}
                 @if ($user->id != Auth::user()->id)
 
                     @if (is_null($follower))
-                        <a href="{{ route('follow', $user->id) }}">
-                            <button class="add-friend">
-                                Seguir
-                            </button>
+
+                        <a href="{{ route('follow', $user->id) }}" data-title="Seguir">
+                            <i class="fas fa-plus add-friend" aria-hidden="true"></i>
                         </a>
+
                     @else
-                        <a href="{{ route('unfollow', $user->id) }}">
-                            <button class="add-friend">Deixar de seguir</button>
+
+                        <a href="{{ route('unfollow', $user->id) }}" data-title="Parar de seguir">
+                            <i class="fas fa-minus add-friend" aria-hidden="true"></i>
                         </a>
+
                     @endif
 
                     {{-- BOTÃO MENSAGEM --}}

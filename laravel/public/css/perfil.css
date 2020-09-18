@@ -123,7 +123,48 @@
 
 /* BOTÕES ADICIONAR E MENSAGEM */
 
-.add-friend,
+.add-message-perfil a:hover {
+    text-decoration: none;
+}
+
+.add-friend {
+    color: #fdcf46;
+    font-size: 1.3em;
+}
+
+.add-friend:hover {
+    color: #8f8f8f;
+    cursor: pointer;
+}
+
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+
+[data-title]:after {
+    content: attr(data-title);
+    background-color: #007592;
+    color: #fdcf46;
+    font-size: 0.9em;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -1.6em;
+    left: 100%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #007592;
+    opacity: 0;
+    border: 1px solid #007592;
+    z-index: 99999;
+    visibility: hidden;
+}
+
+[data-title] {
+    position: relative;
+}
+
+
 .messaga-button {
     padding: 8px;
     margin: -30px 0 30px 10px;
@@ -134,14 +175,16 @@
     box-shadow: 1px 1px 2px #333, 0 3px 3px #0000003b;
 }
 
-.add-friend,
+.messaga-button a:hover {
+    text-decoration: none;
+}
+
 .messaga-button {
     background-color: #ffd559;
     border: solid 1px #ffd559;
     color: #007592;
 }
 
-.add-friend:hover,
 .messaga-button:hover {
     background-color: #e6ebee;
     border: solid 1px #e6ebee;
@@ -149,7 +192,6 @@
     font-weight: bold;
 }
 
-.add-friend:focus,
 .messaga-button:focus {
     outline: none;
 }
@@ -321,7 +363,7 @@
     color: #ffcd36;
 }
 
-.stars-rating input[type="radio"]:checked ~ label i.fas:before {
+.stars-rating input[type="radio"]:checked~label i.fas:before {
     color: #ccc;
 }
 
@@ -334,11 +376,7 @@
     color: #ffcd36;
 }
 
-.stars-rating-service
-    input[type="radio"]:checked
-    ~ label
-    i.fas
-    .starService:before {
+.stars-rating-service input[type="radio"]:checked~label i.fas .starService:before {
     color: #ccc;
 }
 
