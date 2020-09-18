@@ -10,6 +10,8 @@ use App\Post;
 use App\Rating;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\sendMail;
 
 class ServiceController extends Controller
 {
@@ -83,6 +85,10 @@ class ServiceController extends Controller
 
 
             $post->save();
+
+            Mail::to($provider->email)->send(new SendMail($provider));
+
+
             Session::flash('message', 'Profissional indicado com sucesso!');
             return back();
         }
@@ -136,6 +142,11 @@ class ServiceController extends Controller
 
 
         $post->save();
+
+
+        Mail::to($provider->email)->send(new SendMail($provider));
+
+
         return back();
     }
 }
