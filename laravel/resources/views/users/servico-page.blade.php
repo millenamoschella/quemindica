@@ -22,10 +22,7 @@
 
             <h1>Serviço - {{ $service->servico }}</h1>
 
-            {{-- CARDS SERVIÇOS --}}
-
-
-            {{-- SERVIÇO 1 --}}
+            {{-- SERVIÇO --}}
             <div class="col-lg-6 servico-page-div">
                 <div class="card card-service">
 

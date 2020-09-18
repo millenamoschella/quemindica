@@ -447,7 +447,8 @@
                                                                         <i class="far fa-star "> </i>
                                                                     @endif
                                                                 @endfor
-                                                                <h6 class="service-point">{{ 'Nota ' . $post->service->rating[0]->nota }}</h6>
+                                                                <h6 class="service-point">
+                                                                    {{ 'Nota ' . $post->service->rating[0]->nota }}</h6>
                                                             </div>
 
                                                         </div>
@@ -456,7 +457,7 @@
                                                         <h6 class="service-segment">Segmento:
                                                             {{ $post->service->segment->tipo }}
                                                         </h6>
-                                                        
+
 
                                                         <h6 class="service-provider">{{ $post->service->servico . ' com ' }}
                                                             <a href="{{ route('user', $post->service->user->username) }}">{{ $post->service->nome_prestador }}
@@ -629,8 +630,6 @@
 
                     {{-- MENU DIREITO --}}
                     <div class="col-lg-3 col-md-2 col-sm-12 order-md-3 text-center section-right-menu">
-
-                        {{-- SEÇÃO AMIGOS --}}
                         <div class="card card-sticky scroll">
 
                             {{-- SEÇÃO USUÁRIOS SEGUIDOS
@@ -712,26 +711,21 @@
                                     {{-- IMAGEM SERVIÇO
                                     --}}
                                     <div class="services-area">
-                                        <a href="#">
 
-                                            <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
-                                                class="img-fluid services-cards">
-                                        </a>
+                                        @foreach ($postsServices as $post)
+                                            @if ($post->service->photo == null)
+                                                <a href="{{ route('servico.show', $post->service->id) }}">
+                                                    <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
+                                                        class="img-fluid services-cards">
+                                                </a>
+                                            @else
+                                                <a href="{{ route('servico.show', $post->service->id) }}">
+                                                    <img src="{{ asset('uploads/photos/services/' . $post->service->photo) }}"
+                                                        alt="Foto Serviço" class="img-fluid services-cards">
+                                                </a>
+                                            @endif
+                                        @endforeach
 
-                                        <a href="#">
-                                            <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
-                                                class="img-fluid services-cards">
-                                        </a>
-
-                                        <a href="#">
-                                            <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
-                                                class="img-fluid services-cards">
-                                        </a>
-
-                                        <a href="#">
-                                            <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
-                                                class="img-fluid services-cards">
-                                        </a>
                                     </div>
 
                                 </div>
@@ -748,7 +742,7 @@
                     </div>
 
                 </div>
- 
+
             </div>
 
         </div>

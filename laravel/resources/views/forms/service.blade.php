@@ -1,6 +1,6 @@
 {{-- ESCREVER INDICAÇÃO DE SERVIÇO
 --}}
-<form action="{{ route('service_insert') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('service_insert') }}" method="POST" enctype="multipart/form-data" class="form-service">
     @csrf
 
     {{-- TÍTULO DE SERVIÇO
@@ -41,8 +41,6 @@
     </div>
 
 
-
-
     {{-- SEGMENTO --}}
 
     <div class="form-group col-md-4 px-0">
@@ -64,21 +62,6 @@
     </div>
 
     {{-- NOTA --}}
-
-    {{-- <div class="form-group col-md-4 px-0">
-        <label for="ratings">Nota</label>
-        <select id="ratings" class="form-control" name="nota">
-            <option selected>Escolha uma opção</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-
-        </select>
-    </div> --}}
-
-
     <label for="ratings">Avaliação:</label>
     <div class="stars-rating">
         <input type="radio" id="cm_star-empty" name="nota" value="" checked />
@@ -93,27 +76,6 @@
         <label for="cm_star-5"><i class="fas fa-star"></i></label>
         <input type="radio" id="cm_star-5" name="nota" value="5" />
     </div>
-
-
-
-    {{-- <div class="overlay" style="position: relative;top: -22px;">
-
-        @foreach (range(1, 5) as $i)
-            <span class="fa-stack" style="width:1em">
-                <i class="far fa-star fa-stack-1x"></i>
-
-                @if ($rating > 0)
-                    @if ($rating > 0.5)
-                        <i class="fas fa-star fa-stack-1x"></i>
-                        @else
-                        <i class="fas fa-star-half fa-stack-1x"></i>
-                    @endif
-                @endif
-                @php $rating--; @endphp
-            </span>
-        @endforeach
-
-    </div> --}}
 
 
     {{-- CONTEÚDO --}}
