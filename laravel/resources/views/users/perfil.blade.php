@@ -59,58 +59,33 @@
 
             {{-- PONTUAÇÃO USUÁRIO --}}
             <div class="stars">
-                <p>
-                    {{--Start Rating--}}
-                    @for ($i = 0; $i < 5; $i++)
-                        @if (floor($avaregeRating) - $i >= 1)
-                            {{--Full Start--}}
-                            <i class="fas fa-star "> </i>
-                        @elseif ($avaregeRating - $i > 0)
-                            {{--Half Start--}}
-                            <i class="fas fa-star-half-alt "> </i>
-                        @else
-                            {{--Empty Start--}}
-                            <i class="far fa-star "> </i>
-                        @endif
-                    @endfor
-                    <br>
-                    @if ($countRatings == null)
-                       
-                    
-                    @else 
-                    <span class="small">({{ $ratings->sum() . "/" . ($countRatings * 5) }})</span>
-                    <br>
-                    <span class="small">{{ "Total de " . $ratings->sum() }}
-                        @if ($countRatings == 1)
-                        {{" ponto de " . $countRatings . " avaliação."}}
-                        @else
-                        {{" pontos de " . $countRatings . " avaliações."}}
-                        @endif
-                    </span>
-                    
+                @for ($i = 0; $i < 5; $i++)
+                    @if (floor($avaregeRating) - $i >= 1)
+                        <i class="fas fa-star "> </i>
+                    @elseif ($avaregeRating - $i > 0)
+                        <i class="fas fa-star-half-alt "> </i>
+                    @else
+                        <i class="far fa-star "> </i>
                     @endif
+                @endfor
 
-                </p>
+                @if ($countRatings == null)
+                    <p class="text-points">(0 / 0)</p>
+                @else
 
+                    <p class="text-points">({{ $ratings->sum() . '/' . $countRatings * 5 }})</p>
 
+                    <div class="ratings-avaliation">
+                        <p class="text-rating">{{ 'Total de ' . $ratings->sum() }}
+                            @if ($countRatings == 1)
+                                {{ ' ponto de ' . $countRatings . ' avaliação.' }}
+                            @else
+                                {{ ' pontos de ' . $countRatings . ' avaliações.' }}
+                            @endif
+                        </p>
+                    </div>
 
-
-
-                    {{-- @foreach ($ratings as $rating)
-
-
-                        <p>{{$rating->service->servico}}</p>
-                        
-                    @endforeach --}}
-
-
-                    
-
-
-
-
-
-
+                @endif
             </div>
 
             {{-- NOME USUÁRIO --}}
@@ -125,7 +100,6 @@
                 {{-- ÁREA PARA SEGUIR UM USUÁRIO --}}
                 @if ($user->id != Auth::user()->id)
 
-
                     @if (is_null($follower))
                         <a href="{{ route('follow', $user->id) }}">
                             <button class="add-friend">
@@ -133,14 +107,17 @@
                             </button>
                         </a>
                     @else
-
                         <a href="{{ route('unfollow', $user->id) }}">
                             <button class="add-friend">Deixar de seguir</button>
                         </a>
-
                     @endif
 
                 @endif
+
+                {{-- BOTÃO MENSAGEM --}}
+                <button class="messaga-button">
+                    Mensagem
+                </button>
 
 
             </div>
@@ -169,29 +146,34 @@
 
                                         {{-- PONTUAÇÃO DO USUÁRIO
                                         --}}
-                                        
+
                                         <div class="rating-perfil text-center">
                                             <p>
-                                                {{--Start Rating--}}
+                                                {{--Start
+                                                Rating--}}
                                                 @for ($i = 0; $i < 5; $i++)
                                                     @if (floor($avaregeRating) - $i >= 1)
-                                                        {{--Full Start--}}
+                                                        {{--Full
+                                                        Start--}}
                                                         <i class="fas fa-star "> </i>
                                                     @elseif ($avaregeRating - $i > 0)
-                                                        {{--Half Start--}}
+                                                        {{--Half
+                                                        Start--}}
                                                         <i class="fas fa-star-half-alt "> </i>
                                                     @else
-                                                        {{--Empty Start--}}
+                                                        {{--Empty
+                                                        Start--}}
                                                         <i class="far fa-star "> </i>
                                                     @endif
                                                 @endfor
                                                 @if ($countRatings == null)
-                                                                                                   
-                                                @else 
-                                                <span class="small">({{ $ratings->sum() . "/" . ($countRatings * 5) }})</span>
-                                             
+
+                                                @else
+                                                    <span
+                                                        class="small">({{ $ratings->sum() . '/' . $countRatings * 5 }})</span>
+
                                                 @endif
-                            
+
                                             </p>
                                         </div>
 
@@ -432,7 +414,7 @@
                                 <div class="card shadow my-3 posts-area">
                                     {{-- FOTO USUÁRIO E HORÁRIO POST
                                     --}}
-                                    
+
                                     @foreach ($postsUser as $post)
 
                                         {{-- ÁREA POST
@@ -539,32 +521,37 @@
                                                             <a href="{{ route('user', $post->service->user->username) }}">{{ $post->service->nome_prestador }}
                                                             </a>
                                                         </h6>
-                                                    <h1> 
-                                                        {{-- {{ $ratingServiceId }}
-                                                        {{ $post->service_id }} --}}
-                                                        {{ "Nota " . $post->service->rating[0]->nota }}
-                                                       
+                                                        <h1>
+                                                            {{-- {{ $ratingServiceId }}
+                                                            {{ $post->service_id }} --}}
+                                                            {{ 'Nota ' . $post->service->rating[0]->nota }}
 
-                                                        <p>
-                                        
-                                                            {{--Start Rating--}}
-                                                            @for ($i = 0; $i < 5; $i++)
-                                                                @if (floor($post->service->rating[0]->nota) - $i >= 1)
-                                                                    {{--Full Start--}}
-                                                                    <i class="fas fa-star "> </i>
-                                                                @elseif ($post->service->rating[0]->nota - $i > 0)
-                                                                    {{--Half Start--}}
-                                                                    <i class="fas fa-star-half-alt "> </i>
-                                                                @else
-                                                                    {{--Empty Start--}}
-                                                                    <i class="far fa-star "> </i>
-                                                                @endif
-                                                            @endfor
-                                                            <span class="small">({{ $post->service->rating[0]->nota }})</span>
-                                                        </p>
-                                                        
-                                                        
-                                                    </h1>
+
+                                                            <p>
+
+                                                                {{--Start
+                                                                Rating--}}
+                                                                @for ($i = 0; $i < 5; $i++)
+                                                                    @if (floor($post->service->rating[0]->nota) - $i >= 1)
+                                                                        {{--Full
+                                                                        Start--}}
+                                                                        <i class="fas fa-star "> </i>
+                                                                    @elseif ($post->service->rating[0]->nota - $i > 0)
+                                                                        {{--Half
+                                                                        Start--}}
+                                                                        <i class="fas fa-star-half-alt "> </i>
+                                                                    @else
+                                                                        {{--Empty
+                                                                        Start--}}
+                                                                        <i class="far fa-star "> </i>
+                                                                    @endif
+                                                                @endfor
+                                                                <span
+                                                                    class="small">({{ $post->service->rating[0]->nota }})</span>
+                                                            </p>
+
+
+                                                        </h1>
 
 
                                                     </div>

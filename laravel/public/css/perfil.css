@@ -41,7 +41,6 @@
     width: 40px;
 }
 
-
 /* ----------HEADER BIO */
 
 
@@ -65,7 +64,9 @@
 /* PONTUAÇÃO USUÁRIO */
 
 .stars {
-    margin-top: -100px;
+    margin-top: -90px;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
 .stars i {
@@ -73,13 +74,26 @@
     color: #ffd559;
 }
 
+.text-points {
+    color: #CCC;
+    font-size: 0.8em;
+}
+
+.text-rating {
+    color: #CCC;
+    font-size: 0.9em;
+    margin-top: -10px;
+}
+
+
 /* NOME USUÁRIO */
 
 .user-name {
     color: #fff;
     font-weight: bold;
     text-shadow: 1px 1px 2px #333;
-    margin-bottom: 30px;
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
 /* FOTO USÁRIO */
@@ -112,9 +126,10 @@
 
 /* BOTÕES ADICIONAR E MENSAGEM */
 
-.add-friend {
+.add-friend,
+.messaga-button {
     padding: 8px;
-    margin: 10px 5px;
+    margin: -30px 0 30px 10px;
     border-radius: 5px;
     font-size: 1em;
     font-weight: bold;
@@ -122,20 +137,23 @@
     box-shadow: 1px 1px 2px #333, 0 3px 3px #0000003b;
 }
 
-.add-friend {
+.add-friend,
+.messaga-button {
     background-color: #ffd559;
     border: solid 1px #ffd559;
     color: #007592;
 }
 
-.add-friend:hover {
+.add-friend:hover,
+.messaga-button:hover {
     background-color: #e6ebee;
     border: solid 1px #e6ebee;
     color: #007592;
     font-weight: bold;
 }
 
-.add-friend:focus {
+.add-friend:focus,
+.messaga-button:focus {
     outline: none;
 }
 
