@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 
 // ROTA HOME 
 
-Route::get('/home', 'HomeController@home')->name('home');
+Route::get('/', 'HomeController@home')->name('home');
 
 // ROTAS AUTENTICAÇÃO
 

@@ -931,6 +931,10 @@ span:hover {
 }
 
 .caption-service {
-    display: block;
+    /* display: block; */
     color: #007592;
+}
+
+.section-image-service {
+    display: inline-block;
 }

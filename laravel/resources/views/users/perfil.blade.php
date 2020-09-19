@@ -713,6 +713,7 @@
                                     <div class="services-area">
 
                                         @foreach ($postsServices as $post)
+                                        <div class="section-image-service">
                                             @if ($post->service->photo == null)
                                                 <a href="{{ route('servico.show', $post->service->id) }}">
                                                     <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
@@ -724,7 +725,9 @@
                                                         alt="Foto Serviço" class="img-fluid services-cards">
                                                 </a>
                                             @endif
+                                            <br>
                                             <span class="small caption-service">{{ $post->service->servico }}</span>
+                                        </div>
                                         @endforeach
 
 
