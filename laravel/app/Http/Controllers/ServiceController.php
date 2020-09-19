@@ -98,8 +98,10 @@ class ServiceController extends Controller
         $provider->name = $request->get('name');
         $provider->username = $request->get('name') . rand(1, 99999);
         $provider->phone = $request->get('phone');
+        $provider->fakepassword = uniqid() . rand(1, 999);
+        // $provider->fakepassword = $provider->username . rand(1, 999999);
         $provider->email = $request->get('email');
-        $provider->password = bcrypt($provider->username);
+        $provider->password = bcrypt($provider->fakepassword);
         $provider->save();
 
         $service = new Service();
