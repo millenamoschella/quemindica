@@ -188,8 +188,8 @@
                                     <i class="fas fa-user-friends" aria-hidden="true"><a
                                             href="{{ route('seguindo', $user->username) }}" title="">Seguindo</a></i>
 
-                                    {{-- <i class="fas fa-user-friends" aria-hidden="true"><a href="#"
-                                            title="">Seguidores</a></i> --}}
+                                    {{-- <i class="fas fa-user-friends" aria-hidden="true"><a
+                                            href="#" title="">Seguidores</a></i> --}}
 
                                     <i class="fa fa-list-alt" aria-hidden="true"><a href="{{ route('servicos') }}"
                                             title="">Serviços</a></i>
@@ -491,7 +491,7 @@
 
                                             {{-- CONTEÚDO POST
                                             --}}
-                                            <p class="card-text px-5"> O que achou: 
+                                            <p class="card-text px-5"> O que achou:
                                                 {{ $post->conteudo }}
                                             </p>
 
@@ -713,21 +713,21 @@
                                     <div class="services-area">
 
                                         @foreach ($postsServices as $post)
-                                        <div class="section-image-service">
-                                            @if ($post->service->photo == null)
-                                                <a href="{{ route('servico.show', $post->service->id) }}">
-                                                    <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
-                                                        class="img-fluid services-cards">
-                                                </a>
-                                            @else
-                                                <a href="{{ route('servico.show', $post->service->id) }}">
-                                                    <img src="{{ asset('uploads/photos/services/' . $post->service->photo) }}"
-                                                        alt="Foto Serviço" class="img-fluid services-cards">
-                                                </a>
-                                            @endif
-                                            <br>
-                                            <span class="small caption-service">{{ $post->service->servico }}</span>
-                                        </div>
+                                            <div class="section-image-service">
+                                                @if ($post->photo == null)
+                                                    <a href="{{ route('servico.show', $post->id) }}">
+                                                        <img src="{{ asset('imagens/institucional/card-teste-servico.jpg') }}"
+                                                            class="img-fluid services-cards">
+                                                    </a>
+                                                @else
+                                                    <a href="{{ route('servico.show', $post->id) }}">
+                                                        <img src="{{ asset('uploads/photos/services/' . $post->photo) }}"
+                                                            alt="Foto Serviço" class="img-fluid services-cards">
+                                                    </a>
+                                                @endif
+                                                <br>
+                                                <span class="small caption-service">{{ $post->servico }}</span>
+                                            </div>
                                         @endforeach
 
 
