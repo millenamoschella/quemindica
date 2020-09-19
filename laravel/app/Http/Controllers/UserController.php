@@ -132,14 +132,14 @@ class UserController extends Controller
         if (!$user)
             abort(404);
 
-        // $postsUser = Post::where(function ($query) use ($user) {
-        //     $query->where('user_id', $user->id)
-        //         ->orWhere('user_id', $user->id);
-        // })
-        //     ->orderBy('created_at', 'DESC')->get();
+        $postsUser = Post::where(function ($query) use ($user) {
+            $query->where('user_id', $user->id)
+                ->orWhere('user_id', $user->id);
+        })
+            ->orderBy('created_at', 'DESC')->get();
 
 
-        $postsUser = Post::orderBy('created_at', 'DESC')->get();
+        // $postsUser = Post::orderBy('created_at', 'DESC')->get();
         $postsServices = Post::orderBy('created_at', 'DESC')->limit(8)->get();
 
         $commentsUser = Comment::limit(3)->get();
