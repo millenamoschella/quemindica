@@ -7,32 +7,32 @@
     --}}
     <div class="form-group">
         <input type="text" class="form-control" rows="1" placeholder="Serviço Prestado" name="servico"
-            id="service"></input>
+            id="service">
     </div>
 
     {{-- NOME PRESTADOR --}}
     <div class="form-group">
         <input type="text" class="form-control" rows="1" placeholder="Nome do profissional" name="name"
-            id="name"></input>
+            id="name">
     </div>
     {{-- Telefone --}}
     <div class="form-group">
-        <input type="tel" class="form-control" rows="1" placeholder="Telefone" name="phone" id="phone"></input>
+        <input type="tel" class="form-control" rows="1" placeholder="Telefone" name="phone" id="phone">
     </div>
 
     {{-- Valor --}}
     <div class="form-group">
-        <input type="text" class="form-control" rows="1" placeholder="Valor" name="valor" id="valor"></input>
+        <input type="text" class="form-control" rows="1" placeholder="Valor" name="valor" id="valor">
     </div>
 
     {{-- Email --}}
     <div class="form-group">
-        <input type="email" class="form-control" rows="1" placeholder="Email" name="email" id="email"></input>
+        <input type="email" class="form-control" rows="1" placeholder="Email" name="email" id="email">
     </div>
 
     {{-- Cidade --}}
     <div class="form-group">
-        <input type="text" class="form-control" rows="1" placeholder="Cidade/local" name="local" id="local"></input>
+        <input type="text" class="form-control" rows="1" placeholder="Cidade/local" name="local" id="local">
     </div>
 
 

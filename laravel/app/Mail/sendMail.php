@@ -31,6 +31,8 @@ class sendMail extends Mailable
         return $this->from('hi@quemindica.io')
             ->subject('Email Teste')
             ->view('email.email')
-            ->with(['conteudo' => 'Texto teste']);
+            ->with([
+                'conteudo' => 'Texto teste'
+                ]);
     }
 }

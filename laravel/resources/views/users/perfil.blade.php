@@ -188,8 +188,8 @@
                                     <i class="fas fa-user-friends" aria-hidden="true"><a
                                             href="{{ route('seguindo', $user->username) }}" title="">Seguindo</a></i>
 
-                                    <i class="fas fa-user-friends" aria-hidden="true"><a href="#"
-                                            title="">Seguidores</a></i>
+                                    {{-- <i class="fas fa-user-friends" aria-hidden="true"><a href="#"
+                                            title="">Seguidores</a></i> --}}
 
                                     <i class="fa fa-list-alt" aria-hidden="true"><a href="{{ route('servicos') }}"
                                             title="">Serviços</a></i>
@@ -235,7 +235,7 @@
                         <div class="section-posts">
 
                             {{-- ESCOLHER TIPO DE POST --}}
-                            <div class="card noScroll shadow card-sticky choose-post" id="choosePost">
+                            <div class="card shadow noScroll card-sticky choose-post" id="choosePost">
                                 <div class="card-body">
 
                                     <p>Quero indicar:</p>
@@ -276,7 +276,7 @@
                             </div>
 
                             {{-- ESCREVER POST CULTURA --}}
-                            <div class="card shadow card-sticky displayNone" id="culturePost">
+                            <div class="card shadow displayNone" id="culturePost">
                                 <div class="card-body">
 
                                     {{-- BOTÃO VOLTAR AS OPÇÕES TIPO DE POST
@@ -291,7 +291,7 @@
                             </div>
 
                             {{-- ESCREVER POST SERVIÇO --}}
-                            <div class="card shadow card-sticky displayNone" id="servicePost">
+                            <div class="card shadow displayNone scroll" id="servicePost">
                                 <div class="card-body">
 
                                     {{-- BOTÃO VOLTAR AS OPÇÕES TIPO DE POST
@@ -306,7 +306,7 @@
                             </div>
 
                             {{-- ESCREVER POST PRODUTO --}}
-                            <div class="card shadow card-sticky displayNone" id="productPost">
+                            <div class="card shadow displayNone" id="productPost">
                                 <div class="card-body">
 
                                     {{-- BOTÃO VOLTAR AS OPÇÕES TIPO DE POST
@@ -491,7 +491,7 @@
 
                                             {{-- CONTEÚDO POST
                                             --}}
-                                            <p class="card-text px-5">
+                                            <p class="card-text px-5"> O que achou: 
                                                 {{ $post->conteudo }}
                                             </p>
 

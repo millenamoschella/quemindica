@@ -63,7 +63,7 @@
                                     href="{{ route('users', Auth::user()->username) }}">Usuários</a>
                                 <a class="dropdown-item"
                                     href="{{ route('seguindo', Auth::user()->username) }}">Seguindo</a>
-                                <a class="dropdown-item" href="#">Seguidores</a>
+                                {{-- <a class="dropdown-item" href="#">Seguidores</a> --}}
                                 <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
                                 <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
                                 <a class="dropdown-item" href="{{ route('editarperfil', Auth::user()->id) }}">Editar
@@ -79,12 +79,12 @@
                 </div>
 
                 {{-- ÁREA NOTIFICAÇÕES GERAIS --}}
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
 
                     <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
 
-                        {{-- ÍCONE NOTIFICAÇÃO --}}
+                        
                         <i class="fa fa-fw fa-bell"></i>
 
                         <span class="d-lg-none titulo-not-mobile-menulog">Notificações
@@ -111,12 +111,11 @@
 
                         <div class="dropdown-divider"></div>
 
-                        {{-- VER TODAS AS NOTIFICAÇÕES
-                        --}}
+                        
                         <a class="dropdown-item small ver-mais-menu" href="#">Ver Todas</a>
 
                     </div>
-                </li>
+                </li> --}}
 
 
                 {{-- ÁREA PESQUISA --}}

@@ -90,7 +90,7 @@ footer {
 /* === FOOTER LOGADO === */
 
 .footer-logado {
-    position: fixed;
+    position: relative;
     bottom: 0;
     /* position: -webkit-sticky;
     position: sticky; */

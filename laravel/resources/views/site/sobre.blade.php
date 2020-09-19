@@ -145,7 +145,7 @@
                         <img src="{{ asset('../imagens/time/Marcia.png') }}" alt="Avatar Marcia" width="100"
                             class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
 
-                        <h5 class="mb-0">Marcia Yokoto</h5>
+                        <h5 class="mb-0">Marcia Yokota</h5>
                         <ul class="social mb-0 list-inline mt-3">
 
                             <li class="list-inline-item"><a href="https://github.com/marciayokota" class="social-link"

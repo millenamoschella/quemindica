@@ -258,3 +258,7 @@
 
 
 @endsection
+
+@section('footer')
+    @include('layouts.footer-logado')
+@endsection
