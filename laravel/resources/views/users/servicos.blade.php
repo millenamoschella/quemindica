@@ -128,11 +128,11 @@
                                     --}}
 
 
-                                    @if ($post->service->photo == null)
+                                    @if ($post->photo == null)
                                         <img src="{{ asset('../imagens/servicos/servico-3.jpg') }}" alt="Card Serviço"
                                             class="img-fluid">
                                     @else
-                                        <img src="{{ asset('uploads/photos/services/' . $post->service->photo) }}"
+                                        <img src="{{ asset('uploads/photos/services/' . $post->photo) }}"
                                             alt="Foto Serviço" class="default-photo-user img-fluid">
                                     @endif
 
@@ -141,7 +141,7 @@
                                     {{-- BOTÃO
                                     --}}
                                     <div class="card-img-overlay">
-                                        <a href="{{ route('servico.show', $post->service->id) }}">
+                                        <a href="{{ route('servico.show', $post->id) }}">
                                             <button class="btn Auth::user()->">Contratar
                                                 <i class="fa fa-check-square-o"></i>
                                             </button>
@@ -155,15 +155,15 @@
 
                                         <div class="text-service">
                                             <span class="service-card-title">Serviço: </span>
-                                            <span class="service-text-card"> {{ $post->service->servico }}</span>
+                                            <span class="service-text-card"> {{ $post->servico }}</span>
                                         </div>
                                         <div class="text-service">
                                             <span class="service-card-title">Prestador: </span>
-                                            <span class="service-text-card"> {{ $post->service->nome_prestador }}</span>
+                                            <span class="service-text-card"> {{ $post->nome_prestador }}</span>
                                         </div>
                                         <div class="text-service">
                                             <span class="service-card-title">Local: </span>
-                                            <span class="service-text-card"> {{ $post->service->local }}</span>
+                                            <span class="service-text-card"> {{ $post->local }}</span>
                                         </div>
                                     </div>
                                 </div>

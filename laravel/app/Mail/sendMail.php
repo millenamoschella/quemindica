@@ -29,10 +29,10 @@ class sendMail extends Mailable
     public function build()
     {
         return $this->from('hi@quemindica.io')
-            ->subject('Email Teste')
+            ->subject('Você foi indicado')
             ->view('email.email')
             ->with([
-                'conteudo' => 'Texto teste'
+                'conteudo' => 'Olá, estamos enviando este email pra informar que você foi indicado na plataforma Quem Indica, acesse agora mesmo com o código que está abaixo para saber mais.'
                 ]);
     }
 }
