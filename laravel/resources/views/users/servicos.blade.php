@@ -132,8 +132,8 @@
                                         <img src="{{ asset('../imagens/servicos/servico-3.jpg') }}" alt="Card Serviço"
                                             class="img-fluid">
                                     @else
-                                        <img src="{{ asset('uploads/photos/services/' . $post->photo) }}"
-                                            alt="Foto Serviço" class="default-photo-user img-fluid">
+                                        <img src="{{ asset('uploads/services/' . $post->photo) }}" alt="Foto Serviço"
+                                            class="default-photo-user img-fluid">
                                     @endif
 
 

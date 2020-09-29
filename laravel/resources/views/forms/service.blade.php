@@ -6,33 +6,58 @@
     {{-- TÍTULO DE SERVIÇO
     --}}
     <div class="form-group">
-        <input type="text" class="form-control" rows="1" placeholder="Serviço Prestado" name="servico"
+        <input type="text" class="form-control input-service" rows="1" placeholder="Serviço Prestado" name="servico"
             id="service">
     </div>
 
     {{-- NOME PRESTADOR --}}
     <div class="form-group">
-        <input type="text" class="form-control" rows="1" placeholder="Nome do profissional" name="name"
-            id="name">
+        <input id="name" type="text" class="form-control input-service @error('name') is-invalid @enderror" name="name"
+            value="{{ old('name') }}" placeholder="Nome" required autocomplete="name">
+
+        @error('name')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+        @enderror
     </div>
-    {{-- Telefone --}}
+
+    {{-- Celular --}}
     <div class="form-group">
-        <input type="tel" class="form-control" rows="1" placeholder="Telefone" name="phone" id="phone">
+        <input id="phone" type="tel" class="form-control input-service @error('phone') is-invalid @enderror"
+            name="phone" value="{{ old('phone') }}" required autocomplete="phone" placeholder="Celular">
+
+        @error('phone')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+
     </div>
 
     {{-- Valor --}}
     <div class="form-group">
-        <input type="text" class="form-control" rows="1" placeholder="Valor" name="valor" id="valor">
+        <input type="number" class="form-control input-service" rows="1" placeholder="Valor" name="valor" id="valor">
     </div>
 
     {{-- Email --}}
     <div class="form-group">
-        <input type="email" class="form-control" rows="1" placeholder="Email" name="email" id="email">
+
+        <input id="email" type="email" class="form-control input-service @error('email') is-invalid @enderror"
+            name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
+
+        @error('email')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+
     </div>
 
     {{-- Cidade --}}
     <div class="form-group">
-        <input type="text" class="form-control" rows="1" placeholder="Cidade/local" name="local" id="local">
+        <input type="text" class="form-control input-service" rows="1" placeholder="Cidade/local" name="local"
+            id="local">
     </div>
 
 
@@ -45,7 +70,7 @@
 
     <div class="form-group col-md-4 px-0">
         <label for="segments">Segmento</label>
-        <select id="segments" class="form-control" name="segment_id">
+        <select id="segments" class="form-control input-service" name="segment_id">
             <option selected>Escolha uma opção</option>
             <option value="1">Assistência Técnica</option>
             <option value="2">Educação</option>
@@ -81,8 +106,8 @@
     {{-- CONTEÚDO --}}
     <div class="form-group">
 
-        <textarea class="form-control" rows="3" placeholder="O que tem a dizer sobre este profissional?" name="conteudo"
-            id="conteudo"></textarea>
+        <textarea class="form-control input-service" rows="3" placeholder="O que tem a dizer sobre este profissional?"
+            name="conteudo" id="conteudo"></textarea>
     </div>
 
 

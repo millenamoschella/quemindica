@@ -6,13 +6,12 @@
 --}}
 @endprepend
 
-@section('title', Auth::user()->name . ' ' . Auth::user()->lastname)
+@section('title', Auth::user()->name)
 
 @section('style')
     @parent
     <link rel="stylesheet" href="{{ asset('/css/perfil.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/modalFotoPerfil.css') }}">
-
 @endsection
 
 
@@ -88,7 +87,7 @@
             </div>
 
             {{-- NOME USUÁRIO --}}
-            <h1 class="user-name">{{ $user->name . ' ' . $user->lastname }}
+            <h1 class="user-name">{{ $user->name }}
             </h1>
 
             {{-- BOTÕES ADICIONAR E MENSAGEM --}}
@@ -458,11 +457,27 @@
                                                             {{ $post->service->segment->tipo }}
                                                         </h6>
 
-
                                                         <h6 class="service-provider">{{ $post->service->servico . ' com ' }}
                                                             <a href="{{ route('user', $post->service->user->username) }}">{{ $post->service->nome_prestador }}
                                                             </a>
                                                         </h6>
+
+                                                        {{-- FOTO DO SERVIÇO
+                                                        --}}
+                                                        <div class="service-photo">
+
+                                                            <a href="#" data-toggle="modal" data-target="#modalFoto">
+                                                                @if ($post->service->photo == null)
+                                                                    <img src="{{ asset('imagens/servicos/servico-6.png') }}"
+                                                                        alt="Foto default serviço"
+                                                                        class="default-photo-service">
+                                                                @else
+                                                                    <img src="{{ asset('uploads/services/' . $post->service->photo) }}"
+                                                                        alt="Foto serviço" class="default-photo-service">
+                                                                @endif
+                                                            </a>
+
+                                                        </div>
 
                                                     </div>
                                                     @break
@@ -475,9 +490,8 @@
                                                         <h6 class="product-segment">Segmento:
                                                             {{ $post->product->segment->tipo }}
                                                         </h6>
-                                                        <h6 class="product-name">Produto: {{ $post->product->nome }}
-                                                        </h6>
-                                                        <h6 class="product-store">Loja: {{ $post->product->loja }}
+                                                        <h6 class="product-description">
+                                                            {{ $post->product->nome . ' da marca ' . $post->product->marca . ', na loja ' . $post->product->loja . ', no valor de R$ ' . $post->product->valor . ',00' }}
                                                         </h6>
 
                                                     </div>
@@ -638,7 +652,7 @@
 
                                 @if (!$user->followers->count())
                                     <div class="container text-center default-message-follow">
-                                        <p>Você ainda não está seguindo nenhum usuário</p>
+                                        <p>Este usuário ainda não está seguindo ninguém</p>
                                     </div>
                                 @else
 
@@ -675,7 +689,7 @@
                                                             {{-- NOME
                                                             --}}
                                                             <span class="name-following">
-                                                                {{ $follower->name . ' ' . $follower->lastname }}
+                                                                {{ $follower->name }}
                                                             </span>
 
                                                         </li>
@@ -721,7 +735,7 @@
                                                     </a>
                                                 @else
                                                     <a href="{{ route('servico.show', $post->id) }}">
-                                                        <img src="{{ asset('uploads/photos/services/' . $post->photo) }}"
+                                                        <img src="{{ asset('uploads/services/' . $post->photo) }}"
                                                             alt="Foto Serviço" class="img-fluid services-cards">
                                                     </a>
                                                 @endif
@@ -737,7 +751,7 @@
 
                                 {{-- VER MAIS SERVIÇOS
                                 --}}
-                                <div class="card-footer">
+                                <div class="card-footer see-more-services">
                                     <a href="{{ route('servicos') }}">Ver Mais</a>
                                 </div>
 

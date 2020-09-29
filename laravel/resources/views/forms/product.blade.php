@@ -58,7 +58,7 @@
     </div> --}}
     {{-- CONTEÚDO --}}
     <div class="form-group">
-        <textarea class="form-control" rows="3" placeholder="Qual a sua indicação de hoje?" name="conteudo"
+        <textarea class="form-control" rows="3" placeholder="Qual a sua avaliação?" name="conteudo"
             id="conteudo"></textarea>
     </div>
 

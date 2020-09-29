@@ -26,7 +26,7 @@ class ServiceController extends Controller
     {
         $user = Auth::user();
 
-        $postsUser = Post::all();
+        $postsUser = Service::all();
 
         return view('users.servicos', compact('user', 'postsUser'));
     }
@@ -60,7 +60,7 @@ class ServiceController extends Controller
                 $file = $request->file('photo');
                 $extension = $file->getClientOriginalExtension();
                 $filename = time() . '.' . $extension;
-                $file->move('uploads/photos/services/', $filename);
+                $file->move('uploads/services/', $filename);
                 $service->photo = $filename;
             } else {
                 return $request;
@@ -86,7 +86,7 @@ class ServiceController extends Controller
 
             $post->save();
 
-            Mail::to($provider->email)->send(new SendMail($provider));
+            // Mail::to($provider->email)->send(new SendMail($provider));
 
 
             Session::flash('message', 'Profissional indicado com sucesso!');
@@ -119,7 +119,7 @@ class ServiceController extends Controller
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $file->move('uploads/photos/services/', $filename);
+            $file->move('uploads/services/', $filename);
             $service->photo = $filename;
         } else {
             return $request;
@@ -145,7 +145,7 @@ class ServiceController extends Controller
 
         $post->save();
 
-        Mail::to($provider->email)->send(new SendMail($provider));
+        // Mail::to($provider->email)->send(new SendMail($provider));
 
 
         return back();

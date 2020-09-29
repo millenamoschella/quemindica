@@ -105,7 +105,6 @@ class UserController extends Controller
         $user = User::findOrFail($id);
 
         $user->name = $request->input('name');
-        $user->lastname = $request->input('lastname');
         $user->cpf = $request->input('cpf');
         $user->zip_code = $request->input('zip_code');
         $user->street = $request->input('street');

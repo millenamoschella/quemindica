@@ -382,7 +382,8 @@
 
 /* BOTÃO VOLTAR PARA OS TIPOS DE INDICAÇÕES */
 .backIcon i {
-    width: 20px;
+    width: 30px;
+    padding: 10px 30px;
     float: right;
     color: #007592;
     font-size: 2em;
@@ -522,6 +523,11 @@
     text-decoration: none;
 }
 
+.default-photo-service {
+    width: 200px;
+    margin-top: 15px;
+}
+
 /* POST DE PRODUTO */
 
 .product-title {
@@ -536,20 +542,12 @@
     font-size: 0.8em;
 }
 
-.product-name {
+.product-description {
     display: block;
     font-weight: bold;
     color: #007592;
     margin-top: 30px;
     margin-bottom: 0;
-    font-size: 0.9em;
-}
-
-.product-store {
-    display: block;
-    color: #007592;
-    margin-bottom: 10px;
-    font-weight: 400;
     font-size: 0.9em;
 }
 
@@ -897,6 +895,7 @@ span:hover {
 .see-more-friends a {
     font-weight: bold;
     text-decoration: none;
+    color: #007592;
 }
 
 .see-more-friends a:hover {
@@ -937,4 +936,8 @@ span:hover {
 
 .section-image-service {
     display: inline-block;
+}
+
+.see-more-services a {
+    color: #007592;
 }

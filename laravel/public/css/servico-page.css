@@ -1,6 +1,6 @@
 .services-bg {
     background: #00415e;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .service-page-section {
@@ -77,6 +77,19 @@
     font-size: 1em;
 }
 
+.text-service a {
+    color: #00415e;
+    font-weight: bold;
+}
+
+.text-service a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.text-service a:focus {
+    border: none;
+}
 
 /* BOTÃO MENSAGEM */
 

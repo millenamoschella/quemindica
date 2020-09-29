@@ -47,7 +47,7 @@
                                             <i class="fas fa-minus" aria-hidden="true"></i>
                                         </a>
 
-                                    @endif 
+                                    @endif
 
                                 @endif
 
@@ -66,17 +66,17 @@
                                     {{-- FOTO AMIGO --}}
                                     <a href="{{ route('user', $user->username) }}">
                                         @if ($user->photo == null)
-                                            <img src="{{ asset('imagens/institucional/user-default.jpg') }}" alt="foto default"
-                                            class="">
+                                            <img src="{{ asset('imagens/institucional/user-default.jpg') }}"
+                                                alt="foto default" class="">
                                         @else
-                                            <img src="{{ asset('uploads/photos/' . $user->photo) }}" alt="Foto perfil usuário"
-                                            class="">
+                                            <img src="{{ asset('uploads/photos/' . $user->photo) }}"
+                                                alt="Foto perfil usuário" class="">
                                         @endif
                                     </a>
                                 </div>
 
                                 {{-- NOME AMIGO E USERNAME --}}
-                                <h5>{{ $user->name . ' ' . $user->lastname }}</h5>
+                                <h5>{{ $user->name }}</h5>
 
                                 <i><a href="{{ route('user', $user->username) }}">
                                         {{ '@' . $user->username }} </a></i>

@@ -47,23 +47,12 @@
                             </div>
 
                             {{-- LINHA 1 --}}
-                            <div class="row mt-2">
+                            <div class="row mt-3">
 
                                 {{-- NOME --}}
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <input id="name" type="text" class="area-input-edit form-control" name="name"
                                         value="{{ $user->name }}">
-
-                                    <span class="focus-area-input-edit"></span>
-                                    <span class="edit-icone-input">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                    </span>
-                                </div>
-
-                                {{-- SOBRENOME --}}
-                                <div class="col-md-6">
-                                    <input id="lastname" type="text" class="area-input-edit form-control" name="lastname"
-                                        value="{{ $user->lastname }}">
 
                                     <span class="focus-area-input-edit"></span>
                                     <span class="edit-icone-input">
@@ -74,10 +63,10 @@
                             </div>
 
                             {{-- LINHA 2 --}}
-                            <div class="row mt-2">
+                            <div class="row mt-1">
 
                                 {{-- USERNAME --}}
-                                <div class="col-md-6">
+                                <div class="col-md-6 mt-4">
                                     <input id="username" type="text" class="area-input-edit form-control" name="username"
                                         required autocomplete="username" autofocus value="{{ old('username') }}"
                                         placeholder="{{ $user->username }}" onkeyup="return forceLower(this)"
@@ -90,7 +79,7 @@
                                 </div>
 
                                 {{-- EMAIL --}}
-                                <div class="col-md-6">
+                                <div class="col-md-6 mt-4">
                                     <input id="email" type="email" class="form-control area-input-edit" name=" email"
                                         value="{{ old('email') }}" placeholder="{{ $user->email }}" disabled="disabled">
 
@@ -103,10 +92,10 @@
                             </div>
 
                             {{-- LINHA 3 --}}
-                            <div class="row mt-2">
+                            <div class="row mt-1">
 
                                 {{-- CELULAR --}}
-                                <div class="col-md-6">
+                                <div class="col-md-6 mt-4">
                                     <input id="phone" type="tel" class="form-control area-input-edit" name="phone"
                                         value="{{ $user->phone }}" disabled="disabled">
 
@@ -117,7 +106,7 @@
                                 </div>
 
                                 {{-- CPF --}}
-                                <div class="col-md-6">
+                                <div class="col-md-6 mt-4">
                                     <input id="cpf" type="text" class="form-control area-input-edit" name=" cpf"
                                         value="{{ $user->cpf }}" placeholder="CPF">
 
@@ -130,10 +119,10 @@
                             </div>
 
                             {{-- LINHA 4 --}}
-                            <div class="row mt-2">
+                            <div class="row mt-1">
 
                                 {{-- CEP --}}
-                                <div class="col-md-12">
+                                <div class="col-md-12 mt-4">
                                     <input id="zip_code" type="text" class="form-control area-input-edit" name="zip_code"
                                         value="{{ $user->zip_code }}" placeholder="CEP">
 
@@ -146,10 +135,10 @@
                             </div>
 
                             {{-- LINHA 5 --}}
-                            <div class="row mt-2">
+                            <div class="row mt-1">
 
                                 {{-- RUA --}}
-                                <div class="col-md-12">
+                                <div class="col-md-12 mt-4">
                                     <input id="street" type="text" class="form-control area-input-edit" name="street"
                                         value="{{ $user->street }}" placeholder="Rua">
 
@@ -163,10 +152,10 @@
                             </div>
 
                             {{-- LINHA 6 --}}
-                            <div class="row mt-2">
+                            <div class="row mt-1">
 
                                 {{-- BAIRRO --}}
-                                <div class="col-md-12">
+                                <div class="col-md-12 mt-4">
                                     <input id="bairro" type="text" class="form-control area-input-edit" name="neighborhood"
                                         value="{{ $user->neighborhood }}" placeholder="Bairro">
 
@@ -180,10 +169,10 @@
                             </div>
 
                             {{-- LINHA 7 --}}
-                            <div class="row mt-2">
+                            <div class="row mt-1">
 
                                 {{-- CIDADE --}}
-                                <div class="col-md-6">
+                                <div class="col-md-6 mt-4">
                                     <input id="city" type="text" class="form-control area-input-edit" name="city"
                                         value="{{ $user->city }}" placeholder="Cidade">
 
@@ -194,7 +183,7 @@
                                 </div>
 
                                 {{-- ESTADO --}}
-                                <div class="col-md-6">
+                                <div class="col-md-6 mt-4">
                                     <input id="state" type="text" class="form-control area-input-edit" name="state"
                                         value="{{ $user->state }}" placeholder="Estado">
 
@@ -207,10 +196,10 @@
                             </div>
 
                             {{-- LINHA 8 --}}
-                            <div class="row mt-2">
+                            <div class="row mt-1">
 
                                 {{-- DATA DE NASCIMENTO --}}
-                                <div class="col-md-12">
+                                <div class="col-md-12 mt-4">
                                     <input id="born_date" type="date" class="form-control area-input-edit" name="born_date"
                                         value="{{ $user->born_date }}">
 
@@ -223,10 +212,10 @@
                             </div>
 
                             {{-- LINHA 9 --}}
-                            <div class="row mt-2">
+                            <div class="row mt-1">
 
                                 {{-- BIO --}}
-                                <div class="col-md-12 text-edit">
+                                <div class="col-md-12 text-edit mt-4">
                                     <textarea class="form-control area-input-edit" name="about" id="about" cols="30"
                                         rows="10" value="{{ $user->about }}" placeholder="{{ $user->about }}"></textarea>
 
@@ -240,7 +229,7 @@
                             </div>
 
                             {{-- BOTÃO SALVAR --}}
-                            <div class="col-md-6 offset-md-4 mt-3 section-btn-edit">
+                            <div class="col-md-6 offset-lg-5 mt-3 section-btn-edit">
                                 <button type="submit" class="edit-btn">
                                     {{ __('Salvar') }}
                                 </button>

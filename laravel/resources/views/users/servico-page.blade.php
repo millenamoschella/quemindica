@@ -34,7 +34,7 @@
                             <img src="{{ asset('../imagens/servicos/servico-3.jpg') }}" alt="Card Serviço"
                                 class="img-fluid">
                         @else
-                            <img src="{{ asset('uploads/photos/services/' . $service->photo) }}" alt="Foto Serviço"
+                            <img src="{{ asset('uploads/services/' . $service->photo) }}" alt="Foto Serviço"
                                 class="default-photo-user img-fluid">
                         @endif
 
@@ -59,7 +59,10 @@
                             <div class="all-text">
                                 {{-- PRESTADOR --}}
                                 <div class="text-service">
-                                    <span class="service-text-page">Prestador: {{ $service->nome_prestador }}</span>
+                                    <span class="service-text-page">Prestador:
+                                        <a
+                                            href="{{ route('user', $service->user->username) }}">{{ $service->nome_prestador }}</a>
+                                    </span>
                                 </div>
 
                                 {{-- LOCAL --}}

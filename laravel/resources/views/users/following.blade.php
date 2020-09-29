@@ -66,7 +66,7 @@
                                         </a>
                                     </span> --}}
 
-                                {{-- </div> --}}
+                                    {{-- </div> --}}
 
                                 {{-- INFOS AMIGO --}}
                                 <div class="card-user">
@@ -84,7 +84,7 @@
 
                                     {{-- NOME AMIGO E USERNAME
                                     --}}
-                                    <h5>{{ $follower->name . ' ' . $follower->lastname }}</h5>
+                                    <h5>{{ $follower->name }}</h5>
 
                                     <i><a href="{{ route('user', $user->username) }}">
                                             {{ '@' . $follower->username }}
