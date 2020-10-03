@@ -2,6 +2,7 @@
 
 @prepend('scripts')
 <script defer src="{{ asset('/js/app.js') }}"></script>
+<script defer src="{{ asset('/js/registerRules.js') }}"></script>
 {{-- <script defer src="{{ asset('/js/modalfotoPerfil.js') }}"></script>
 --}}
 @endprepend

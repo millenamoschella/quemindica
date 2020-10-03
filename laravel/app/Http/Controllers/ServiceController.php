@@ -117,7 +117,7 @@ class ServiceController extends Controller
 
             $provider = new User();
             $provider->name = $request->get('name');
-            $provider->username = $request->get('name') . rand(1, 99999);
+            $provider->username = strtolower($request->get('name') . rand(1, 99999));
             $provider->phone = $request->get('phone');
             $provider->fakepassword = uniqid() . rand(1, 999);
             $provider->email = $request->get('email');

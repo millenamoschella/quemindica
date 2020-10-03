@@ -13,7 +13,8 @@
     {{-- NOME PRESTADOR --}}
     <div class="form-group">
         <input id="name" type="text" class="form-control input-service @error('name') is-invalid @enderror" name="name"
-            value="{{ old('name') }}" placeholder="Nome" required autocomplete="name">
+            value="{{ old('name') }}" placeholder="Nome" required autocomplete="name" id="txtEmpName"
+            onkeypress="return AvoidSpace(event)">
 
         @error('name')
         <span class="invalid-feedback" role="alert">
@@ -60,7 +61,7 @@
             id="local">
     </div>
 
-
+    {{-- FOTO SERVIÇO --}}
     <div class="form-group">
         <input type="file" class="photo" name="photo" value="photo">
     </div>
