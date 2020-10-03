@@ -44,8 +44,9 @@
     {{-- Email --}}
     <div class="form-group">
 
-        <input id="email" type="email" class="form-control input-service @error('email') is-invalid @enderror"
-            name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
+        <input type="email" class="form-control input-email-service @error('email') is-invalid @enderror" name="email"
+            value="{{ old('email') }}" required autocomplete="email" placeholder="Email" id=" txtEmpName"
+            onkeypress="return AvoidSpace(event)" onchange="this.value = this.value.toUpperCase();">
 
         @error('email')
         <span class="invalid-feedback" role="alert">

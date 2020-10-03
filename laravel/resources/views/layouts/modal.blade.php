@@ -1,9 +1,17 @@
+@prepend('scripts')
+<script defer src="{{ asset('/js/registerRules.js') }}"></script>
+@endprepend
+
+
 @section('style')
     @parent
     <link rel="stylesheet" href="{{ asset('/css/modalRegistrar.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/modalLogin.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/modalSuporte.css') }}">
 @endsection
+
+
+
 {{-- MODAL LOGIN --}}
 
 <div id="modalEntrar" class="modal fade" tabindex="-1" role="dialog">
@@ -230,37 +238,47 @@
                                         </div>
 
                                         {{-- USERNAME --}}
+
                                         <div class="wrap-register-modal">
-                                            <input id="username" type="text" class="input-modal-register"
-                                                name="username" required autocomplete="username"
-                                                value="{{ old('username') }}" placeholder="username" onkeyup="return forceLower(this)>
+                                            <input type="text"
+                                                class="input-modal-register input-username @error('username') is-invalid @enderror"
+                                                name="username" value="{{ old('username') }}" placeholder="Username"
+                                                required autocomplete="username" id=" txtEmpName"
+                                                onkeypress="return AvoidSpace(event)">
+
+                                            @error('name')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @enderror
 
 
                                             <span class=" focus-input-modal-register"></span>
                                             <span class="modal-register-icone">
                                                 <i class="fa fa-user" aria-hidden="true"></i>
                                             </span>
-
                                         </div>
 
                                         {{-- EMAIL --}}
                                         <div class="wrap-register-modal">
-                                            <input id="email" type="email"
-                                                class="input-modal-register @error('email') is-invalid @enderror"
-                                                name="email" value="{{ old('email') }}" required autocomplete="email"
-                                                placeholder="E-mail">
+                                            <input type="email"
+                                                class="input-modal-register input-email @error('email') is-invalid @enderror"
+                                                name="email" value="{{ old('email') }}" placeholder="E-mail" required
+                                                autocomplete="username" id=" txtEmpName"
+                                                onkeypress="return AvoidSpace(event)"
+                                                onchange="this.value = this.value.toUpperCase();">
 
                                             @error('email')
-                                            <span class="invalid-feedback" role="alert">
+                                            <span class=" invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                             @enderror
 
-                                            <span class="focus-input-modal-register"></span>
+
+                                            <span class=" focus-input-modal-register"></span>
                                             <span class="modal-register-icone">
                                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                             </span>
-
                                         </div>
 
                                         {{-- CELULAR --}}
@@ -283,7 +301,6 @@
                                             </span>
 
                                         </div>
-
 
                                         {{-- SENHA --}}
                                         <div class="wrap-register-modal">

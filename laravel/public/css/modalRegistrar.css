@@ -108,6 +108,11 @@
     padding-left: 22px;
 }
 
+.input-email,
+.input-username {
+    text-transform: lowercase;
+}
+
 /* * TERMOS CHECK RADIO */
 
 .terms-section input[type='radio'] {

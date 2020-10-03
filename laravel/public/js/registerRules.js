@@ -1,10 +1,3 @@
-// FUNÇÃO LETRA MINÚSCULA NO USERNAME
-
-function forceLower(strInput) {
-    strInput.value = strInput.value.toLowerCase();
-}
-
-
 // FUNÇÃO SEM ESPAÇO NO INPUT DO USERNAME
 
 function AvoidSpace(event) {

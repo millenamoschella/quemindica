@@ -126,7 +126,7 @@
 
             </div>
         </div>
-    </section> 
+    </section>
 
     {{-- VOLTAR PARA O TOPO - CSS NO ESTILO.CSS --}}
 
@@ -134,7 +134,7 @@
         <i class="fa fa-arrow-up"></i>
     </button>
 
-    
+
 @endsection
 
 @section('modal')
@@ -144,6 +144,3 @@
 @section('footer')
     @include('layouts.footer')
 @endsection
-
-
-

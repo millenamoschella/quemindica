@@ -352,6 +352,39 @@
     border-radius: 5px 5px 0 0;
 }
 
+
+/* BOTÃO VOLTAR PARA OS TIPOS DE INDICAÇÕES */
+.backIcon i {
+    width: 30px;
+    padding: 10px 30px;
+    float: right;
+    color: #007592;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.backIcon i:hover {
+    color: #ffcd36;
+    cursor: pointer;
+}
+
+/* ESCREVER INDICAÇÃO */
+
+.section-posts textarea {
+    resize: none;
+    color: #007592;
+}
+
+/* ESCREVER INDICAÇÕES */
+
+/* ESCREVER INDICAÇÃO SERVIÇO */
+
+.input-email-service {
+    text-transform: lowercase;
+}
+
+
 /* ESTRELAS PARA AVALIAÇÃO */
 
 .stars-rating input[type="radio"] {
@@ -380,28 +413,13 @@
     color: #ccc;
 }
 
-/* BOTÃO VOLTAR PARA OS TIPOS DE INDICAÇÕES */
-.backIcon i {
-    width: 30px;
-    padding: 10px 30px;
-    float: right;
-    color: #007592;
-    font-size: 2em;
-    font-weight: bold;
-    cursor: pointer;
-}
 
-.backIcon i:hover {
-    color: #ffcd36;
-    cursor: pointer;
-}
 
-/* ESCREVER INDICAÇÃO */
 
-.section-posts textarea {
-    resize: none;
-    color: #007592;
-}
+
+
+
+
 
 /* SEÇÃO POSTS */
 
