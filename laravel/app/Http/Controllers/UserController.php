@@ -139,7 +139,7 @@ class UserController extends Controller
 
 
         // $postsUser = Post::orderBy('created_at', 'DESC')->get();
-        $postsServices = Service::orderBy('created_at', 'DESC')->limit(8)->get();
+        $postsServices = Service::orderBy('created_at', 'DESC')->limit(6)->get();
 
         $commentsUser = Comment::limit(3)->get();
         $postsCulture = Culture::All();

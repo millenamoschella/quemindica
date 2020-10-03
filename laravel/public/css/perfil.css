@@ -359,7 +359,7 @@
     padding: 10px 30px;
     float: right;
     color: #007592;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     cursor: pointer;
 }
@@ -378,47 +378,134 @@
 
 /* ESCREVER INDICAÇÕES */
 
-/* ESCREVER INDICAÇÃO SERVIÇO */
+/* ESCREVER INDICAÇÃO SERVIÇO, PRODUTO, CULTURA */
+
+.form-service label,
+.form-product label,
+.form-culture label {
+    color: #7c7c7c;
+}
+
+.input-service,
+.input-product,
+.input-culture {
+    outline: none;
+    border: 1px solid #007592;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    color: #007592;
+    font-size: 0.9em;
+}
+
+.input-service::placeholder,
+.input-product::placeholder,
+.input-culture::placeholder {
+    color: #007592;
+    /* padding: 5px; */
+}
 
 .input-email-service {
     text-transform: lowercase;
 }
 
+select {
+    border: none;
+    outline: none;
+}
 
-/* ESTRELAS PARA AVALIAÇÃO */
+option {
+    font-size: 1em;
+}
 
-.stars-rating input[type="radio"] {
+
+.form-service textarea,
+.form-culture textarea {
+    margin-top: 10px;
+}
+
+/* ESTRELAS PARA AVALIAÇÃO DE CULTURA */
+
+.label-culture-star {
+    display: block;
+}
+
+.rating {
+    display: inline-block;
+    font-size: 1em;
+}
+
+.rating:not(:checked) .rating-input {
     display: none;
 }
 
-.stars-rating label i.fas:before {
+.rating:hover .rating-star:hover,
+.rating:hover .rating-star:hover~label,
+.rating-input.checked~.rating-star {
+    color: #ffcd36;
+}
+
+.rating-input:checked~.rating-star {
+    color: #ffcd36;
+}
+
+.rating-star,
+.rating:hover .rating-star {
+    float: right;
+    margin: 1px;
+}
+
+
+/* ESTRELAS PARA AVALIAÇÃO SERVIÇO */
+
+.stars-rating-service input[type="radio"] {
+    display: none;
+}
+
+.stars-rating-service label i.fas:before {
     content: "\f005";
     color: #ffcd36;
 }
 
-.stars-rating input[type="radio"]:checked~label i.fas:before {
-    color: #ccc;
+.stars-rating-service input[type="radio"]:checked~label i.fas:before {
+    color: #7e7e7e;
 }
 
 .stars-rating-service input[type="radio"] {
     display: none;
 }
 
-.stars-rating-service label i.fas .starService:before {
+.stars-rating-service label i.fas:before {
     content: "\f005";
     color: #ffcd36;
 }
 
-.stars-rating-service input[type="radio"]:checked~label i.fas .starService:before {
-    color: #ccc;
+.stars-rating-service input[type="radio"]:checked~label i.fas:before {
+    color: #7e7e7e;
 }
 
 
+/* ESTRELAS PARA AVALIAÇÃO DE PRODUTO */
 
 
+.product-form p,
+.product-form input[type="submit"] {
+    font-size: 1.1em;
+}
+
+input[type="radio"] {
+    display: none;
+}
 
 
+.clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
 
+input[type="radio"]:checked~label {
+    color: #ffcd36;
+}
 
 
 /* SEÇÃO POSTS */

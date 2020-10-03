@@ -1,22 +1,22 @@
 {{-- ESCREVER INDICAÇÃO DE PRODUTO
 --}}
-<form action="{{ route('product_insert') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('product_insert') }}" method="POST" enctype="multipart/form-data" class="form-product">
     @csrf
 
     {{-- NOME DO PRODUTO --}}
     <div class="form-group">
-        <textarea class="form-control" rows="1" placeholder="Produto" name="nome" id="nome"></textarea>
+        <textarea class="input-product" rows="1" placeholder="Produto" name="nome" id="nome"></textarea>
     </div>
     {{-- MARCA --}}
     <div class="form-group">
-        <textarea class="form-control" rows="1" placeholder="Marca" name="marca" id="marca"></textarea>
+        <textarea class="input-product" rows="1" placeholder="Marca" name="marca" id="marca"></textarea>
     </div>
 
     {{-- SEGMENTO --}}
 
     <div class="form-group col-md-4 px-0">
         <label for="segments">Segmento</label>
-        <select id="segments" class="form-control" name="segment_id">
+        <select id="segments" class="input-product" name="segment_id">
             <option selected>Escolha uma opção</option>
             <option value="1">Assistência Técnica</option>
             <option value="2">Educação</option>
@@ -34,31 +34,39 @@
 
     {{-- PREÇO --}}
     <div class="form-group">
-        <textarea class="form-control" rows="1" placeholder="Preço" name="valor" id="valor"></textarea>
+        <textarea class="input-product" rows="1" placeholder="Preço" name="valor" id="valor"></textarea>
     </div>
     {{-- LOJA --}}
     <div class="form-group">
-        <textarea class="form-control" rows="1" placeholder="Loja" name="loja" id="loja"></textarea>
+        <textarea class="input-product" rows="1" placeholder="Loja" name="loja" id="loja"></textarea>
     </div>
 
+
     {{-- NOTA --}}
-    {{-- <label for="">Avaliação:</label>
-    <div class="stars-rating">
-        <input type="radio" id="cm_star-empty" name="fb" value="" checked />
-        <label for="cm_star-1"><i class="fas fa-star"></i></label>
-        <input type="radio" id="cm_star-1" name="fb" value="1" />
-        <label for="cm_star-2"><i class="fas fa-star"></i></label>
-        <input type="radio" id="cm_star-2" name="fb" value="2" />
-        <label for="cm_star-3"><i class="fas fa-star"></i></label>
-        <input type="radio" id="cm_star-3" name="fb" value="3" />
-        <label for="cm_star-4"><i class="fas fa-star"></i></label>
-        <input type="radio" id="cm_star-4" name="fb" value="4" />
-        <label for="cm_star-5"><i class="fas fa-star"></i></label>
-        <input type="radio" id="cm_star-5" name="fb" value="5" />
-    </div> --}}
+    <label for="ratings">Avaliação:</label>
+    <div id="wrapper">
+        <form action="" method="post" class="product-form">
+            <p class="clasificacion">
+                <input id="radio5" type="radio" name="product-stars" value="1">
+                <label for="radio5"><i class="fas fa-star"></i></label>
+                <input id="radio4" type="radio" name="product-stars" value="2">
+                <label for="radio4"><i class="fas fa-star"></i></label>
+                <input id="radio3" type="radio" name="product-stars" value="3">
+                <label for="radio3"><i class="fas fa-star"></i></label>
+                <input id="radio2" type="radio" name="product-stars" value="4">
+                <label for="radio2"><i class="fas fa-star"></i></label>
+                <input id="radio1" type="radio" name="product-stars" value="5">
+                <label for="radio1"><i class="fas fa-star"></i></label>
+            </p>
+        </form>
+    </div>
+
+
+
+
     {{-- CONTEÚDO --}}
     <div class="form-group">
-        <textarea class="form-control" rows="3" placeholder="Qual a sua avaliação?" name="conteudo"
+        <textarea class="input-product" rows="3" placeholder="Qual a sua avaliação?" name="conteudo"
             id="conteudo"></textarea>
     </div>
 
