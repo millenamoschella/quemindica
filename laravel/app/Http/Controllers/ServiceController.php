@@ -33,12 +33,10 @@ class ServiceController extends Controller
     }
 
 
-
     public function create()
     {
         return view('service.create');
     }
-
 
 
     public function insert(Request $request)
@@ -97,9 +95,6 @@ class ServiceController extends Controller
         }
 
 
-
-
-
         $email = $request->get('email');
 
         $validator = Validator::make(
@@ -147,8 +142,6 @@ class ServiceController extends Controller
                 $service->photo = '';
             }
         }
-
-
 
 
         // CRIANDO UM SERVIÇO

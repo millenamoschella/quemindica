@@ -45,22 +45,22 @@
     {{-- NOTA --}}
     <label for="ratings">Avaliação:</label>
     <div id="wrapper">
-        <form action="" method="post" class="product-form">
+        {{-- <form action="" method="post" class="form-product">
+            --}}
             <p class="clasificacion">
-                <input id="radio5" type="radio" name="product-stars" value="1">
+                <input id="radio5" type="radio" name="nota" value="1">
                 <label for="radio5"><i class="fas fa-star"></i></label>
-                <input id="radio4" type="radio" name="product-stars" value="2">
+                <input id="radio4" type="radio" name="nota" value="2">
                 <label for="radio4"><i class="fas fa-star"></i></label>
-                <input id="radio3" type="radio" name="product-stars" value="3">
+                <input id="radio3" type="radio" name="nota" value="3">
                 <label for="radio3"><i class="fas fa-star"></i></label>
-                <input id="radio2" type="radio" name="product-stars" value="4">
+                <input id="radio2" type="radio" name="nota" value="4">
                 <label for="radio2"><i class="fas fa-star"></i></label>
-                <input id="radio1" type="radio" name="product-stars" value="5">
+                <input id="radio1" type="radio" name="nota" value="5">
                 <label for="radio1"><i class="fas fa-star"></i></label>
             </p>
-        </form>
+            {{-- </form> --}}
     </div>
-
 
 
 
@@ -70,21 +70,11 @@
             id="conteudo"></textarea>
     </div>
 
-    {{-- BOTÕES POSTAR --}}
-    <div class="form-group icones-postagem">
 
-        {{-- ÍCONES PARA MARCAR UMA PESSOA, ADD IMAGEM OU
-        LOCAL A POSTAGEM --}}
-        <button class="btn icon-post"><i class="fa fa-paperclip" aria-hidden="true"></i></button>
-        <button class="btn icon-post"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
-        <button class="btn icon-post"><i class="fa fa-user" aria-hidden="true"></i></button>
-
-        {{-- POSTAR --}}
-        <button class="btn float-right button-posts">
-            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-            <span>Postar</span>
-        </button>
-
-    </div>
+    {{-- BOTÃO POSTAR --}}
+    <button class="btn float-right button-posts">
+        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+        <span>Postar</span>
+    </button>
 
 </form>

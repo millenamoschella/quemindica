@@ -9,6 +9,7 @@ use App\Comment;
 use App\Culture;
 use Illuminate\Support\Facades\Auth;
 use App\Follower;
+use App\Product;
 use App\Rating;
 use App\Service;
 
@@ -125,36 +126,68 @@ class UserController extends Controller
     public function username($username)
     {
 
+        // Usuários
         $user = User::where('username', $username)->first();
         $users = User::orderby('created_at', 'DESC')->limit(9)->get();
 
         if (!$user)
             abort(404);
 
+        // Posts dos usuários
         $postsUser = Post::where(function ($query) use ($user) {
             $query->where('user_id', $user->id)
                 ->orWhere('user_id', $user->id);
         })
             ->orderBy('created_at', 'DESC')->get();
 
-
-        // $postsUser = Post::orderBy('created_at', 'DESC')->get();
+        // Serviços do usuário
         $postsServices = Service::orderBy('created_at', 'DESC')->limit(6)->get();
 
+        // Comentários dos usuários
         $commentsUser = Comment::limit(3)->get();
+
+        // Posts de cultura do usuário
         $postsCulture = Culture::All();
 
 
-        // Pegando as notas de um usuário:
+
+
+
+
+        // Pegando as notas de um usuário - serviço:
         $serviceUser = Service::where('user_id', '=', $user->id)->pluck('id'); // retorna id de serviço QUANDO é daquele usuário
 
         $ratings = Rating::whereIn('service_id', $serviceUser)->pluck('nota');
         $countRatings = count($ratings);
         if ($countRatings > 0) {
-            $avaregeRating = $ratings->sum() / $countRatings;
-            // dd($countRatings);
+            $averageRating = $ratings->sum() / $countRatings;
         } else {
-            $avaregeRating = 0;
+            $averageRating = 0;
+        }
+
+
+
+        // Pegando as notas de um usuário - cultura:
+        $cultureRating = Culture::pluck('id'); // retorna id de serviço QUANDO é daquele usuário
+
+        $ratingsCulture = Rating::whereIn('culture_id', $cultureRating)->pluck('nota');
+        $countRatingCulture = count($ratingsCulture);
+        if ($countRatingCulture > 0) {
+            $averageRatingCulture = $ratingsCulture->sum() / $countRatingCulture;
+        } else {
+            $averageRatingCulture = 0;
+        }
+
+
+        // Pegando as notas de um usuário - produto:
+        $productRating = Product::pluck('id'); // retorna id de serviço QUANDO é daquele usuário
+
+        $ratingsProduct = Rating::whereIn('product_id', $productRating)->pluck('nota');
+        $countRatingsProduct = count($ratingsProduct);
+        if ($countRatingsProduct > 0) {
+            $averageRatingProduct = $ratingsProduct->sum() / $countRatingsProduct;
+        } else {
+            $averageRatingProduct = 0;
         }
 
 
@@ -171,26 +204,17 @@ class UserController extends Controller
             'users',
             'follower',
             'ratings',
-            'avaregeRating',
+            'averageRating',
             'countRatings',
-            'postsServices'
+            'postsServices',
+            'cultureRating',
+            'averageRatingCulture',
+            'countRatingCulture',
+            'productRating',
+            'averageRatingProduct',
+            'countRatingsProduct'
         ));
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

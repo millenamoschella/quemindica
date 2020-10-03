@@ -59,9 +59,9 @@
             {{-- PONTUAÇÃO USUÁRIO --}}
             <div class="stars">
                 @for ($i = 0; $i < 5; $i++)
-                    @if (floor($avaregeRating) - $i >= 1)
+                    @if (floor($averageRating) - $i >= 1)
                         <i class="fas fa-star "> </i>
-                    @elseif ($avaregeRating - $i > 0)
+                    @elseif ($averageRating - $i > 0)
                         <i class="fas fa-star-half-alt "> </i>
                     @else
                         <i class="far fa-star "> </i>
@@ -148,9 +148,9 @@
                                         <div class="rating-perfil text-center">
 
                                             @for ($i = 0; $i < 5; $i++)
-                                                @if (floor($avaregeRating) - $i >= 1)
+                                                @if (floor($averageRating) - $i >= 1)
                                                     <i class="fas fa-star "> </i>
-                                                @elseif ($avaregeRating - $i > 0)
+                                                @elseif ($averageRating - $i > 0)
                                                     <i class="fas fa-star-half-alt "> </i>
                                                 @else
                                                     <i class="far fa-star "> </i>
@@ -267,11 +267,11 @@
                                             </div>
                                         </div>
 
-                                        @if (Session::has('message'))
-                                            <p class="alert alert-info">{{ Session::get('message') }}</p>
-                                        @endif
                                     </div>
 
+                                    @if (Session::has('message'))
+                                        <p class="alert alert-info">{{ Session::get('message') }}</p>
+                                    @endif
                                 </div>
                             </div>
 

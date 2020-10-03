@@ -352,6 +352,16 @@
     border-radius: 5px 5px 0 0;
 }
 
+/* MENSAGEM DO POST CRIADO */
+
+.alert-info {
+    height: 50px;
+    color: #007592;
+    background-color: #ffda69;
+    border: none;
+    margin-top: 15px;
+}
+
 
 /* BOTÃO VOLTAR PARA OS TIPOS DE INDICAÇÕES */
 .backIcon i {
@@ -419,10 +429,15 @@ option {
 }
 
 
-.form-service textarea,
 .form-culture textarea {
+    margin-top: 15px;
+}
+
+
+.form-service textarea {
     margin-top: 10px;
 }
+
 
 /* ESTRELAS PARA AVALIAÇÃO DE CULTURA */
 
@@ -488,8 +503,8 @@ option {
 /* ESTRELAS PARA AVALIAÇÃO DE PRODUTO */
 
 
-.product-form p,
-.product-form input[type="submit"] {
+.form-product p,
+.form-product input[type="submit"] {
     font-size: 1.1em;
 }
 
