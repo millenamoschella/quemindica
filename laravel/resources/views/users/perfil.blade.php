@@ -466,7 +466,7 @@
                                                         --}}
                                                         <div class="service-photo">
 
-                                                            <a href="#" data-toggle="modal" data-target="#modalFoto">
+                                                            <a href="{{ route('servico.show', $post->service->id) }}">
                                                                 @if ($post->service->photo == null)
                                                                     <img src="{{ asset('imagens/servicos/servico-6.png') }}"
                                                                         alt="Foto default serviço"
