@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\sendMail;
+use Illuminate\Support\Facades\Validator;
 
 class ServiceController extends Controller
 {
@@ -32,10 +33,12 @@ class ServiceController extends Controller
     }
 
 
+
     public function create()
     {
         return view('service.create');
     }
+
 
 
     public function insert(Request $request)
@@ -94,38 +97,61 @@ class ServiceController extends Controller
         }
 
 
-        $provider = new User();
-        $provider->name = $request->get('name');
-        $provider->username = $request->get('name') . rand(1, 99999);
-        $provider->phone = $request->get('phone');
-        $provider->fakepassword = uniqid() . rand(1, 999);
-        $provider->email = $request->get('email');
-        $provider->password = bcrypt($provider->fakepassword);
-        $provider->save();
-
-        $service = new Service();
-
-        $service->segment_id = $request->get('segment_id');
-        $service->nome_prestador = $provider->name;
-        $service->user_id = $provider->id;
-        $service->servico = $request->get('servico');
-        $service->local = $request->get('local');
-        $service->valor = $request->get('valor');
 
 
-        // UPOLOAD DE IMAGEM
 
-        if ($request->hasFile('photo')) {
-            $file = $request->file('photo');
-            $extension = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $extension;
-            $file->move('uploads/services/', $filename);
-            $service->photo = $filename;
+        $email = $request->get('email');
+
+        $validator = Validator::make(
+            array(
+                'email' => $email
+            ),
+            array(
+                'email' => 'required|email|unique:users'
+            )
+        );
+        if ($validator->fails()) {
+            return back()->withInput()->withErrors(['email' => 'este email já está sendo utilizado']);;
         } else {
-            return $request;
-            $service->photo = '';
+
+
+            $provider = new User();
+            $provider->name = $request->get('name');
+            $provider->username = $request->get('name') . rand(1, 99999);
+            $provider->phone = $request->get('phone');
+            $provider->fakepassword = uniqid() . rand(1, 999);
+            $provider->email = $request->get('email');
+            $provider->password = bcrypt($provider->fakepassword);
+            $provider->save();
+
+            $service = new Service();
+
+            $service->segment_id = $request->get('segment_id');
+            $service->nome_prestador = $provider->name;
+            $service->user_id = $provider->id;
+            $service->servico = $request->get('servico');
+            $service->local = $request->get('local');
+            $service->valor = $request->get('valor');
+
+
+            // UPOLOAD DE IMAGEM
+
+            if ($request->hasFile('photo')) {
+                $file = $request->file('photo');
+                $extension = $file->getClientOriginalExtension();
+                $filename = time() . '.' . $extension;
+                $file->move('uploads/services/', $filename);
+                $service->photo = $filename;
+            } else {
+                return $request;
+                $service->photo = '';
+            }
         }
 
+
+
+
+        // CRIANDO UM SERVIÇO
 
         $service->save();
 
@@ -148,6 +174,7 @@ class ServiceController extends Controller
         // Mail::to($provider->email)->send(new SendMail($provider));
 
 
+        Session::flash('message', 'Profissional indicado com sucesso!');
         return back();
     }
 
