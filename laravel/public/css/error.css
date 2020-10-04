@@ -1,0 +1,32 @@
+.error-message {
+    height: 100vh;
+    margin: 0;
+}
+
+.error-image {
+    width: 1000px;
+    margin-top: -80px;
+}
+
+.error-button {
+    background-color: #007592;
+    color: #FCDA73;
+    border-radius: 5px;
+    padding: 8px 24px;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: -120px;
+}
+
+.error-button:hover {
+    background-color: #FCDA73;
+    color: #007592;
+}
+
+.error-button:focus {
+    outline: none;
+}

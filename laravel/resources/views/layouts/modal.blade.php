@@ -223,20 +223,6 @@
 
                                         </div>
 
-                                        {{-- SOBRENOME --}}
-                                        {{-- <div class="wrap-register-modal">
-                                            <input id="lastname" type="text" class="input-modal-register"
-                                                name="lastname" required autocomplete="lastname"
-                                                value="{{ old('lastname') }}" placeholder="Sobrenome">
-
-
-                                            <span class="focus-input-modal-register"></span>
-                                            <span class="modal-register-icone">
-                                                <i class="fa fa-user" aria-hidden="true"></i>
-                                            </span>
-
-                                        </div> --}}
-
                                         {{-- USERNAME --}}
 
                                         <div class="wrap-register-modal">
