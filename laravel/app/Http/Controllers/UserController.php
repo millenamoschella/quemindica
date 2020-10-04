@@ -164,20 +164,7 @@ class UserController extends Controller
             $averageRating = 0;
         }
 
-
-
-
-
         // Pegando as notas de um usuário - cultura:
-        // $cultureRating = Culture::where('post_id', '=', $posts->id)->pluck('id');
-        // $posts = Post::pluck('culture_id');
-        // dd($posts);
-        // $cultureId = Culture::where($posts->culture_id, '=', $posts->id)->pluck('id');
-
-
-        // $cultureRating = Rating::whereIn('culture_id', $cultureId)->pluck('nota');
-
-
         $cultureRating = Culture::pluck('id');
         $ratingsCulture = Rating::whereIn('culture_id', $cultureRating)->pluck('nota');
         $countRatingCulture = count($ratingsCulture);
@@ -188,31 +175,6 @@ class UserController extends Controller
         } else {
             $averageRatingCulture = 0;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         // Pegando as notas de um usuário - produto:

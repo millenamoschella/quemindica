@@ -202,12 +202,12 @@
 
                                     <div class="row">
 
-                                        {{-- NOME --}}
+                                        {{-- NOME COMPLETO--}}
                                         <div class="wrap-register-modal">
                                             <input id="name" type="text"
-                                                class="input-modal-register @error('name') is-invalid @enderror"
-                                                name="name" value="{{ old('name') }}" placeholder="Nome" required
-                                                autocomplete="name">
+                                                class="input-modal-register @error('fullname') is-invalid @enderror"
+                                                name="name" value="{{ old('fullname') }}" placeholder="Nome Completo"
+                                                required autocomplete="name">
 
                                             @error('name')
                                             <span class="invalid-feedback" role="alert">
@@ -224,7 +224,7 @@
                                         </div>
 
                                         {{-- SOBRENOME --}}
-                                        <div class="wrap-register-modal">
+                                        {{-- <div class="wrap-register-modal">
                                             <input id="lastname" type="text" class="input-modal-register"
                                                 name="lastname" required autocomplete="lastname"
                                                 value="{{ old('lastname') }}" placeholder="Sobrenome">
@@ -235,7 +235,7 @@
                                                 <i class="fa fa-user" aria-hidden="true"></i>
                                             </span>
 
-                                        </div>
+                                        </div> --}}
 
                                         {{-- USERNAME --}}
 

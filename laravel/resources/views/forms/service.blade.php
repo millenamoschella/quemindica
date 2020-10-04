@@ -9,10 +9,10 @@
         <input type="text" class="input-service" rows="1" placeholder="Serviço Prestado" name="servico" id="service">
     </div>
 
-    {{-- NOME PRESTADOR --}}
+    {{-- NOME COMPLETO PRESTADOR --}}
     <div class="form-group">
-        <input id="name" type="text" class=" input-service @error('name') is-invalid @enderror" name="name"
-            value="{{ old('name') }}" placeholder="Nome" required autocomplete="name">
+        <input id="name" type="text" class=" input-service @error('fullname') is-invalid @enderror" name="name"
+            value="{{ old('fullname') }}" placeholder="Nome Completo" required autocomplete="name">
 
         @error('name')
         <span class="invalid-feedback" role="alert">
