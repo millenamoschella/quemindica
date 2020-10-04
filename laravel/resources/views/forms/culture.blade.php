@@ -40,16 +40,16 @@
     {{-- NOTA --}}
     <label for="ratings" class="label-culture-star">Avaliação:</label>
     <div class="rating">
-        <input type="radio" class="rating-input" id="rating-1" name="nota" value="1">
-        <label for="rating-1" class="rating-star"><i class="fa fa-star"></i></label>
-        <input type="radio" class="rating-input" id="rating-2" name="nota" value="2">
-        <label for="rating-2" class="rating-star"><i class="fa fa-star"></i></label>
-        <input type="radio" class="rating-input" id="rating-3" name="nota" value="3">
-        <label for="rating-3" class="rating-star"><i class="fa fa-star"></i></label>
-        <input type="radio" class="rating-input" id="rating-4" name="nota" value="4">
-        <label for="rating-4" class="rating-star"><i class="fa fa-star"></i></label>
         <input type="radio" class="rating-input" id="rating-5" name="nota" value="5">
         <label for="rating-5" class="rating-star"><i class="fa fa-star"></i></label>
+        <input type="radio" class="rating-input" id="rating-4" name="nota" value="4">
+        <label for="rating-4" class="rating-star"><i class="fa fa-star"></i></label>
+        <input type="radio" class="rating-input" id="rating-3" name="nota" value="3">
+        <label for="rating-3" class="rating-star"><i class="fa fa-star"></i></label>
+        <input type="radio" class="rating-input" id="rating-2" name="nota" value="2">
+        <label for="rating-2" class="rating-star"><i class="fa fa-star"></i></label>
+        <input type="radio" class="rating-input" id="rating-1" name="nota" value="1">
+        <label for="rating-1" class="rating-star"><i class="fa fa-star"></i></label>
     </div>
 
     {{-- COMENTÁRIO --}}

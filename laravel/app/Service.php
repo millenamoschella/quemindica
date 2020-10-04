@@ -18,6 +18,8 @@ class Service extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+
     public function segment()
     {
         return $this->belongsTo(Segment::class);

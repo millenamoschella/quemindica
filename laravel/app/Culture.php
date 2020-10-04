@@ -19,7 +19,6 @@ class Culture extends Model
         return $this->belongsTo(Genre::class);
     }
 
-    
 
     public function culture_segment()
     {

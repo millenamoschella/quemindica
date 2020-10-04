@@ -596,6 +596,17 @@ input[type="radio"]:checked~label {
     margin-bottom: 30px;
 }
 
+.raintg-culture i {
+    color: #ffd559;
+}
+
+.culture-point {
+    color: #007592;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
 /* POST DE SERVIÇO */
 
 .raintg-service i {
@@ -669,6 +680,17 @@ input[type="radio"]:checked~label {
     margin-top: 30px;
     margin-bottom: 0;
     font-size: 0.9em;
+}
+
+.raintg-product i {
+    color: #ffd559;
+}
+
+.product-point {
+    color: #007592;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+    font-weight: bold;
 }
 
 /* CONTEÚDO DO POST */

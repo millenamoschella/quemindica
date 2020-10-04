@@ -149,16 +149,15 @@ class UserController extends Controller
         // Posts de cultura do usuário
         $postsCulture = Culture::All();
 
-
-
-
+        $posts = Post::all();
 
 
         // Pegando as notas de um usuário - serviço:
         $serviceUser = Service::where('user_id', '=', $user->id)->pluck('id'); // retorna id de serviço QUANDO é daquele usuário
-
         $ratings = Rating::whereIn('service_id', $serviceUser)->pluck('nota');
         $countRatings = count($ratings);
+
+        // Somar a nota 
         if ($countRatings > 0) {
             $averageRating = $ratings->sum() / $countRatings;
         } else {
@@ -167,11 +166,23 @@ class UserController extends Controller
 
 
 
-        // Pegando as notas de um usuário - cultura:
-        $cultureRating = Culture::pluck('id'); // retorna id de serviço QUANDO é daquele usuário
 
+
+        // Pegando as notas de um usuário - cultura:
+        // $cultureRating = Culture::where('post_id', '=', $posts->id)->pluck('id');
+        // $posts = Post::pluck('culture_id');
+        // dd($posts);
+        // $cultureId = Culture::where($posts->culture_id, '=', $posts->id)->pluck('id');
+
+
+        // $cultureRating = Rating::whereIn('culture_id', $cultureId)->pluck('nota');
+
+
+        $cultureRating = Culture::pluck('id');
         $ratingsCulture = Rating::whereIn('culture_id', $cultureRating)->pluck('nota');
         $countRatingCulture = count($ratingsCulture);
+
+        // Somar a nota 
         if ($countRatingCulture > 0) {
             $averageRatingCulture = $ratingsCulture->sum() / $countRatingCulture;
         } else {
@@ -179,16 +190,43 @@ class UserController extends Controller
         }
 
 
-        // Pegando as notas de um usuário - produto:
-        $productRating = Product::pluck('id'); // retorna id de serviço QUANDO é daquele usuário
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Pegando as notas de um usuário - produto:
+        $productRating = Product::pluck('id');
         $ratingsProduct = Rating::whereIn('product_id', $productRating)->pluck('nota');
         $countRatingsProduct = count($ratingsProduct);
+
+        // Somar a nota 
         if ($countRatingsProduct > 0) {
             $averageRatingProduct = $ratingsProduct->sum() / $countRatingsProduct;
         } else {
             $averageRatingProduct = 0;
         }
+
 
 
         // variável pra identificar se o usuário já segue alguém

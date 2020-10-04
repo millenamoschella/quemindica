@@ -422,6 +422,26 @@
                                                     @case($post->culture_id != null)
                                                     <div class="culture-post">
 
+                                                        <div class="rating-culture-section">
+                                                            <div class="raintg-culture">
+
+                                                                @for ($i = 0; $i < 5; $i++)
+                                                                    @if (floor($post->culture->rating[0]->nota) - $i >= 1)
+                                                                        <i class="fas fa-star"></i>
+                                                                    @elseif ($post->culture->rating[0]->nota - $i > 0)
+                                                                        <i class="fas fa-star-half-alt "></i>
+                                                                    @else
+                                                                        <i class="far fa-star "></i>
+                                                                    @endif
+                                                                @endfor
+
+                                                                <h6 class="culture-point">
+                                                                    {{ 'Nota ' . $post->culture->rating[0]->nota }}</h6>
+
+                                                            </div>
+                                                        </div>
+
+
                                                         <h6 class="culture-segment">
                                                             {{ $post->culture->culture_segment->tipo . ' em ' }}
                                                             {{ $post->culture->plataforma }}
@@ -447,6 +467,8 @@
                                                                         <i class="far fa-star "> </i>
                                                                     @endif
                                                                 @endfor
+
+
                                                                 <h6 class="service-point">
                                                                     {{ 'Nota ' . $post->service->rating[0]->nota }}</h6>
                                                             </div>
@@ -486,6 +508,25 @@
                                                     {{-- PRODUTO --}}
                                                     @case($post->product_id != null)
                                                     <div class="product-post">
+
+                                                        <div class="rating-culture-section">
+                                                            <div class="raintg-culture">
+
+                                                                @for ($i = 0; $i < 5; $i++)
+                                                                    @if (floor($post->product->rating[0]->nota) - $i >= 1)
+                                                                        <i class="fas fa-star"></i>
+                                                                    @elseif ($post->product->rating[0]->nota - $i > 0)
+                                                                        <i class="fas fa-star-half-alt "></i>
+                                                                    @else
+                                                                        <i class="far fa-star "></i>
+                                                                    @endif
+                                                                @endfor
+
+                                                                <h6 class="culture-point">
+                                                                    {{ 'Nota ' . $post->product->rating[0]->nota }}</h6>
+
+                                                            </div>
+                                                        </div>
 
                                                         <h6 class="product-title">Indicação de produto</h6>
                                                         <h6 class="product-segment">Segmento:

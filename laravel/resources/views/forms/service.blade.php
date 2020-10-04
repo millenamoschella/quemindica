@@ -12,8 +12,7 @@
     {{-- NOME PRESTADOR --}}
     <div class="form-group">
         <input id="name" type="text" class=" input-service @error('name') is-invalid @enderror" name="name"
-            value="{{ old('name') }}" placeholder="Nome" required autocomplete="name" id="txtEmpName"
-            onkeypress="return AvoidSpace(event)">
+            value="{{ old('name') }}" placeholder="Nome" required autocomplete="name">
 
         @error('name')
         <span class="invalid-feedback" role="alert">

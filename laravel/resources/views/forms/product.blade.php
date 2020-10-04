@@ -45,21 +45,18 @@
     {{-- NOTA --}}
     <label for="ratings">Avaliação:</label>
     <div id="wrapper">
-        {{-- <form action="" method="post" class="form-product">
-            --}}
-            <p class="clasificacion">
-                <input id="radio5" type="radio" name="nota" value="1">
-                <label for="radio5"><i class="fas fa-star"></i></label>
-                <input id="radio4" type="radio" name="nota" value="2">
-                <label for="radio4"><i class="fas fa-star"></i></label>
-                <input id="radio3" type="radio" name="nota" value="3">
-                <label for="radio3"><i class="fas fa-star"></i></label>
-                <input id="radio2" type="radio" name="nota" value="4">
-                <label for="radio2"><i class="fas fa-star"></i></label>
-                <input id="radio1" type="radio" name="nota" value="5">
-                <label for="radio1"><i class="fas fa-star"></i></label>
-            </p>
-            {{-- </form> --}}
+        <p class="clasificacion">
+            <input id="radio5" type="radio" name="nota" value="5">
+            <label for="radio5"><i class="fas fa-star"></i></label>
+            <input id="radio4" type="radio" name="nota" value="4">
+            <label for="radio4"><i class="fas fa-star"></i></label>
+            <input id="radio3" type="radio" name="nota" value="3">
+            <label for="radio3"><i class="fas fa-star"></i></label>
+            <input id="radio2" type="radio" name="nota" value="2">
+            <label for="radio2"><i class="fas fa-star"></i></label>
+            <input id="radio1" type="radio" name="nota" value="1">
+            <label for="radio1"><i class="fas fa-star"></i></label>
+        </p>
     </div>
 
 

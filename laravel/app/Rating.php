@@ -28,11 +28,11 @@ class Rating extends Model
 
     public function productRating()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class, 'product_id', 'id');
     }
 
     public function cultureRating()
     {
-        return $this->belongsTo(Culture::class);
+        return $this->belongsTo(Culture::class, 'culture_id', 'id');
     }
 }
