@@ -15,12 +15,13 @@ Route::get('/logout', 'LoginController@logout')->name('logout');
 
 // ROTAS ADMIN EQUIPE
 
-Route::get('/admin-usuarios', 'AdminController@usuarios')->name('admin-usuarios');
-Route::get('/admin-indicacoes', 'AdminController@indicacoes')->name('admin-indicacoes');
-Route::get('/admin-servicos', 'AdminController@servicos')->name('admin-servicos');
+Route::get('/admin', 'AdminController@users')->name('admin');
+Route::get('/admin-culture', 'AdminController@cultures')->name('admin-culture');
+Route::get('/admin-service', 'AdminController@services')->name('admin-service');
+Route::get('/admin-product', 'AdminController@products')->name('admin-product');
 
 
-// ROTAS USUÁRIO 
+// ROTAS USUÁRIO  
 
 Route::get('/user/{username}', 'UserController@username')->name('user');
 

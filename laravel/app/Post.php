@@ -22,17 +22,17 @@ class Post extends Model
 
     public function service()
     {
-        return $this->belongsTo(Service::class);
+        return $this->belongsTo(Service::class, 'service_id');
     }
 
     public function product()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class, 'product_id');
     }
 
     public function culture()
     {
-        return $this->belongsTo(Culture::class);
+        return $this->belongsTo(Culture::class, 'culture_id');
     }
 
     public function reaction()

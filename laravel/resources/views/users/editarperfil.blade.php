@@ -37,7 +37,6 @@
                         </div>
                     </div>
 
-
                     {{-- CAMPOS FORMULÁRIO --}}
                     <div class="col-md-8">
                         <div class="p-3 py-5">
@@ -235,16 +234,14 @@
                                 </button>
                             </div>
 
-            </form>
+                        </div>
+                    </div>
 
+                </div>
+
+            </form>
         </div>
     </div>
-
-    </div>
-
-    </div>
-    </div>
-
 
 @endsection
 

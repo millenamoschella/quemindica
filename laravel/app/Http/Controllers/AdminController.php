@@ -2,24 +2,61 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Culture;
+use App\Service;
+use App\Product;
+use App\Post;
+
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function usuarios()
+
+    public function users()
     {
-        return view('admin.admin-usuarios');
+        $users = User::all();
+        $cultures = Culture::all();
+        $services = Service::all();
+        $products = Product::all();
+        $posts = Post::all();
+
+        return view('admin.admin-user', compact('users', 'cultures', 'posts', 'products', 'services'));
     }
 
 
-    public function indicacoes()
+    public function cultures()
     {
-        return view('admin.admin-indicacoes');
+        $users = User::all();
+        $cultures = Culture::all();
+        $services = Service::all();
+        $products = Product::all();
+        $posts = Post::all();
+
+        return view('admin.admin-culture', compact('users', 'cultures', 'posts', 'products', 'services'));
     }
 
 
-    public function servicos()
+    public function services()
     {
-        return view('admin.admin-servicos');
+        $users = User::all();
+        $cultures = Culture::all();
+        $services = Service::all();
+        $products = Product::all();
+        $posts = Post::all();
+
+        return view('admin.admin-service', compact('users', 'cultures', 'posts', 'products', 'services'));
+    }
+
+
+    public function products()
+    {
+        $users = User::all();
+        $cultures = Culture::all();
+        $services = Service::all();
+        $products = Product::all();
+        $posts = Post::all();
+
+        return view('admin.admin-product', compact('users', 'cultures', 'posts', 'products', 'services'));
     }
 }
