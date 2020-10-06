@@ -2,6 +2,16 @@
     background-color: #e0e0e0;
     margin-top: 50px;
     padding: 20px;
+    height: 100vh;
+}
+
+.secao-admin-painel a {
+    color: #007592;
+}
+
+.secao-admin-painel a:hover {
+    color: #FCDA73;
+    text-decoration: none;
 }
 
 /* MENU CARDS */
