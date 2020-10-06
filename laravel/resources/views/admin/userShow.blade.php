@@ -8,7 +8,7 @@
 @endsection
 
 @section('header')
-    @include('layouts.layout-menulogado')
+    @include('admin.layout-menuAdmin')
 @endsection
 
 

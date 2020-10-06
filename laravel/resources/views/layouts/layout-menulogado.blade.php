@@ -4,6 +4,7 @@
 @endsection
 
 
+{{-- MENU --}}
 <header>
     {{-- MENU --}}
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top menu-logado" id="mainNav">
@@ -63,14 +64,13 @@
                                     href="{{ route('users', Auth::user()->username) }}">Usuários</a>
                                 <a class="dropdown-item"
                                     href="{{ route('seguindo', Auth::user()->username) }}">Seguindo</a>
-                                {{-- <a class="dropdown-item" href="#">Seguidores</a> --}}
+                                {{-- <a class="dropdown-item" href="#">Seguidores</a>
+                                --}}
                                 <a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a>
                                 <a class="dropdown-item" href="{{ route('suporte') }}">Suporte</a>
                                 <a class="dropdown-item" href="{{ route('editarperfil', Auth::user()->id) }}">Editar
                                     Perfil</a>
                             </div>
-
-                            {{-- @endguest --}}
 
                         </ul>
                     </div>
@@ -84,7 +84,7 @@
                     <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
 
-                        
+
                         <i class="fa fa-fw fa-bell"></i>
 
                         <span class="d-lg-none titulo-not-mobile-menulog">Notificações
@@ -111,7 +111,7 @@
 
                         <div class="dropdown-divider"></div>
 
-                        
+
                         <a class="dropdown-item small ver-mais-menu" href="#">Ver Todas</a>
 
                     </div>
@@ -191,6 +191,5 @@
 
             </div>
         </div>
-    </div>
     </div>
 </header>

@@ -9,6 +9,7 @@ use App\Product;
 use App\Post;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -21,6 +22,7 @@ class AdminController extends Controller
         $posts = Post::all();
 
         $busca = request('busca');
+
         $users = User::where('name', 'LIKE', '%' . $busca . '%')->paginate(5);
 
         return view('admin.admin-user', compact('users', 'cultures', 'posts', 'products', 'services'));

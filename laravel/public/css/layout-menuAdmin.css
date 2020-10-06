@@ -1,0 +1,83 @@
+header {
+    background-color: #007592;
+}
+
+
+/* LOGO E TÍTULO QUEM INDICA */
+
+
+.logo-nav img {
+    width: 40px;
+}
+
+.titulo-quemindica {
+    color: #FCDA73;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.titulo-quemindica:hover,
+.navbar-dark,
+.navbar-brand {
+    color: #FCDA73 !important;
+}
+
+
+/* BOTÃO LOGIN E REGISTRAR */
+
+.btn-yellow {
+    background-color: #007592;
+    color: #FCDA73;
+    border: 1px solid #FCDA73;
+    border-radius: 5px;
+    padding: 8px 24px;
+    font-size: 0.8em;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-yellow:hover {
+    background-color: #FCDA73;
+    color: #007592;
+}
+
+.btn-yellow:focus {
+    outline: none;
+}
+
+/* DROWPDOWN MENU */
+
+.avatar-menu-off {
+    width: 40px;
+    height: 40px;
+}
+
+.avatar-menu-off:hover {
+    border: 2px solid #FCDA73;
+}
+
+.drop-menuoff {
+    color: #FCDA73;
+}
+
+.drop-menuoff:hover {
+    color: #fff;
+}
+
+.menu-links-menuoff {
+    /* border: none; */
+    background-color: #007592;
+    border: 1px solid #FCDA73;
+}
+
+.menu-links-menuoff a {
+    color: #FCDA73;
+}
+
+.menu-links-menuoff a:hover {
+    color: #007592;
+    font-weight: bold;
+    background-color: #FCDA73;
+}

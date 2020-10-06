@@ -4,7 +4,7 @@
 
 
 @section('header')
-    @include('layouts.layout-menulogado')
+    @include('admin.layout-menuAdmin')
 @endsection
 
 
@@ -88,6 +88,7 @@
     </div>
 
 @endsection
+
 
 {{-- CONTEÚDO --}}
 @section('content')
