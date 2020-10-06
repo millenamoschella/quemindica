@@ -18,7 +18,7 @@
                 <div class="card-body card-b-admin">
                     <div class="media d-flex">
                         <div class="media-body text-left">
-                            <h3>{{ count($users) }}</h3>
+                            <h3>{{ $users->total() }}</h3>
                             <span><a href="{{ route('admin') }}">Usuários</a></span>
                         </div>
                         <div class="align-self-center">
@@ -110,15 +110,20 @@
 
                             <div class="wrap secao-pesquisa-admin">
                                 <div class="pesquisar">
-                                    <input type="text" class="input-pesquisar-admin" placeholder="Pesquisar">
-                                    <button type="submit" class="botao-pesquisar-admin">
-                                        <i class="fa fa-search"></i>
-                                    </button>
+                                    <form action="{{ url('admin') }}" method="GET" class="form-inline busca">
+                                        @csrf
+                                        <input value="{{ Request::get('busca') }}" name="busca" type="text"
+                                            class="input-pesquisar-admin" placeholder="Pesquisar">
+                                        <button type="submit" class="botao-pesquisar-admin">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
 
                         </div>
                     </div>
+
 
                     {{-- TABELA --}}
                     <table class="table table-striped text-center">
@@ -167,7 +172,9 @@
                                             <i class="fa fa-trash-o btn" aria-hidden="true"></i>
                                         </a>
 
-                                        <i class="fa fa-eye btn" aria-hidden="true"><a href=""></a></i>
+                                        <a href="{{ route('showUser', $user->id) }}">
+                                            <i class="fa fa-eye btn" aria-hidden="true"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -182,6 +189,8 @@
         </div>
 
     </section>
+
+    {{ $users->links() }}
 
 @endsection
 

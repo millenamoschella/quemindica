@@ -75,7 +75,7 @@
                 <div class="card-body card-b-admin">
                     <div class="media d-flex">
                         <div class="media-body text-left">
-                            <h3>{{ count($products) }}</h3>
+                            <h3>{{ $products->total() }}</h3>
                             <span><a href="{{ route('admin-product') }}">Produto</a></span>
                         </div>
                         <div class="align-self-center">
@@ -110,10 +110,13 @@
 
                             <div class="wrap secao-pesquisa-admin">
                                 <div class="pesquisar">
-                                    <input type="text" class="input-pesquisar-admin" placeholder="Pesquisar">
-                                    <button type="submit" class="botao-pesquisar-admin">
-                                        <i class="fa fa-search"></i>
-                                    </button>
+                                    <form action="{{ url('admin-product') }}" method="GET" class="form-inline busca">
+                                        @csrf
+                                        <input type="text" class="input-pesquisar-admin" placeholder="Pesquisar">
+                                        <button type="submit" class="botao-pesquisar-admin">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
 
@@ -165,7 +168,9 @@
                                             <i class="fa fa-trash-o btn" aria-hidden="true"></i>
                                         </a>
 
-                                        <i class="fa fa-eye btn" aria-hidden="true"><a href=""></a></i>
+                                        <a href="{{ route('showProduct', $product->id) }}">
+                                            <i class="fa fa-eye btn" aria-hidden="true"></i>
+                                        </a>
                                     </td>
                                 </tr>
 
@@ -181,6 +186,8 @@
         </div>
 
     </section>
+
+    {{ $products->links() }}
 
 @endsection
 

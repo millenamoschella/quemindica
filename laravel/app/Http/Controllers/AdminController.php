@@ -15,11 +15,13 @@ class AdminController extends Controller
 
     public function users()
     {
-        $users = User::all();
         $cultures = Culture::all();
         $services = Service::all();
         $products = Product::all();
         $posts = Post::all();
+
+        $busca = request('busca');
+        $users = User::where('name', 'LIKE', '%' . $busca . '%')->paginate(5);
 
         return view('admin.admin-user', compact('users', 'cultures', 'posts', 'products', 'services'));
     }
@@ -28,10 +30,12 @@ class AdminController extends Controller
     public function cultures()
     {
         $users = User::all();
-        $cultures = Culture::all();
         $services = Service::all();
         $products = Product::all();
         $posts = Post::all();
+
+        $busca = request('busca');
+        $cultures = Culture::where('titulo', 'LIKE', '%' . $busca . '%')->paginate(5);
 
         return view('admin.admin-culture', compact('users', 'cultures', 'posts', 'products', 'services'));
     }
@@ -41,9 +45,11 @@ class AdminController extends Controller
     {
         $users = User::all();
         $cultures = Culture::all();
-        $services = Service::all();
         $products = Product::all();
         $posts = Post::all();
+
+        $busca = request('busca');
+        $services = Service::where('servico', 'LIKE', '%' . $busca . '%')->paginate(5);
 
         return view('admin.admin-service', compact('users', 'cultures', 'posts', 'products', 'services'));
     }
@@ -54,11 +60,51 @@ class AdminController extends Controller
         $users = User::all();
         $cultures = Culture::all();
         $services = Service::all();
-        $products = Product::all();
         $posts = Post::all();
+
+        $busca = request('busca');
+        $products = Product::where('nome', 'LIKE', '%' . $busca . '%')->paginate(5);
 
         return view('admin.admin-product', compact('users', 'cultures', 'posts', 'products', 'services'));
     }
+
+
+
+    //////////////////// FUNÇÕES PARA APRESENTAR MAIS DETALHES
+
+
+    // MOSTRAR UM USUÁRIO
+    public function showUser($id)
+    {
+        $user = User::findOrFail($id);
+        return view('admin.userShow', compact('user'));
+    }
+
+
+    // MOSTRAR UMA INDICAÇÃO DE CULTURA
+    public function showCulture($culture_id)
+    {
+        $culture = User::findOrFail($culture_id);
+        return view('admin.cultureShow', compact('culture'));
+    }
+
+
+    // MOSTRAR UMA INDICAÇÃO DE SERVIÇO
+    public function showService($service_id)
+    {
+        $service = Service::findOrFail($service_id);
+        return view('admin.serviceShow', compact('service'));
+    }
+
+
+    // MOSTRAR UMA INDICAÇÃO DE PRODUTO
+    public function showProduct($product_id)
+    {
+        $product = Product::findOrFail($product_id);
+        return view('admin.productShow', compact('culture'));
+    }
+
+
 
 
 

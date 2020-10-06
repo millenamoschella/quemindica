@@ -17,18 +17,22 @@ Route::get('/logout', 'LoginController@logout')->name('logout');
 
 Route::get('/admin', 'AdminController@users')->name('admin')->middleware();
 Route::get('/admin/user/delete/{id}', 'AdminController@deleteUser')->name('userDelete');
+Route::get('/admin/user/show/{id}', 'AdminController@showUser')->name('showUser');
 
 
 Route::get('/admin-culture', 'AdminController@cultures')->name('admin-culture')->middleware();
 Route::get('/admin-culture/delete/{id}', 'AdminController@deleteCulture')->name('cultureDelete');
+Route::get('/admin/culture/show/{id}', 'AdminController@showCulture')->name('showCulture');
 
 
 Route::get('/admin-service', 'AdminController@services')->name('admin-service')->middleware();
 Route::get('/admin/service/delete/{id}', 'AdminController@deleteService')->name('serviceDelete');
+Route::get('/admin/service/show/{id}', 'AdminController@showService')->name('showService');
 
 
 Route::get('/admin-product', 'AdminController@products')->name('admin-product')->middleware();
 Route::get('/admin/product/delete/{id}', 'AdminController@deleteProduct')->name('productDelete');
+Route::get('/admin/product/show/{id}', 'AdminController@showProduct')->name('showProduct');
 
 
 // ROTAS USUÁRIO  
