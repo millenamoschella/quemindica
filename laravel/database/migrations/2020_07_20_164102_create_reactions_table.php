@@ -19,8 +19,8 @@ class CreateReactionsTable extends Migration
             $table->string('comentario', 120);
             $table->timestamps();
 
-            $table->foreignId('post_id')->constrained();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('post_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
     }
 

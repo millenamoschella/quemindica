@@ -59,4 +59,48 @@ class AdminController extends Controller
 
         return view('admin.admin-product', compact('users', 'cultures', 'posts', 'products', 'services'));
     }
+
+
+
+    //////////////////// FUNÇÕES PARA DELETAR
+
+
+    // DELETAR UM USUÁRIO
+    public function deleteUser($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+
+        return back();
+    }
+
+
+    // DELETAR UMA INDICAÇÃO DE CULTURA
+    public function deleteCulture($culture_id)
+    {
+        $culture = Culture::find($culture_id);
+        $culture->delete();
+
+        return back();
+    }
+
+
+    // DELETAR UMA INDICAÇÃO DE SERVIÇO
+    public function deleteService($service_id)
+    {
+        $service = Service::find($service_id);
+        $service->delete();
+
+        return back();
+    }
+
+
+    // DELETAR UMA INDICAÇÃO DE PRODUTO
+    public function deleteProduct($product_id)
+    {
+        $product = Product::find($product_id);
+        $product->delete();
+
+        return back();
+    }
 }

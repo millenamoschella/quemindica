@@ -16,14 +16,4 @@ class PostController extends Controller
      {
           return view('post.create');
      }
-
-
-     public function delete($post_id)
-     {
-          $post_id = decrypt($post_id);
-          $post = Post::find($post_id);
-
-          $post->delete();
-          return back();
-     }
 }

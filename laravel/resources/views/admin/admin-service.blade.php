@@ -12,7 +12,7 @@
 @section('menu-admin')
 
     {{-- USUÁRIOS --}}
-    <div class="col-lg-4 col-md-4 col-sm-12 card-admin">
+    <div class="col-lg-3 col-md-4 col-sm-12 card-admin">
         <div class="card">
             <div class="card-content">
                 <div class="card-body card-b-admin">
@@ -31,14 +31,14 @@
     </div>
 
     {{-- CULTURA --}}
-    <div class="col-lg-4 col-md-4 col-sm-12 card-admin">
+    <div class="col-lg-3 col-md-4 col-sm-12 card-admin">
         <div class="card">
             <div class="card-content">
                 <div class="card-body card-b-admin">
                     <div class="media d-flex">
                         <div class="media-body text-left">
                             <h3>{{ count($cultures) }}</h3>
-                            <span><a href="{{ route('admin-culture') }}">Indicação de Cultura</a></span>
+                            <span><a href="{{ route('admin-culture') }}">Cultura</a></span>
                         </div>
                         <div class="align-self-center">
                             <i class="fa fa-file-text-o float-right"></i>
@@ -50,7 +50,7 @@
     </div>
 
     {{-- SERVIÇOS --}}
-    <div class="col-lg-4 col-md-4 col-sm-12 card-admin">
+    <div class="col-lg-3 col-md-4 col-sm-12 card-admin">
         <div class="card">
             <div class="card-content">
                 <div class="card-body card-b-admin">
@@ -69,14 +69,14 @@
     </div>
 
     {{-- PRODUTO --}}
-    <div class="col-lg-4 col-md-4 col-sm-12 card-admin">
+    <div class="col-lg-3 col-md-4 col-sm-12 card-admin">
         <div class="card">
             <div class="card-content">
                 <div class="card-body card-b-admin">
                     <div class="media d-flex">
                         <div class="media-body text-left">
                             <h3>{{ count($products) }}</h3>
-                            <span><a href="{{ route('admin-product') }}">Indicação de Produto</a></span>
+                            <span><a href="{{ route('admin-product') }}">Produto</a></span>
                         </div>
                         <div class="align-self-center">
                             <i class="fa fa-comments float-right"></i>
@@ -145,48 +145,53 @@
 
                         <tbody>
                             @foreach ($services as $service)
-                                {{-- @foreach ($posts as $post)
-                                    --}}
 
-                                    <tr>
-                                        <th scope="row">{{ $service->id }}</th>
-                                        <td>{{ $service->servico }}</td>
-                                        <td>{{ $service->segment->tipo }}</td>
-                                        <td>
-                                            <a href="{{ route('user', $service->user->username) }}" target="_blank">
-                                                {{ $service->nome_prestador }}
-                                            </a>
-                                        </td>
-                                        <td>{{ $service->telefone }}</td>
-                                        <td>R$ {{ $service->valor }},00</td>
-                                        <td>{{ $service->local }}</td>
-                                        <td>{{ $service->cidade }}</td>
-                                        <td>{{ $service->estado }}</td>
-                                        <td>{{ $service->coordenadas }}</td>
-                                        <td>
-                                            <a href="{{ route('servico.show', $service->id) }}" target="_blank">
-                                                @if ($service->photo == null)
-                                                    <img src="{{ asset('imagens/servicos/servico-6.png') }}"
-                                                        alt="Foto default serviço" class="service-photo" width="80px">
-                                                @else
-                                                    <img src="{{ asset('uploads/services/' . $service->photo) }}"
-                                                        alt="Foto serviço" class="service-photo" width="80px">
-                                                @endif
-                                            </a>
-                                        </td>
-                                        {{-- <td>{{ $post->conteudo }}</td>
-                                        --}}
-                                        <td>{{ $service->rating[0]->nota }}</td>
-                                        <td>{{ $service->created_at->diffforhumans() }}</td>
+                                <tr>
+                                    <th scope="row">{{ $service->id }}</th>
+                                    <td>{{ $service->servico }}</td>
+                                    <td>{{ $service->segment->tipo }}</td>
+                                    <td>
+                                        <a href="{{ route('user', $service->user->username) }}" target="_blank">
+                                            {{ $service->nome_prestador }}
+                                        </a>
+                                    </td>
+                                    <td>{{ $service->telefone }}</td>
+                                    <td>R$ {{ $service->valor }},00</td>
+                                    <td>{{ $service->local }}</td>
+                                    <td>{{ $service->cidade }}</td>
+                                    <td>{{ $service->estado }}</td>
+                                    <td>{{ $service->coordenadas }}</td>
+                                    <td>
+                                        <a href="{{ route('servico.show', $service->id) }}" target="_blank">
+                                            @if ($service->photo == null)
+                                                <img src="{{ asset('imagens/servicos/servico-6.png') }}"
+                                                    alt="Foto default serviço" class="service-photo" width="80px">
+                                            @else
+                                                <img src="{{ asset('uploads/services/' . $service->photo) }}"
+                                                    alt="Foto serviço" class="service-photo" width="80px">
+                                            @endif
+                                        </a>
+                                    </td>
 
-                                        <td>
-                                            <i class="fa fa-trash-o btn" aria-hidden="true"><a href=""></a></i>
-                                            <i class="fa fa-eye btn" aria-hidden="true"><a href=""></a></i>
-                                        </td>
-                                    </tr>
+                                    @foreach ($posts as $post)
+                                        @if ($service->id == $post->service_id)
+                                            <td>{{ $post->conteudo }}</td>
+                                        @endif
+                                    @endforeach
 
-                                    {{-- @endforeach
-                                --}}
+                                    <td>{{ $service->rating[0]->nota }}</td>
+                                    <td>{{ $service->created_at->diffforhumans() }}</td>
+
+                                    <td>
+                                        <a href="{{ route('serviceDelete', $service->id) }}">
+                                            <i class="fa fa-trash-o btn" aria-hidden="true"></i>
+                                        </a>
+
+                                        <i class="fa fa-eye btn" aria-hidden="true"><a href=""></a></i>
+                                    </td>
+                                </tr>
+
+
                             @endforeach
                         </tbody>
 

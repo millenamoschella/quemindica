@@ -18,10 +18,10 @@ class CreateRatingsTable extends Migration
             $table->float('nota', 2, 1);
             $table->timestamps();
 
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('service_id')->nullable()->constrained();
-            $table->foreignId('product_id')->nullable()->constrained();
-            $table->foreignId('culture_id')->nullable()->constrained();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('service_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('product_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('culture_id')->nullable()->constrained()->onDelete('cascade');
         });
     }
 

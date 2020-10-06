@@ -23,7 +23,7 @@ class CreateCulturesTable extends Migration
             $table->timestamps();
 
             // $table->foreignId('genre_id')->constrained();
-            $table->foreignId('culture__segments_id')->nullabe()->constrained();
+            $table->foreignId('culture__segments_id')->nullabe()->constrained()->onDelete('cascade');
         });
     }
 

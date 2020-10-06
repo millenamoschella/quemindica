@@ -26,8 +26,8 @@ class CreateServicesTable extends Migration
             $table->string('photo')->nullable()->default(NULL);
             $table->timestamps();
 
-            $table->foreignId('segment_id')->constrained();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('segment_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
     }
 

@@ -12,7 +12,7 @@
 @section('menu-admin')
 
     {{-- USUÁRIOS --}}
-    <div class="col-lg-4 col-md-4 col-sm-12 card-admin">
+    <div class="col-lg-3 col-md-4 col-sm-12 card-admin">
         <div class="card">
             <div class="card-content">
                 <div class="card-body card-b-admin">
@@ -31,14 +31,14 @@
     </div>
 
     {{-- CULTURA --}}
-    <div class="col-lg-4 col-md-4 col-sm-12 card-admin">
+    <div class="col-lg-3 col-md-4 col-sm-12 card-admin">
         <div class="card">
             <div class="card-content">
                 <div class="card-body card-b-admin">
                     <div class="media d-flex">
                         <div class="media-body text-left">
                             <h3>{{ count($cultures) }}</h3>
-                            <span><a href="{{ route('admin-culture') }}">Indicação de Cultura</a></span>
+                            <span><a href="{{ route('admin-culture') }}">Cultura</a></span>
                         </div>
                         <div class="align-self-center">
                             <i class="fa fa-file-text-o float-right"></i>
@@ -50,7 +50,7 @@
     </div>
 
     {{-- SERVIÇOS --}}
-    <div class="col-lg-4 col-md-4 col-sm-12 card-admin">
+    <div class="col-lg-3 col-md-4 col-sm-12 card-admin">
         <div class="card">
             <div class="card-content">
                 <div class="card-body card-b-admin">
@@ -69,14 +69,14 @@
     </div>
 
     {{-- PRODUTO --}}
-    <div class="col-lg-4 col-md-4 col-sm-12 card-admin">
+    <div class="col-lg-3 col-md-4 col-sm-12 card-admin">
         <div class="card">
             <div class="card-content">
                 <div class="card-body card-b-admin">
                     <div class="media d-flex">
                         <div class="media-body text-left">
                             <h3>{{ count($products) }}</h3>
-                            <span><a href="{{ route('admin-product') }}">Indicação de Produto</a></span>
+                            <span><a href="{{ route('admin-product') }}">Produto</a></span>
                         </div>
                         <div class="align-self-center">
                             <i class="fa fa-comments float-right"></i>
@@ -141,30 +141,34 @@
 
                         <tbody>
                             @foreach ($products as $product)
-                                {{-- @foreach ($posts as $post)
-                                    --}}
 
-                                    <tr>
-                                        <th scope="row">{{ $product->id }}</th>
-                                        <td>{{ $product->nome }}</td>
-                                        <td>{{ $product->marca }}</td>
-                                        <td>R$ {{ $product->valor }},00</td>
-                                        <td>{{ $product->loja }}</td>
-                                        <td>{{ $product->cidade }}</td>
-                                        <td>{{ $product->Estado }}</td>
-                                        <td>Avaliação aqui</td>
+                                <tr>
+                                    <th scope="row">{{ $product->id }}</th>
+                                    <td>{{ $product->nome }}</td>
+                                    <td>{{ $product->marca }}</td>
+                                    <td>R$ {{ $product->valor }},00</td>
+                                    <td>{{ $product->loja }}</td>
+                                    <td>{{ $product->cidade }}</td>
+                                    <td>{{ $product->Estado }}</td>
 
-                                        <td>{{ $product->rating[0]->nota }}</td>
-                                        <td>{{ $product->created_at->diffforhumans() }}</td>
+                                    @foreach ($posts as $post)
+                                        @if ($product->id == $post->product_id)
+                                            <td>{{ $post->conteudo }}</td>
+                                        @endif
+                                    @endforeach
 
-                                        <td>
-                                            <i class="fa fa-trash-o btn" aria-hidden="true"><a href=""></a></i>
-                                            <i class="fa fa-eye btn" aria-hidden="true"><a href=""></a></i>
-                                        </td>
-                                    </tr>
+                                    <td>{{ $product->rating[0]->nota }}</td>
+                                    <td>{{ $product->created_at->diffforhumans() }}</td>
 
-                                    {{-- @endforeach
-                                --}}
+                                    <td>
+                                        <a href="{{ route('productDelete', $product->id) }}">
+                                            <i class="fa fa-trash-o btn" aria-hidden="true"></i>
+                                        </a>
+
+                                        <i class="fa fa-eye btn" aria-hidden="true"><a href=""></a></i>
+                                    </td>
+                                </tr>
+
                             @endforeach
 
                         </tbody>

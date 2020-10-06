@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
             $table->string('coordenadas')->nullable()->default(NULL);
             $table->timestamps();
 
-            $table->foreignId('segment_id')->constrained();
+            $table->foreignId('segment_id')->constrained()->onDelete('cascade');
         });
     }
 

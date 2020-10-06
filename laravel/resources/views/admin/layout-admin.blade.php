@@ -16,7 +16,6 @@
 
     {{-- CSS --}}
     @section('style')
-        <link rel="stylesheet" href="{{ asset('../css/layout-admin.css') }}">
         <link rel="stylesheet" href="{{ asset('../css/admin.css') }}">
         <link rel="stylesheet" href="{{ asset('../css/servicos.css') }}">
         <link rel="stylesheet" href="{{ asset('../css/footer.css') }}">
