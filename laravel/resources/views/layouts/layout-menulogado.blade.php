@@ -1,6 +1,6 @@
 @section('style')
     @parent
-    <link rel="stylesheet" href="{{ asset('../css/layout-menulogado.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/layout-menulogado.css') }}">
 @endsection
 
 
